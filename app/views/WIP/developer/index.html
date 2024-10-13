@@ -1,0 +1,135 @@
+{% extends "./_layout.html" %}
+
+{% block pageTitle %}
+    {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+
+{{ super() }}
+<div class="x-govuk-masthead x-govuk-masthead--large">
+    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation"
+        aria-labelledby="app-navigation-heading">
+        <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+        <div class="govuk-width-container">
+            <ul class="app-navigation__list app-width-container">
+                <li class="app-navigation__list-item ">
+                    <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link"
+                        href="/WIP/start">
+                        Home
+                    </a>
+                </li>
+            </ul>
+            <ul class="app-navigation__list app-width-container" style="float: right;margin-right: -30px;">
+                {% if data['loggedin'] == "true" %}
+                <li class="app-navigation__list-item">
+                    <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link"
+                        href="/WIP/secure/account">
+                        Account
+                    </a>
+                </li>
+                <li class="app-navigation__list-item">
+                    <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link"
+                        href="/WIP/developer?loggedin=false">
+                        Sign out
+                    </a>
+                </li>
+                {% else %}
+                <li class="app-navigation__list-item">
+                    <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link"
+                        href="/WIP/secure/information?loggedin=true&signinRoute=home">
+                        Sign in
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <div class="govuk-width-container">
+
+        <div class="govuk-phase-banner x-govuk-phase-banner--inverse">
+            <p class="govuk-phase-banner__content">
+                <strong class="govuk-tag govuk-phase-banner__content__tag x-govuk-tag--inverse">
+                    Beta
+                </strong>
+                <span class="govuk-phase-banner__text">
+                    This is a new service – your <a class="govuk-link" href="#1" style="color: white;">feedback</a> will
+                    help us to improve it.
+                </span>
+            </p>
+        </div>
+
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="x-govuk-masthead__title govuk-!-margin-bottom-2">
+                    Data Marketplace - Developer Admin
+                </h1>
+                
+                <p class="x-govuk-masthead__description govuk-!-margin-bottom-4">
+                    The Developer Portal allows you to configure client apps which allow to you to make calls against
+                    the Data Marketplace API, and manage your credentials in different API environments.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        {% if data['loggedin'] == "true" %}
+
+            <h2 class="govuk-heading-m">
+                Client apps
+            </h2>
+            <p>
+                Manage the client apps under your organisation account.
+            </p>
+            <p>
+                <a href="#">
+                    Manage your client apps
+                </a>
+            </p>
+
+            <h2 class="govuk-heading-m">
+                Create a new client app
+            </h2>
+            <p>
+                Create a new client app under your organisation account.
+            </p>
+            <p>
+                <a href="#">
+                    New client app
+                </a>
+            </p>
+
+        {% endif %}
+
+        <h2 class="govuk-heading-m">
+            Learn
+        </h2>
+        <p>
+            <a href="#">
+                Use the developer portal to get connected to the Data Marketplace API
+            </a>
+        </p>
+
+    </div>
+    
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include "includes/WIP_footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="/public/javascripts/jquery-3.6.3.min.js"></script>
+{% endblock %}
