@@ -5,6 +5,6 @@ module.exports = {
 	'WIP_settings_permissions': ['add', 'review', 'hack'],
 	'settings_permissions': ['add', 'review', 'hack'],
 	'developer': {
-		'apps': {}
+		'apps': []
 	}
 }

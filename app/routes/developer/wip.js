@@ -15,7 +15,7 @@ router.post('/create-app', (request, response) => {
         return
     }
 
-    data.developer.apps[appName] = { "name": appName }
+    data.developer.apps.push({ "name": appName })
 
     data.appCreated = true
 
@@ -35,7 +35,7 @@ router.get('/apps/:name', (request, response) => {
         delete data.appCreated
     }
 
-    response.locals.app = data.developer.apps[appName]
+    response.locals.app = data.developer.apps.find(app => app.name == appName)
 
     response.render(path + '/view-app')
 
