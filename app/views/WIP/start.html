@@ -22,17 +22,40 @@
             </a>
           </li>
 
+          {% if data['loggedin'] == "true" %}
+
           <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/find/find?signinRoute=Find">
-              Find data assets
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
+              Find data
             </a>
           </li>
 
           <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/learn/">
-              Learn
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
+              Data requests
             </a>
           </li>
+
+          <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
+              Your data
+            </a>
+          </li>
+
+          <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
+              API keys
+            </a>
+          </li>
+
+          {% endif %}
+
+          <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/WIP/learn/">
+              Help
+            </a>
+          </li>
+
       </ul>
       <ul class="app-navigation__list app-width-container" style="float: right;margin-right: -30px;">
         {% if data['loggedin'] == "true" %}
@@ -69,41 +92,61 @@
         </p>
       </div>
 
+      {% if data['loggedin'] == "true" %}
 
-  
-  <h1 class="x-govuk-masthead__title govuk-!-margin-bottom-2">
-    Data Marketplace
-  </h1>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <form action="/WIP/find/find" method="GET" id="searchForm">
+            <div class="gem-c-search gem-c-search--on-white govuk-!-margin-top-6 govuk-!-margin-bottom-4">
+                <label for="search" class="govuk-heading-m" style="color: inherit">Find government data</label>
+                <div class="gem-c-search__item-wrapper">
+                    <input  class="gem-c-search__item gem-c-search__input govuk-input js-class-toggle" id="search" name="q" title="Search" type="search" value="{{ query }}">
+                        <div class="gem-c-search__item gem-c-search__submit-wrapper">
+                            <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
+                                Search
+                        <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+                        <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+                        </svg>
+                        </button> 
+                    </div>
+                </div>
+            </div>
+        
+        </form>
+        <p>
+          <a class="govuk-link" href="/WIP/find/find">View all data</a> or browse by <a href="/WIP/find/organisations" class="govuk-link">organisation</a> or <a href="/WIP/find/topics" class="govuk-link">topic</a>
+        </p>
+
+        </div>
+      </div>
+
+      {% else %}
+
+      <h1 class="x-govuk-masthead__title govuk-!-margin-bottom-2">
+        Data Marketplace
+      </h1>
+
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-three-quarters">
             <p class="x-govuk-masthead__description govuk-!-margin-bottom-4">
               A place for people who work in government  organisations, agencies and public bodies to share data.
             </p>
-            <h2 class="govuk-heading-m  govuk-!-margin-bottom-3" style="color: inherit">Find data assets from government organisations</h2>
             
-
-            <form action="/WIP/find/find" method="GET" id="searchForm">
-              <div class="gem-c-search gem-c-search--on-white govuk-!-width-two-thirds govuk-!-margin-bottom-4">
-                  <label for="search" class="gem-c-search__label govuk-label">Search the Data Catalogue</label>
-                  <div class="gem-c-search__item-wrapper">
-                      <input  class="gem-c-search__item gem-c-search__input govuk-input js-class-toggle" id="search" name="q" title="Search" type="search" value="{{ query }}">
-                          <div class="gem-c-search__item gem-c-search__submit-wrapper">
-                              <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
-                                  Search
-                          <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                          <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
-                          <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
-                          </svg>
-                          </button> 
-                      </div>
-                  </div>
-              </div>
-          
-          </form>
-          <p class="govuk-text"><a href="/WIP/find/find">View all data</a> or browse by <a href="/WIP/find/organisations" class="govuk-link">organisation</a> or <a href="/WIP/find/topics" class="govuk-link">topic</a></p>
+            <a href="#" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-button--start" data-module="govuk-button">
+              Get started
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+              </svg>
+            </a>
+            
         </div>
       
       </div>
+
+      {% endif %}
+
     </div>
   </div>
 {% endblock %}
@@ -113,16 +156,19 @@
   <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
     <h2 class="govuk-heading-m">Data requests</h2>
     <p class="govuk-body">Manage your data share requests with other government organisations.</p>
+
     {% if data['loggedin'] == "true" %}
     <ul class="govuk-list">
       <li>
-        <a href="/WIP/manage-shares?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data request Dashboard</a>
+        <a href="/WIP/manage-shares?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data requests</a>
       </li>
     </ul>
     {% else %}
     <ul class="govuk-list">
       <li>
-        <p class="govuk-body"><a href="/WIP/secure/information?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data request Dashboard</a></p>
+        <p>
+          <a href="/WIP/secure/information?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data requests</a>
+        </p>
       </li>
     </ul>
    
@@ -130,16 +176,20 @@
     
   </div>
   <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
-    <h2 class="govuk-heading-m">Data descriptions</h2>
-    <p class="govuk-body">Add a metadata description of your data assets.</p>
+    <h2 class="govuk-heading-m">Submit data</h2>
+    <p class="govuk-body">Add your data to the marketplace</p>
 
     {% if data['loggedin'] == "true" %}
     <ul class="govuk-list">
       <li>
-        <a href="/bMVP_wip--dashboard-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
+        <a href="/bMVP_wip--dashboard-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">
+          Your data
+        </a>
       </li>
       <li>
-        <a href="/bMVP_wip--method-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
+        <a href="/bMVP_wip--method-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">
+          Submit data
+        </a>
       </li>
     </ul>
     {% else %}
