@@ -5,17 +5,20 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "@govuk-prototype-kit/common-templates": "^1.0.0",
-    "@govuk-prototype-kit/task-list": "^1.0.0",
-    "@ministryofjustice/frontend": "^1.6.4",
+    "@govuk-prototype-kit/common-templates": "^2.0.1",
+    "@govuk-prototype-kit/task-list": "^2.0.0",
+    "@ministryofjustice/frontend": "^2.2.4",
     "got": "^11.8.6",
-    "govuk-frontend": "^4.5.0",
+    "govuk-frontend": "^5.7.1",
     "govuk-prototype-components": "^1.1.0",
     "govuk-prototype-filters": "^0.1.0",
-    "govuk-prototype-kit": "13.16.2",
-    "hmrc-frontend": "^5.24.0",
-    "itemsjs": "^2.1.20",
-    "jquery": "^3.7.0",
-    "notifications-node-client": "^7.0.0"
+    "govuk-prototype-kit": "^13.16.2",
+    "hmrc-frontend": "^6.35.0",
+    "itemsjs": "^2.1.25",
+    "jquery": "^3.7.1",
+    "notifications-node-client": "^8.2.1"
+  },
+  "overrides": {
+    "sass": "1.77.6"
   }
 }

@@ -13,12 +13,18 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-		<h1 class="govuk-heading-l">Apps</h1>
+		<h1 class="govuk-heading-l">API keys</h1>
+
+		<p><a href="#">Get started with the Data Marketplace API</a></p>
+
+		<div class="govuk-!-margin-top-4">
+			{{ govukButton({'text': 'New API key', 'href': '/WIP/developer/create-app' }) }}
+		</div>
 
 		{% set apps = data.developer.apps %}
 
 		<p>
-			{{ apps.length }} app{{ "s" if apps.length >1 }}
+			{{ apps.length }} key{{ "s" if apps.length > 1 or apps.length == 0 }}
 		</p>
 
 		{% for app in apps %}
@@ -53,11 +59,13 @@
 								text: "Environment"
 							},
 							value: {
-								text: "Production"
+								text: "Sandbox"
 							}
 						}
 					]
 				}) }}
+
+				<p><a href="#">Revoke key</a></p>
 
 			</div>
 

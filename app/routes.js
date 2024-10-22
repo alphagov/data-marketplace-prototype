@@ -6,7 +6,6 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 const { promises: fs } = require("fs");
 
-const got = require('got');
 let cache = {};
 let itemsjs;
 let items;

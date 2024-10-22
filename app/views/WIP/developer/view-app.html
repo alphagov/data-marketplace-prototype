@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/WIP/developer/apps">All apps</a>
+  <a class="govuk-back-link" href="/WIP/developer/apps">All API keys</a>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
       {% if appCreated %}
         {% set html %}
           <p class="govuk-notification-banner__heading">
-            App created
+            API key created
           </p>
         {% endset %}
 
@@ -28,7 +28,7 @@
       {% endif %}
 
       <h1 class="govuk-heading-l">
-        <span class="govuk-caption-l">Apps</span>
+        <span class="govuk-caption-l">API keys</span>
         {{ app.name }}
       </h1>
 
@@ -130,7 +130,7 @@
                 text: "Environment"
             },
             value: {
-                text: "Integration"
+                text: "Sandbox"
             },
             actions: {
               items: [
