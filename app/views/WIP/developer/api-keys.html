@@ -1,12 +1,10 @@
-{% extends "./_layout.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
 	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-	<a class="govuk-back-link" href="/WIP/developer">Developer admin</a>
-{% endblock %}
+{% set navActive = 'API keys' %}
 
 {% block content %}
 
@@ -15,24 +13,30 @@
 
 		<h1 class="govuk-heading-l">API keys</h1>
 
-		<p><a href="#">Get started with the Data Marketplace API</a></p>
+		<p>
+			<a href="#">Data Marketplace API documentation</a>
+		</p>
 
-		<div class="govuk-!-margin-top-4">
-			{{ govukButton({'text': 'New API key', 'href': '/WIP/developer/create-app' }) }}
+		<div class="govuk-!-margin-top-6">
+			{{ govukButton({'text': 'New API key', 'href': '/WIP/developer/new-api-key' }) }}
 		</div>
 
 		{% set apps = data.developer.apps %}
 
+		{% if apps.length > 0 %}
+
 		<p>
-			{{ apps.length }} key{{ "s" if apps.length > 1 or apps.length == 0 }}
+			{{ apps.length }} key{{ "s" if apps.length > 1 }}
 		</p>
+
+		{% endif %}
 
 		{% for app in apps %}
 
-			<div class="govuk-!-margin-bottom-4" style="border-bottom: 1px solid #b1b4b6">
+			<div class="govuk-!-padding-top-4 govuk-!-margin-bottom-4" style="border-top: 1px solid #b1b4b6">
 
 				<h2 class="govuk-heading-m">
-					<a href="/WIP/developer/apps/{{ app.name }}">{{ app.name }}</a>
+					<a href="/WIP/developer/api-keys/{{ app.name }}">{{ app.name }}</a>
 				</h2>
 
 				{{ govukSummaryList({

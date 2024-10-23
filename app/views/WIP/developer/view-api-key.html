@@ -1,11 +1,13 @@
-{% extends "./_layout.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% set navActive = 'API keys' %}
+
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/WIP/developer/apps">All API keys</a>
+  <a class="govuk-back-link" href="/WIP/developer/api-keys">All API keys</a>
 {% endblock %}
 
 {% block content %}

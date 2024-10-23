@@ -10,9 +10,58 @@
     }
 </style>
 
+{% if data['loggedin'] == 'true' %}
+
 {% set navigationEnd %}
   <li class="govuk-service-navigation__item" style="margin-left: auto;">
     <a class="govuk-service-navigation__link" href="#">Sign out</a>
+  </li>
+{% endset %}
+
+{{ govukServiceNavigation({
+
+    navigation: [
+      {
+        href: "/WIP/home",
+        text: "Home",
+        active: true if navActive == 'Home'
+      },
+      {
+        href: "#",
+        text: "Find data",
+        active: true if navActive == 'Find data'
+      },
+      {
+        href: "#",
+        text: "Data requests",
+        active: true if navActive == 'Data requests'
+      },
+      {
+        href: "#",
+        text: "Your data",
+        active: true if navActive == 'Your data'
+      },
+      {
+        href: "/WIP/developer/api-keys",
+        text: "API keys",
+        active: true if navActive == 'API keys'
+      },
+      {
+        href: "#",
+        text: "Support",
+        active: true if navActive == 'Support'
+      }
+    ],
+    slots: {
+        navigationEnd: navigationEnd
+    }
+}) }}
+
+{% else %}
+
+{% set navigationEnd %}
+  <li class="govuk-service-navigation__item" style="margin-left: auto;">
+    <a class="govuk-service-navigation__link" href="#">Sign in</a>
   </li>
 {% endset %}
 
@@ -25,24 +74,14 @@
       },
       {
         href: "#",
-        text: "Find data"
-      },
-      {
-        href: "#",
-        text: "Data requests"
-      },
-      {
-        href: "#",
-        text: "Your data"
-      },
-      {
-        href: "#",
-        text: "API keys"
+        text: "Support"
       }
     ],
     slots: {
         navigationEnd: navigationEnd
     }
-  }) }}
+}) }}
+
+{% endif %}
 
 {% endblock %}

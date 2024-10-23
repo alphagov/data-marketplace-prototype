@@ -3,7 +3,7 @@ const { resetState } = require('govuk-prototype-kit/lib/routes/api')
 const path = '/WIP/developer'
 const router = govukPrototypeKit.requests.setupRouter(path)
 
-router.post('/create-app', (request, response) => {
+router.post('/new-api-key', (request, response) => {
 
     let data = request.session.data
     
@@ -11,7 +11,7 @@ router.post('/create-app', (request, response) => {
 
     if (appName.trim() === '') {
         // no name entered
-        response.redirect(path + '/create-app')
+        response.redirect(path + '/new-api-key')
         return
     }
 
@@ -19,11 +19,11 @@ router.post('/create-app', (request, response) => {
 
     data.appCreated = true
 
-    response.redirect(path + '/apps/' + appName)
+    response.redirect(path + '/api-keys/' + appName)
 
 })
 
-router.get('/apps/:name', (request, response) => {
+router.get('/api-keys/:name', (request, response) => {
 
     const data = request.session.data
     const appName = request.params.name
@@ -37,6 +37,6 @@ router.get('/apps/:name', (request, response) => {
 
     response.locals.app = data.developer.apps.find(app => app.name == appName)
 
-    response.render(path + '/view-app')
+    response.render(path + '/view-api-key')
 
 })
