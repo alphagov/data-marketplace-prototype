@@ -11,7 +11,7 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-		<h1 class="govuk-heading-l">API keys</h1>
+		<h1 class="govuk-heading-l">API credentials</h1>
 
 		<p>
 			<a href="/WIP/support/api">Data Marketplace API documentation</a>
@@ -20,7 +20,7 @@
 		{% if data['is-developer'] == 'true' %}
 
 			<div class="govuk-!-margin-top-6">
-				{{ govukButton({'text': 'New API key', 'href': '/WIP/developer/new-api-key' }) }}
+				{{ govukButton({'text': 'New API credentials', 'href': '/WIP/developer/new-api-key' }) }}
 			</div>
 
 			{% set apps = data.developer.apps %}
@@ -28,7 +28,7 @@
 			{% if apps.length > 0 %}
 
 			<p>
-				{{ apps.length }} key{{ "s" if apps.length > 1 }}
+				{{ apps.length }} credential{{ "s" if apps.length > 1 }}
 			</p>
 
 			{% endif %}
@@ -46,7 +46,7 @@
 						rows: [
 							{
 								key: {
-									text: "Permissions"
+									text: "Scopes"
 								},
 								value: {
 									text: "Discover, Publish, Delete"

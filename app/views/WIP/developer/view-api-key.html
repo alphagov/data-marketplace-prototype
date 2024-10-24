@@ -7,7 +7,7 @@
 {% set navActive = 'API keys' %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/WIP/developer/api-keys">All API keys</a>
+  <a class="govuk-back-link" href="/WIP/developer/api-keys">API</a>
 {% endblock %}
 
 {% block content %}
@@ -18,7 +18,7 @@
       {% if appCreated %}
         {% set html %}
           <p class="govuk-notification-banner__heading">
-            API key created
+            API credentials created
           </p>
         {% endset %}
 
@@ -30,7 +30,7 @@
       {% endif %}
 
       <h1 class="govuk-heading-l">
-        <span class="govuk-caption-l">API keys</span>
+        <span class="govuk-caption-l">API credentials</span>
         {{ app.name }}
       </h1>
 
@@ -55,7 +55,7 @@
             },
             {
             key: {
-                text: "Permissions"
+                text: "Scopes"
             },
             value: {
                 text: "Discover, Publish, Delete"
