@@ -1,0 +1,126 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% set navActive = "Support" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+
+        <ul class="govuk-list">
+            <li>
+                <a href="#">
+                    Get started
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Roles
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Features
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            API
+        </h1>
+
+        <p>You can use the Data Marketplace API to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>create and update metadata in the Data Marketplace’s catalogue</li>
+            <li>query the Data Marketplace’s catalogue using keywords and other search terms</li>
+        </ul>
+
+        <p>To call the API, you need an API client.</p>
+
+        <h2 class="govuk-heading-m">Create an API client</h2>
+
+        <p>An API client is software that you and your team write to make calls against the API. You can write API client software in many programming languages, for example Python or JavaScript.</p>
+
+        <p>Refer to the Data Marketplace OpenAPI specification to write or generate an API client.</p>
+
+        <h2 class="govuk-heading-m">How this API is secured</h2>
+
+        <p>This API is secured using the OAuth 2.0 Client Credentials Grant type.</p>
+
+        <p>You’ll be able to request client credentials for 2 different environments:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Test: https://test.api.datamarketplace.gov.uk</li>
+            <li>Production: https://api.datamarketplace.gov.uk</li>
+        </ul>
+
+        <p>You’ll need your client credentials to pass into the token endpoint in order to generate an access token.</p>
+
+        <h2 class="govuk-heading-m">Security scopes</h2>
+
+        <p>Each API endpoint is secured by one of the following security scopes:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>discover</li>
+            <li>publish</li>
+            <li>delete</li>
+        </ul>
+
+        <p>When you call an API operation, the access token you present must contain the scope(s) required for the operation.</p>
+
+        <h2 class="govuk-heading-m">Call the token endpoint</h2>
+
+        <p>To call the token endpoint, construct a request with the following information:</p>
+
+<pre style="max-width:100%; overflow: auto; border: 10px solid #eee; padding: 10px; font-size: 1rem;">
+POST {token endpoint URL} HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&amp;scope=discover%2Cpublish&amp;client_id={your-client-ID}&amp;client_secret={your-client-secret}
+</pre>
+        <p>This request will return an access token like the one below:</p>
+        
+<pre style="max-width:100%; overflow: auto; border: 10px solid #eee; padding: 10px; font-size: 1rem;">
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+</pre>
+
+        <p>You’ll need to present an access token like this when you call operations on the API. To do this, construct a request like the one below. It needs a header called ‘Authorization’ with a value set to ‘Bearer {access token}’ with every call made to the API:</p>
+
+<pre style="max-width:100%; overflow: auto; border: 10px solid #eee; padding: 10px; font-size: 1rem;">
+GET /catalogued-resources HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+</pre>
+
+        <h2 class="govuk-heading-m">View and create client apps</h2>
+
+        <p>You and your team can create and manage client apps in the developer portal.</p>
+
+        <p><a href="#">View client apps for your organisation</a></p>
+
+        <p><a href="#">Create a new client app</a></p>
+
+        <p>When you use the portal to create a new client app, client credentials will be generated for that app with the following characteristics:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>identification of you and your organisation</li>
+            <li>access to either the Test or Production environment</li>
+            <li>one or more security scopes</li>
+            <li>an expiry date – after which you’ll need to create a new client app</li>
+        </ul>
+
+        <p>You can create as many client apps as you want. You should delete unused or expired client apps.</p>
+        
+        <p>You can access a client app’s client credentials by opening that app.</p>
+
+    </div>
+
+</div>
+
+{% endblock %}
