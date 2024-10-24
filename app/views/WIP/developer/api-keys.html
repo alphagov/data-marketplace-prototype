@@ -17,63 +17,73 @@
 			<a href="/WIP/support/api">Data Marketplace API documentation</a>
 		</p>
 
-		<div class="govuk-!-margin-top-6">
-			{{ govukButton({'text': 'New API key', 'href': '/WIP/developer/new-api-key' }) }}
-		</div>
+		{% if data['is-developer'] == 'true' %}
 
-		{% set apps = data.developer.apps %}
-
-		{% if apps.length > 0 %}
-
-		<p>
-			{{ apps.length }} key{{ "s" if apps.length > 1 }}
-		</p>
-
-		{% endif %}
-
-		{% for app in apps %}
-
-			<div class="govuk-!-padding-top-4 govuk-!-margin-bottom-4" style="border-top: 1px solid #b1b4b6">
-
-				<h2 class="govuk-heading-m">
-					<a href="/WIP/developer/api-keys/{{ app.name }}">{{ app.name }}</a>
-				</h2>
-
-				{{ govukSummaryList({
-					classes: "govuk-summary-list--no-border",
-					rows: [
-						{
-							key: {
-								text: "Permissions"
-							},
-							value: {
-								text: "Discover, Publish, Delete"
-							}
-						},
-						{
-							key: {
-								text: "Expiry"
-							},
-							value: {
-								text: "1/1/2026"
-							}
-						},
-						{
-							key: {
-								text: "Environment"
-							},
-							value: {
-								text: "Sandbox"
-							}
-						}
-					]
-				}) }}
-
-				<p><a href="#">Revoke key</a></p>
-
+			<div class="govuk-!-margin-top-6">
+				{{ govukButton({'text': 'New API key', 'href': '/WIP/developer/new-api-key' }) }}
 			</div>
 
-		{% endfor %}
+			{% set apps = data.developer.apps %}
+
+			{% if apps.length > 0 %}
+
+			<p>
+				{{ apps.length }} key{{ "s" if apps.length > 1 }}
+			</p>
+
+			{% endif %}
+
+			{% for app in apps %}
+
+				<div class="govuk-!-padding-top-4 govuk-!-margin-bottom-4" style="border-top: 1px solid #b1b4b6">
+
+					<h2 class="govuk-heading-m">
+						<a href="/WIP/developer/api-keys/{{ app.name }}">{{ app.name }}</a>
+					</h2>
+
+					{{ govukSummaryList({
+						classes: "govuk-summary-list--no-border",
+						rows: [
+							{
+								key: {
+									text: "Permissions"
+								},
+								value: {
+									text: "Discover, Publish, Delete"
+								}
+							},
+							{
+								key: {
+									text: "Expiry"
+								},
+								value: {
+									text: "1/1/2026"
+								}
+							},
+							{
+								key: {
+									text: "Environment"
+								},
+								value: {
+									text: "Sandbox"
+								}
+							}
+						]
+					}) }}
+
+					<p><a href="#">Revoke key</a></p>
+
+				</div>
+
+			{% endfor %}
+
+		{% else %}
+
+		<p>You need the publisher role to use the API.</p>
+
+		{{ govukButton({ text: "Request access", href: "/WIP/developer/request-permission" }) }}
+
+		{% endif %}
 
 	</div>
 </div>
