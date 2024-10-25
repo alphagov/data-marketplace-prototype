@@ -1,45 +1,19 @@
-{% extends "WIP/_layouts/main.html" %}
+{% extends "WIP/_layouts/support.html" %}
 
 {% set navActive = "Support" %}
 
-{% block content %}
+{% block supportContent %}
 
-<div class="govuk-grid-row">
-
-    <div class="govuk-grid-column-one-third">
-
-        <ul class="govuk-list">
-            <li>
-                <a href="#">
-                    Get started
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Roles
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    Features
-                </a>
-            </li>
-        </ul>
-
-    </div>
-
-    <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-l">
             Get started
         </h1>
 
-        <p>This service is for people who work in government organisations.</p>
-
-        <p>It allows you to find and request government data that is not available to the public.</p>
+        <p>The Data Marketplace is for people who work in government organisations. It allows you to find and request government data that is not available to the public.</p>
 
         <p>Visit <a href="https://data.gov.uk">data.gov.uk</a> to find data that’s already in the public domain, and can be accessed by anyone.</p>
+
+        <p>This is a new service. It’s still in private beta, and is only available to central government departments and some other organisations.</p>
 
         <h2 class="govuk-heading-m">
             Create an account
@@ -56,7 +30,7 @@
 
         <p>Go to the <a href="/WIP/sign-in">sign in page</a>, enter your email address and continue.</p>
 
-        <p>You’ll then go through your regular government sign-in process</p>
+        <p>You’ll then go through your regular government sign-in process.</p>
 
         <p>You can also <a href="/WIP/support/roles">request additional roles</a> for your account to approve data requests or publish metadata records.</p>
 
@@ -65,8 +39,5 @@
 
         <p>Once you’ve signed in, you can <a href="">explore the data catalogue</a> and find data you’re interested in.</p>
 
-    </div>
-
-</div>
 
 {% endblock %}

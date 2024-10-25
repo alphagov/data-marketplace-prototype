@@ -1,0 +1,46 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+
+        <h2 class="govuk-heading-m">General</h2>
+
+        <ul class="govuk-list">
+            <li>
+                <a href="#">
+                    Get started
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Roles
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Features
+                </a>
+            </li>
+        </ul>
+
+        <ul class="govuk-list">
+
+            <h2 class="govuk-heading-m">Developers</h2>
+
+            <li>
+                <a href="/WIP/support/ipa">
+                    API documentation
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+        {% block supportContent %}
+        {% endblock %}
+    </div>
+
+{% endblock %}

@@ -67,7 +67,7 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-three-quarters">
             <p class="x-govuk-masthead__description govuk-!-margin-bottom-4">
-              A place for people who work in government organisations, agencies and public bodies to share data.
+              A place for people who work in government organisations to find, request and share government data.
             </p>
 
             <div class="govuk-button-group">
@@ -100,7 +100,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
     <h2 class="govuk-heading-m">Data requests</h2>
-    <p class="govuk-body">Manage your data share requests with other government organisations.</p>
+    <p class="govuk-body">Manage your data requests with other government organisations.</p>
 
     {% if data['loggedin'] == "true" %}
     <ul class="govuk-list">
@@ -122,7 +122,7 @@
   </div>
   <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
     <h2 class="govuk-heading-m">Submit data</h2>
-    <p class="govuk-body">Add your data to the marketplace</p>
+    <p class="govuk-body">Add your data to the Data Marketplace.</p>
 
     {% if data['loggedin'] == "true" %}
     <ul class="govuk-list">
@@ -140,10 +140,10 @@
     {% else %}
     <ul class="govuk-list">
       <li>
-        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Descriptions dashboard</a>
+        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Data dashboard</a>
       </li>
       <li>
-        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data description</a>
+        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data</a>
       </li>
     </ul>
     {% endif %}
