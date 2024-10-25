@@ -8,6 +8,7 @@ router.post('/new-api-key', (request, response) => {
     let data = request.session.data
     
     const appName = data['app-name']
+    const environment = data['app-environment']
 
     if (appName.trim() === '') {
         // no name entered
@@ -15,7 +16,10 @@ router.post('/new-api-key', (request, response) => {
         return
     }
 
-    data.developer.apps.push({ "name": appName })
+    data.developer.apps.push({
+        "name": appName,
+        "environment": environment,
+    })
 
     data.appCreated = true
 

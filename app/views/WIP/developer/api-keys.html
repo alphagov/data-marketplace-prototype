@@ -11,7 +11,7 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-		<h1 class="govuk-heading-l">API credentials</h1>
+		<h1 class="govuk-heading-l">API integration</h1>
 
 		<p>
 			<a href="/WIP/support/api">Data Marketplace API documentation</a>
@@ -65,13 +65,13 @@
 									text: "Environment"
 								},
 								value: {
-									text: "Sandbox"
+									text: app.environment
 								}
 							}
 						]
 					}) }}
 
-					<p><a href="#">Revoke key</a></p>
+					<p><a href="#">Revoke</a></p>
 
 				</div>
 
@@ -79,9 +79,11 @@
 
 		{% else %}
 
-		<p>You need the publisher role to use the API.</p>
+		<p>The Data Marketplace API allows developers to connect where they store their data, for example a data catalogue, to the Data Marketplace.</p>
 
-		{{ govukButton({ text: "Request access", href: "/WIP/developer/request-permission" }) }}
+		<p>You need the Metadata Publisher role to use the API.</p>
+
+		{{ govukButton({ text: "Request Metadata Publisher role", href: "/WIP/developer/request-permission" }) }}
 
 		{% endif %}
 

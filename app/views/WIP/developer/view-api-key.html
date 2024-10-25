@@ -7,7 +7,7 @@
 {% set navActive = 'API keys' %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/WIP/developer/api-keys">API</a>
+  <a class="govuk-back-link" href="/WIP/developer/api-keys">API integration</a>
 {% endblock %}
 
 {% block content %}
@@ -132,20 +132,18 @@
                 text: "Environment"
             },
             value: {
-                text: "Sandbox"
-            },
-            actions: {
-              items: [
-                {
-                    href: "#",
-                    text: "Change",
-                    visuallyHiddenText: "expiry"
-                }
-              ]
+                text: app.environment
             }
           }
         ]
       }) }}
+
+
+      <p>
+        <a href="/WIP/support/ipa">
+          API documentation
+        </a>
+      </p>
 
     </div>
   </div>
