@@ -1,0 +1,59 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% set navActive = 'API keys' %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="" method="post">
+
+        {{ govukCheckboxes({
+        name: "scopes",
+        values: app.scopes,
+        fieldset: {
+            legend: {
+                text: app.name + " - Scopes",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+                value: "discover",
+                text: "discover"
+            },
+            {
+                value: "publish",
+                text: "publish"
+            },
+            {
+                value: "delete",
+                text: "delete"
+            }
+        ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Save changes</button>
+
+      </form>
+
+      <p>
+        <a href="/WIP/support/ipa">
+          API documentation
+        </a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

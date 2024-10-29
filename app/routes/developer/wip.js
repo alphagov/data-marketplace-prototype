@@ -19,6 +19,7 @@ router.post('/new-api-key', (request, response) => {
     data.developer.apps.push({
         "name": appName,
         "environment": environment,
+        "scopes": ['discover','publish','delete']
     })
 
     data.appCreated = true
@@ -74,5 +75,32 @@ router.post('/api-key-name/:name', (request, response) => {
     data.changesSaved = true
 
     response.redirect(path + '/api-keys/' + newAppName)
+
+})
+
+router.get('/api-key-scopes/:name', (request, response) => {
+
+    const data = request.session.data
+    const appName = request.params.name
+
+    response.locals.app = data.developer.apps.find(app => app.name == appName)
+
+    response.render(path + '/api-key-scopes')
+
+})
+
+router.post('/api-key-scopes/:name', (request, response) => {
+
+    const data = request.session.data
+    const scopes = data['scopes']
+    const appName = request.params.name
+
+    let app = data.developer.apps.find(app => app.name == appName)
+
+    app.scopes = scopes
+
+    data.changesSaved = true
+
+    response.redirect(path + '/api-keys/' + appName)
 
 })
