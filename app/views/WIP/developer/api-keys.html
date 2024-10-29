@@ -25,14 +25,6 @@
 
 			{% set apps = data.developer.apps %}
 
-			{% if apps.length > 0 %}
-
-			<p>
-				{{ apps.length }} credential{{ "s" if apps.length > 1 }}
-			</p>
-
-			{% endif %}
-
 			{% for app in apps %}
 
 				<div class="govuk-!-padding-top-4 govuk-!-margin-bottom-4" style="border-top: 1px solid #b1b4b6">
