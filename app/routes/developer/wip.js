@@ -19,7 +19,10 @@ router.post('/new-api-key', (request, response) => {
     data.developer.apps.push({
         "name": appName,
         "environment": environment,
-        "scopes": ['discover','publish','delete']
+        "scopes": ['discover','publish','delete'],
+        "expiry-day": "1",
+        "expiry-month": "1",
+        "expiry-year": "2026"
     })
 
     data.appCreated = true
@@ -98,6 +101,37 @@ router.post('/api-key-scopes/:name', (request, response) => {
     let app = data.developer.apps.find(app => app.name == appName)
 
     app.scopes = scopes
+
+    data.changesSaved = true
+
+    response.redirect(path + '/api-keys/' + appName)
+
+})
+
+router.get('/api-key-expiry/:name', (request, response) => {
+
+    const data = request.session.data
+    const appName = request.params.name
+
+    response.locals.app = data.developer.apps.find(app => app.name == appName)
+
+    response.render(path + '/api-key-expiry')
+
+})
+
+router.post('/api-key-expiry/:name', (request, response) => {
+
+    const data = request.session.data
+    const day = data['expiry-day']
+    const month = data['expiry-month']
+    const year = data['expiry-year']
+    const appName = request.params.name
+
+    let app = data.developer.apps.find(app => app.name == appName)
+
+    app['expiry-day'] = day
+    app['expiry-month'] = month
+    app['expiry-year'] = year
 
     data.changesSaved = true
 
