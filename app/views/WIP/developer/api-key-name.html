@@ -7,7 +7,7 @@
 {% set navActive = 'API keys' %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">API integration</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,46 +15,23 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">New API credentials</h1>
-
       <form class="form" action="" method="post">
 
         {{ govukInput({
           label: {
             text: "Name",
-            classes: "govuk-label--s"
+            classes: "govuk-label--l"
           },
           hint: {
             text: 'What will these credentials be used for? This is just for your reference.'
           },
           id: "app-name",
           name: "app-name",
+          value: app.name,
           classes: "govuk-input--width-20"
         }) }}
 
-        {{ govukRadios({
-          idPrefix: "app-environment",
-          name: "app-environment",
-          value: "Sandbox",
-          fieldset: {
-            legend: {
-              text: "Environment",
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              value: "Sandbox",
-              text: "Sandbox"
-            },
-            {
-              value: "Production",
-              text: "Production"
-            }
-          ]
-        })}}
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button" data-module="govuk-button">Save changes</button>
 
       </form>
 

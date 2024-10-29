@@ -29,6 +29,21 @@
 
       {% endif %}
 
+
+      {% if changesSaved %}
+        {% set html %}
+          <p class="govuk-notification-banner__heading">
+            Changes saved
+          </p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          type: "success"
+        }) }}
+
+      {% endif %}
+
       <h1 class="govuk-heading-l">
         <span class="govuk-caption-l">API credentials</span>
         {{ app.name }}
@@ -46,7 +61,7 @@
             actions: {
                 items: [
                   {
-                      href: "#",
+                      href: "/WIP/developer/api-key-name/" + app.name,
                       text: "Change",
                       visuallyHiddenText: "name"
                   }
@@ -63,9 +78,9 @@
             actions: {
                 items: [
                   {
-                      href: "#",
+                      href: "/WIP/developer/api-key-scopes/" + app.name,
                       text: "Change",
-                      visuallyHiddenText: "permissions"
+                      visuallyHiddenText: "scopes"
                   }
                 ]
               }
@@ -80,7 +95,7 @@
             actions: {
                 items: [
                 {
-                    href: "#",
+                    href: "/WIP/developer/api-key-expiry/" + app.name,
                     text: "Change",
                     visuallyHiddenText: "expiry"
                 }
