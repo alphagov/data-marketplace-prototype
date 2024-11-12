@@ -10,9 +10,13 @@ const root = process.cwd()
 const apiSpecFile = fs.readFileSync(root + '/app/data/metadata_management_api.yaml', 'utf8')
 const apiSpec = yaml.parse(apiSpecFile)
 
-router.get('/test', (request, response) => {
+router.get('/ipa-spec/:path', (request, response) => {
 
-    response.locals.paths = apiSpec.paths
+    const path = '/' + request.params.path
+
+    response.locals.path = path
+
+    response.locals.endpoint = apiSpec.paths[path]
     response.locals.components = apiSpec.components
 
     response.render('/WIP/support/ipa-spec')

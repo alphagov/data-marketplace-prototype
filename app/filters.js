@@ -6,6 +6,7 @@ const marked = require('marked')
 // To do - Create seperate JS files for each sub-service
 
 addFilter('getAPIRef', (components, ref) => {
+    console.log(ref)
     ref = ref.replace('#/components/','')
     const refParts = ref.split('/')
     let result = components
@@ -17,7 +18,7 @@ addFilter('getAPIRef', (components, ref) => {
           break
         }
       }
-      
+      console.log(result)
       return result
 
 })
@@ -37,5 +38,19 @@ addFilter('includes', (array, value) => {
         return array.includes(value)
     } catch {
         return
+    }
+})
+
+addFilter('sort', (input) => {
+    if (Array.isArray(input)) {
+        // Sort an array
+        return input.slice().sort()
+    } else if (typeof input === 'object' && input !== null) {
+        // Sort object keys
+        const keys = Object.keys(input)
+        return keys.slice().sort((a, b) => a.localeCompare(b))
+    } else {
+        // Return the original input if it's not an array or object
+        return input
     }
 })
