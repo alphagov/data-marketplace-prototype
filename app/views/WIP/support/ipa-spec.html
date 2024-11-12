@@ -4,14 +4,14 @@
 
 {% block supportContent %}
 
-    <h1 class="govuk-heading-xl">
+    <span class="govuk-caption-xl">
         API endpoints
-    </h1>
+    </span>
 
 
     {% for method, methodObj in endpoint %}
 
-        <h2 class="govuk-heading-l govuk-!-margin-top-9">
+        <h2 class="govuk-heading-l">
             <span class="govuk-!-margin-right-2">{{ path }}</span> {{ govukTag({text: method}) }}
         </h2>
 
