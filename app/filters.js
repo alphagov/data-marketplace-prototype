@@ -1,6 +1,8 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const addFilter = govukPrototypeKit.views.addFilter
 
+const marked = require('marked')
+
 // To do - Create seperate JS files for each sub-service
 
 addFilter('getAPIRef', (components, ref) => {
@@ -19,3 +21,12 @@ addFilter('getAPIRef', (components, ref) => {
       return result
 
 })
+
+addFilter('markdown', (content) => {
+    try {
+        return marked.parse(content)
+    } catch {
+        return
+    }
+  
+}, {renderAsHtml: true})

@@ -38,9 +38,12 @@
 
                         {% for name, property in schema.properties %}
 
-                            <h4 class="govuk-heading-s">{{name}}</h4>
+                            <h4 class="govuk-heading-s">
+                                <span class="govuk-!-margin-right-2">{{name}}</span>
+                                {{ govukTag({ text: property.type, classes: "govuk-tag--yellow" }) }}
+                            </h4>
                                 
-                            <p>({{ property.type }}) {{ property.description }}</p>
+                            {{ property.description | markdown }}
 
                         {% endfor %}
 

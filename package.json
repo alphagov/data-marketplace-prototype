@@ -16,6 +16,7 @@
     "hmrc-frontend": "^6.35.0",
     "itemsjs": "^2.1.25",
     "jquery": "^3.7.1",
+    "marked": "^15.0.0",
     "notifications-node-client": "^8.2.1",
     "yaml": "^2.6.0"
   },
