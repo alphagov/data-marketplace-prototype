@@ -1,0 +1,55 @@
+{% extends "WIP/_layouts/support.html" %}
+
+{% set navActive = "Support" %}
+
+{% block supportContent %}
+
+        <h1 class="govuk-heading-xl">
+            API endpoints
+        </h1>
+
+        {% for path, methods in paths %}
+
+            <div>
+
+                {% for method, methodObj in methods %}
+    
+                    <h2 class="govuk-heading-l">
+                        <span class="govuk-!-margin-right-2">{{ path }}</span> {{ govukTag({text: method}) }}
+                    </h2>
+
+                    <p>
+                        {{ methodObj.description }}
+                    </p>
+
+                    {% for i in methodObj.parameters %}
+
+                        <p> {{ i.name }} </p>
+
+                    {% endfor %}
+
+                    {% set ref = methodObj.requestBody.content['application/json'].schema.$ref %}
+
+                    {% if ref %}
+
+                        {% set schema = components|getAPIRef(ref) %}
+
+                        <h3 class="govuk-heading-m">Parameters</h3>
+
+                        {% for name, property in schema.properties %}
+
+                            <h4 class="govuk-heading-s">{{name}}</h4>
+                                
+                            <p>({{ property.type }}) {{ property.description }}</p>
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+        {% endfor %}
+
+{% endblock %}

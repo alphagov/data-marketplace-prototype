@@ -12,6 +12,9 @@ const apiSpec = yaml.parse(apiSpecFile)
 
 router.get('/test', (request, response) => {
 
-    response.send(apiSpec)
+    response.locals.paths = apiSpec.paths
+    response.locals.components = apiSpec.components
+
+    response.render('/WIP/support/ipa-spec')
 
 })
