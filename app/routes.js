@@ -101,6 +101,12 @@ router.use('', manageShares_wip);
 // Developer
 // #################################################
 
-const developer_wip = require('./routes/developer/wip.js')
+require('./routes/developer/wip.js')
+
+// #################################################
+// Support
+// #################################################
+
+require('./routes/support/wip.js')
 
 module.exports = router;
