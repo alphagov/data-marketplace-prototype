@@ -30,3 +30,12 @@ addFilter('markdown', (content) => {
     }
   
 }, {renderAsHtml: true})
+
+addFilter('includes', (array, value) => {
+    
+    try {
+        return array.includes(value)
+    } catch {
+        return
+    }
+})

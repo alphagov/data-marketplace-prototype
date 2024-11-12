@@ -14,33 +14,47 @@
 
                 {% for method, methodObj in methods %}
     
-                    <h2 class="govuk-heading-l">
+                    <h2 class="govuk-heading-l govuk-!-margin-top-9">
                         <span class="govuk-!-margin-right-2">{{ path }}</span> {{ govukTag({text: method}) }}
                     </h2>
 
-                    <p>
-                        {{ methodObj.description }}
-                    </p>
+                    {{ methodObj.description | markdown }}
 
-                    {% for i in methodObj.parameters %}
+                    {% if methodObj.parameters %}
 
-                        <p> {{ i.name }} </p>
+                        <h3 class="govuk-heading-m">Query parameters</h3>
 
-                    {% endfor %}
+                        {% for parameter in methodObj.parameters %}
+
+                            <h4 class="govuk-heading-s">
+                                <span class="govuk-!-margin-right-2">{{ parameter.name }}</span>
+                                {{ govukTag({ text: parameter.schema.type, classes: "govuk-tag--yellow" }) }}
+                            </h4>
+
+                            <div class="govuk-body">
+                                {{ parameter.description | markdown }}
+                            </div>
+
+                        {% endfor %}
+                    
+                    {% endif %}
 
                     {% set ref = methodObj.requestBody.content['application/json'].schema.$ref %}
 
                     {% if ref %}
 
-                        {% set schema = components|getAPIRef(ref) %}
-
                         <h3 class="govuk-heading-m">Parameters</h3>
+
+                        {% set schema = components|getAPIRef(ref) %}
 
                         {% for name, property in schema.properties %}
 
                             <h4 class="govuk-heading-s">
                                 <span class="govuk-!-margin-right-2">{{name}}</span>
                                 {{ govukTag({ text: property.type, classes: "govuk-tag--yellow" }) }}
+                                {% if schema.required | includes(name) %}
+                                    {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
+                                {% endif %}
                             </h4>
                                 
                             {{ property.description | markdown }}
