@@ -31,7 +31,7 @@ router.post('/new-api-key', (request, response) => {
 
 })
 
-router.get('/api-keys/:name', (request, response) => {
+router.get('/api-keys/:name', (request, response, next) => {
 
     const data = request.session.data
     const appName = request.params.name
@@ -49,6 +49,11 @@ router.get('/api-keys/:name', (request, response) => {
     }
 
     response.locals.app = data.developer.apps.find(app => app.name == appName)
+
+    if (!response.locals.app) {
+        next()
+        return
+    }
 
     response.render(path + '/view-api-key')
 
