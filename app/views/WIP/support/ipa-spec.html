@@ -64,7 +64,17 @@
 
                 <h4 class="govuk-heading-s">
                     <span class="govuk-!-margin-right-2">{{name}}</span>
-                    {{ govukTag({ text: property.type, classes: "govuk-tag--yellow" }) }}
+                    {% set type = property.type %}
+                    {% if type == "array" and property.items.type == "object" %}
+                        {% set type = "array of objects" %}
+                    {% endif %}
+                    {% if type == "array" and property.items.type == "string" %}
+                        {% set type = "array of strings" %}
+                    {% endif %}
+                    {% if property.anyOf %}
+                        {% set type = "date time string" %}
+                    {% endif %}
+                    {{ govukTag({ text: type, classes: "govuk-tag--yellow" }) }}
 
                     {% if property.maxLength %}
                         {{ govukTag({ text: "max length: " + property.maxLength, classes: "govuk-tag--yellow" }) }}
@@ -79,6 +89,18 @@
 
                     <p>
                         Values: {{ property.enum | join (', ') }}
+                        <!-- {% for value in property.enum %}
+                            {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
+                        {% endfor %} -->
+                    </p>
+
+                {% endif %}
+
+
+                {% if property.items.enum %}
+
+                    <p>
+                        Values: {{ property.items.enum | join (', ') }}
                         <!-- {% for value in property.enum %}
                             {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
                         {% endfor %} -->
