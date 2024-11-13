@@ -8,141 +8,151 @@
         API endpoints
     </span>
 
+    <h1 class="govuk-heading-xl">
+        {{ title }}
+    </h1>
 
-    {% for method, methodObj in endpoint %}
+    {{ endpoint.description | markdown }}
+
+    <p>
+        <code>
+            {{ path }} {{ govukTag({text: method}) }}
+        </code>
+    </p>
+
+    {% if endpoint.parameters %}
+
+        <h2 class="govuk-heading-l">Parameters</h2>
+
+        {% for parameter in endpoint.parameters %}
+
+
+            {% if parameter.$ref %}
+
+                {% set parameter = components|getAPIRef(parameter.$ref) %}
+
+            {% endif %}
+
+            <h3 class="govuk-heading-m">
+                <span class="govuk-!-margin-right-2">{{ parameter.name }}</span>
+                {{ govukTag({ text: parameter.schema.type, classes: "govuk-tag--yellow" }) }}
+            </h3>
+
+            <div class="govuk-body">
+                {{ parameter.description | markdown }}
+            </div>
+
+        {% endfor %}
+    
+    {% endif %}
+
+    {% set ref = endpoint.requestBody.content['application/json'].schema.$ref %}
+
+    {% if ref %}
 
         <h2 class="govuk-heading-l">
-            <span class="govuk-!-margin-right-2">{{ path }}</span> {{ govukTag({text: method}) }}
+            Request body
         </h2>
 
-        {{ methodObj.description | markdown }}
+        {% set schema = components|getAPIRef(ref) %}
 
-        {% if methodObj.parameters %}
+        {% set properties = schema.properties | sort %}
 
-            <h3 class="govuk-heading-m">Query parameters</h3>
+        {% for name in properties %}
 
-            {% for parameter in methodObj.parameters %}
+            {% set property = schema.properties[name] %}
 
-                <h4 class="govuk-heading-s">
-                    <span class="govuk-!-margin-right-2">{{ parameter.name }}</span>
-                    {{ govukTag({ text: parameter.schema.type, classes: "govuk-tag--yellow" }) }}
-                </h4>
+            {% if property.$ref %}
 
-                <div class="govuk-body">
-                    {{ parameter.description | markdown }}
+                {% set property = components|getAPIRef(property.$ref) %}
+
+            {% endif %}
+
+            {% if property.anyOf %}
+
+                <!-- to do -->
+
+            {% endif %}
+
+            <h3 class="govuk-heading-m">
+                <span class="govuk-!-margin-right-2">{{name}}</span>
+                {% set type = property.type %}
+                {% if type == "array" and property.items.type == "object" %}
+                    {% set type = "array of objects" %}
+                {% endif %}
+                {% if type == "array" and property.items.type == "string" %}
+                    {% set type = "array of strings" %}
+                {% endif %}
+                {% if property.anyOf %}
+                    {% set type = "date time string" %}
+                {% endif %}
+                {{ govukTag({ text: type, classes: "govuk-tag--yellow" }) }}
+
+                {% if property.maxLength %}
+                    {{ govukTag({ text: "max length: " + property.maxLength, classes: "govuk-tag--yellow" }) }}
+                {% endif %}
+
+                {% if schema.required | includes(name) %}
+                    {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
+                {% endif %}
+            </h3>
+
+            {% if property.enum %}
+
+                <p>
+                    Values: {{ property.enum | join (', ') }}
+                    <!-- {% for value in property.enum %}
+                        {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
+                    {% endfor %} -->
+                </p>
+
+            {% endif %}
+
+
+            {% if property.items.enum %}
+
+                <p>
+                    Values: {{ property.items.enum | join (', ') }}
+                    <!-- {% for value in property.enum %}
+                        {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
+                    {% endfor %} -->
+                </p>
+
+            {% endif %}
+                
+            {{ property.description | markdown }}
+
+            {% if property.items.type == "object" %}
+
+                <p>
+                    Array of objects:
+                </p>
+
+                <div class="govuk-inset-text">
+
+                    {% for subPropertyName, subProperty in property.items.properties %}
+
+                        <h4 class="govuk-heading-s govuk-!-margin-right-2">
+
+                            <span class="govuk-!-margin-right-2">{{ subPropertyName }}</span>
+                            {{ govukTag({ text: subProperty.type, classes: "govuk-tag--yellow" }) }}
+
+                            {% if property.items.required | includes(subPropertyName) %}
+                                {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
+                            {% endif %}
+                            
+                        </h4>
+
+                        {{ subProperty.description | markdown }}
+
+                    {% endfor %}
+
                 </div>
 
-            {% endfor %}
-        
-        {% endif %}
+            {% endif %}
 
-        {% set ref = methodObj.requestBody.content['application/json'].schema.$ref %}
+        {% endfor %}
 
-        {% if ref %}
-
-            <h3 class="govuk-heading-m">Parameters</h3>
-
-            {% set schema = components|getAPIRef(ref) %}
-
-            {% set properties = schema.properties | sort %}
-
-            {% for name in properties %}
-
-                {% set property = schema.properties[name] %}
-
-                {% if property.$ref %}
-
-                    {% set property = components|getAPIRef(property.$ref) %}
-
-                {% endif %}
-
-                {% if property.anyOf %}
-
-                    <!-- to do -->
-
-                {% endif %}
-
-                <h4 class="govuk-heading-s">
-                    <span class="govuk-!-margin-right-2">{{name}}</span>
-                    {% set type = property.type %}
-                    {% if type == "array" and property.items.type == "object" %}
-                        {% set type = "array of objects" %}
-                    {% endif %}
-                    {% if type == "array" and property.items.type == "string" %}
-                        {% set type = "array of strings" %}
-                    {% endif %}
-                    {% if property.anyOf %}
-                        {% set type = "date time string" %}
-                    {% endif %}
-                    {{ govukTag({ text: type, classes: "govuk-tag--yellow" }) }}
-
-                    {% if property.maxLength %}
-                        {{ govukTag({ text: "max length: " + property.maxLength, classes: "govuk-tag--yellow" }) }}
-                    {% endif %}
-
-                    {% if schema.required | includes(name) %}
-                        {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
-                    {% endif %}
-                </h4>
-
-                {% if property.enum %}
-
-                    <p>
-                        Values: {{ property.enum | join (', ') }}
-                        <!-- {% for value in property.enum %}
-                            {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
-                        {% endfor %} -->
-                    </p>
-
-                {% endif %}
-
-
-                {% if property.items.enum %}
-
-                    <p>
-                        Values: {{ property.items.enum | join (', ') }}
-                        <!-- {% for value in property.enum %}
-                            {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
-                        {% endfor %} -->
-                    </p>
-
-                {% endif %}
-                    
-                {{ property.description | markdown }}
-
-                {% if property.items.type == "object" %}
-
-                    <p>
-                        Array of objects:
-                    </p>
-
-                    <div class="govuk-inset-text">
-
-                        {% for subPropertyName, subProperty in property.items.properties %}
-
-                            <h5 class="govuk-heading-s govuk-!-margin-right-2">
-
-                                <span class="govuk-!-margin-right-2">{{ subPropertyName }}</span>
-                                {{ govukTag({ text: subProperty.type, classes: "govuk-tag--yellow" }) }}
-
-                                {% if property.items.required | includes(subPropertyName) %}
-                                    {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
-                                {% endif %}
-                                
-                            </h5>
-
-                            {{ subProperty.description | markdown }}
-
-                        {% endfor %}
-
-                    </div>
-
-                {% endif %}
-
-            {% endfor %}
-
-        {% endif %}
-
-    {% endfor %}
+    {% endif %}
 
 {% endblock %}
