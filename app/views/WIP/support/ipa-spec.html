@@ -14,9 +14,14 @@
 
     {{ endpoint.description | markdown }}
 
+    <h2 class="govuk-heading-m">
+        Path
+    </h2>
+
     <p>
+        {{ govukTag({ text: method | upper }) }}
         <code>
-            {{ path }} {{ govukTag({text: method}) }}
+            {{ path }} 
         </code>
     </p>
 
