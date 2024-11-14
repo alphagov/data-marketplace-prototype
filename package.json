@@ -5,6 +5,7 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^11.7.2",
     "@govuk-prototype-kit/common-templates": "^2.0.1",
     "@govuk-prototype-kit/task-list": "^2.0.0",
     "@ministryofjustice/frontend": "^2.2.4",
