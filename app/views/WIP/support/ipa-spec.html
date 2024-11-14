@@ -29,18 +29,31 @@
 
         <h2 class="govuk-heading-l">Parameters</h2>
 
-        {% for parameter in endpoint.parameters %}
+        <dl class="govuk-summary-list">
 
-            <h3 class="govuk-heading-s">
-                <span class="govuk-!-margin-right-2">{{ parameter.name }}</span>
-                {{ govukTag({ text: parameter.schema.type, classes: "govuk-tag--yellow" }) }}
-            </h3>
+            {% for parameter in endpoint.parameters %}
 
-            <div class="govuk-body">
-                {{ parameter.description | markdown }}
-            </div>
+                <div class="govuk-summary-list__row">
 
-        {% endfor %}
+                    <dt class="govuk-summary-list__key">
+                        {{ parameter.name }}
+                    </dt>
+
+                    <dd class="govuk-summary-list__value">
+
+                        {{ govukTag({ text: parameter.schema.type, classes: "govuk-tag--yellow govuk-!-margin-bottom-2" }) }}
+
+                        <div class="govuk-body">
+                            {{ parameter.description | markdown }}
+                        </div>
+                    
+                    </dd>
+                
+                </div>
+
+            {% endfor %}
+        
+        </dl>
     
     {% endif %}
 
@@ -55,88 +68,99 @@
 
         {% set properties = schema.properties | sortKeys %}
 
-        {% for name in properties %}
+        <dl class="govuk-summary-list">
 
-            {% set property = schema.properties[name] %}
+            {% for name in properties %}
+            
+                <div class="govuk-summary-list__row">
 
-            <h3 class="govuk-heading-s">
-                <span class="govuk-!-margin-right-2">{{name}}</span>
-                {% set type = property.type %}
-                {% if type == "array" and property.items.type == "object" %}
-                    {% set type = "array of objects" %}
-                {% endif %}
-                {% if type == "array" and property.items.type == "string" %}
-                    {% set type = "array of strings" %}
-                {% endif %}
-                {% if property.anyOf %}
-                    {% set type = "date time string" %}
-                {% endif %}
-                {{ govukTag({ text: type, classes: "govuk-tag--yellow" }) }}
+                    {% set property = schema.properties[name] %}
 
-                {% if property.maxLength %}
-                    {{ govukTag({ text: "max length: " + property.maxLength, classes: "govuk-tag--yellow" }) }}
-                {% endif %}
+                    <dt class="govuk-summary-list__key">
+                        {{ name }}
 
-                {% if schema.required | includes(name) %}
-                    {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
-                {% endif %}
-            </h3>
+                        {% if schema.required | includes(name) %}
+                            <div>
+                                {{ govukTag({ text: "required", classes: "govuk-tag--green govuk-!-margin-top-1" }) }}
+                            </div>
+                        {% endif %}
 
-            {% if property.enum %}
+                    </dt>
 
-                <p>
-                    Values: {{ property.enum | join (', ') }}
-                    <!-- {% for value in property.enum %}
-                        {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
-                    {% endfor %} -->
-                </p>
+                    <dd class="govuk-summary-list__value">
 
-            {% endif %}
+                        {% set type = property.type %}
+                        {% if type == "array" and property.items.type == "object" %}
+                            {% set type = "array of objects" %}
+                        {% endif %}
+                        {% if type == "array" and property.items.type == "string" %}
+                            {% set type = "array of strings" %}
+                        {% endif %}
+                        {% if property.anyOf %}
+                            {% set type = "date time string" %}
+                        {% endif %}
+                        {{ govukTag({ text: type, classes: "govuk-tag--yellow govuk-!-margin-bottom-2" }) }}
 
+                        {% if property.maxLength %}
+                            {{ govukTag({ text: "max length: " + property.maxLength, classes: "govuk-tag--yellow" }) }}
+                        {% endif %}
 
-            {% if property.items.enum %}
+                        {% if property.enum %}
 
-                <p>
-                    Values: {{ property.items.enum | join (', ') }}
-                    <!-- {% for value in property.enum %}
-                        {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
-                    {% endfor %} -->
-                </p>
+                            <p>
+                                Values: {{ property.enum | join (', ') }}
+                                <!-- {% for value in property.enum %}
+                                    {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
+                                {% endfor %} -->
+                            </p>
 
-            {% endif %}
-                
-            {{ property.description | markdown }}
+                        {% endif %}
 
-            {% if property.items.type == "object" %}
+                        {% if property.items.enum %}
 
-                <p>
-                    Array of objects:
-                </p>
+                            <p>
+                                Values: {{ property.items.enum | join (', ') }}
+                                <!-- {% for value in property.enum %}
+                                    {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
+                                {% endfor %} -->
+                            </p>
 
-                <div class="govuk-inset-text">
+                        {% endif %}
+                        
+                        {{ property.description | markdown }}
 
-                    {% for subPropertyName, subProperty in property.items.properties %}
+                        {% if property.items.type == "object" %}
 
-                        <p>
+                            <p>
+                                Array of objects:
+                            </p>
 
-                            <strong class="govuk-!-margin-right-2">{{ subPropertyName }}</strong>
-                            {{ govukTag({ text: subProperty.type, classes: "govuk-tag--yellow" }) }}
+                            {% for subPropertyName, subProperty in property.items.properties %}
 
-                            {% if property.items.required | includes(subPropertyName) %}
-                                {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
-                            {% endif %}
-                            
-                        </p>
+                                <p>
 
-                        {{ subProperty.description | markdown }}
+                                    <strong class="govuk-!-margin-right-2">{{ subPropertyName }}</strong>
+                                    {{ govukTag({ text: subProperty.type, classes: "govuk-tag--yellow" }) }}
 
-                    {% endfor %}
+                                    {% if property.items.required | includes(subPropertyName) %}
+                                        {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
+                                    {% endif %}
+                                    
+                                </p>
+
+                                {{ subProperty.description | markdown }}
+
+                            {% endfor %}
+
+                        {% endif %}
+                    
+                    </dd>
 
                 </div>
 
-            {% endif %}
+            {% endfor %}
 
-        {% endfor %}
+        </dl>
 
     {% endif %}
 
@@ -178,31 +202,43 @@
 
             {% endif %}
 
-            {% for propertyName in properties | sortKeys %}
+            <dl class="govuk-summary-list">
 
-                {% set property = properties[propertyName] %}
+                {% for propertyName in properties | sortKeys %}
 
-                <p>
-                    <strong class="govuk-!-margin-right-2">{{ propertyName }}</strong>
-                    {% set type = property.type %}
-                    {% if type == "array" and property.items.type == "object" %}
-                        {% set type = "array of objects" %}
-                    {% endif %}
-                    {% if type == "array" and property.items.type == "string" %}
-                        {% set type = "array of strings" %}
-                    {% endif %}
-                    {% if property.anyOf %}
-                        {% set type = "date time string" %}
-                    {% endif %}
-                    {{ govukTag({ text: type, classes: "govuk-tag--yellow" }) }}
+                    <div class="govuk-summary-list__row">
 
-                    {{ property.description | markdown }}
+                        {% set property = properties[propertyName] %}
 
-                </p>
+                        <dt class="govuk-summary-list__key">
+                            {{ propertyName }}
+                        </dt>
+
+                        <dd class="govuk-summary-list__value">
+
+                            {% set type = property.type %}
+                            {% if type == "array" and property.items.type == "object" %}
+                                {% set type = "array of objects" %}
+                            {% endif %}
+                            {% if type == "array" and property.items.type == "string" %}
+                                {% set type = "array of strings" %}
+                            {% endif %}
+                            {% if property.anyOf %}
+                                {% set type = "date time string" %}
+                            {% endif %}
+                            {{ govukTag({ text: type, classes: "govuk-tag--yellow govuk-!-margin-bottom-2" }) }}
+
+                            {{ property.description | markdown }}
+
+                        </dd>
+
+                    </div>
+
+                {% endfor %}
 
             {% endfor %}
 
-        {% endfor %}
+        </dl>
 
     {% endfor %}
 
