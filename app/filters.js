@@ -6,7 +6,7 @@ const marked = require('marked')
 // To do - Create seperate JS files for each sub-service
 
 addFilter('getAPIRef', (components, ref) => {
-    console.log(ref)
+    
     ref = ref.replace('#/components/','')
     const refParts = ref.split('/')
     let result = components
@@ -18,7 +18,6 @@ addFilter('getAPIRef', (components, ref) => {
           break
         }
       }
-      console.log(result)
       return result
 
 })
