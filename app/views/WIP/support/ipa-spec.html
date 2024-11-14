@@ -14,7 +14,7 @@
 
     {{ endpoint.description | markdown }}
 
-    <h2 class="govuk-heading-m">
+    <h2 class="govuk-heading-s">
         Path
     </h2>
 
@@ -31,7 +31,7 @@
 
         {% for parameter in endpoint.parameters %}
 
-            <h3 class="govuk-heading-m">
+            <h3 class="govuk-heading-s">
                 <span class="govuk-!-margin-right-2">{{ parameter.name }}</span>
                 {{ govukTag({ text: parameter.schema.type, classes: "govuk-tag--yellow" }) }}
             </h3>
@@ -59,7 +59,7 @@
 
             {% set property = schema.properties[name] %}
 
-            <h3 class="govuk-heading-m">
+            <h3 class="govuk-heading-s">
                 <span class="govuk-!-margin-right-2">{{name}}</span>
                 {% set type = property.type %}
                 {% if type == "array" and property.items.type == "object" %}
@@ -117,7 +117,7 @@
 
                     {% for subPropertyName, subProperty in property.items.properties %}
 
-                        <h4 class="govuk-heading-s govuk-!-margin-right-2">
+                        <strong class="govuk-!-margin-right-2">
 
                             <span class="govuk-!-margin-right-2">{{ subPropertyName }}</span>
                             {{ govukTag({ text: subProperty.type, classes: "govuk-tag--yellow" }) }}
@@ -126,7 +126,7 @@
                                 {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
                             {% endif %}
                             
-                        </h4>
+                        </strong>
 
                         {{ subProperty.description | markdown }}
 
@@ -168,7 +168,19 @@
                 {% endif %}
             </p>
 
-            {% for propertyName, property in schema.items.properties %}
+            {% if schema.items %}
+
+                {% set properties = schema.items.properties | sort %}
+
+            {% else %}
+
+                {% set properties = schema.properties | sort %}
+
+            {% endif %}
+
+            {% for propertyName in properties %}
+
+                {% set property = schema.properties[propertyName] %}
 
                 <p>
                     <strong class="govuk-!-margin-right-2">{{ propertyName }}</strong>
