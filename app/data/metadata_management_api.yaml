@@ -42,7 +42,7 @@ paths:
     get:
       operationId: queryDataAssets
       description: | 
-        This performs a filtered query against your organisation's data assets.
+        You can enter a search term to filter your organisation's datasets in the Data Marketplace.
       tags:
         - Cataloged Resources
       security:
@@ -52,10 +52,10 @@ paths:
         - name: filter
           in: query
           description: >-
-            Returns data asset metadata where a match is found against the following fields:
+            This is your search term. The system will look for matches against these fields:
             
               - title
-              - keywords
+              - keyword
               - supplier identifier
 
           required: false
