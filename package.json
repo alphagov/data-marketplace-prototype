@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "govuk-prototype-kit dev",
+    "dev": "node node_modules/govuk-prototype-kit/bin/cli dev",
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start"
   },
