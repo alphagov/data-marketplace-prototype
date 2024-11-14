@@ -53,7 +53,7 @@
 
         {% set schema = endpoint.requestBody.content['application/json'].schema %}
 
-        {% set properties = schema.properties | sort %}
+        {% set properties = schema.properties | sortKeys %}
 
         {% for name in properties %}
 
@@ -117,16 +117,16 @@
 
                     {% for subPropertyName, subProperty in property.items.properties %}
 
-                        <strong class="govuk-!-margin-right-2">
+                        <p>
 
-                            <span class="govuk-!-margin-right-2">{{ subPropertyName }}</span>
+                            <strong class="govuk-!-margin-right-2">{{ subPropertyName }}</strong>
                             {{ govukTag({ text: subProperty.type, classes: "govuk-tag--yellow" }) }}
 
                             {% if property.items.required | includes(subPropertyName) %}
                                 {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
                             {% endif %}
                             
-                        </strong>
+                        </p>
 
                         {{ subProperty.description | markdown }}
 
@@ -170,17 +170,17 @@
 
             {% if schema.items %}
 
-                {% set properties = schema.items.properties | sort %}
+                {% set properties = schema.items.properties %}
 
             {% else %}
 
-                {% set properties = schema.properties | sort %}
+                {% set properties = schema.properties %}
 
             {% endif %}
 
-            {% for propertyName in properties %}
+            {% for propertyName in properties | sortKeys %}
 
-                {% set property = schema.properties[propertyName] %}
+                {% set property = properties[propertyName] %}
 
                 <p>
                     <strong class="govuk-!-margin-right-2">{{ propertyName }}</strong>
