@@ -29,7 +29,7 @@ router.get('/ipa-spec/:action', (request, response) => {
 
     const endpoints = {
         'search-your-data': {
-            title: 'Search your data',
+            title: 'Search your datasets',
             path: '/cataloged-resources',
             method: 'get'
         },
