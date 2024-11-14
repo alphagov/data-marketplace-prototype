@@ -42,7 +42,7 @@ paths:
     get:
       operationId: queryDataAssets
       description: | 
-        Performs a filtered query against your organisations data assets.
+        This performs a filtered query against your organisation's data assets.
       tags:
         - Cataloged Resources
       security:
