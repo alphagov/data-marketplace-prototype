@@ -31,13 +31,6 @@
 
         {% for parameter in endpoint.parameters %}
 
-
-            {% if parameter.$ref %}
-
-                {% set parameter = components|getAPIRef(parameter.$ref) %}
-
-            {% endif %}
-
             <h3 class="govuk-heading-m">
                 <span class="govuk-!-margin-right-2">{{ parameter.name }}</span>
                 {{ govukTag({ text: parameter.schema.type, classes: "govuk-tag--yellow" }) }}
@@ -51,33 +44,20 @@
     
     {% endif %}
 
-    {% set ref = endpoint.requestBody.content['application/json'].schema.$ref %}
 
-    {% if ref %}
+    {% if endpoint.requestBody %}
 
         <h2 class="govuk-heading-l">
             Request body
         </h2>
 
-        {% set schema = components|getAPIRef(ref) %}
+        {% set schema = endpoint.requestBody.content['application/json'].schema %}
 
         {% set properties = schema.properties | sort %}
 
         {% for name in properties %}
 
             {% set property = schema.properties[name] %}
-
-            {% if property.$ref %}
-
-                {% set property = components|getAPIRef(property.$ref) %}
-
-            {% endif %}
-
-            {% if property.anyOf %}
-
-                <!-- to do -->
-
-            {% endif %}
 
             <h3 class="govuk-heading-m">
                 <span class="govuk-!-margin-right-2">{{name}}</span>
@@ -159,5 +139,59 @@
         {% endfor %}
 
     {% endif %}
+
+    <h2 class="govuk-heading-l">
+        Response
+    </h2>
+
+    {% for responseCode, response in endpoint.responses %}
+
+        <h3 class="govuk-heading-m">
+            {{ responseCode }}
+        </h3>
+
+        {{ response.description | markdown }}
+
+        {% for responseType, responseDetails in response.content %}
+
+            <p>
+                {{ responseType }}
+            </p>
+
+            {% set schema = responseDetails.schema %}
+
+            <p>
+                {{ schema.type }}
+
+                {% if schema.maxItems %}
+                    (max items {{ schema.maxItems }})
+                {% endif %}
+            </p>
+
+            {% for propertyName, property in schema.items.properties %}
+
+                <p>
+                    <strong class="govuk-!-margin-right-2">{{ propertyName }}</strong>
+                    {% set type = property.type %}
+                    {% if type == "array" and property.items.type == "object" %}
+                        {% set type = "array of objects" %}
+                    {% endif %}
+                    {% if type == "array" and property.items.type == "string" %}
+                        {% set type = "array of strings" %}
+                    {% endif %}
+                    {% if property.anyOf %}
+                        {% set type = "date time string" %}
+                    {% endif %}
+                    {{ govukTag({ text: type, classes: "govuk-tag--yellow" }) }}
+
+                    {{ property.description | markdown }}
+
+                </p>
+
+            {% endfor %}
+
+        {% endfor %}
+
+    {% endfor %}
 
 {% endblock %}

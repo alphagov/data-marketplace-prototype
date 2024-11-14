@@ -4,13 +4,14 @@ const router = govukPrototypeKit.requests.setupRouter(path)
 
 const fs = require('fs')
 const yaml = require('yaml')
+const $RefParser = require('@apidevtools/json-schema-ref-parser')
 
 const root = process.cwd()
 
 let apiSpecModified = null
 let apiSpec = null
 
-function loadApiSpec() {
+async function loadApiSpec() {
 
     const apiSpecFilePath = root + '/app/data/metadata_management_api.yaml'
     const stats = fs.statSync(apiSpecFilePath)
@@ -20,6 +21,7 @@ function loadApiSpec() {
         apiSpecModified = stats.mtimeMs
         const apiSpecFile = fs.readFileSync(apiSpecFilePath, 'utf8')
         apiSpec = yaml.parse(apiSpecFile)
+        apiSpec = await $RefParser.dereference(apiSpec)
     }
 }
 
