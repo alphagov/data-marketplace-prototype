@@ -7,10 +7,25 @@ const yaml = require('yaml')
 
 const root = process.cwd()
 
-const apiSpecFile = fs.readFileSync(root + '/app/data/metadata_management_api.yaml', 'utf8')
-const apiSpec = yaml.parse(apiSpecFile)
+let apiSpecModified = null
+let apiSpec = null
+
+function loadApiSpec() {
+
+    const apiSpecFilePath = root + '/app/data/metadata_management_api.yaml'
+    const stats = fs.statSync(apiSpecFilePath)
+
+    if (stats.mtimeMs != apiSpecModified) {
+
+        apiSpecModified = stats.mtimeMs
+        const apiSpecFile = fs.readFileSync(apiSpecFilePath, 'utf8')
+        apiSpec = yaml.parse(apiSpecFile)
+    }
+}
 
 router.get('/ipa-spec/:action', (request, response) => {
+
+    loadApiSpec()
 
     const endpoints = {
         'search-your-data': {
