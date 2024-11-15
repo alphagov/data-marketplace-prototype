@@ -169,6 +169,30 @@
 
         </dl>
 
+        {% set examples = endpoint.requestBody.content['application/json'].examples %}
+
+            {% if examples %}
+
+                <h4 class="govuk-heading-m">
+                    {% if examples.length > 1 %}
+                        Examples
+                    {% else %}
+                        Example
+                    {% endif %}
+                </h4>
+
+                {% for exampleName, example in examples %}
+
+                    {{ example.summary | markdown }}
+
+<pre style="max-width:100%; overflow: auto; border: 10px solid #eee; padding: 10px; font-size: 1rem;"><code>{{ example.value | dump(2) | safe }}
+</code></pre>
+
+                {% endfor %}
+
+            {% endif %}
+
+
     {% endif %}
 
     <h2 class="govuk-heading-l">
