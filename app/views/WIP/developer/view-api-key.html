@@ -7,7 +7,9 @@
 {% set navActive = 'API keys' %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/WIP/developer/api-keys">API integration</a>
+  <a class="govuk-back-link" href="/WIP/developer/api-keys">
+    API credentials
+  </a>
 {% endblock %}
 
 {% block content %}
@@ -117,7 +119,7 @@
           actions: {
               items: [
                 {
-                    html: '<button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Copy</button>'
+                    html: '<button onclick="navigator.clipboard.writeText(\'test\'); return false;" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Copy</button>'
                 }
               ]
             }
@@ -132,7 +134,7 @@
           actions: {
               items: [
                 {
-                    html: '<button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Copy</button>'
+                    html: '<button onclick="navigator.clipboard.writeText(\'test2\'); return false;" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Copy</button>'
                 }
               ]
             }
@@ -153,6 +155,12 @@
         ]
       }) }}
 
+
+      <p>
+        <a href="#">
+          Revoke these credentials
+        </a>
+      </p>
 
       <p>
         <a href="/WIP/support/ipa">

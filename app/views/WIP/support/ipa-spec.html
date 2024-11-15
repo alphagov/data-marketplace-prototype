@@ -14,10 +14,6 @@
 
     {{ endpoint.description | markdown }}
 
-    <h2 class="govuk-heading-s">
-        Path
-    </h2>
-
     <p>
         {{ govukTag({ text: method | upper }) }}
         <code>
@@ -140,7 +136,18 @@
                                 <p>
 
                                     <strong class="govuk-!-margin-right-2">{{ subPropertyName }}</strong>
-                                    {{ govukTag({ text: subProperty.type, classes: "govuk-tag--yellow" }) }}
+
+                                    {% set type = subProperty.type %}
+                                    {% if type == "array" and subProperty.items.type == "object" %}
+                                        {% set type = "array of objects" %}
+                                    {% endif %}
+                                    {% if type == "array" and subProperty.items.type == "string" %}
+                                        {% set type = "array of strings" %}
+                                    {% endif %}
+                                    {% if property.anyOf %}
+                                        {% set type = "date time string" %}
+                                    {% endif %}
+                                    {{ govukTag({ text: type, classes: "govuk-tag--yellow govuk-!-margin-bottom-2" }) }}
 
                                     {% if property.items.required | includes(subPropertyName) %}
                                         {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
@@ -165,7 +172,7 @@
     {% endif %}
 
     <h2 class="govuk-heading-l">
-        Response
+        Responses
     </h2>
 
     {% for responseCode, response in endpoint.responses %}

@@ -7,7 +7,9 @@
 {% set navActive = 'API keys' %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">API integration</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">
+    API credentials
+  </a>
 {% endblock %}
 
 {% block content %}
@@ -15,7 +17,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">New API credentials</h1>
+      <h1 class="govuk-heading-l">Create new API credentials</h1>
 
       <form class="form" action="" method="post">
 
@@ -45,11 +47,17 @@
           items: [
             {
               value: "Sandbox",
-              text: "Sandbox"
+              text: "Sandbox",
+              hint: {
+                text: "Use this environment for testing."
+              }
             },
             {
               value: "Production",
-              text: "Production"
+              text: "Production",
+              hint: {
+                text: "Use this environment for publishing your records."
+              }
             }
           ]
         })}}

@@ -15,26 +15,28 @@
             <li>search for your data in the Data Marketplace’s catalogue using keywords and other search terms</li>
         </ul>
 
-        <p>To call the API, you need an API client.</p>
-
-        <h2 class="govuk-heading-m">Create an API client</h2>
-
-        <p>An API client is software that you and your team write to make calls against the API. You can write API client software in many programming languages, for example Python or JavaScript.</p>
-
-        <p>Refer to the <a href="https://co-cddo.github.io/data-catalogue-metadata/swagger/">Data Marketplace OpenAPI specification</a> to write or generate an API client.</p>
-
-        <h2 class="govuk-heading-m">Manage your API credentials</h2>
-
-        <p>This API is secured using the <a href="https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/">OAuth 2.0 Client Credentials Grant type</a>.</p>
+        <h2 class="govuk-heading-m">API credentials</h2>
 
         <p>You can <a href="/WIP/developer/api-keys">create credentials</a> for 2 environments:</p>
 
-        <ul class="govuk-list govuk-list--bullet">
-            <li>Sandbox</li>
-            <li>Production</li>
-        </ul>
-
-        <p>Refer to the <a href="https://co-cddo.github.io/data-catalogue-metadata/swagger/">specification</a> for the URLs of each environment.</p>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Sandbox
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    https://api.sandbox.datamarketplace.gov.uk/v1
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Production
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    https://api.datamarketplace.gov.uk/v1
+                </dd>
+            </div>
+        </dl>
 
         <h2 class="govuk-heading-m">Security scopes</h2>
 
@@ -42,23 +44,25 @@
 
         <ul class="govuk-list govuk-list--bullet">
             <li>
-                <strong>discover</strong> - to find your data in the catalogue
+                <strong>discover</strong> – to search and retrieve your data
             </li>
             <li>
-                <strong>publish</strong> - to publish or update your data in the catalogue
+                <strong>publish</strong> – to publish or update your data
             </li>
             <li>
-                <strong>delete</strong> - to delete your data from the catalogue
+                <strong>delete</strong> – to delete your data
             </li>
         </ul>
 
         <p>When you create your credentials, they'll have all 3 scopes by default. You can change this if required.</p>
 
-        <h2 class="govuk-heading-m">Call the token endpoint</h2>
+        <h2 class="govuk-heading-m">
+            Authentication using tokens
+        </h2>
 
-        <p>You’ll need to pass your credentials to the token endpoint to generate an access token.</p>
+        <p>You need to pass your credentials to the token endpoint to generate an access token.</p>
 
-        <p>To call the token endpoint, construct a request with the following information:</p>
+        <p>To call the token endpoint, construct a request with the following information (replacing the URL, client secret and client id):</p>
 
 <pre style="max-width:100%; overflow: auto; border: 10px solid #eee; padding: 10px; font-size: 1rem;">
 POST {API URL}/ClientAuth/get-token HTTP/1.1
@@ -80,6 +84,40 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
 GET {API URL}/catalogued-resources HTTP/1.1
 Authorization: Bearer {access token}
 </pre>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-6">
+            Endpoints
+        </h2>
+
+        <ul class="govuk-list">
+                            
+                <li>
+                    <a href="/WIP/support/ipa-spec/search-your-data">
+                        Search your datasets
+                    </a>
+                </li>
+                <li>
+                    <a href="/WIP/support/ipa-spec/submit-dataset">
+                        Submit dataset
+                    </a>
+                </li>
+                <li>
+                    <a href="/WIP/support/ipa-spec/get-dataset">
+                        Get dataset
+                    </a>
+                </li>
+                <li>
+                    <a href="/WIP/support/ipa-spec/update-dataset">
+                        Update dataset
+                    </a>
+                </li>
+                <li>
+                    <a href="/WIP/support/ipa-spec/delete-dataset">
+                        Delete dataset
+                    </a>
+                </li>
+            </ul>
+        
 
 
 {% endblock %}
