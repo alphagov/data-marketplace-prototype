@@ -25,9 +25,9 @@ async function loadApiSpec() {
     }
 }
 
-router.get('/ipa-spec/:action', (request, response) => {
+router.get('/ipa-spec/:action', async (request, response) => {
 
-    loadApiSpec()
+    await loadApiSpec()
 
     const endpoints = {
         'search-your-data': {
