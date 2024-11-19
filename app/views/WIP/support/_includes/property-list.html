@@ -1,0 +1,105 @@
+
+<dl class="govuk-summary-list">
+
+    {% for name in properties %}
+    
+        <div class="govuk-summary-list__row">
+
+            {% set property = schema.properties[name] %}
+
+            <dt class="govuk-summary-list__key">
+                {{ name }}
+
+                {% if schema.required | includes(name) %}
+                    <div>
+                        {{ govukTag({ text: "required", classes: "govuk-tag--green govuk-!-margin-top-1" }) }}
+                    </div>
+                {% endif %}
+
+            </dt>
+
+            <dd class="govuk-summary-list__value">
+
+                {% set type = property.type %}
+                {% if type == "array" and property.items.type == "object" %}
+                    {% set type = "array of objects" %}
+                {% endif %}
+                {% if type == "array" and property.items.type == "string" %}
+                    {% set type = "array of strings" %}
+                {% endif %}
+                {% if property.anyOf %}
+                    {% set type = "date time string" %}
+                {% endif %}
+                {{ govukTag({ text: type, classes: "govuk-tag--yellow govuk-!-margin-bottom-2" }) }}
+
+                {% if property.maxLength %}
+                    {{ govukTag({ text: "max length: " + property.maxLength, classes: "govuk-tag--yellow" }) }}
+                {% endif %}
+
+                {% if property.enum %}
+
+                    <p>
+                        Values: {{ property.enum | join (', ') }}
+                        <!-- {% for value in property.enum %}
+                            {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
+                        {% endfor %} -->
+                    </p>
+
+                {% endif %}
+
+                {% if property.items.enum %}
+
+                    <p>
+                        Values: {{ property.items.enum | join (', ') }}
+                        <!-- {% for value in property.enum %}
+                            {{ govukTag({ text: value, classes: "govuk-tag--grey" }) }}
+                        {% endfor %} -->
+                    </p>
+
+                {% endif %}
+                
+                {{ property.description | markdown }}
+
+                {% if property.items.type == "object" %}
+
+                    <p>
+                        Object parameters:
+                    </p>
+
+                    {% for subPropertyName, subProperty in property.items.properties %}
+
+                        <p>
+
+                            <strong class="govuk-!-margin-right-2">{{ subPropertyName }}</strong>
+
+                            {% set type = subProperty.type %}
+                            {% if type == "array" and subProperty.items.type == "object" %}
+                                {% set type = "array of objects" %}
+                            {% endif %}
+                            {% if type == "array" and subProperty.items.type == "string" %}
+                                {% set type = "array of strings" %}
+                            {% endif %}
+                            {% if property.anyOf %}
+                                {% set type = "date time string" %}
+                            {% endif %}
+                            {{ govukTag({ text: type, classes: "govuk-tag--yellow govuk-!-margin-bottom-2" }) }}
+
+                            {% if property.items.required | includes(subPropertyName) %}
+                                {{ govukTag({ text: "required", classes: "govuk-tag--green" }) }}
+                            {% endif %}
+                            
+                        </p>
+
+                        {{ subProperty.description | markdown }}
+
+                    {% endfor %}
+
+                {% endif %}
+            
+            </dd>
+
+        </div>
+
+    {% endfor %}
+
+</dl>
