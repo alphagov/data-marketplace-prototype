@@ -8,10 +8,12 @@
 
 {% block main %}
 
-<style>
-  .govuk-service-navigation{ border-bottom: none; }
-  .x-govuk-masthead{ margin-top: 0;}
-</style>
+{% if data['loggedin'] == "true" %}
+
+  <style>
+    .govuk-service-navigation{ border-bottom: none; }
+    .x-govuk-masthead{ margin-top: 0;}
+  </style>
 
   <div class="x-govuk-masthead x-govuk-masthead--large">
 
@@ -27,8 +29,6 @@
           </span>
         </p>
       </div>
-
-      {% if data['loggedin'] == "true" %}
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
@@ -51,6 +51,7 @@
             </div>
         
         </form>
+
         <p>
           <a class="govuk-link" href="/WIP/find/find">View all data</a> or browse by <a href="/WIP/find/organisations" class="govuk-link">organisation</a> or <a href="/WIP/find/topics" class="govuk-link">topic</a>
         </p>
@@ -58,110 +59,135 @@
         </div>
       </div>
 
-      {% else %}
-
-      <h1 class="x-govuk-masthead__title govuk-!-margin-bottom-2">
-        Data Marketplace
-      </h1>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-three-quarters">
-            <p class="x-govuk-masthead__description govuk-!-margin-bottom-4">
-              A place for people who work in government organisations to find, request and share government data.
-            </p>
-
-            <div class="govuk-button-group">
-            
-              <a href="/WIP/support/get-started" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-button--start" data-module="govuk-button">
-                Get started
-                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-                  <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                </svg>
-              </a>
-
-              <span class="govuk-body govuk-!-margin-right-2" style="color:inherit">or</span>
-
-              <a class="govuk-link govuk-!-font-weight-bold" href="/WIP/sign-in" style="color:inherit">Sign in</a>
-
-            </div>
-            
-        </div>
-      
-      </div>
-
-      {% endif %}
-
     </div>
   </div>
 
   <div class="govuk-width-container">
     <main class="govuk-main-wrapper">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
-    <h2 class="govuk-heading-m">Data requests</h2>
-    <p class="govuk-body">Manage your data requests with other government organisations.</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">Data requests</h2>
+          <p>
+            Manage the requests you’ve created or received.
+          </p>
+          
+          <ul class="govuk-list">
+            <li>
+              <a href="/WIP/manage-shares?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data requests</a>
+            </li>
+          </ul>
+          
+        </div>
 
-    {% if data['loggedin'] == "true" %}
-    <ul class="govuk-list">
-      <li>
-        <a href="/WIP/manage-shares?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data requests</a>
-      </li>
-    </ul>
-    {% else %}
-    <ul class="govuk-list">
-      <li>
-        <p>
-          <a href="/WIP/secure/information?signinRoute=Manage" class="govuk-link  govuk-!-font-weight-bold">Data requests</a>
-        </p>
-      </li>
-    </ul>
-   
-    {% endif %}
-    
-  </div>
-  <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
-    <h2 class="govuk-heading-m">Submit data</h2>
-    <p class="govuk-body">Add your data to the Data Marketplace.</p>
+        <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">Your data</h2>
+          <p class="govuk-body">View and manage your listings on the Data Marketplace</p>
 
-    {% if data['loggedin'] == "true" %}
-    <ul class="govuk-list">
-      <li>
-        <a href="/bMVP_wip--dashboard-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">
-          Your data
-        </a>
-      </li>
-      <li>
-        <a href="/bMVP_wip--method-add-permission?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">
-          Submit data
-        </a>
-      </li>
-    </ul>
-    {% else %}
-    <ul class="govuk-list">
-      <li>
-        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Data dashboard</a>
-      </li>
-      <li>
-        <a href="/WIP/secure/information?signinRoute=Publish" class="govuk-link  govuk-!-font-weight-bold">Add data</a>
-      </li>
-    </ul>
-    {% endif %}
+          <ul class="govuk-list">
+            <li>
+              <a href="/WIP/publish/publish-dashboard" class="govuk-link  govuk-!-font-weight-bold">
+                View your data listings
+              </a>
+            </li>
+            <li>
+              <a href="/WIP/publish/method" class="govuk-link  govuk-!-font-weight-bold">
+                Add a data listing
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </main>
+
   </div>
 
-</div>
+{% else %}
 
-</main>
-
-</div>
+<!------------- Signed out ------------->
       
+  <style>
+    .govuk-service-navigation{ border-bottom: none; }
+    .x-govuk-masthead{ margin-top: 0;}
+  </style>
+  
+    <div class="x-govuk-masthead x-govuk-masthead--large">
+  
+      <div class="govuk-width-container">
+  
+        <div class="govuk-phase-banner x-govuk-phase-banner--inverse">
+          <p class="govuk-phase-banner__content">
+            <strong class="govuk-tag govuk-phase-banner__content__tag x-govuk-tag--inverse">
+              Beta
+            </strong>
+            <span class="govuk-phase-banner__text">
+              This is a new service – your <a class="govuk-link" href="#1" style="color: white;">feedback</a> will help us to improve it.
+            </span>
+          </p>
+        </div>
+  
+        <h1 class="x-govuk-masthead__title govuk-!-margin-bottom-2">
+          Data Marketplace
+        </h1>
+  
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-three-quarters">
+              <p class="x-govuk-masthead__description govuk-!-margin-bottom-4">
+                A place for people who work in government organisations to find, request and share government data.
+              </p>
+  
+              <div class="govuk-button-group">
+              
+                <a href="/WIP/support/get-started" role="button" draggable="false" class="govuk-button govuk-button--inverse govuk-button--start" data-module="govuk-button">
+                  Get started
+                  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                  </svg>
+                </a>
+  
+                <span class="govuk-body govuk-!-margin-right-2" style="color:inherit">or</span>
+  
+                <a class="govuk-link govuk-!-font-weight-bold" href="/WIP/sign-in" style="color:inherit">Sign in</a>
+  
+              </div>
+              
+          </div>
+        
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="govuk-width-container">
+      <main class="govuk-main-wrapper">
+  
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+            <h2 class="govuk-heading-m">Data requests</h2>
+            <p class="govuk-body">Manage your data requests with other government organisations.</p>
+            
+          </div>
+  
+          <div class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+            <h2 class="govuk-heading-m">Submit data</h2>
+            <p class="govuk-body">Add your data to the Data Marketplace.</p>
+  
+          </div>
+  
+        </div>
+  
+      </main>
+  
+    </div>
+
+{% endif %}
+    
 {% endblock %}
 
 {% block footer %}
 {% include "includes/WIP_footer.html" %}
 {% endblock %}
 
-{% block scripts %}
-  {{ super() }}
-  <script src="/public/javascripts/jquery-3.6.3.min.js"></script>
-{% endblock %}
