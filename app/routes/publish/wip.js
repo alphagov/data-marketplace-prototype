@@ -1,5 +1,6 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
-const router = govukPrototypeKit.requests.setupRouter()
+const path = '/WIP/publish'
+const router = govukPrototypeKit.requests.setupRouter(path)
 
 // Access to publish
 router.get('/bMVP_wip--dashboard-add-permission', (req, res) => {
@@ -21,17 +22,35 @@ router.get('/bMVP_wip--method-add-permission', (req, res) => {
 });
 
 // Publisher journey
-router.post('/wip-method-answer', function(request, response) {
+router.post('/method', function(request, response) {
 
     var method = request.session.data['method']
-    if (method == "dataset"){
-        response.redirect("/WIP/publish/manual/title")
-    } else if (method == "data service") {
-        response.redirect("/WIP/publish/manual/title")
+    if (method == "web"){
+        response.redirect(`${path}/manual/type`)
     } else if (method == "Upload a CSV file of metadata") {
-        response.redirect("/WIP/publish/csv/start")
+        response.redirect(`${path}/csv/start`)
     } else {
-        response.redirect("/WIP/publish/api/start")
+        response.redirect(`${path}/api/start`)
+    }
+})
+
+router.post('/manual/type', function(request, response) {
+
+    var type = request.session.data['type']
+    if (type == "Data set"){
+        response.redirect(`${path}/manual/security-classification`)
+    } else {
+        response.redirect(`${path}/manual/type-error`)
+    }
+})
+
+router.post('/manual/security-classification', function(request, response) {
+
+    var official = request.session.data['security-classification']
+    if (official == "Yes"){
+        response.redirect(`${path}/manual/title`)
+    } else {
+        response.redirect(`${path}/manual/security-classification-error`)
     }
 })
 
@@ -303,6 +322,3 @@ router.post('/wip-upload-error', function(request, response) {
         response.redirect("/WIP/publish/csv/upload-summary")
     }
 })
-
-
-module.exports = router;

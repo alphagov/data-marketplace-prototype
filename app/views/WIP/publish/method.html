@@ -1,18 +1,9 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
-{% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -23,49 +14,45 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="/WIP/publish/publish-dashboard">
+  Your data
+</a>
 {% endblock %}
 
 {% block content %}
 
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        How do you want to add your data description?
-      </h1>
-    </div>
-  </div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/wip-method-answer" method="post">
+      <form class="form" action="" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-
-              <p class="govuk-body">Choose how you want to add your dataset or data service descriptions so they can be found by other government organisations.</p>
-
-              {% from "govuk/components/details/macro.njk" import govukDetails %}
-
-              <p class="govuk-body">To add a data description and data service description manually, you'll need to <a href="/WIP/learn/articles/publish-data-descriptions-questions" class="govuk-link">answer these questions</a>.</p>
+              Choose how to add your listing
             </legend>
+            <p>
+              <a href="#">
+                Learn about listings and the details we ask for
+              </a>
+            </p>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="method-1" name="method" type="radio" value="dataset">
+                <input class="govuk-radios__input" id="method-1" name="method" type="radio" value="web">
                 <label class="govuk-label govuk-radios__label" for="method-1">
-                  Add a data description manually
+                  Complete a web form
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="method-2" name="method" type="radio" value="Upload a CSV file of metadata">
                 <label class="govuk-label govuk-radios__label" for="method-2">
-                  Upload a CSV file of data asset descriptions
+                  Upload a spreadsheet
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="method-3" name="method" type="radio" value="Connect a data harvester">
                 <label class="govuk-label govuk-radios__label" for="method-3">
-                  Connect a data harvester
+                  Connect to the Data Marketplace API
                 </label>
               </div>
             </div>
@@ -73,40 +60,13 @@
         </div>
         
         {{ govukButton({
-          text: "Start now"
+          text: "Continue"
         }) }}
         
         </form>
 
     </div>
     
-    <div class="govuk-grid-column-one-third">
-      <div class="gem-c-contextual-sidebar">
-        <div class="gem-c-related-navigation">
-          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
-            Learn
-          </h2>
-          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
-            <ul class="gem-c-related-navigation__link-list">
-              
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/guidance-on-publish">Publishing data descriptions</a>
-              </li>
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
-              </li>
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
-              </li>
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-CSV-file">Adding a collection of metadata records as a CSV file</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-
   </div>
 
 {% endblock %}

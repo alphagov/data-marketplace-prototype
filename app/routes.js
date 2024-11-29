@@ -67,8 +67,7 @@ router.use('', publish_dev);
 const publish_ur = require('./routes/publish/ur.js')
 router.use('', publish_ur);
 
-const publish_wip = require('./routes/publish/wip.js')
-router.use('', publish_wip);
+require('./routes/publish/wip.js')
 
 
 // #################################################

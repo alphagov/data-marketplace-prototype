@@ -1,17 +1,7 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Security Classification
-{% endblock %}
-
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -33,69 +23,46 @@
 
 
       {% if data['check-answers'] == "true" %}
-      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
-        <input type="hidden" name="check-answers" value="false">
-      {% else %}
-      <form class="form" action="/wip-security-answer" method="post">
-      {% endif %}
-      
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+
+      {% else %}
+
+        <form class="form" action="" method="post">
+
+      {% endif %}
 
         {{ govukRadios({
-          name: "MetadataSecurity",
+          name: "security-classification",
           fieldset: {
             legend: {
-              text: "What is the Security Classification of the data?",
+              text: "Is the security classification of the data set OFFICIAL?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
-          hint: {
-            text: "Security Classification promotes the broad distribution of non-sensitive resources. Only resources with a security classification of “Official” will be included in the Data Marketplace. You need to ensure that the data has been reviewed and cleared as unrestricted and aligns with the UK Government’s Security Classifications."
-          },
           items: [
             {
-              value: "Offical",
-              text: "Offical"
+              value: "Yes",
+              text: "Yes"
             },
             {
-              value: "Secret",
-              text: "Secret"
-            },
-            {
-              value: "Top Secret",
-              text: "Top Secret"
+              value: "No",
+              text: "No"
             }
           ],
-          value: data['MetadataSecurity']
+          value: data['security-classification']
         }) }}
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
 
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
-      <div class="gem-c-contextual-sidebar">
-        <div class="gem-c-related-navigation">
-          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
-            Learn
-          </h2>
-          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
-            <ul class="gem-c-related-navigation__link-list">
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
-              </li>
-              
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+  
   </div>
 
 {% endblock %}

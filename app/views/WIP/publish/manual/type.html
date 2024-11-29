@@ -22,28 +22,36 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+        <form action="" method="post">
 
-      {% if data['check-answers'] == "true" %}
-      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
-        <input type="hidden" name="check-answers" value="false">
-      {% else %}
-      <form class="form" action="/WIP/publish/manual/alternative-title" method="post">
-      {% endif %}
-
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-
-        {{ govukInput({
-          label: {
-            text: "What is the title of the data set?",
-            classes: "govuk-label--l",
-            isPageHeading: true
+        {{ govukRadios({
+          name: "type",
+          fieldset: {
+            legend: {
+              text: "Are you listing a data set or API?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
           },
-          id: "metadataTitle",
-          name: "metadataTitle",
-          hint: {
-            text: "Provide the full name. Avoid acronyms or technical jargon."
+          formGroup: {
+            beforeInputs: {
+                html : "<p><a href=\"#\">Learn more about data sets and APIs</a></p>"
+            }
           },
-          value: data['metadataTitle']
+          items: [
+            {
+              value: "Data set",
+              text: "Data set"
+            },
+            {
+              value: "API",
+              text: "API"
+            },
+            {
+              value: "Something else",
+              text: "Something else"
+            }
+          ]
         }) }}
 
         {{ govukButton({
