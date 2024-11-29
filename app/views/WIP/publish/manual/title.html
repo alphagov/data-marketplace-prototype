@@ -24,13 +24,15 @@
 
 
       {% if data['check-answers'] == "true" %}
-      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
-        <input type="hidden" name="check-answers" value="false">
-      {% else %}
-      <form class="form" action="/WIP/publish/manual/alternative-title" method="post">
-      {% endif %}
 
-        {% from "govuk/components/input/macro.njk" import govukInput %}
+        <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+          <input type="hidden" name="check-answers" value="false">
+
+      {% else %}
+
+        <form class="form" action="/WIP/publish/manual/task-list" method="post">
+
+      {% endif %}
 
         {{ govukInput({
           label: {
@@ -38,12 +40,12 @@
             classes: "govuk-label--l",
             isPageHeading: true
           },
-          id: "metadataTitle",
-          name: "metadataTitle",
+          id: "title",
+          name: "title",
           hint: {
             text: "Provide the full name. Avoid acronyms or technical jargon."
           },
-          value: data['metadataTitle']
+          value: data['title']
         }) }}
 
         {{ govukButton({
