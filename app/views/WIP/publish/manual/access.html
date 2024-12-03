@@ -1,0 +1,85 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  Security Classification
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      {% if data['check-answers'] == "true" %}
+
+        <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+
+      {% else %}
+
+        <form class="form" action="" method="post">
+
+      {% endif %}
+
+        <div class="govuk-caption-l">
+            {{ data['title'] }}
+        </div>
+
+        {{ govukRadios({
+          name: "access",
+          fieldset: {
+            legend: {
+              text: "Is the data set publicly available?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Public",
+              text: "Yes - anyone can access it"
+            },
+            {
+              value: "Restricted",
+              text: "No – it requires a data share agreement"
+            }
+          ],
+          value: data['security-classification']
+        }) }}
+
+        <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Continue"
+             }) }}
+             {{ govukButton({
+              text: "Save and return",
+              classes: "govuk-button--secondary",
+              attributes: {
+                formaction: "/WIP/publish/manual/task-list"
+              }
+             })}}
+        </div>
+
+      </form>
+
+    </div>
+  
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "includes/WIP_footer.html" %}
+{% endblock %}

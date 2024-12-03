@@ -25,17 +25,6 @@
         {{ data['title'] }}
       </div>
 
-      <h1 class="govuk-heading-l">
-        Provide a contact for the data set
-      </h1>
-
-      <p>
-        Provide details of the team or individual that will respond to queries or requests
-        for this data set.
-      </p>
-      <p>
-        These details will be visible to users on the Data Marketplace.
-      </p>
       
         {% if data['check-answers'] == "true" %}
 
@@ -45,33 +34,38 @@
 
         {% else %}
 
-          <form class="form" action="/WIP/publish/manual/owner" method="post">
+          <form class="form" action="/WIP/publish/manual/frequency" method="post">
 
         {% endif %}
-    
 
-        {{ govukInput({
-          label: {
-            text: "Name",
-            classes: "govuk-label--s"
-          },
-          id: "metadataContact",
-          name: "metadataContact",
-          value: data['metadataContact']
+
+        {{ govukDateInput({
+        id: "passport-issued",
+        namePrefix: "passport-issued",
+        fieldset: {
+            legend: {
+                text: "When was the data set first made available?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+            }
+        },
+        hint: {
+            text: "This is the date you first issued the data set, or published it in your data catalogue."
+        }
         }) }}
 
-        {{ govukInput({
-          label: {
-            text: "Email address",
-            type: email,
-            classes: "govuk-label--s"
-          },
-          id: "metadataContactEmail",
-          name: "metadataContactEmail",
-          value: data['metadataContactEmail']
-        }) }}
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Continue"
+             }) }}
+             {{ govukButton({
+              text: "Save and return",
+              classes: "govuk-button--secondary",
+              attributes: {
+                formaction: "/WIP/publish/manual/task-list"
+              }
+             })}}
+        </div>
 
       </form>
 

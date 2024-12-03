@@ -1,17 +1,7 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Themes
-{% endblock %}
-
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -38,33 +28,22 @@
       {% else %}
       <form class="form" action="/WIP/publish/manual/keyword" method="post">
       {% endif %}
-      
-
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-
-        {% set otherHtml %}
-        {{ govukInput({
-          id: "metadataThemes",
-          name: "metadataThemes",
-          type: "text",
-          label: {
-            text: "Enter URI to theme"
-          }
-        }) }}
-        {% endset -%}
+  
+        <div class="govuk-caption-l">
+          {{ data['title'] }}
+        </div>
 
         {{ govukCheckboxes({
           name: "metadataThemes",
           fieldset: {
             legend: {
-              text: "What are the themes associated with the data? (optional)",
+              text: "Select themes for the data set",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           hint: {
-            text: "Provide the main category of the data. Data can have multiple themes."
+            text: "Select all that apply."
           },
           items: [
             {
@@ -124,40 +103,32 @@
               text: "Government reference data"
             },
             {
-              value: "Other",
-              text: "Other",
-              conditional: {
-                html: otherHtml
-              }
+              divider: "or"
+            },
+            {
+              value: "None of the above",
+              text: "None of the above"
             }
           ]
         }) }}
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+           }) }}
+           {{ govukButton({
+            text: "Save and return",
+            classes: "govuk-button--secondary",
+            attributes: {
+              formaction: "/WIP/publish/manual/task-list"
+            }
+           })}}
+        </div>
 
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
-      <div class="gem-c-contextual-sidebar">
-        <div class="gem-c-related-navigation">
-          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
-            Learn
-          </h2>
-          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
-            <ul class="gem-c-related-navigation__link-list">
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
-              </li>
-              
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+   
   </div>
 
 {% endblock %}

@@ -54,6 +54,18 @@ router.post('/manual/security-classification', function(request, response) {
     }
 })
 
+router.post('/manual/access', function(request, response) {
+
+    var access = request.session.data['access']
+    if (access == 'Public'){
+        response.redirect(`${path}/manual/links`)
+    } else if (access == 'Restricted' ) {
+        response.redirect(`${path}/manual/format`)
+    } else {
+        response.redirect(`${path}/manual/access`)
+    }
+})
+
 router.post('/wip-licence-answer', function(request, response) {
 
     var licence = request.session.data['metadataLicence']

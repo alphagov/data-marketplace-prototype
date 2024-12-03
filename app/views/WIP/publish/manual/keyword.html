@@ -1,18 +1,9 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Keyword
 {% endblock %}
 
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
-{% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -31,17 +22,23 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">What are the keywords associated with the data? (optional)</h1>
-      <p class="govuk-hint">Enter a few words (keywords) which are associated with the data.</p>
+      <div class="govuk-caption-l">
+        {{ data['title'] }}
+      </div>
+
+      <h1 class="govuk-heading-l">
+        Provide keywords for the data set
+      </h1>
+      <p class="govuk-hint">
+        Enter one or more keywords. Add one word or phrase at a time. For example, ‘schools’, ‘exam results’ or ‘Covid-19’. Do not use commas.
+      </p>
+
       {% if data['check-answers'] == "true" %}
       <form class="form" action="/WIP/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
       <form class="form" action="/WIP/publish/manual/contact" method="post">
       {% endif %}
-      
-        {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
-        {%- from "govuk/components/input/macro.njk" import govukInput -%}
 
         <div data-module="moj-add-another">
             {% call govukFieldset({
@@ -63,31 +60,25 @@
             {% endcall %}
 
             <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another keyword</button>
-            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue"
+               }) }}
+               {{ govukButton({
+                text: "Save and return",
+                classes: "govuk-button--secondary",
+                attributes: {
+                  formaction: "/WIP/publish/manual/task-list"
+                }
+               })}}
+            </div>
+
         </div>
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
-      <div class="gem-c-contextual-sidebar">
-        <div class="gem-c-related-navigation">
-          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
-            Learn
-          </h2>
-          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
-            <ul class="gem-c-related-navigation__link-list">
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
-              </li>
-              
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+    
   </div>
 
 {% endblock %}

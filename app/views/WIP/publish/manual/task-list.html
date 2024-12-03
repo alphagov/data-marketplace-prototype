@@ -26,7 +26,7 @@
         {{ data['title'] }} (draft)
       </h1>
 
-      {% set path = "/WIP/manual" %}
+      {% set path = "/WIP/publish/manual" %}
 
       <h2 class="govuk-heading-m">
         General
@@ -49,22 +49,25 @@
             },
             href: path + "/description",
             status: {
+                text: "Completed"
+            } if data['description'] else {
               tag: {
-                text: "Incomplete",
-                classes: "govuk-tag--blue"
-              }
+                text: "Incomplete"
+               }
             }
+          
           },
           {
             title: {
               text: "Reference"
             },
-            href: "#",
+            href: path + "/reference",
             status: {
+                text: "Completed"
+            } if data['reference'] else {
               tag: {
-                text: "Incomplete",
-                classes: "govuk-tag--blue"
-              }
+                text: "Incomplete"
+               }
             }
           }
         ]
@@ -146,7 +149,7 @@
             title: {
               text: "Date first made available"
             },
-            href: path + "/date-served",
+            href: path + "/date-published",
             status: {
                 tag: {
                   text: "Incomplete",
@@ -180,6 +183,13 @@
           }
         ]
       }) }}
+
+      <div class="govuk-form-group">
+        {{ govukButton({
+          text: "Review and submit",
+          href: "#"
+        }) }}
+      </div>
 
     </div>
 

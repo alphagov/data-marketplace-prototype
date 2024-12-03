@@ -1,17 +1,7 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Update frequency
-{% endblock %}
-
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,123 +21,92 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <div class="govuk-caption-l">
+        {{ data['title'] }}
+      </div>
 
       {% if data['check-answers'] == "true" %}
       <form class="form" action="/WIP/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/wip-frequency-answer" method="post">
+        <form class="form" action="/WIP/publish/manual/access" method="post">
       {% endif %}
-      
-      {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-        {{ govukSelect({
-          label: {
-            text: "How often is the dataset updated?",
-            classes: "govuk-label--l",
-            isPageHeading: true
+        {{ govukRadios({
+          fieldset: {
+            legend: {
+              text: "How often is the data set updated? (optional)",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
           },
           id: "metadataFrequency",
           name: "metadataFrequency",
           value: data['metadataFrequency'],
           items: [
             {
-              value: "Triennial (every three years)",
-              text: "Triennial (every three years)"
-            },
-            {
-              value: "Biennial (every two years)",
-              text: "Biennial (every two years)"
-            },
-            {
-              value: "Annual (once a year)",
-              text: "Annual (once a year)"
-            },
-            {
-              value: "Semiannual (twice a year)",
-              text: "Semiannual (twice a year)"
-            },
-            {
-              value: "Three times a year",
-              text: "Three times a year"
-            },
-            {
-              value: "Quarterly (every three months)",
-              text: "Quarterly (every three months)"
-            },
-            {
-              value: "Bimonthly (every two months)",
-              text: "Bimonthly (every two months)"
-            },
-            {
-              value: "Monthly (once a month)",
-              text: "Monthly (once a month)"
-            },
-            {
-              value: "Semimonthly (twice a month)",
-              text: "Semimonthly (twice a month)"
-            },
-            {
-              value: "Biweekly (every two weeks)",
-              text: "Biweekly (every two weeks)"
-            },
-            {
-              value: "Three times a month",
-              text: "Three times a month"
-            },
-            {
-              value: "Weekly (once a week)",
-              text: "Weekly (once a week)"
-            },
-            {
-              value: "Semiweekly (twice a week)",
-              text: "Semiweekly (twice a week)"
-            },
-            {
-              value: "Three times a week",
-              text: "Three times a week"
+              value: "Never",
+              text: "Never"
             },
             {
               value: "Daily",
               text: "Daily"
             },
             {
-              value: "Continuous (repeats without interruption)",
-              text: "Continuous (repeats without interruption)"
+              value: "Weekly",
+              text: "Weekly"
             },
             {
-              value: "Irregular (occurs at uneven intervals)",
-              text: "Irregular (occurs at uneven intervals)"
-            }
+              value: "Monthly",
+              text: "Monthly"
+            },
+            {
+              value: "Quarterly",
+              text: "Quarterly"
+            },
+            {
+              value: "Yearly",
+              text: "Yearly"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "Other",
+              text: "Other",
+              conditional: {
+                html:  govukInput({
+                  id: "otherFrequency",
+                  name: "otherFrequency",
+                  value: data['otherFrequency'],
+                  classes: "govuk-input--width-10",
+                  label: {
+                    text: "Enter a custom time period, for example ‘hourly’ or ‘every 3 years’."
+                   }
+                 }) 
+               }
+             }
           ],
           value: data['metadataFrequency']
         }) }}
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+           }) }}
+           {{ govukButton({
+            text: "Save and return",
+            classes: "govuk-button--secondary",
+            attributes: {
+              formaction: "/WIP/publish/manual/task-list"
+            }
+           })}}
+      </div>
 
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
-      <div class="gem-c-contextual-sidebar">
-        <div class="gem-c-related-navigation">
-          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
-            Learn
-          </h2>
-          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
-            <ul class="gem-c-related-navigation__link-list">
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
-              </li>
-              
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+    
   </div>
 
 {% endblock %}
