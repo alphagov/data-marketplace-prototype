@@ -66,6 +66,40 @@ router.post('/manual/access', function(request, response) {
     }
 })
 
+router.post('/manual/links', function(request, response) {
+
+    let data = request.session.data
+
+    if (!data.links){
+      data.links = {
+        access: [],
+        download: []
+      }
+    }
+
+    let links
+
+    if (data['link-type'] == 'File download') {
+      links = data.links.download
+    } else {
+      links = data.links.access
+    } 
+
+    links.push({
+        'type': data['link-type'],
+        'title': data['link-title'],
+        'url': data['link-url'],
+        'download-format': data['link-download-format'],
+        'download-size': data['link-download-size'],
+        'download-units': data['link-download-units']
+    })
+
+    console.log(JSON.stringify(request.session.data, null, '  '))
+    
+
+    response.redirect(`${path}/manual/links-summary`)
+})
+
 router.post('/wip-licence-answer', function(request, response) {
 
     var licence = request.session.data['metadataLicence']

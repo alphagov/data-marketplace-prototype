@@ -1,0 +1,182 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  Security Classification
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      {% if data['check-answers'] == "true" %}
+
+        <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+
+      {% else %}
+
+        <form class="form" action="" method="post">
+
+      {% endif %}
+
+        <div class="govuk-caption-l">
+            {{ data['title'] }}
+        </div>
+
+        <h1 class="govuk-heading-l">
+            Provide links to access the data set
+        </h1>
+
+        <p>
+            Each link can be to download a file directly, or to a webpage that contains the data.
+        </p>
+
+        <p>
+            You'll be able to add more links if needed.
+        </p>
+
+        {{ govukRadios({
+          name: "link-type",
+          fieldset: {
+            legend: {
+              text: "Link type",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "File download",
+              text: "File download",
+              attributes: {
+                "data-aria-controls": "conditional-file"
+               }
+            },
+            {
+              value: "Web page",
+              text: "Web page"
+            }
+          ],
+          value: ''
+        }) }}
+
+        {{ govukInput({
+            label: {
+              text: "Link title",
+              classes: "govuk-label--s"
+            },
+            id: "link-title",
+            name: "link-title",
+            value: ''
+          }) }}
+
+        {{ govukInput({
+            label: {
+                text: "Link URL",
+                classes: "govuk-label--s"
+            },
+            id: "link-url",
+            name: "link-url",
+            value: ''
+        }) }}
+
+          <style>
+            .govuk-radios__conditional {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: 0;
+            }
+          </style>
+
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-file">
+            {{ govukInput({
+                label: {
+                    text: "File format",
+                    classes: "govuk-label--s"
+                },
+                classes: "govuk-input--width-10",
+                id: "link-download-format",
+                name: "link-download-format",
+                value: ''
+            }) }}
+            <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+
+            {{ govukInput({
+                label: {
+                    text: "File size",
+                    classes: "govuk-label--s"
+                },
+                classes: "govuk-input--width-10",
+                id: "link-download-size",
+                name: "link-download-size",
+                value: ''
+            }) }}
+
+            </div>
+            <div class="govuk-date-input__item">
+
+            {{ govukSelect({
+                id: "link-download-units",
+                name: "link-download-units",
+                label: {
+                  text: "Units"
+                },
+                items: [
+                  {
+                    value: "KB",
+                    text: "KB"
+                  },
+                  {
+                    value: "MB",
+                    text: "MB",
+                    selected: true
+                  },
+                  {
+                    value: "GB",
+                    text: "GB"
+                  }
+                ]
+              }) }}
+            </div>
+        </div>
+
+          </div>
+
+        <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Continue"
+             }) }}
+             {{ govukButton({
+              text: "Save and return",
+              classes: "govuk-button--secondary",
+              attributes: {
+                formaction: "/WIP/publish/manual/task-list"
+              }
+             })}}
+        </div>
+
+      </form>
+
+    </div>
+  
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "includes/WIP_footer.html" %}
+{% endblock %}
