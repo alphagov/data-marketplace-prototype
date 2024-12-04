@@ -33,7 +33,7 @@
         The data set must have an owner that can make decisions about the data.
       </p>
       <p>
-        These details will not be visible to any users outside your organisation.
+        These details will not be visible to users outside your organisation.
       </p>
       
         {% if data['check-answers'] == "true" %}
@@ -54,9 +54,9 @@
             text: "Name",
             classes: "govuk-label--s"
           },
-          id: "metadataContact",
-          name: "metadataContact",
-          value: data['metadataContact']
+          id: "metadataOwner",
+          name: "metadataOwner",
+          value: data['metadataOwner']
         }) }}
 
         {{ govukInput({
@@ -65,9 +65,9 @@
             type: email,
             classes: "govuk-label--s"
           },
-          id: "metadataContactEmail",
-          name: "metadataContactEmail",
-          value: data['metadataContactEmail']
+          id: "metadataOwnerEmail",
+          name: "metadataOwnerEmail",
+          value: data['metadataOwnerEmail']
         }) }}
 
         <div class="govuk-button-group">
@@ -85,6 +85,19 @@
 
       </form>
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <h2 class="govuk-heading-m">
+        More information
+      </h2>
+
+      <p>
+        <a href="#">
+          Learn more about data owners
+        </a>
+      </p>
     </div>
     
   </div>

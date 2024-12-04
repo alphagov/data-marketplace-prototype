@@ -27,15 +27,15 @@
       <form class="form" action="" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
+          <fieldset class="govuk-fieldset" aria-describedby="hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               Choose how to add your listing
             </legend>
-            <p>
-              <a href="#">
-                Learn about listings and the details we ask for
-              </a>
-            </p>
+
+            <div id="hint" class="govuk-hint">
+              Your listing will be published in the Data Marketplace.
+            </div>
+
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="method-1" name="method" type="radio" value="web">
@@ -65,6 +65,19 @@
         
         </form>
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <h2 class="govuk-heading-m">
+        More information
+      </h2>
+
+      <p>
+        <a href="#">
+          Learn about listings and the details we ask for
+        </a>
+      </p>
     </div>
     
   </div>

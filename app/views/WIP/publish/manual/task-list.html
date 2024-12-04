@@ -40,7 +40,7 @@
             },
             href: path + "/title",
             status: {
-              text: "Completed"
+              text: "Done"
             }
           },
           {
@@ -49,10 +49,10 @@
             },
             href: path + "/description",
             status: {
-                text: "Completed"
+                text: "Done"
             } if data['description'] else {
               tag: {
-                text: "Incomplete"
+                text: "To do"
                }
             }
           
@@ -63,10 +63,10 @@
             },
             href: path + "/reference",
             status: {
-                text: "Completed"
+                text: "Done"
             } if data['reference'] else {
               tag: {
-                text: "Incomplete"
+                text: "To do"
                }
             }
           }
@@ -86,7 +86,7 @@
             href: path + "/themes",
             status: {
                 tag: {
-                  text: "Incomplete",
+                  text: "To do",
                   classes: "govuk-tag--blue"
                 }
             }
@@ -98,7 +98,7 @@
             href: path + "/keywords",
             status: {
               tag: {
-                text: "Incomplete",
+                text: "To do",
                 classes: "govuk-tag--blue"
               }
             }
@@ -119,7 +119,7 @@
             href: path + "/contact",
             status: {
               tag: {
-                text: "Incomplete",
+                text: "To do",
                 classes: "govuk-tag--blue"
               }
             }
@@ -131,7 +131,7 @@
             href: path + "/owner",
             status: {
               tag: {
-                text: "Incomplete",
+                text: "To do",
                 classes: "govuk-tag--blue"
               }
             }
@@ -152,31 +152,31 @@
             href: path + "/date-published",
             status: {
                 tag: {
-                  text: "Incomplete",
+                  text: "To do",
                   classes: "govuk-tag--blue"
                 }
             }
           },
           {
             title: {
-              text: "Frequency of update"
+              text: "Update frequency"
             },
             href: path + "/frequency",
             status: {
               tag: {
-                text: "Incomplete",
+                text: "To do",
                 classes: "govuk-tag--blue"
               }
             }
           },
           {
             title: {
-              text: "Access restrictions"
+              text: "Public or restricted data"
             },
-            href: path + "/access-restrictions",
+            href: path + "/access",
             status: {
               tag: {
-                text: "Incomplete",
+                text: "To do",
                 classes: "govuk-tag--blue"
               }
             }

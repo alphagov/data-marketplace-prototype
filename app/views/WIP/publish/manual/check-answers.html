@@ -1,18 +1,9 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
-{% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -29,7 +20,7 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Check your answers before submitting your data</h1>
+    <h1 class="govuk-heading-l">Check your answers before submitting your data</h1>
   </div>
 </div>
 
@@ -49,25 +40,7 @@
               <span class="govuk-visually-hidden"> title</span>
             </a>
           </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Alternative title
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <ul class="govuk-list">
-              {% for value in data['metadataAltTitle'] %}
-                <li>{{ value }}</li>
-              {% endfor %}
-            </ul>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/alternative-title?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> alternative title</span>
-            </a>
-          </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Description
@@ -81,24 +54,10 @@
               <span class="govuk-visually-hidden"> description</span>
             </a>
           </dd>
-        </div>        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Summary
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataSummary'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/summary?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> summary</span>
-            </a>
-          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Internal identifier
+            Reference
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataIdentifier'] }}
@@ -147,7 +106,7 @@
               <span class="govuk-visually-hidden"> keyword</span>
             </a>
           </dd>
-        </div>                
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Point of Contact
@@ -165,7 +124,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Creator
+            Owner
           </dt>
           <dd class="govuk-summary-list__value">
             <ul class="govuk-list">
@@ -180,24 +139,10 @@
               <span class="govuk-visually-hidden"> creator</span>
             </a>
           </dd>
-        </div>      
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Version number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataVersion'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/version?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> version</span>
-            </a>
-          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date Issued
+            Date first made available
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataCreatedDay'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedYear'] }}
@@ -208,10 +153,10 @@
               <span class="govuk-visually-hidden"> date created</span>
             </a>
           </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date Modified
+            Frequency of updates
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedMonth'] }} {{ data['metadataModifiedYear'] }}
@@ -225,219 +170,94 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence
+            Access restrictions
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataLicence'] }}
+            {{ data['access'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/licence?check-answers=true">
+            <a href="/WIP/publish/manual/access?check-answers=true">
               Change
               <span class="govuk-visually-hidden"> licence</span>
             </a>
           </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Access rights
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataAccessRights'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/access-rights?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>        
-      
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Security Classification
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['MetadataSecurity'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/security-classification?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> Security Classification</span>
-            </a>
-          </dd>
-        </div>                          
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Related data 
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <ul class="govuk-list">
-              {% for value in data['metadataRelated'] %}
-                <li>{{ value }}</li>
-              {% endfor %}
-            </ul>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/related?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> Related data assets</span>
-            </a>
-          </dd>
-        </div>     
-        {% if data['csv-title'] or data['xml-title'] or data['xlxs-title'] or data['geo-title'] %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Update frequency
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['metadataFrequency'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/frequency?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> update frequency</span>
-            </a>
-          </dd>
-        </div>
-        {% endif %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Delivery Mechanism
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {% if data['data-CSV'] %}{{ data['data-CSV'] }}{% endif %}
-            {% if data['data-XML'] %}, {{ data['data-XML'] }}{% endif %}
-            {% if data['data-XLXS'] %}, {{ data['data-XLXS'] }}{% endif %}
-            {% if data['data-geo'] %}, {{ data['data-geo'] }}{% endif %}
-            {% if data['data-REST'] %}, {{ data['data-REST'] }}{% endif %}
-            {% if data['data-SOAP'] %}, {{ data['data-SOAP'] }}{% endif %}
-            {% if data['data-event'] %}, {{ data['data-event'] }}{% endif %}
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/data-type?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> Delivery Mechanism</span>
-            </a>
-          </dd>
-        </div>
+        </div>      
       </dl>
 
-      {% if data['csv-title'] or data['xml-title'] or data['xlxs-title'] or data['geo-title'] %}
-      <h2 class="govuk-heading-l">Distributions</h2>
+      {% if data['access'] == "Public" %}
 
-        {% if data['csv-title'] %}
-        <table class="govuk-table govuk-!-margin-bottom-3">
-          <caption class="govuk-table__caption govuk-table__caption--m">CSV</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Title</th>
-              <th scope="col" class="govuk-table__header">Download URL</th>
-              <th scope="col" class="govuk-table__header">Filesize</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-              {% for value in data['csv-title'] %}
+      <h2 class="govuk-heading-l">Links to the data</h2>
+
+      {% if data.links.download.length > 0 %}
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Download links</caption>
+            <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['csv-title'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['csv-url'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['csv-size'][loop.index0] }} {{ data['csv-size-unit'][loop.index0] }}</td>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Title</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Format</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Size</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
               </tr>
-              {% endfor %}
-          </tbody>
+            </thead>
+            <tbody class="govuk-table__body">
+
+                {% for link in data.links.download %}
+
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+                            <a href="{{ link.url }}">
+                                {{ link.title }}
+                            </a>
+                        </th>
+                        <td class="govuk-table__cell">                    
+                            {{ link['download-format'] }}
+                        </td>
+                        <td class="govuk-table__cell">                    
+                            {{ link['download-size'] }}{{ link['download-units']}}
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="#">Change</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+            
+            </tbody>
         </table>
-        <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/WIP/publish/manual/add-data/csv?check-answers=true">
-            Change
-            <span class="govuk-visually-hidden"> data served</span>
-          </a>
-        </p>
+
+
         {% endif %}
 
-        {% if data['xml-title'] %}
-        <table class="govuk-table govuk-!-margin-bottom-3">
-          <caption class="govuk-table__caption govuk-table__caption--m">XML</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Title</th>
-              <th scope="col" class="govuk-table__header">Download URL</th>
-              <th scope="col" class="govuk-table__header">Filesize</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-              {% for value in data['xml-title'] %}
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['xml-title'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['xml-url'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['xml-size'][loop.index0] }} {{ data['xml-size-unit'][loop.index0] }}</td>
-              </tr>
-              {% endfor %}
-          </tbody>
-        </table>
-        <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/WIP/publish/manual/add-data/xml?check-answers=true">
-            Change
-            <span class="govuk-visually-hidden"> data served</span>
-          </a>
-        </p>
-        {% endif %}
+        {% if data.links.access.length > 0 %}
 
-        {% if data['xlxs-title'] %}
-        <table class="govuk-table govuk-!-margin-bottom-3">
-          <caption class="govuk-table__caption govuk-table__caption--m">XLXS</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Title</th>
-              <th scope="col" class="govuk-table__header">Download URL</th>
-              <th scope="col" class="govuk-table__header">Filesize</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-              {% for value in data['xlxs-title'] %}
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Web pages</caption>
+            <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['xlxs-title'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['xlxs-url'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['xlxs-size'][loop.index0] }} {{ data['xlxs-size-unit'][loop.index0] }}</td>
+                <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Title</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
               </tr>
-              {% endfor %}
-          </tbody>
-        </table>
-        <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/WIP/publish/manual/add-data/xlxs?check-answers=true">
-            Change
-            <span class="govuk-visually-hidden"> data served</span>
-          </a>
-        </p>
-        {% endif %}
+            </thead>
+            <tbody class="govuk-table__body">
 
-        {% if data['geo-title'] %}
-        <table class="govuk-table govuk-!-margin-bottom-3">
-          <caption class="govuk-table__caption govuk-table__caption--m">GeoPackage</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Title</th>
-              <th scope="col" class="govuk-table__header">Download URL</th>
-              <th scope="col" class="govuk-table__header">Filesize</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-              {% for value in data['geo-title'] %}
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['geo-title'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['geo-url'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['geo-size'][loop.index0] }} {{ data['geo-size-unit'][loop.index0] }}</td>
-              </tr>
-              {% endfor %}
-          </tbody>
-        </table>
-        <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/WIP/publish/manual/add-data/geopackage?check-answers=true">
-            Change
-            <span class="govuk-visually-hidden"> data served</span>
-          </a>
-        </p>
-        {% endif %}
+                {% for link in data.links.access %}
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+                            <a href="{{ link.url }}">
+                                {{ link.title }}
+                            </a>
+                        </th>
+                        <td class="govuk-table__cell">
+                            <a href="#">Change</a>
+                        </td>
+                    </tr>
+                {% endfor %}
 
+            </tbody>
+        </table>
+
+        {% endif %}
 
 
       {% endif %}
@@ -547,26 +367,7 @@
       </form>
 
     </div>
-    <div class="govuk-grid-column-one-third">
-      <div class="gem-c-contextual-sidebar">
-        <div class="gem-c-related-navigation">
-          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
-            Learn
-          </h2>
-          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
-            <ul class="gem-c-related-navigation__link-list">
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
-              </li>
-              
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
+    
   </div>
 {% endblock %}
 

@@ -45,10 +45,6 @@
             Each link can be to download a file directly, or to a webpage that contains the data.
         </p>
 
-        <p>
-            You'll be able to add more links if needed.
-        </p>
-
         {{ govukRadios({
           name: "link-type",
           fieldset: {
@@ -66,8 +62,8 @@
                }
             },
             {
-              value: "Web page",
-              text: "Web page"
+              value: "Webpage",
+              text: "Webpage"
             }
           ],
           value: ''
@@ -170,6 +166,73 @@
         </div>
 
       </form>
+
+      {% if data.links.download.length > 0 %}
+
+      <table class="govuk-table govuk-!-margin-top-8">
+          <caption class="govuk-table__caption govuk-table__caption--m">Download links</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Title</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Format</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Size</th>
+              
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+              {% for link in data.links.download %}
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+                          <a href="{{ link.url }}">
+                              {{ link.title }}
+                          </a>
+                      </th>
+                      <td class="govuk-table__cell">                    
+                          {{ link['download-format'] }}
+                      </td>
+                      <td class="govuk-table__cell">                    
+                          {{ link['download-size'] }}{{ link['download-units']}}
+                      </td>
+                  </tr>
+
+              {% endfor %}
+          
+          </tbody>
+      </table>
+
+
+      {% endif %}
+
+      {% if data.links.access.length > 0 %}
+
+      <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Webpage links</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Title</th>
+             
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+              {% for link in data.links.access %}
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+                          <a href="{{ link.url }}">
+                              {{ link.title }}
+                          </a>
+                      </th>
+                     
+                  </tr>
+              {% endfor %}
+
+          </tbody>
+      </table>
+
+      {% endif %}
+
 
     </div>
   

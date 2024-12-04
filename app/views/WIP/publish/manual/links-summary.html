@@ -45,10 +45,14 @@
             Each link can be to download a file directly, or to a webpage that contains the data.
         </p>
 
+        <p>
+          These links open in a new tab.
+        </p>
+
         {% if data.links.download.length > 0 %}
 
         <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Download links</caption>
+            <caption class="govuk-table__caption govuk-table__caption--m">Downloads</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Title</th>
@@ -89,7 +93,7 @@
         {% if data.links.access.length > 0 %}
 
         <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Web pages</caption>
+            <caption class="govuk-table__caption govuk-table__caption--m">Webpages</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Title</th>
@@ -127,7 +131,8 @@
 
         <div class="govuk-button-group">
             {{ govukButton({
-              text: "Continue"
+              text: "Continue",
+              href: "/WIP/publish/manual/check-answers"
              }) }}
              {{ govukButton({
               text: "Save and return",
