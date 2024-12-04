@@ -27,7 +27,7 @@ router.post('/new-api-key', (request, response) => {
 
     data.appCreated = true
 
-    response.redirect(path + '/api-keys/' + appName)
+    response.redirect(path + '/api-confirmation')
 
 })
 
@@ -141,5 +141,13 @@ router.post('/api-key-expiry/:name', (request, response) => {
     data.changesSaved = true
 
     response.redirect(path + '/api-keys/' + appName)
+
+})
+
+router.get('/api-confirm-revoke/:name', (request, response) => {
+
+    response.locals.name = request.params.name
+
+    response.render(path + '/api-confirm-revoke')
 
 })
