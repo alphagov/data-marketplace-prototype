@@ -173,8 +173,6 @@ router.get('/api-keys', (request, response) => {
         delete request.session.data.revoked
     }
 
-    console.dir(response.locals)
-
     response.render(path + '/api-keys')
 
 })
