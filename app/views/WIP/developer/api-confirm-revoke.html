@@ -23,10 +23,12 @@
 
       <p>Name: {{ name }}</p>
       
-      {{ govukButton({
-        text: "Revoke credentials",
-        classes: "govuk-button--warning"
-      }) }}
+      <form action="" method="post">
+        {{ govukButton({
+            text: "Revoke credentials",
+            classes: "govuk-button--warning"
+        }) }}
+        </form>
 
         <p>
             <a href="/WIP/developer/api-keys/{{ name }}" class="govuk-link">

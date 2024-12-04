@@ -151,3 +151,31 @@ router.get('/api-confirm-revoke/:name', (request, response) => {
     response.render(path + '/api-confirm-revoke')
 
 })
+
+// post api key revoke route
+
+router.post('/api-confirm-revoke/:name', (request, response) => {
+
+    const data = request.session.data
+
+    const appName = request.params.name
+
+    data.developer.apps = data.developer.apps.filter(app => app.name !== appName)
+
+    response.redirect(path + '/api-keys?revoked=true')
+
+})
+  
+
+router.get('/api-keys', (request, response) => {
+
+    if (request.session.data.revoked){
+        delete request.session.data.revoked
+    }
+
+    console.dir(response.locals)
+
+    response.render(path + '/api-keys')
+
+})
+

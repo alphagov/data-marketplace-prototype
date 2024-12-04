@@ -11,6 +11,23 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
+		{% if data.revoked %}
+
+			{% set html %}
+				<p class="govuk-notification-banner__heading">
+					API credentials revoked
+				</p>
+			{% endset %}
+
+			{{ govukNotificationBanner({
+				html: html,
+				type: "success"
+			}) }}
+
+		{% endif %}
+
+
+
 		<h1 class="govuk-heading-l">
 			
 			{% if data['is-developer'] == 'true' %}
