@@ -32,7 +32,7 @@
             Title
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataTitle'] }}
+            {{ data['title'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/title?check-answers=true">
@@ -46,7 +46,7 @@
             Description
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataDescription'] }}
+            {{ data['description'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/description?check-answers=true">
@@ -60,7 +60,7 @@
             Reference
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataIdentifier'] }}
+            {{ data['reference'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/identifier?check-answers=true">
@@ -75,7 +75,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <ul class="govuk-list">
-              {% for value in data['metadataThemes'] %}
+              {% for value in data['themes'] %}
               {% if value != "Other" %}
                 <li>{{ value }}</li>
               {% endif %}
@@ -95,7 +95,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <ul class="govuk-list">
-              {% for value in data['metadataKeyword'] %}
+              {% for value in data['keywords'] %}
                 <li>{{ value }}</li>
               {% endfor %}
             </ul>
@@ -112,8 +112,8 @@
             Point of Contact
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataContact'] }}<br>
-            {{ data['metadataContactEmail'] }}
+            {{ data['contactName'] }}<br>
+            {{ data['contactEmail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/contact?check-answers=true">
@@ -127,11 +127,8 @@
             Owner
           </dt>
           <dd class="govuk-summary-list__value">
-            <ul class="govuk-list">
-              {% for value in data['metadataCreator'] %}
-                <li>{{ value }}</li>
-              {% endfor %}
-            </ul>
+            {{ data['ownerName'] }}<br>
+            {{ data['ownerEmail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/creator?check-answers=true">
@@ -145,7 +142,7 @@
             Date first made available
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataCreatedDay'] }} {{ data['metadataCreatedMonth'] }} {{ data['metadataCreatedYear'] }}
+            {{ data['datePublished-Day'] }} {{ data['datePublished-Month'] }} {{ data['datePublished-Year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/created?check-answers=true">
@@ -156,21 +153,21 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Frequency of updates
+            Update frequency
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['metadataModifiedDay'] }} {{ data['metadataModifiedMonth'] }} {{ data['metadataModifiedYear'] }}
+            {{ data['frequency'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/modified?check-answers=true">
               Change
-              <span class="govuk-visually-hidden"> date modified</span>
+              <span class="govuk-visually-hidden"> update frequency</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Access restrictions
+            Public or restricted data
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['access'] }}
@@ -178,7 +175,7 @@
           <dd class="govuk-summary-list__actions">
             <a href="/WIP/publish/manual/access?check-answers=true">
               Change
-              <span class="govuk-visually-hidden"> licence</span>
+              <span class="govuk-visually-hidden"> public or restricted data</span>
             </a>
           </dd>
         </div>      

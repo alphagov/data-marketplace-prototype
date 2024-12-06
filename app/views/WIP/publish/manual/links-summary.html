@@ -21,136 +21,118 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <div class="govuk-caption-l">
+          {{ data['title'] }}
+      </div>
 
-      {% if data['check-answers'] == "true" %}
+      <h1 class="govuk-heading-l">
+          Provide links to access the data set
+      </h1>
 
-        <form class="form" action="/WIP/publish/manual/check-answers" method="post">
-        <input type="hidden" name="check-answers" value="false">
+      <p>
+          Each link can be to download a file directly, or to a webpage that contains the data.
+      </p>
 
-      {% else %}
+      <p>
+        These links open in a new tab.
+      </p>
 
-        <form class="form" action="" method="post">
+      {% if data.links.download.length > 0 %}
+
+      <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Downloads</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Title</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Format</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Size</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+              {% for link in data.links.download %}
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+                          <a href="{{ link.url }}">
+                              {{ link.title }}
+                          </a>
+                      </th>
+                      <td class="govuk-table__cell">                    
+                          {{ link['download-format'] }}
+                      </td>
+                      <td class="govuk-table__cell">                    
+                          {{ link['download-size'] }}{{ link['download-units']}}
+                      </td>
+                      <td class="govuk-table__cell">
+                          <a href="#">Change</a>
+                      </td>
+                  </tr>
+
+              {% endfor %}
+          
+          </tbody>
+      </table>
+
 
       {% endif %}
 
-        <div class="govuk-caption-l">
-            {{ data['title'] }}
-        </div>
+      {% if data.links.access.length > 0 %}
 
-        <h1 class="govuk-heading-l">
-            Provide links to access the data set
-        </h1>
+      <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Webpages</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Title</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
 
-        <p>
-            Each link can be to download a file directly, or to a webpage that contains the data.
-        </p>
+              {% for link in data.links.access %}
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
+                          <a href="{{ link.url }}">
+                              {{ link.title }}
+                          </a>
+                      </th>
+                      <td class="govuk-table__cell">
+                          <a href="#">Change</a>
+                      </td>
+                  </tr>
+              {% endfor %}
 
-        <p>
-          These links open in a new tab.
-        </p>
+          </tbody>
+      </table>
 
-        {% if data.links.download.length > 0 %}
+      {% endif %}
 
-        <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Downloads</caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Title</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Format</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Size</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-
-                {% for link in data.links.download %}
-
-                    <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
-                            <a href="{{ link.url }}">
-                                {{ link.title }}
-                            </a>
-                        </th>
-                        <td class="govuk-table__cell">                    
-                            {{ link['download-format'] }}
-                        </td>
-                        <td class="govuk-table__cell">                    
-                            {{ link['download-size'] }}{{ link['download-units']}}
-                        </td>
-                        <td class="govuk-table__cell">
-                            <a href="#">Change</a>
-                        </td>
-                    </tr>
-
-                {% endfor %}
-            
-            </tbody>
-        </table>
-
-
-        {% endif %}
-
-        {% if data.links.access.length > 0 %}
-
-        <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Webpages</caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-!-width-three-quarters">Title</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-
-                {% for link in data.links.access %}
-                    <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">
-                            <a href="{{ link.url }}">
-                                {{ link.title }}
-                            </a>
-                        </th>
-                        <td class="govuk-table__cell">
-                            <a href="#">Change</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-
-            </tbody>
-        </table>
-
-        {% endif %}
-
-        <div class="govuk-for-group">
-            {{ govukButton({
-                text: "Add another link",
-                classes: "govuk-button--secondary",
-                href: "/WIP/publish/manual/links"
-               })}}
-        </div>
-
-
-        <div class="govuk-button-group">
-            {{ govukButton({
-              text: "Continue",
-              href: "/WIP/publish/manual/check-answers"
-             }) }}
-             {{ govukButton({
-              text: "Save and return",
+      <div class="govuk-for-group">
+          {{ govukButton({
+              text: "Add another link",
               classes: "govuk-button--secondary",
-              attributes: {
-                formaction: "/WIP/publish/manual/task-list"
-              }
-             })}}
-        </div>
+              href: "/WIP/publish/manual/links"
+              })}}
+      </div>
 
-      </form>
+
+      <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue",
+            href: "/WIP/publish/manual/check-answers"
+            }) }}
+            {{ govukButton({
+            text: "Save and return",
+            classes: "govuk-button--secondary",
+            attributes: {
+              formaction: "/WIP/publish/manual/task-list"
+            }
+            })}}
+      </div>
 
     </div>
   
   </div>
 
-{% endblock %}
-
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
 {% endblock %}

@@ -35,14 +35,14 @@
         {{ govukRadios({
           fieldset: {
             legend: {
-              text: "How often is the data set updated? (optional)",
+              text: "How often is the data set updated?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
-          id: "metadataFrequency",
-          name: "metadataFrequency",
-          value: data['metadataFrequency'],
+          id: "frequency",
+          name: "frequency",
+          value: data['frequency'],
           items: [
             {
               value: "Never",
@@ -70,6 +70,10 @@
             },
             {
               divider: "or"
+            },
+            {
+              value: "Unknown",
+              text: "I don’t know"
             },
             {
               value: "Other – I'll enter a different time period",
@@ -109,8 +113,4 @@
     
   </div>
 
-{% endblock %}
-
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
 {% endblock %}

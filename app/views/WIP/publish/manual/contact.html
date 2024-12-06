@@ -55,9 +55,9 @@
             text: "Name",
             classes: "govuk-label--s"
           },
-          id: "metadataContact",
-          name: "metadataContact",
-          value: data['metadataContact']
+          id: "contactName",
+          name: "contactName",
+          value: data['contactName']
         }) }}
 
         {{ govukInput({
@@ -66,9 +66,9 @@
             type: email,
             classes: "govuk-label--s"
           },
-          id: "metadataContactEmail",
-          name: "metadataContactEmail",
-          value: data['metadataContactEmail']
+          id: "contactEmail",
+          name: "contactEmail",
+          value: data['contactEmail']
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
@@ -79,8 +79,4 @@
     
   </div>
 
-{% endblock %}
-
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
 {% endblock %}

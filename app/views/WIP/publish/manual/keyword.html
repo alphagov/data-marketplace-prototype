@@ -44,23 +44,30 @@
             {% call govukFieldset({
               classes: 'moj-add-another__item'
             }) %}
-            {{ govukInput({
-              id: 'metadataKeyword[0]',
-              name: 'metadataKeyword[0]',
-              label: {
-                html: 'Keyword',
-                classes: 'govuk-visually-hidden'
-              },
-              attributes: {
-                'data-name': 'metadataKeyword[%index%]',
-                'data-id': 'metadataKeyword[%index%]',
-                'data-value': 'metadataKeyword[%index%]'
-              }
-            }) }}
+              {{ govukInput({
+                id: 'keyword[0]',
+                name: 'keyword[0]',
+                label: {
+                  html: 'Keyword',
+                  classes: 'govuk-visually-hidden'
+                },
+                attributes: {
+                  'data-name': 'keyword[%index%]',
+                  'data-id': 'keyword[%index%]',
+                  'data-value': 'keyword[%index%]'
+                }
+              }) }}
             {% endcall %}
 
-            <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">Add another keyword</button>
+            <div class="govuk-form-group">
+
+              {{ govukButton({
+                classes: "govuk-button--secondary moj-add-another__add-button",
+                text: "Add another keyword"
+              }) }}
             
+            </div>
+
             <div class="govuk-button-group">
               {{ govukButton({
                 text: "Continue"
@@ -94,8 +101,4 @@
     
   </div>
 
-{% endblock %}
-
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
 {% endblock %}

@@ -54,7 +54,7 @@ router.post('/manual/security-classification', function(request, response) {
     }
 })
 
-router.post('/manual/access', function(request, response) {
+router.post('/manual/access-answer', function(request, response) {
 
     var access = request.session.data['access']
     if (access == 'Public'){
@@ -66,7 +66,7 @@ router.post('/manual/access', function(request, response) {
     }
 })
 
-router.post('/manual/links', function(request, response) {
+router.post('/manual/links-answer', function(request, response) {
 
     let data = request.session.data
 
@@ -93,10 +93,7 @@ router.post('/manual/links', function(request, response) {
         'download-size': data['link-download-size'],
         'download-units': data['link-download-units']
     })
-
-    console.log(JSON.stringify(request.session.data, null, '  '))
-    
-
+  
     response.redirect(`${path}/manual/links-summary`)
 })
 

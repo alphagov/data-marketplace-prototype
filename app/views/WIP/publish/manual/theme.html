@@ -26,7 +26,7 @@
       <form class="form" action="/WIP/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/WIP/publish/manual/keyword" method="post">
+        <form class="form" action="/WIP/publish/manual/keyword" method="post">
       {% endif %}
   
         <div class="govuk-caption-l">
@@ -34,7 +34,8 @@
         </div>
 
         {{ govukCheckboxes({
-          name: "metadataThemes",
+          name: "themes",
+          values: data['themes'],
           fieldset: {
             legend: {
               text: "Select themes for the data set",
@@ -127,8 +128,4 @@
    
   </div>
 
-{% endblock %}
-
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
 {% endblock %}

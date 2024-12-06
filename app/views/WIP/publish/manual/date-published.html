@@ -40,18 +40,18 @@
 
 
         {{ govukDateInput({
-        id: "passport-issued",
-        namePrefix: "passport-issued",
-        fieldset: {
-            legend: {
-                text: "When was the data set first made available?",
-                isPageHeading: true,
-                classes: "govuk-fieldset__legend--l"
-            }
-        },
-        hint: {
-            text: "This is the date you first issued the data set, or published it in your data catalogue."
-        }
+          id: "datePublished",
+          namePrefix: "datePublished",
+          fieldset: {
+              legend: {
+                  text: "When was the data set first made available?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+              }
+          },
+          hint: {
+              text: "This is the date you first issued the data set, or published it in your data catalogue."
+          }
         }) }}
 
         <div class="govuk-button-group">
@@ -73,8 +73,4 @@
     
   </div>
 
-{% endblock %}
-
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
 {% endblock %}
