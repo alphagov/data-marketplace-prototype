@@ -85,10 +85,11 @@
             },
             href: path + "/themes",
             status: {
-                tag: {
-                  text: "To do",
-                  classes: "govuk-tag--blue"
-                }
+              text: "Done"
+            } if data['themes'] else {
+              tag: {
+                text: "To do"
+              }
             }
           },
           {
@@ -97,9 +98,10 @@
             },
             href: path + "/keywords",
             status: {
+              text: "Done"
+            } if data['keywords'] else {
               tag: {
-                text: "To do",
-                classes: "govuk-tag--blue"
+                text: "To do"
               }
             }
           }
@@ -118,9 +120,10 @@
             },
             href: path + "/contact",
             status: {
+              text: "Done"
+            } if data['contactName'] else {
               tag: {
-                text: "To do",
-                classes: "govuk-tag--blue"
+                text: "To do"
               }
             }
           },
@@ -130,9 +133,10 @@
             },
             href: path + "/owner",
             status: {
+              text: "Done"
+            } if data['ownerName'] else {
               tag: {
-                text: "To do",
-                classes: "govuk-tag--blue"
+                text: "To do"
               }
             }
           }
@@ -151,10 +155,11 @@
             },
             href: path + "/date-published",
             status: {
-                tag: {
-                  text: "To do",
-                  classes: "govuk-tag--blue"
-                }
+              text: "Done"
+            } if data['datePublished-day'] else {
+              tag: {
+                text: "To do"
+              }
             }
           },
           {
@@ -163,9 +168,10 @@
             },
             href: path + "/frequency",
             status: {
+              text: "Done"
+            } if data['frequency'] else {
               tag: {
-                text: "To do",
-                classes: "govuk-tag--blue"
+                text: "To do"
               }
             }
           },
@@ -175,9 +181,10 @@
             },
             href: path + "/access",
             status: {
+              text: "Done"
+            } if data['access'] else {
               tag: {
-                text: "To do",
-                classes: "govuk-tag--blue"
+                text: "To do"
               }
             }
           }

@@ -39,6 +39,7 @@
 
         {{ govukRadios({
           name: "access",
+          value: data['access'],
           fieldset: {
             legend: {
               text: "Is the data set publicly available?",
@@ -55,8 +56,7 @@
               value: "Restricted",
               text: "No – it requires a data share agreement"
             }
-          ],
-          value: data['security-classification']
+          ]
         }) }}
 
         <div class="govuk-button-group">

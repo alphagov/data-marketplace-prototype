@@ -2,6 +2,13 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const path = '/WIP/publish'
 const router = govukPrototypeKit.requests.setupRouter(path)
 
+// logging
+// 
+router.use((req,res,next) => {
+    console.log(req.session.data)
+    next()
+})
+
 // Access to publish
 router.get('/bMVP_wip--dashboard-add-permission', (req, res) => {
   const permissions = req.session.data['WIP_settings_permissions'];

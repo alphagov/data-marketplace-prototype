@@ -41,23 +41,28 @@
       {% endif %}
 
         <div data-module="moj-add-another">
+          {% set keywords = data['keywords'] or [""] %}
+          {% for keyword in keywords %}
             {% call govukFieldset({
               classes: 'moj-add-another__item'
             }) %}
               {{ govukInput({
-                id: 'keyword[0]',
-                name: 'keyword[0]',
+                id: 'keywords[0]',
+                name: 'keywords[0]',
+                value: keyword,
                 label: {
-                  html: 'Keyword',
+                  text: 'Keyword',
                   classes: 'govuk-visually-hidden'
                 },
                 attributes: {
-                  'data-name': 'keyword[%index%]',
-                  'data-id': 'keyword[%index%]',
-                  'data-value': 'keyword[%index%]'
+                  'data-name': 'keywords[%index%]',
+                  'data-id': 'keywords[%index%]',
+                  'data-value': 'keywords[%index%]'
                 }
               }) }}
             {% endcall %}
+
+            {% endfor %}
 
             <div class="govuk-form-group">
 
