@@ -4,10 +4,10 @@ const router = govukPrototypeKit.requests.setupRouter(path)
 
 // logging
 // 
-// router.use((req,res,next) => {
-//     console.log(req.session.data)
-//     next()
-// })
+router.use((req,res,next) => {
+    console.log(JSON.stringify(req.session.data, null, 2))
+    next()
+})
 
 // Access to publish
 router.get('/bMVP_wip--dashboard-add-permission', (req, res) => {

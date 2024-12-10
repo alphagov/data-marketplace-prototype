@@ -31,7 +31,7 @@
       </h1>
 
       <p class="govuk-hint">
-        For example CSV or JSON.
+        For example, CSV or JSON.
       </p>
 
       {% if data['check-answers'] == "true" %}
@@ -51,6 +51,7 @@
                 id: 'formats[0]',
                 name: 'formats[0]',
                 value: format,
+                classes: "govuk-input--width-10",
                 label: {
                   text: 'format',
                   classes: 'govuk-visually-hidden'

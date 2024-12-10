@@ -109,7 +109,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Point of Contact
+            Point of contact
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['contactName'] }}<br>
@@ -259,15 +259,16 @@
       {% endif %}
 
       {{ govukButton({
-        text: "Submit",
+        text: "Publish listing",
         href: "/WIP/publish/manual/confirmation"
       })}}
+
+
+      <p>
+        <a class="govuk-link" href="#">Delete draft</a>
+      </p>
         
     </div>
     
   </div>
-{% endblock %}
-
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
 {% endblock %}
