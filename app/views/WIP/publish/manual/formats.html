@@ -1,0 +1,110 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  Keyword
+{% endblock %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-caption-l">
+        {{ data['title'] }}
+      </div>
+
+      <h1 class="govuk-heading-l">
+        What formats is the data available in?
+      </h1>
+
+      <p class="govuk-hint">
+        For example CSV or JSON.
+      </p>
+
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/WIP/publish/manual/contact" method="post">
+      {% endif %}
+
+        <div data-module="moj-add-another">
+          {% set formats = data['formats'] or [""] %}
+          {% for format in formats %}
+            {% call govukFieldset({
+              classes: 'moj-add-another__item'
+            }) %}
+              {{ govukInput({
+                id: 'formats[0]',
+                name: 'formats[0]',
+                value: format,
+                label: {
+                  text: 'format',
+                  classes: 'govuk-visually-hidden'
+                },
+                attributes: {
+                  'data-name': 'formats[%index%]',
+                  'data-id': 'formats[%index%]',
+                  'data-value': 'formats[%index%]'
+                }
+              }) }}
+            {% endcall %}
+
+            {% endfor %}
+
+            <div class="govuk-form-group">
+
+              {{ govukButton({
+                classes: "govuk-button--secondary moj-add-another__add-button",
+                text: "Add another format"
+              }) }}
+            
+            </div>
+
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue"
+               }) }}
+               {{ govukButton({
+                text: "Save and return",
+                classes: "govuk-button--secondary",
+                attributes: {
+                  formaction: "/WIP/publish/manual/task-list"
+                }
+               })}}
+            </div>
+
+        </div>
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <h2 class="govuk-heading-m">
+        More information
+      </h2>
+
+      <p>
+        <a href="#">
+          Get help with formats
+        </a>
+      </p>
+    </div>
+    
+  </div>
+
+{% endblock %}

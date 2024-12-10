@@ -256,113 +256,13 @@
 
         {% endif %}
 
-
       {% endif %}
 
-
-      {% if data['REST-docs'] or data['SOAP-docs'] or data['event-docs'] %}
-      <h2 class="govuk-heading-l">Services</h2>
-
-        {% if data['REST-docs'] %}
-        <table class="govuk-table govuk-!-margin-bottom-3">
-          <caption class="govuk-table__caption govuk-table__caption--m">REST</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Endpoint URL</th>
-              <th scope="col" class="govuk-table__header">Documentation URL</th>
-              <th scope="col" class="govuk-table__header">Service Status</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-              {% for value in data['REST-docs'] %}
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['REST-url'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['REST-docs'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['REST-status'][loop.index0] }}</td>
-              </tr>
-              {% endfor %}
-          </tbody>
-        </table>
-        <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/WIP/publish/manual/add-data/rest?check-answers=true">
-            Change
-            <span class="govuk-visually-hidden"> data served</span>
-          </a>
-        </p>
-        {% endif %}
-
-        {% if data['SOAP-docs'] %}
-        <table class="govuk-table govuk-!-margin-bottom-3">
-          <caption class="govuk-table__caption govuk-table__caption--m">SOAP</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Endpoint URL</th>
-              <th scope="col" class="govuk-table__header">Documentation URL</th>
-              <th scope="col" class="govuk-table__header">Service Status</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-              {% for value in data['SOAP-docs'] %}
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['SOAP-url'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['SOAP-docs'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['SOAP-status'][loop.index0] }}</td>
-              </tr>
-              {% endfor %}
-          </tbody>
-        </table>
-        <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/WIP/publish/manual/add-data/soap?check-answers=true">
-            Change
-            <span class="govuk-visually-hidden"> data served</span>
-          </a>
-        </p>
-        {% endif %}
-
-
-        {% if data['event-docs'] %}
-        <table class="govuk-table govuk-!-margin-bottom-3">
-          <caption class="govuk-table__caption govuk-table__caption--m">Event based Service</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Endpoint URL</th>
-              <th scope="col" class="govuk-table__header">Documentation URL</th>
-              <th scope="col" class="govuk-table__header">Service Status</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-              {% for value in data['event-docs'] %}
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['event-url'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['event-docs'][loop.index0] }}</td>
-                <td class="govuk-table__cell">{{ data['event-status'][loop.index0] }}</td>
-              </tr>
-              {% endfor %}
-          </tbody>
-        </table>
-        <p class=" govuk-!-margin-bottom-6">
-          <a class="govuk-link" href="/WIP/publish/manual/add-data/event?check-answers=true">
-            Change
-            <span class="govuk-visually-hidden"> data served</span>
-          </a>
-        </p>
-        {% endif %}
-
-
-
-      {% endif %}
+      {{ govukButton({
+        text: "Submit",
+        href: "/publish/manual/confirmation"
+      })}}
         
-
-      <form action="/publish/manual/confirmation" method="post" novalidate>
-
-        <input type="hidden" name="answers-checked" value="true">
-
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Submit
-        </button>
-
-      </form>
-
     </div>
     
   </div>

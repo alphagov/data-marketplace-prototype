@@ -4,10 +4,10 @@ const router = govukPrototypeKit.requests.setupRouter(path)
 
 // logging
 // 
-router.use((req,res,next) => {
-    console.log(req.session.data)
-    next()
-})
+// router.use((req,res,next) => {
+//     console.log(req.session.data)
+//     next()
+// })
 
 // Access to publish
 router.get('/bMVP_wip--dashboard-add-permission', (req, res) => {
@@ -67,7 +67,7 @@ router.post('/manual/access-answer', function(request, response) {
     if (access == 'Public'){
         response.redirect(`${path}/manual/links`)
     } else if (access == 'Restricted' ) {
-        response.redirect(`${path}/manual/format`)
+        response.redirect(`${path}/manual/formats`)
     } else {
         response.redirect(`${path}/manual/access`)
     }
