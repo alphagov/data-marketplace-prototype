@@ -1,0 +1,52 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  Reference
+{% endblock %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {{ govukPanel({
+            titleText: "Listing published",
+            html: data['title'],
+            classes: "govuk-!-margin-bottom-6"
+        }) }}
+
+        <ul class="govuk-list">
+            <li class="govuk-!-margin-bottom-4">
+                <a href="#">
+                    View listing on the Data Marketplace
+                </a>
+            </li>
+            <li class="govuk-!-margin-bottom-4">
+                <a href="#">
+                    Change your listing
+                </a>
+            </li>
+            <li class="govuk-!-margin-bottom-4">
+                <a href="#">
+                    View all your listings
+                </a>
+            </li>
+        </ul>
+
+    </div>
+   
+  </div>
+
+{% endblock %}
