@@ -9,6 +9,7 @@ router.post('/new-api-key', (request, response) => {
     
     const appName = data['app-name']
     const environment = data['app-environment']
+    const scopes = data['app-scopes']
 
     if (appName.trim() === '') {
         // no name entered
@@ -19,7 +20,7 @@ router.post('/new-api-key', (request, response) => {
     data.developer.apps.push({
         "name": appName,
         "environment": environment,
-        "scopes": ['discover','publish','delete'],
+        "scopes": scopes,
         "expiry-day": "1",
         "expiry-month": "1",
         "expiry-year": "2026"

@@ -62,6 +62,39 @@
           ]
         })}}
 
+        {{ govukCheckboxes({
+          name: "app-scopes",
+          fieldset: {
+              legend: {
+                  text: "Scopes",
+                  classes: "govuk-fieldset__legend--s"
+              }
+          },
+          items: [
+              {
+                  value: "discover",
+                  text: "discover",
+                  hint: {
+                    text: "Search and retrieve your metadata records."
+                  }
+              },
+              {
+                  value: "publish",
+                  text: "publish",
+                  hint: {
+                    text: "Publish and update your metadata records."
+                  }
+              },
+              {
+                  value: "delete",
+                  text: "delete",
+                  hint: {
+                    text: "Delete your metadata records."
+                  }
+              }
+          ]
+          }) }}
+
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
