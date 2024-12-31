@@ -29,14 +29,6 @@ window.GOVUKPrototypeKit.documentReady(() => {
     });
   }
 
-  $('.app-c-expander__button').on('click', function (e) {
-    let toggleValue = 'true'
-    $(this).attr('aria-expanded') === 'true' ? toggleValue = 'false' : toggleValue = 'true';
-    $(this).attr('aria-expanded', toggleValue)
-    // console.log($(this).closest('app-c-expander__content'))
-    $(this).parent().next('.app-c-expander__content').toggleClass('app-c-expander__content--visible')
-})
-
 var checkboxes = document.querySelectorAll("#searchForm input[type='checkbox']");
 var button = document.querySelector(".moj-filter__options button");
 

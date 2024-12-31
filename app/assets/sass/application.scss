@@ -29,6 +29,11 @@
 //     color:  #1d70b8!important;
 // }
 
+
+.govuk-\!-colour-secondary {
+    color: $govuk-secondary-text-colour !important;
+}
+
 .govuk-warning-text__icon {
     border: 3px solid #666;
     color: #666;
