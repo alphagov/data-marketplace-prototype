@@ -75,7 +75,7 @@
                     <p class="govuk-!-colour-secondary" id="js-result-count">{{ count }} results</p>
                 </div>
             </div>
-            
+
             <div id="js-sort-options" data-ga4-change-category="update-sort select">
                 <div class="govuk-form-group sort-options gem-c-select">
                     <label for="order" class="sort-options__label govuk-label">Sort by</label>
@@ -89,30 +89,30 @@
             </div>
 
 
-            {% if resources|length %}
+            {% if listings.length > 0 %}
                 <div class="govuk-!-margin-bottom-5">
-                    {% for resource in resources %}
+                    {% for listing in listings %}
                     <div class="govuk-!-margin-bottom-7">
 
                         <p class="govuk-!-margin-bottom-3">
-                            <a href="./resources/{{ resource.slug | urlencode }}" class="govuk-!-font-weight-bold govuk-link">
-                                {{ resource.title}}
+                            <a href="./resources/{{ listing.slug | urlencode }}" class="govuk-!-font-weight-bold govuk-link">
+                                {{ listing.title }}
                             </a>
                         </p>
 
                         <p class="govuk-!-margin-bottom-3 govuk-!-colour-secondary">
-                            {{ resource.issuing_body_readable }}
+                            {{ listing.organisation }}
                         </p>
 
                         <!-- <p class="govuk-!-display-inline">
-                            {% for distribution in resource.distributions %}
+                            {% for distribution in result.distributions %}
                                 <strong class="govuk-tag govuk-tag--grey">{{ distribution }}</strong>
                             {% endfor %}
                         </p> -->
                         
                         <div class="govuk-!-margin-bottom-0 govuk-!-margin-top-1">
                             <p class="govuk-!-font-size-16">
-                                {{ resource.description | truncate(280) }}
+                                {{ listing.description | truncate(280) }}
                             </p>
                         </div>
                         
