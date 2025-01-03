@@ -13,6 +13,7 @@ const init = async function() {
     global.organisations = require(root + '/app/data/organisations.json')
     global.topics = require(root + '/app/data/topics.json')
     global.types = require(root + '/app/data/asset-types.json')
+    global.access = require(root + '/app/data/access.json')
     global.resources = []
     const catalogue = require(root + '/app/data/catalogue.json')
     const mappedCatalogue = helpers.mapLiveSchemaToSpec(catalogue)
@@ -48,7 +49,7 @@ router.get('/' + sprint + '/find', function(req, res) {
                 return true
             })
         }
-        if(Array.isArray(req.query.topicFilters)) {
+        if (Array.isArray(req.query.topicFilters)) {
             appliedFilters.topic = req.query.topicFilters.filter(function(e) {
                 anyFiltersActive = true
                 if(e == '_unchecked' || e == req.query.removeFilter) {
@@ -77,22 +78,25 @@ router.get('/' + sprint + '/find', function(req, res) {
             title: 'Topic',
             id: 'topicFilters',
             items: helpers.generateFilterItems(global.topics, 'topicFilters', aggregations.topic),
-            expanded: 'true',
             selectedCount: helpers.getSelectedFiltersCount(aggregations.topic.buckets)
         },
         {
             title: 'Organisation',
             id: 'organisationFilters',
             items: helpers.generateFilterItems(global.organisations, 'organisationFilters', aggregations.issuing_body),
-            expanded: 'true',
             selectedCount: helpers.getSelectedFiltersCount(aggregations.issuing_body.buckets)
         },
         {
             title: 'Type',
             id: 'typesFilters',
             items: helpers.generateFilterItems(global.types, 'typesFilters', aggregations.type),
-            expanded: 'true',
             selectedCount: helpers.getSelectedFiltersCount(aggregations.type.buckets)
+        },
+        {
+            title: 'Access',
+            id: 'accessFilters',
+            items: helpers.generateFilterItems(global.access, 'accessFilters', aggregations.access),
+            selectedCount: helpers.getSelectedFiltersCount(aggregations.access.buckets)
         }
     ]
 
@@ -154,6 +158,11 @@ const searchSetup = function(data) {
             },
             type: {
                 title: 'Asset Type',
+                size: 30,
+                conjunction: false
+            },
+            access: {
+                title: 'AccessRights',
                 size: 30,
                 conjunction: false
             }
@@ -262,47 +271,31 @@ const helpers = {
         const url = req.protocol + '://' + req.get('host') + req.originalUrl
         return url
     },
-    mapLiveSchemaToSpec(data, issuing_body, topic, type) {
-        console.log(issuing_body, topic, type)
+    mapLiveSchemaToSpec(data) {
         return data.map(function(e) {
             let n = {}
-            if (e.data) {
-                n.title = e.data.name
-                n.description = e.data.description
-                n.issuing_body_readable = e.data.organisation
-                n.issuing_body = issuing_body
-                n.topic = helpers.splitTopics(topic)
-                n.contact = e.data.contact
-                n.documentation = e.data['documentation-url']
-                n.distributions = e.data.distributions
-                n.dateUpdated = e.data.dateUpdated
-                n.type = e.data.type
-                n.type = type
-                n.accessRights = e.data.accessRights
-            } else {
-                n.title = e.name
-                n.description = e.description
-                n.issuing_body = e.provider
-                n.issuing_body_readable = helpers.getOrgTitle(e.provider)
-                n.contact = e.maintainer
-                n.documentation = e.documentation
-                n.distributions = e.distributions
-                n.dateUpdated = e.dateUpdated
-                n.dateUpdatedOrig = helpers.trueDate(n.dateUpdated)
-                n.dateUpdated = helpers.formatDate(n.dateUpdated)
-                if(e.topic) {
-                    n.topic = helpers.splitTopics(e.topic)
-                }
-                n.type = e.type
-                n.accessRights = e.accessRights
-                
+
+            n.title = e.name
+            n.description = e.description
+            n.issuing_body = e.provider
+            n.issuing_body_readable = helpers.getOrgTitle(e.provider)
+            n.contact = e.maintainer
+            n.documentation = e.documentation
+            n.distributions = e.distributions
+            n.dateUpdated = e.dateUpdated
+            n.dateUpdatedOrig = helpers.trueDate(n.dateUpdated)
+            n.dateUpdated = helpers.formatDate(n.dateUpdated)
+            if(e.topic) {
+                n.topic = helpers.splitTopics(e.topic)
             }
+            n.type = e.type
+            n.accessRights = e.accessRights
+            
             n.url = e.url
             n.slug = n.title.toLowerCase().replaceAll(' ','-')
             n['better description'] = e['better description']
             return n
-        }
-        )
+        })
     },
     splitTopics(string) {
         const topics = [].concat(string.split(','))

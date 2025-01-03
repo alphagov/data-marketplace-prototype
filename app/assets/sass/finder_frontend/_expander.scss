@@ -1,95 +1,94 @@
 .app-c-expander {
-    padding: 0 0 govuk-spacing(2);
-    margin-bottom: govuk-spacing(2);
-    border-bottom: 1px solid $govuk-border-colour;
-    &:last-child {
-        border-bottom: 0;
-    }
+  padding: 0 0 govuk-spacing(2);
+  margin-bottom: govuk-spacing(2);
+  border-bottom: 1px solid $govuk-border-colour;
+}
+
+.app-c-expander__title {
+  cursor: pointer;
+  @include govuk-font(19);
+}
+
+.app-c-expander__content {
+  padding: govuk-spacing(2) 13px;
+
+  .govuk-form-group:last-child {
+    margin-bottom: 0;
   }
-  
-  .app-c-expander__title {
-    @include govuk-font(19);
-    cursor: pointer;
+}
+
+.govuk-frontend-supported {
+  .app-c-expander__heading {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
   }
-  
+
   .app-c-expander__content {
-    padding: govuk-spacing(2) 13px;
-  
-    .govuk-form-group:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
-  .js-enabled {
-    .app-c-expander__heading {
-      position: relative;
-      padding: 10px 8px 5px 43px;
-      margin: 0;
-    }
-  
-    .app-c-expander__content {
-      display: none;
-    }
-  
-    .app-c-expander__content--visible {
-      display: block;
-    }
-  
-    [aria-expanded="true"] ~ .app-c-expander__icon--up {
-      display: block;
-    }
-  
-    [aria-expanded="false"] ~ .app-c-expander__icon--down {
-      display: block;
-    }
-  }
-  
-  .app-c-expander__icon {
     display: none;
+  }
+
+  .app-c-expander__content--visible {
+    display: block;
+  }
+
+  [aria-expanded="true"] ~ .app-c-expander__icon--up {
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ .app-c-expander__icon--down {
+    display: block;
+  }
+}
+
+.app-c-expander__icon {
+  display: none;
+  flex-shrink: 0;
+  width: 30px;
+  height: 40px;
+  margin-inline: 10px 4px;
+  fill: govuk-colour("black");
+}
+
+.app-c-expander__button {
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  color: $govuk-link-colour;
+  @include govuk-font(19);
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: .1em;
+    @include govuk-link-hover-decoration;
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    @include govuk-focused-text;
+  }
+
+  // Extend the touch area of the button to span the heading
+  &::after {
+    content: "";
     position: absolute;
     top: 0;
-    left: 9px;
-    width: 30px;
-    height: 40px;
-    fill: govuk-colour("black");
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
   }
-  
-  .app-c-expander__button {
-    @include govuk-font(19);
-    border: 0;
-    background: none;
-    text-align: left;
-    cursor: pointer;
-    padding: 0;
-    color: $govuk-link-colour;
-  
-    &:hover {
-      text-decoration: underline;
-      text-underline-offset: .1em;
-      @include govuk-link-hover-decoration;
-    }
-  
-    &:focus {
-      outline: none;
-      text-decoration: none;
-      @include govuk-focused-text;
-    }
-  
-    // Extend the touch area of the button to span the heading
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-    }
-  }
-  
-  .app-c-expander__selected-counter {
-    @include govuk-font($size: 14);
-    display: block;
-    color: $govuk-text-colour;
-    margin-top: 3px;
-  }
+}
+
+.app-c-expander__selected-counter {
+  display: block;
+  color: $govuk-text-colour;
+  margin-top: 3px;
+  @include govuk-font($size: 14);
+}

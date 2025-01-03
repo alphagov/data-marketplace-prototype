@@ -1,0 +1,217 @@
+{% extends "WIP/_layouts/main.html" %}
+
+
+{% block pageTitle %}
+  Find government data
+{% endblock %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+    Find government data
+</h1>
+
+<form action="{{ thisUrl }}" method="GET" id="searchForm">
+    <div class="gem-c-search gem-c-search--on-white govuk-!-width-two-thirds govuk-!-margin-bottom-4">
+        <div class="gem-c-search__item-wrapper">
+            <input  class="gem-c-search__item gem-c-search__input govuk-input js-class-toggle" id="search" name="q" title="Search" type="search" value="{{ query }}">
+            <div class="gem-c-search__item gem-c-search__submit-wrapper">
+                <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
+                    Search
+                    <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+                        <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+                    </svg>
+                </button> 
+            </div>
+        </div>
+    </div>
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+
+            <div class="moj-override">
+                {%- set filterOptionsHtml %}
+                    {% for filter in filters %}
+                        <div class="app-c-expander" data-module="expander" data-open-on-load="{% if filter.expanded === 'false' %}false{% else %}true{% endif %}">
+                            <h3 class="app-c-expander__heading">
+                                <span class="app-c-expander__title js-toggle">{{ filter.title }}</span>
+                                <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="app-c-expander__icon app-c-expander__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"/></svg>
+                                <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="app-c-expander__icon app-c-expander__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"/></svg>
+                              </h3>
+                              <div class="app-c-expander__content js-content {{'app-c-expander__content--visible' if filter.expanded }}" id="{{ filter.id }}">
+                            
+                                {{ govukCheckboxes({
+                                    name: filter.title,
+                                    classes: "govuk-checkboxes--small js-auto-submit",
+                                    attributes: {
+                                        "id": filter.id
+                                    },
+                                    fieldset: {
+                                        legend: {
+                                            text: filter.title,
+                                            classes: "govuk-fieldset__legend--s govuk-visually-hidden"
+                                        }
+                                    },
+                                    items: filter.items
+                                }) }}
+                                
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endset -%}
+
+                {{ mojFilter({
+                    selectedFilters: selectedFilters,
+                    optionsHtml: filterOptionsHtml
+                }) }}
+            </div>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds" role="region" aria-label="Search results">
+
+            <div class="result-info">
+                <div class="result-info__header">
+                    <p class="govuk-!-colour-secondary" id="js-result-count">{{ count }} results</p>
+                </div>
+                <div id="js-facet-tag-wrapper" class="facet-tags__container" aria-live="assertive">
+                    <div class="moj-override--selected-tags">
+                        {%- set filterOptionsHtml %}
+                            {% for filter in filters %}
+                                    <div class="app-c-expander" data-module="expander" data-open-on-load="{% if filter.expanded === 'true' %}true{% else %}false{% endif %}">
+                                        <h2 class="app-c-expander__heading">
+                                        <button type="button" class="app-c-expander__button js-button" aria-expanded="{% if filter.expanded === 'true' %}true{% else %}false{% endif %}"
+                                            aria-controls="expander-content-{{ filter.id }}">{{ filter.title }}</button>
+                                        <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+                                                class="app-c-expander__icon app-c-expander__icon--up" aria-hidden="true" focusable="false">
+                                            <path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
+                                        </svg>
+                                        <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+                                                class="app-c-expander__icon app-c-expander__icon--down" aria-hidden="true"
+                                                focusable="false">
+                                            <path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
+                                        </svg>
+                                    </h2>
+                                    <div class="app-c-expander__content js-content {% if filter.expanded === 'true' %}app-c-expander__content--visible{% endif %} app-c-option-select__container" id="expander-content-{{filter.id}}">
+            
+                                    {{ govukCheckboxes({
+                                        name: filter.title,
+                                        classes: "govuk-checkboxes--small js-auto-submit",
+                                        attributes: {
+                                            "id": filter.id
+                                            },
+                                        fieldset: {
+                                            legend: {
+                                            text: filter.title,
+                                            classes: "govuk-fieldset__legend--s govuk-visually-hidden"
+                                            }
+                                        },
+                                        items: filter.items
+                                        }) }}
+                                    
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endset -%}
+            
+                        {{ mojFilter({
+                        heading: {
+                            text: ''
+                        },
+                        selectedFilters: selectedFilters,
+                        optionsHtml: filterOptionsHtml
+                        }) }}
+                        </div>
+                </div>
+            </div>
+
+            <div id="js-sort-options" data-ga4-change-category="update-sort select">
+                <div class="govuk-form-group sort-options gem-c-select">
+                    <label for="order" class="sort-options__label govuk-label">Sort by</label>
+                    <select class="js-order-results govuk-select sort-options__select" name="order" id="order" aria-controls="js-search-results-info" data-default-sort-option="Updated (newest)" data-relevance-sort-option="Updated (newest)" data-module="track-select-change" data-track-select-change-module-started="true">
+
+                        <option value="updated-newest" selected="" data-track-category="dropDownClicked" data-track-action="clicked" data-track-label="Updated (newest)">Updated (newest)</option>
+                        <option value="updated-oldest" data-track-category="dropDownClicked" data-track-action="clicked" data-track-label="Updated (oldest)">Updated (oldest)</option>
+                        <option value="relevance" data-track-category="dropDownClicked" data-track-action="clicked" data-track-label="Relevance">Relevance</option>
+                    </select>
+                </div>
+            </div>
+
+
+            {% if resources|length %}
+                <div class="govuk-!-margin-bottom-5">
+                    {% for resource in resources %}
+                    <div class="govuk-!-margin-bottom-7">
+
+                        <p class="govuk-!-margin-bottom-3">
+                            <a href="./resources/{{ resource.slug | urlencode }}" class="govuk-!-font-weight-bold govuk-link">
+                                {{ resource.title}}
+                            </a>
+                        </p>
+
+                        <p class="govuk-!-margin-bottom-3 govuk-!-colour-secondary">
+                            {{ resource.issuing_body_readable }}
+                        </p>
+
+                        <!-- <p class="govuk-!-display-inline">
+                            {% for distribution in resource.distributions %}
+                                <strong class="govuk-tag govuk-tag--grey">{{ distribution }}</strong>
+                            {% endfor %}
+                        </p> -->
+                        
+                        <div class="govuk-!-margin-bottom-0 govuk-!-margin-top-1">
+                            <p class="govuk-!-font-size-16">
+                                {{ resource.description | truncate(280) }}
+                            </p>
+                        </div>
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+
+                {% include "includes/pagination.njk" %}
+                
+            {% else %}
+            <div class="no-results govuk-!-font-size-19"> 
+                <p class="govuk-body govuk-!-font-weight-bold">There are no matching results.</p>
+                 <p class="govuk-body">Improve your search results by:</p> 
+                 <ul class="govuk-list govuk-list--bullet"> 
+                    <li>removing filters</li> 
+                    <li>double-checking your spelling</li> 
+                    <li>using fewer keywords</li> 
+                    <li>searching for something less specific</li> 
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}
+
+{% block footer %}
+{% include "includes/WIP_footer.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+    <script src="/public/javascripts/expander.js"></script>
+    <script>
+        document.querySelectorAll('[data-module="expander"]').forEach(function(element) {
+            new GOVUK.Modules.Expander(element).init()
+        });
+    </script>
+{% endblock %}

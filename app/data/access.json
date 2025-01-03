@@ -1,0 +1,12 @@
+[
+    {
+      "id": "open",
+      "name": "Open",
+      "description": ""
+    },
+    {
+      "id": "onRequest",
+      "name": "On request",
+      "description": ""
+    }
+  ]
