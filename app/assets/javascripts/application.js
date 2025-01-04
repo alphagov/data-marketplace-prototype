@@ -30,7 +30,7 @@ window.GOVUKPrototypeKit.documentReady(() => {
   }
 
 var checkboxes = document.querySelectorAll("#searchForm input[type='checkbox']");
-var button = document.querySelector(".moj-filter__options button");
+var button = document.querySelector("#search-button");
 
 for (var i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("change", function() {

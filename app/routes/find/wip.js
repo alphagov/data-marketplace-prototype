@@ -7,6 +7,10 @@ const catalogue = require(`${root}/app/data/catalogue.json`)
 const organisations = require(`${root}/app/data/organisations.json`)
 const topics = require(`${root}/app/data/topics.json`)
 
+const log = (input) => {
+    console.log(JSON.stringify(input, null, 2))
+}
+
 const getOrganisation = (id) => {
     return organisations.find((item) => item.id == id)
 }
@@ -75,6 +79,7 @@ const processFilters = (aggregations) => {
         items: aggregation.buckets.map((item) => ({
             text: item.key,
             value: item.key,
+            checked: item.selected,
             label: {
                 classes: "govuk-!-font-size-16"
             }
@@ -84,15 +89,60 @@ const processFilters = (aggregations) => {
     return filters
 }
 
-router.get('/',(request, response) => {
+router.use((request, response, next) => {
+    // remove _unchecked from query
+    for (let i in request.query) {
+        if (request.query[i] == "_unchecked") {
+            delete request.query[i]
+        } else if (Array.isArray(request.query[i])) {
+            request.query[i] = request.query[i].filter((item) => item != "_unchecked")
+        }
+    }
+    next()
+})
 
-    const results = itemsjs.search()
+router.get('/', (request, response) => {
+
+    const searchOptions = {
+        filters: {}
+    }
+
+    const term = request.query.term
+
+    if (term) {
+        searchOptions.query = term
+        response.locals.term = term
+    }
+
+    const topic = request.query.topic
+
+    if (topic) {
+        searchOptions.filters.topic = topic
+    }
+
+    const organisation = request.query.organisation
+
+    if (organisation) {
+        searchOptions.filters.organisation = organisation
+    }
+
+    const type = request.query.type
+
+    if (type) {
+        searchOptions.filters.type = type
+    }
+
+    const access = request.query.access
+
+    if (access) {
+        searchOptions.filters.access = access
+    }
+
+    const results = itemsjs.search(searchOptions)
 
     response.locals.listings = results.data.items
     response.locals.count = results.pagination.total
     response.locals.filters = processFilters(results.data.aggregations)
-
-    console.log(JSON.stringify(results.data.aggregations, null, 2))
 
     response.render('/WIP/find/find')
 
