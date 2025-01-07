@@ -142,7 +142,7 @@ router.get('/', (request, response) => {
         searchOptions.filters.access = access
     }
 
-    const page = request.query.page
+    const page = Number(request.query.page) || 1
 
     if (page) {
         searchOptions.page = page
