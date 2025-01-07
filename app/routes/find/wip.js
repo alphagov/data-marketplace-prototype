@@ -17,7 +17,7 @@ const getOrganisation = (id) => {
 
 const getTopics = (input) => {
 
-    const oldTopics = input.split(',')
+    const oldTopics = input.split(',').filter((item) => item != "")
     const newTopics = oldTopics.map((oldTopic => {
         if (oldTopic == ""){
             return
@@ -49,22 +49,26 @@ const searchConfig = {
         topic: {
             title: 'Topic',
             size: 30,
-            conjunction: false
+            conjunction: false,
+            hide_zero_doc_count: true
         },
         organisation: {
             title: 'Organisation',
             size: 30,
-            conjunction: false
+            conjunction: false,
+            hide_zero_doc_count: true
         },
         type: {
             title: 'Type',
             size: 30,
-            conjunction: false
+            conjunction: false,
+            hide_zero_doc_count: true
         },
         access: {
             title: 'Access',
             size: 30,
-            conjunction: false
+            conjunction: false,
+            hide_zero_doc_count: true
         }
     },
     searchableFields: ['title', 'description', 'organisation'],
@@ -138,11 +142,45 @@ router.get('/', (request, response) => {
         searchOptions.filters.access = access
     }
 
+    const page = request.query.page
+
+    if (page) {
+        searchOptions.page = page
+    }
+
     const results = itemsjs.search(searchOptions)
 
     response.locals.listings = results.data.items
     response.locals.count = results.pagination.total
     response.locals.filters = processFilters(results.data.aggregations)
+
+    // pagination
+
+    let pagination = {}
+
+    let url = new URL(`${request.protocol}://${request.get('host')}${request.originalUrl}`)
+
+    // previous
+
+    if (page != 1) {
+        const prevPage = page - 1
+        url.searchParams.set('page', prevPage)
+        pagination.previous = {
+            href: url.href
+        }
+    }
+
+    // next
+
+    if (page != results.pagination.numPages) {
+        const nextPage = page + 1
+        url.searchParams.set('page', nextPage)
+        pagination.next = {
+            href: url.href
+        }
+    }
+
+    response.locals.pagination = pagination
 
     response.render('/WIP/find/find')
 

@@ -120,7 +120,11 @@
                     {% endfor %}
                 </div>
 
-                {% include "includes/pagination.njk" %}
+                {{ govukPagination({
+                    previous: pagination.previous,
+                    next: pagination.next,
+                    items: pagination.items
+                  }) }}
                 
             {% else %}
             <div class="no-results govuk-!-font-size-19"> 
