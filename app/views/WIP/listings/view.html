@@ -1,53 +1,38 @@
-{% extends "layouts/main.html" %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
-  {{ resource.title }}
+  {{ listing.title }}
 {% endblock %}
 
-{% set WIPconditionalURL = "/WIP/start?loggedin=" + data['loggedin'] %}
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: WIPconditionalURL,
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_conditional.html" %}
-{% endblock %}
-
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
-
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-margin-bottom-4">
     <p class="govuk-caption-xl">
-      {{ resource.issuing_body_readable }}
+      {{ listing.issuing_body_readable }}
     </p>
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
-        {{ resource.title }}
+        {{ listing.title }}
     </h1>
     
-    <p class="govuk-caption-m"> Last updated: <strong>{{ resource.dateUpdated }}</strong></p>
+    <p class="govuk-caption-m"> Last updated: <strong>{{ listing.dateUpdated }}</strong></p>
 
     <p class="govuk-!-margin-bottom-5">
-      {% if resource.type == "dataset" %}
+      {% if listing.type == "dataset" %}
       <span class="">Dataset | Filetypes:</span>
-      {% elseif resource.type == "dataservice" %}
+      {% elseif listing.type == "dataservice" %}
       <span class="">Data service | APIs: </span>
       {% endif %}
 
-      {% for distribution in resource.distributions %}
+      {% for distribution in listing.distributions %}
           <strong class="govuk-tag govuk-tag--grey">{{ distribution }}</strong>
       {% endfor %}
     </p>
     <div class="result-list__limit-height">
       <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-0" >
-        {{ resource.description | replace("\\n\\n", "\n\n") | govukMarkdown | safe  }}
+        {{ listing.description | replace("\\n\\n", "\n\n") | govukMarkdown | safe  }}
     </p>
     </div>
     <span class="js-result-list-toggle-height govuk-accordion__section-toggle govuk-body" data-nosnippet=""><span class="govuk-accordion__section-toggle-focus"><span class="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span><span class="govuk-accordion__section-toggle-text">Show more</span></span></span>
@@ -57,16 +42,16 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-margin-bottom-8">
 
-    {% if resource.accessRights == "Internal" %}
+    {% if listing.accessRights == "Internal" %}
 
     <div class="additional-info govuk-!-margin-bottom-8">
-      {% if resource.type == "dataset" %}
+      {% if listing.type == "dataset" %}
       <h2 class="govuk-heading-l">Request this dataset</h2>
-      {% elseif resource.type == "dataservice" %}
+      {% elseif listing.type == "dataservice" %}
       <h2 class="govuk-heading-l">Request this data service</h2>
       {% endif %}
     
-      <p class="govuk-body">This data contains sensitive information (such as personal details) and requires a data share agreement with {{ resource.issuing_body_readable }}.</p>
+      <p class="govuk-body">This data contains sensitive information (such as personal details) and requires a data share agreement with {{ listing.issuing_body_readable }}.</p>
 
       <form class="form" action="/WIP/request/" method="post">
         {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -74,7 +59,7 @@
           type: "hidden",
           id: "shareTitle",
           name: "shareTitle",
-          value: resource.title
+          value: listing.title
         }) }}
         <button class="govuk-button" data-module="govuk-button">Start a data share request</button>
       </form>
@@ -83,7 +68,7 @@
       </p>
     </div>
 
-      {% if resource.type == "dataset" %}
+      {% if listing.type == "dataset" %}
 
       <h2 class="govuk-heading-l">Data available</h2>
       <p class="govuk-body">The following files are available as part of this dataset. </p>
@@ -104,10 +89,10 @@
         </thead>
         
         <tbody class="govuk-table__body">
-          {% for distribution in resource.distributions %}
+          {% for distribution in listing.distributions %}
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">{{ resource.slug }}-{{ loop.index0 + 1 }}</th>
-                <td class="govuk-table__cell">{{resource.dateUpdated}}</td>
+                <th scope="row" class="govuk-table__header">{{ listing.slug }}-{{ loop.index0 + 1 }}</th>
+                <td class="govuk-table__cell">{{listing.dateUpdated}}</td>
                 <td class="govuk-table__cell">{{ distribution }}</td>
               </tr>
           {% endfor %}
@@ -122,7 +107,7 @@
         <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Service type</th>
-                <td class="govuk-table__cell">{{ resource.distributions }}</td>
+                <td class="govuk-table__cell">{{ listing.distributions }}</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Service Status</th>
@@ -143,7 +128,7 @@
     {% else %}
 
     <div class="additional-info govuk-!-margin-bottom-8">
-      {% if resource.type == "dataset" %}
+      {% if listing.type == "dataset" %}
 
       <h2 class="govuk-heading-l">Data available</h2>
       <p class="govuk-body">The following files are available as part of this dataset. </p>
@@ -164,10 +149,10 @@
         </thead>
         
         <tbody class="govuk-table__body">
-          {% for distribution in resource.distributions %}
+          {% for distribution in listing.distributions %}
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">{{ resource.slug }}-{{ loop.index0 + 1 }}</a></th>
-                <td class="govuk-table__cell">{{resource.dateUpdated}}</td>
+                <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">{{ listing.slug }}-{{ loop.index0 + 1 }}</a></th>
+                <td class="govuk-table__cell">{{listing.dateUpdated}}</td>
                 <td class="govuk-table__cell">{{ distribution }}</td>
               </tr>
           {% endfor %}
@@ -182,7 +167,7 @@
         <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Service type</th>
-                <td class="govuk-table__cell">{{ resource.distributions }}</td>
+                <td class="govuk-table__cell">{{ listing.distributions }}</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Service Status</th>
@@ -225,7 +210,7 @@
       <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header  govuk-!-width-one-half">Access rights</th>
-              <td class="govuk-table__cell  govuk-!-width-one-half">{{ resource.accessRights }}</td>
+              <td class="govuk-table__cell  govuk-!-width-one-half">{{ listing.accessRights }}</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header govuk-!-width-one-half">Security Classification</th>
@@ -237,7 +222,7 @@
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header govuk-!-width-one-half">Updated</th>
-              <td class="govuk-table__cell govuk-!-width-one-half">{{ resource.dateUpdated }}</td>
+              <td class="govuk-table__cell govuk-!-width-one-half">{{ listing.dateUpdated }}</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header govuk-!-width-one-half">Added to Data Marketplace</th>
@@ -251,10 +236,10 @@
               <th scope="row" class="govuk-table__header govuk-!-width-one-half">Version</th>
               <td class="govuk-table__cell govuk-!-width-one-half">1.2</td>
             </tr>
-            {% if resource.contact %}
+            {% if listing.contact %}
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Contact</th>
-              <td class="govuk-table__cell">{{ resource.contact | govukMarkdown | safe }}</td>
+              <td class="govuk-table__cell">{{ listing.contact | govukMarkdown | safe }}</td>
             </tr>
             {% endif %}
       </tbody>

@@ -35,7 +35,8 @@ const searchData = catalogue.map(item => ({
     access: item.accessRights,
     topic: getTopics(item.topic),
     organisation: getOrganisation(item.provider).name,
-    description: item.description
+    description: item.description,
+    slug: item.name.toLowerCase().replaceAll(' ','-')
 }))
 
 const searchConfig = {
@@ -184,4 +185,9 @@ router.get('/search', (request, response) => {
 
     response.render('/WIP/listings/search')
 
+})
+
+router.get('/listings/:resourceID', function(request, response) {
+    response.locals.listing = searchData.find(listing => listing.slug == request.params.resourceID)
+    response.render("/WIP/listings/view")
 })
