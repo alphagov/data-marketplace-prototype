@@ -91,6 +91,25 @@
 
       </dl>
 
+    {% else %}
+
+      <h2 class="govuk-heading-m">
+        Request this data
+      </h2>
+
+      <p>
+        This data contains sensitive information (such as personal details)
+        and requires a data share agreement with {{ listing.organisation }}.
+      </p>
+
+      <p>
+        <a href="#">Learn more about requesting data</a>
+      </p>
+
+      <p>
+        {{ govukButton({ text: "Start a data request" })}}
+      </p>
+
     {% endif %}
 
     {% if listing.contactEmail %}
