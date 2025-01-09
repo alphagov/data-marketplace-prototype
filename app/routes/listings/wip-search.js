@@ -6,10 +6,14 @@ const root = process.cwd()
 const searchData = require(`${root}/app/data/dgu.json`)
 
 const log = (input) => {
-    console.log(JSON.stringify(input, null, 2))
+    if (typeof input == "string") {
+        console.log(input)
+    } else {
+        console.log(JSON.stringify(input, null, 2))
+    }
 }
 
-log(searchData.length)
+log(searchData.length + " listings")
 
 const searchConfig = {
     sortings: {
@@ -19,7 +23,7 @@ const searchConfig = {
         }
     },
     aggregations: {
-        theme: {
+        topic: {
             title: 'Topic',
             size: 50,
             sort: "key",
@@ -52,8 +56,6 @@ const searchConfig = {
 const itemsjs = require('itemsjs')(searchData, searchConfig)
 
 const processFilters = (aggregations) => {
-
-    log(aggregations)
 
     const filters = Object.values(aggregations)
         .map((aggregation) => ({
@@ -166,7 +168,26 @@ router.get('/search', (request, response) => {
 
 })
 
+
+const stringSimilarity = require("string-similarity")
+
+const findSimilar = (items, targetItem) => {
+  return items.map(item => ({
+    ...item,
+    similarity: stringSimilarity.compareTwoStrings(
+      `${item.title} ${item.title} ${item.title} ${item.organisation} ${item.topic}`,
+      `${targetItem.title} ${targetItem.title} ${targetItem.title} ${targetItem.organisation} ${item.topic}`
+    )
+  }))
+  .sort((a, b) => b.similarity - a.similarity)
+  .slice(1,6)
+//   .filter( (item) => item.similarity > 0.5)
+}
+
 router.get('/listings/:resourceID', function(request, response) {
-    response.locals.listing = searchData.find(listing => listing.slug == request.params.resourceID)
+    const listing = searchData.find(listing => listing.slug == request.params.resourceID)
+    response.locals.listing = listing
+    response.locals.similar = findSimilar(searchData, listing)
+    log(response.locals.similar)
     response.render("/WIP/listings/view")
 })

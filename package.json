@@ -19,6 +19,7 @@
     "jquery": "^3.7.1",
     "marked": "^15.0.0",
     "notifications-node-client": "^8.2.1",
+    "string-similarity": "^4.0.4",
     "yaml": "^2.6.0"
   },
   "overrides": {

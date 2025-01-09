@@ -1,0 +1,280 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ listing.title }}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-margin-bottom-4">
+    <p class="govuk-caption-xl">
+      {{ listing.issuing_body_readable }}
+    </p>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+        {{ listing.title }}
+    </h1>
+    
+    <p class="govuk-caption-m"> Last updated: <strong>{{ listing.dateUpdated }}</strong></p>
+
+    <p class="govuk-!-margin-bottom-5">
+      {% if listing.type == "dataset" %}
+      <span class="">Dataset | Filetypes:</span>
+      {% elseif listing.type == "dataservice" %}
+      <span class="">Data service | APIs: </span>
+      {% endif %}
+
+      {% for distribution in listing.distributions %}
+          <strong class="govuk-tag govuk-tag--grey">{{ distribution }}</strong>
+      {% endfor %}
+    </p>
+    <div class="result-list__limit-height">
+      <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-0" >
+        {{ listing.description | replace("\\n\\n", "\n\n") | govukMarkdown | safe  }}
+    </p>
+    </div>
+    <span class="js-result-list-toggle-height govuk-accordion__section-toggle govuk-body" data-nosnippet=""><span class="govuk-accordion__section-toggle-focus"><span class="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span><span class="govuk-accordion__section-toggle-text">Show more</span></span></span>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop govuk-!-margin-bottom-8">
+
+    {% if listing.accessRights == "Internal" %}
+
+    <div class="additional-info govuk-!-margin-bottom-8">
+      {% if listing.type == "dataset" %}
+      <h2 class="govuk-heading-l">Request this dataset</h2>
+      {% elseif listing.type == "dataservice" %}
+      <h2 class="govuk-heading-l">Request this data service</h2>
+      {% endif %}
+    
+      <p class="govuk-body">This data contains sensitive information (such as personal details) and requires a data share agreement with {{ listing.issuing_body_readable }}.</p>
+
+      <form class="form" action="/WIP/request/" method="post">
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {{ govukInput({
+          type: "hidden",
+          id: "shareTitle",
+          name: "shareTitle",
+          value: listing.title
+        }) }}
+        <button class="govuk-button" data-module="govuk-button">Start a data share request</button>
+      </form>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Get more help</a>
+      </p>
+    </div>
+
+      {% if listing.type == "dataset" %}
+
+      <h2 class="govuk-heading-l">Data available</h2>
+      <p class="govuk-body">The following files are available as part of this dataset. </p>
+  
+      <table class="govuk-table govuk-!-margin-bottom-8">
+    
+    
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+          
+            <th scope="col" class="govuk-table__header">File</th>
+          
+            <th scope="col" class="govuk-table__header">Date added</th>
+          
+            <th scope="col" class="govuk-table__header">File format</th>
+          
+          </tr>
+        </thead>
+        
+        <tbody class="govuk-table__body">
+          {% for distribution in listing.distributions %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">{{ listing.slug }}-{{ loop.index0 + 1 }}</th>
+                <td class="govuk-table__cell">{{listing.dateUpdated}}</td>
+                <td class="govuk-table__cell">{{ distribution }}</td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <h2 class="govuk-heading-l">Data available</h2>
+      <p class="govuk-body">The API information is available for this data service.</p>
+  
+      <table class="govuk-table govuk-!-margin-bottom-8">
+        
+        <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Service type</th>
+                <td class="govuk-table__cell">{{ listing.distributions }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Service Status</th>
+                <td class="govuk-table__cell">In production</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Endpoint URL (o)</th>
+                <td class="govuk-table__cell">https://api.endpointexample.service.gov.uk/</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Documentation</th>
+                <td class="govuk-table__cell"><a href="https://www.endpointexample.service.gov.uk/documentation" class="govuk-link">https://www.endpointexample.service.gov.uk/documentation</a></td>
+              </tr>
+              
+        </tbody>
+      </table>
+      {% endif %}
+    {% else %}
+
+    <div class="additional-info govuk-!-margin-bottom-8">
+      {% if listing.type == "dataset" %}
+
+      <h2 class="govuk-heading-l">Data available</h2>
+      <p class="govuk-body">The following files are available as part of this dataset. </p>
+  
+      <table class="govuk-table govuk-!-margin-bottom-8">
+    
+    
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+          
+            <th scope="col" class="govuk-table__header">File</th>
+          
+            <th scope="col" class="govuk-table__header">Date added</th>
+          
+            <th scope="col" class="govuk-table__header">File format</th>
+          
+          </tr>
+        </thead>
+        
+        <tbody class="govuk-table__body">
+          {% for distribution in listing.distributions %}
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#">{{ listing.slug }}-{{ loop.index0 + 1 }}</a></th>
+                <td class="govuk-table__cell">{{listing.dateUpdated}}</td>
+                <td class="govuk-table__cell">{{ distribution }}</td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <h2 class="govuk-heading-l">Data available</h2>
+      <p class="govuk-body">The API information is available for this data service.</p>
+  
+      <table class="govuk-table govuk-!-margin-bottom-8">
+        
+        <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Service type</th>
+                <td class="govuk-table__cell">{{ listing.distributions }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Service Status</th>
+                <td class="govuk-table__cell">In production</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Endpoint URL (o)</th>
+                <td class="govuk-table__cell"><a href="https://api.endpointexample.service.gov.uk/" class="govuk-link">https://api.endpointexample.service.gov.uk/</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Documentation</th>
+                <td class="govuk-table__cell"><a href="https://www.endpointexample.service.gov.uk/documentation" class="govuk-link">https://www.endpointexample.service.gov.uk/documentation</a></td>
+              </tr>
+              
+        </tbody>
+      </table>
+      {% endif %}
+
+      <h2 class="govuk-heading-m">Licence</h2>
+      <h3 class="govuk-heading-s">Open Government Licence</h3>
+      <p class="govuk-body">You are encouraged to use and re-use the Information that is available under this licence freely and flexibly, with only a few conditions. You are free to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Copy, publish, distribute and transmit the Information</li>
+        <li>Adapt the Information;</li>
+        <li>Exploit the Information commercially and non-commercially for example, by combining it with other Information, or by including it in your own product or application.</li>
+      </ul>
+      <p class="govuk-body"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/" class="govuk-link">Read more about this licence</a></p>
+    </div>
+
+    {% endif %}
+
+
+
+     
+
+    <h2 class="govuk-heading-l">Further information</h2>
+    
+    <table class="govuk-table govuk-!-margin-bottom-8">
+      
+      <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header  govuk-!-width-one-half">Access rights</th>
+              <td class="govuk-table__cell  govuk-!-width-one-half">{{ listing.accessRights }}</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Security Classification</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Official</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Created</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">04 November 2019</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Updated</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">{{ listing.dateUpdated }}</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Added to Data Marketplace</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">12 July 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Updated on Data Marketplace</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">15 July 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Version</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">1.2</td>
+            </tr>
+            {% if listing.contact %}
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Contact</th>
+              <td class="govuk-table__cell">{{ listing.contact | govukMarkdown | safe }}</td>
+            </tr>
+            {% endif %}
+      </tbody>
+    </table>
+
+      <!-- <h2>Raw data for debugging</h2>
+      <code>
+          {{ resource | dump}}
+      </code> -->
+    
+  </div>
+  <div class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+    <div class="gem-c-contextual-sidebar">
+
+      <div class="gem-c-related-navigation">
+      <h2 id="related-nav-related_items-ae81accd" class="gem-c-related-navigation__main-heading" >
+        Related Data
+      </h2>
+      <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-ae81accd">
+        <ul class="gem-c-related-navigation__link-list">
+          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/find/resources/citizen-relationships">Citizen Relationships</a></li>
+          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/find/resources/contact-details-verification">Contact Details Verification</a></li>
+          <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/find/resources/gov.uk-content">GOV.UK Content</a></li>
+        </ul>
+      </nav>
+
+</div>
+
+
+</div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "includes/WIP_footer.html" %}
+{% endblock %}
