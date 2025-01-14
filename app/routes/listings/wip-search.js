@@ -75,11 +75,6 @@ const processFilters = (aggregations) => {
                 }))
         }))
 
-    filters.forEach((filter) => {
-        log(filter.title)
-        log(filter.items.length)
-    })
-
     return filters
 }
 

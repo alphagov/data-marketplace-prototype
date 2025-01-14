@@ -29,15 +29,13 @@ window.GOVUKPrototypeKit.documentReady(() => {
     });
   }
 
-var checkboxes = document.querySelectorAll("#searchForm input[type='checkbox']");
-var button = document.querySelector("#search-button");
+  var checkboxes = document.querySelectorAll("#searchForm input[type='checkbox']")
+  var button = document.querySelector("#hidden-search-button")
 
-for (var i = 0; i < checkboxes.length; i++) {
-  checkboxes[i].addEventListener("change", function() {
-    button.click();
-  });
-}
-
-
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener("change", function() {
+      button.click()
+    })
+  }
 
 })
