@@ -63,7 +63,7 @@
     }) }}
 
     <p>
-      This page was last updated {{ listing.listingUpdated }}.
+      This page was last updated {{ listing.listingUpdated | govukDate }}.
     </p>
 
     {% if listing.links.length > 0 %}

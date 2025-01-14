@@ -44,3 +44,15 @@ addFilter('sortKeys', (input) => {
     const keys = Object.keys(input)
     return keys.slice().sort((a, b) => a.localeCompare(b))
 })
+
+addFilter('govukDate', (input) => {
+    try {
+        return new Date(input).toLocaleDateString('en-GB', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        })
+    } catch {
+        return
+    }
+})

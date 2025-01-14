@@ -17,8 +17,8 @@ log(searchData.length + " listings")
 
 const searchConfig = {
     sortings: {
-        name_dsc: {
-            field: 'dateUpdatedOrig',
+        "listing-updated-desc": {
+            field: 'listingUpdated',
             order: 'desc'
         }
     },
@@ -75,8 +75,10 @@ const processFilters = (aggregations) => {
     return filters
 }
 
+// remove _unchecked from query
+
 router.use((request, response, next) => {
-    // remove _unchecked from query
+    
     for (let i in request.query) {
         if (request.query[i] == "_unchecked") {
             delete request.query[i]
@@ -85,6 +87,7 @@ router.use((request, response, next) => {
         }
     }
     next()
+
 })
 
 router.get('/search', (request, response) => {
@@ -129,6 +132,8 @@ router.get('/search', (request, response) => {
     if (page) {
         searchOptions.page = page
     }
+
+    searchOptions.sort = "listing-updated-desc"
 
     const results = itemsjs.search(searchOptions)
 
