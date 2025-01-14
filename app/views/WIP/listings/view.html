@@ -11,6 +11,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <p class="govuk-caption-xl">
+      {{ listing.type }}
+    </p>
     <h1 class="govuk-heading-xl">
         {{ listing.title }}
     </h1>
@@ -147,6 +150,16 @@
         Score: {{ listing.similarity }}
       </p>
     {% endfor %}
+
+    <h2 class="govuk-heading-m">
+      More from this organisation
+    </h2>
+
+    <p class="govuk-!-font-size-16">
+      <a href="#">
+        {{ listing.organisation }}
+      </a>
+    </p>
   </div>
 
 {% endblock %}

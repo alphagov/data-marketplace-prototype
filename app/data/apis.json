@@ -1,0 +1,2845 @@
+[
+  {
+    "title": "Bathing Water Monitoring Locations",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "Department for Environment, Food and Rural Affairs",
+    "summary": "The Environment Agency collects and analyses water samples each year from May to September, to ensure that designated bathing water sites on the coast and inland are safe and clean for swimming and other activities. This shape file shows the approximate locations of our monitoring sites and the compliance or classification for each bathing water in England from 1988 to present. It is updated twice a year, to revise the inventory, and the assessment results. For coastal waters the specific locations of monitoring vary along a transect with the changing of the tides. The results of these samples are assessed in annual classifications and are available to view and download through the bathing water data explorer. This data is covered by AfA470. Attribution Statement: © Environment Agency copyright and/or database right 2015. All rights reserved.",
+    "slug": "bathing-water-monitoring-locations",
+    "updateFrequency": null,
+    "firstPublished": "2023-09-24",
+    "licenceName": "Open Government License",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-07T06:32:08.765Z",
+    "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
+    "links": null
+  },
+  {
+    "title": "Address Lookup",
+    "type": "API",
+    "access": "On request",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "The location-service provides endpoints to perform a range of address based queries for UK locations. The reference data used is provided by Ordnance Survey and covers Great Britain Northern Ireland and the Channel Islands.",
+    "slug": "address-lookup",
+    "updateFrequency": null,
+    "firstPublished": "2023-09-18",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-28T00:52:39.619Z",
+    "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
+    "links": null
+  },
+  {
+    "title": "BGS Sensor Data Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "British Geological Survey",
+    "summary": "This service provides an application programming interface (API) for data scientists, software developers and software applications to query and download BGS-hosted sensor data in machine-readable JSON format. The API is powered by FROST Server and conforms to the OGC SensorThings API specification (https://www.ogc.org/standards/sensorthings). See https://sensors.bgs.ac.uk/ for details, videos and code examples.",
+    "slug": "bgs-sensor-data-service",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-01",
+    "licenceName": "Open Government License",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-20T23:59:42.497Z",
+    "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
+    "links": null
+  },
+  {
+    "title": "AGS File Utilities Tool and API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "British Geological Survey",
+    "summary": "The tool (https://agsapi.bgs.ac.uk/) and associated API allow schema validation, data validation and conversion of your geotechnical AGS files. Features include; Accepts multiple AGS files, Tests AGS versions 4.x only, Files are not saved or stored by this tool. The codebase is available at https://github.com/BritishGeologicalSurvey/pyagsapi",
+    "slug": "ags-file-utilities-tool-and-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-01",
+    "licenceName": "Codebase is under LGPL v3.0",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-12T16:13:36.992Z",
+    "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
+    "links": null
+  },
+  {
+    "title": "BGS OGCAPI Server",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "British Geological Survey",
+    "summary": "This server provides endpoints for a selection of BGS geospatial data using the OGCAPI suite of standards (https://ogcapi.ogc.org/). Data includes; geology, sensor, earthquake, landslide and borehole data. The BGS has a wide range of Datasets and wants to increase access to these, publishing as many as possible under Open Government Licence. The API is powered by https://pygeoapi.io/",
+    "slug": "bgs-ogcapi-server",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-01",
+    "licenceName": "Data under Open Government License",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-17T06:24:01.106Z",
+    "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
+    "links": null
+  },
+  {
+    "title": "Services",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Buckinghamshire Council",
+    "summary": "Use this API to search for community and volunteer-run services in Buckinghamshire. It is a partial implementation of the [Open Referral UK](https://openreferraluk.org/) standard for human services data.",
+    "slug": "services",
+    "updateFrequency": null,
+    "firstPublished": "2021-03-09",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-30T03:54:57.654Z",
+    "contactEmail": "fisdigital@buckinghamshire.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Cefas Data Portal APIs",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Transport",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "Centre for Environment, Fisheries and Aquaculture",
+    "summary": "A suite of APIs which allow external interaction with all metadata and data published via our data portal (https://data.cefas.co.uk/), the portal covers many marine science themes including fisheries, biodiversity, environmental monitoring and aquaculture. Our metadata follow the MEDIN standard (https://medin.org.uk/medin-discovery-metadata-standard) which is compatible with UK GEMINI and INSPIRE. Our Datasets do not currently follow one particular data standard. We are currently undertaking a pilot project which will implement the OGC EDR standard (https://ogcapi.ogc.org/edr/) to a subset of our data.",
+    "slug": "cefas-data-portal-apis",
+    "updateFrequency": null,
+    "firstPublished": "2022-01-31",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-16T18:20:12.188Z",
+    "contactEmail": "Data Governance Strategy and Support Team - data.manager@cefas.co.uk",
+    "links": null
+  },
+  {
+    "title": "Companies House",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Companies House",
+    "summary": "The Companies House API provides access to all of the public data we hold on companies free of charge. This includes information about companies, officers, people of significant control and more.",
+    "slug": "companies-house",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-10T23:08:19.503Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Companies House Streaming",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Companies House",
+    "summary": "The Companies House streaming API gives you access to realtime data changes of the information held at Companies House. This delivers the same information that is available through the on-demand REST API GET requests, but instead pushes data to your client as it changes, through a long-running connection that you first establish. Streams include:\\n\\n- company information\\n- filing history\\n- insolvency cases\\n- charges",
+    "slug": "companies-house-streaming",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-26T21:40:07.826Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Teacher Training API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Education"
+    ],
+    "organisation": "Department for Education",
+    "summary": "API to serve post graduate teacher training courses, subjects and training providers.",
+    "slug": "teacher-training-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-18T09:36:18.114Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Get into Teaching API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Education"
+    ],
+    "organisation": "Department for Education",
+    "summary": "Provides a RESTful API for integrating with the Get into Teaching CRM.",
+    "slug": "get-into-teaching-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-13T12:05:46.789Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "DfE EAPIM Platform API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities"
+    ],
+    "organisation": "Department for Education",
+    "summary": "Enterprise API Management Platform API for managing applications, subscriptions and retreiving API details.",
+    "slug": "dfe-eapim-platform-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-14T18:15:54.508Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "DfE Sign-in applications API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Education"
+    ],
+    "organisation": "Department for Education",
+    "summary": "API for application consuming DfE Sign-in.",
+    "slug": "dfe-sign-in-applications-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-19T16:58:45.530Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "UK-AIR Sensor Observation Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Department for Environment, Food and Rural Affairs",
+    "summary": "This is an [OGC](https://www.ogc.org/) standards based Sensor Observation Service interface to Defra's UK Air Information Resource (UK-AIR). The service supports the UK obligations to European air quality e-Reporting initiative and Defra Open Data policy. The SOS provides a machine readable access point for air pollution measurements funded by Defra, Scottish Government, Welsh Government and Department of the Environment Northern Ireland. The service implements [INSPIRE guidelines](https://inspire.ec.europa.eu/id/document/tg/download-sos). You can read more about the [European air quality e-Reporting initiative](http://www.eionet.europa.eu/aqportal) and the [OGC SOS 2.0 standard](https://www.ogc.org/standards/sos).",
+    "slug": "uk-air-sensor-observation-service",
+    "updateFrequency": null,
+    "firstPublished": "2020-02-26",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-06T17:32:26.988Z",
+    "contactEmail": "The service provider is described on the Capabilities document as: Ricardo Energy & Environment (http://ee.ricardo.com/cms/). The phone number and email address are on the GetCapabilities response document in the <ows:ServiceProvider> element.",
+    "links": null
+  },
+  {
+    "title": "UK Trade Quotas",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Department for International Trade",
+    "summary": "This Dataset shows the quotas available in the UK Tariff along with their current or final balances, updated daily. \\n\\nYou can use this data to analyse quota applicability and utilisation in bulk, and to understand trends in quota application and usage over time. \\n\\nPlease see the full UK Trade Quotas summary for detailed information on what this Dataset contains and what it can be used for. \\n\\nParameters can be specified to the API to filter the returned results. See the metadata at the documentation link for more information on how to access the API and how to use the filters.",
+    "slug": "uk-trade-quotas",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-15",
+    "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-03T23:36:40.630Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "UK Global Tariff (measures as defined)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Department for International Trade",
+    "summary": "The UK Global Tariff (UKGT) is the UK's first independent tariff policy which replaced the EU Common External Tariff (CET) which applied until 31 December 2020. This tariff entered into force on 1 January 2021. The UKGT applies to all goods imported into the UK. It lists preferential measures where the UK has entered into a new trade agreement or arrangement with a third country or territory. For other countries and territories, it shows the UK's Most Favoured Nation (MFN) tariffs. The Dataset does not include other import duties (such as VAT) and details of quota volumes.\\n\\nThis table (one of 3 available) is a smaller table showing where in the commodity code hierarchy each measure is defined. This includes commodity codes which are not declarable. Codes are organised in a hierarchy with the 'indent' column identifying the depth of the code. Measures apply to all of the codes in the hierarchy below where they are defined.\\n\\nThe tariffs in this Dataset are a representation of future events and as such are subject to change.\\n\\nYou can use this data when you need to make a calculation against the new duties that apply in the UK. You cannot use this data to calculate the total cost of an import because it does not include VAT. You also cannot use this data to understand the commodity code hierarchy because not all codes are present.\\n\\nParameters can be specified to the API to filter the returned results. See the metadata at the above link for more information on how to access the API and how to use the filters.",
+    "slug": "uk-global-tariff-(measures-as-defined)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-05",
+    "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-30T17:57:04.226Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "UK Global Tariff (measures on declarable commodities)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Department for International Trade",
+    "summary": "The UK Global Tariff (UKGT) is the UK's first independent tariff policy which replaced the EU Common External Tariff (CET) which applied until 31 December 2020. This tariff entered into force on 1 January 2021. The UKGT applies to all goods imported into the UK. It lists preferential measures where the UK has entered into a new trade agreement or arrangement with a third country or territory. For other countries and territories, it shows the UK's Most Favoured Nation (MFN) tariffs. The Dataset does not include other import duties (such as VAT) and details of quota volumes.\\n\\nThis table (one of 3 available) is an expanded table showing the measures that apply to all declarable commodity codes. These are 10-digit codes which are at the lowest level in the commodity code hierarchy (for example, when they do not have any commodity codes below them in the hierarchy) and are therefore at the most granular classification for that product. Any code in this table is usable on declarations at the rates specified.\\n\\nThe tariffs in this Dataset are a representation of future events and as such are subject to change.\\n\\nYou can use this data when you need to make a calculation against the new duties that apply in the UK. You cannot use this data to calculate the total cost of an import because it does not include VAT. You also cannot use this data to understand the commodity code hierarchy because not all codes are present.\\n\\nParameters can be specified to the API to filter the returned results. See the metadata at the above link for more information on how to access the API and how to use the filters.",
+    "slug": "uk-global-tariff-(measures-on-declarable-commodities)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-05",
+    "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-14T03:20:24.190Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Check barriers to trading and investing abroad",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Department for International Trade",
+    "summary": "Check barriers to trading and investing abroad is the service to which DIT publishes trade barriers. It is aimed at UK-based businesses planning to export goods, provide services or invest money in another country.</p>The Dataset will give you information about things that could slow down, stop or raise costs for UK companies and citizens doing business in a specific country (a ‘trade barrier’).</p> API calls can be made using a GET request to `https://data.api.trade.gov.uk/v1/Datasets/market-barriers/versions/latest/data?format=json`.",
+    "slug": "check-barriers-to-trading-and-investing-abroad",
+    "updateFrequency": null,
+    "firstPublished": "2020-03-09",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-18T22:40:11.380Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "UK Global Tariff (commodities)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Department for International Trade",
+    "summary": "The UK Global Tariff (UKGT) is the UK's first independent tariff policy which replaced the EU Common External Tariff (CET) which applied until 31 December 2020. This tariff entered into force on 1 January 2021. The UKGT applies to all goods imported into the UK. It lists preferential measures where the UK has entered into a new trade agreement or arrangement with a third country or territory. For other countries and territories, it shows the UK's Most Favoured Nation (MFN) tariffs. The Dataset does not include other import duties (such as VAT) and details of quota volumes. This table (one of 3 available) shows all of the commodities that are part of the UK's goods classification and their English descriptions.\\n\\n Codes are organised in a hierarchy with each \"parent\" code having zero or more \"child\" codes that represent a more specific classification of the parent commodity. \\n\\nCommodities at all depths of the commodity hierarchy are included, but only commodities without any children codes are declarable. The current parent code of each commodity code is also listed and is accurate at the time the file was generated – note that parent codes can change over time. \\n\\nThe tariffs in this Dataset may be a representation of future events and as such are subject to change. \\n\\nYou can use this data when you need to make a calculation against the new duties that apply in the UK. You cannot use this data to calculate the total cost of an import because it does not include VAT.",
+    "slug": "uk-global-tariff-(commodities)",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-15",
+    "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-21T12:59:36.338Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Domestic Buildings Search API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Allows searching and filtering of our property-level open data on Energy Performance of buildings by one or any combination of the following attributes:\\n\\n- address\\n- postcode\\n- local authority\\n- parliamentary constituency\\n- type of property\\n- energy band\\n- date that the EPC was lodged on the register",
+    "slug": "energy-performance-certificates---domestic-buildings-search-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-25T05:01:00.841Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "OpenDataCommunities (Official statistics from DLUHC) SPARQL endpoint",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "A facility to write and run queries to link and extract data from multiple data sources.   Uses the SPARQL 1.1 standard and syntax.",
+    "slug": "opendatacommunities-(official-statistics-from-dluhc)-sparql-endpoint",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "Licenced per Dataset, but mostly OGL",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-02T10:40:26.681Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Non-domestic Recommendations API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Retrieves full details of recommendations made for a particular Energy Performance Certificate. If the property has no recommendations a `HTTP 404 not found` status code will be returned. Note that this API route does not recognise the `application/zip` mime type. Recommendations are keyed on the certificate's lmk-key, which can be obtained from the certificate's `lmk-key` field.",
+    "slug": "energy-performance-certificates---non-domestic-recommendations-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-30T15:18:07.863Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Non-domestic Certificates API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Retrieves full details for a particular Energy Performance Certificate, where `:lmk-key` is the LMK key of a certificate from a search result or download. For example we can request the certificate with an LMK key of `89931970062019053113040836250130` by making a request to the API at the URL: `https://epc.opendatacommunities.org/api/v1/non-domestic/certificate/89931970062019053113040836250130`.",
+    "slug": "energy-performance-certificates---non-domestic-certificates-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-25T10:11:01.432Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Display (public buildings) Certificates API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Retrieves full details for a particular Energy Performance Certificate, where `:lmk-key` is the LMK key of a certificate from a search result or download. For example we can request the certificate with an LMK key of `27649711032019053114460431000094` by making a request to the API at the URL: `https://epc.opendatacommunities.org/api/v1/display/certificate/27649711032019053114460431000094`.",
+    "slug": "energy-performance-certificates---display-(public-buildings)-certificates-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-07T03:58:00.730Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Domestic Certificate Recommendations API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Retrieves full details of recommendations made for a particular Energy Performance Certificate. If the property has no recommendations a `HTTP 404 not found` status code will be returned. Note that this API route does not recognise the `application/zip` mime type. Recommendations are keyed on the certificate's lmk-key, which can be obtained from the certificate's `lmk-key` field.",
+    "slug": "energy-performance-certificates---domestic-certificate-recommendations-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-27T11:06:05.827Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Non-domestic Buildings Search API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Allows searching and filtering of our property-level open data on Energy Performance of buildings by one or any combination of the following attributes:\\n\\n- address\\n- postcode\\n- local authority\\n- parliamentary consistency\\n- type of property\\n- energy band\\n- date that the EPC was lodged on the register",
+    "slug": "energy-performance-certificates---non-domestic-buildings-search-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-18T10:59:07.873Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Display (public buildings) certificates search API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Allows searching and filtering of our property-level open data on Energy Performance of buildings by one or any combination of the following attributes:\\n\\n- address\\n- postcode\\n- local authority\\n- parliamentary consistency\\n- type of property\\n- energy band\\n- date that the EPC was lodged on the register",
+    "slug": "energy-performance-certificates---display-(public-buildings)-certificates-search-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-04T04:20:38.643Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "OpenDataCommunities (Official statistics from DLUHC.) LinkedData resource API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "A URL pattern for accessing information about individual resources in OpenDataCommunities.",
+    "slug": "opendatacommunities-(official-statistics-from-dluhc.)-linkeddata-resource-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "Licenced per Dataset, but mostly OGL",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-21T07:54:02.766Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Domestic Certificates API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Retrieves full details for a particular Energy Performance Certificate, where `:lmk-key` is the LMK key of a certificate from a search result or download. For example we can request the certificate with an LMK key of `219873319402019053122194154717408` by making a request to the API at the URL: `https://epc.opendatacommunities.org/api/v1/domestic/certificate/219873319402019053122194154717408`.",
+    "slug": "energy-performance-certificates---domestic-certificates-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-09T11:44:37.607Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Energy Performance Certificates - Display (public buildings) Recommendations API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities",
+      "Mapping"
+    ],
+    "organisation": "Department for Levelling Up, Housing and Communities",
+    "summary": "Retrieves full details of recommendations made for a particular Energy Performance Certificate. If the property has no recommendations a `HTTP 404 not found` status code will be returned. Note that this API route does not recognise the `application/zip` mime type. Recommendations are keyed on the certificate's lmk-key, which can be obtained from the certificate's `lmk-key` field.",
+    "slug": "energy-performance-certificates---display-(public-buildings)-recommendations-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-05",
+    "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-09T16:19:59.695Z",
+    "contactEmail": "odc@comunities.gov.uk",
+    "links": null
+  },
+  {
+    "title": "National Public Transport Access Nodes (NaPTAN) and National Public Transport Gazetteer (NPTG) API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Transport",
+      "Towns and cities"
+    ],
+    "organisation": "Department for Transport",
+    "summary": "The NaPTAN & NPTG API can be used to automatically download transport, gazetteer and locality data.\\n\\nThe API has three endpoints. The NaPTAN API allows you to download data either by ATCOAreaCode, a group of ATCOAreaCodes or the whole national Dataset. The NPTG API allows you to download national gazetteer Dataset. The NPTG localities API allows you to download national localities' Dataset.\\n\\nThe NaPTAN & NPTG data are available in either XML or CSV format.",
+    "slug": "national-public-transport-access-nodes-(naptan)-and-national-public-transport-gazetteer-(nptg)-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-01-07",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-01T05:04:07.689Z",
+    "contactEmail": "https://beta-naptan.dft.gov.uk/",
+    "links": null
+  },
+  {
+    "title": "Get Citizen Income Information API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Retrieves current and historical information regarding a citizen's income.",
+    "slug": "get-citizen-income-information-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-04T12:40:46.007Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Include Exclude Earnings",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to determine which earning records are to be excluded or included in calculations for a claimant.",
+    "slug": "include-exclude-earnings",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-06T00:15:58.515Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Maintain Interest Details",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows users to update a citizen's interest record.",
+    "slug": "maintain-interest-details",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-09T13:26:11.075Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Contact Details Verification",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Verifies if there is a match between the supplied details and DWP records.",
+    "slug": "contact-details-verification",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-27T17:38:17.753Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Citizen Trace",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to find personal details of a citizen without knowing their NINo.",
+    "slug": "citizen-trace",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-20T13:15:53.532Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "FINDr Matching Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Identifies the correct service identifier for a given set of biographic data.",
+    "slug": "findr-matching-service",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-14T18:39:58.939Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "GOVUK Notify",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Automatically send emails (including attachments), letters and text messages.",
+    "slug": "govuk-notify",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-06T07:44:08.705Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Calculate Earnings",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Carries out calculation for claimants DWP has an active earning interest for.",
+    "slug": "calculate-earnings",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-19T07:03:33.185Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "View Earnings",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to view earnings data, within the supplied date period, for a claimant.",
+    "slug": "view-earnings",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-22T18:29:27.811Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "DWP GUID Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Exchanges a DWP GUID for the associated National Insurance Number (NINo) and vice versa.",
+    "slug": "dwp-guid-service",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-06T05:46:02.582Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Citizen API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Provides access to DWP citizen information to Other Government Departments and approved external agencies.",
+    "slug": "citizen-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-02T20:59:15.973Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Block Earnings",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to view, apply or lift any active or inactive blocked earning records for any claimant for a claimant.",
+    "slug": "block-earnings",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-11-30T13:58:49.755Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Calculate Earnings by Payday",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to determine which earning records are to be excluded or included in calculations for a claimant.",
+    "slug": "calculate-earnings-by-payday",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-15T07:21:50.747Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Employment Income API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Retrieves core set of citizen employment income attributes held by DWP based on DWP-GUID.",
+    "slug": "employment-income-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-07T14:26:53.632Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "PIP Service Award Subsitute",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Provides PIP award data for a given citizen identified by DWP guid.",
+    "slug": "pip-service-award-subsitute",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-29T17:18:23.268Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Citizen Relationships",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Provides a list of benefits (and where relevant, which components) a person is entitled to.",
+    "slug": "citizen-relationships",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-30T01:24:01.694Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Self Reported Earnings",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to view earnings data, within the supplied date period, for a claimant.",
+    "slug": "self-reported-earnings",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-24T23:21:23.883Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "GOVUK Pay",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Manage online payments using debit cards, credit cards or digital wallets",
+    "slug": "govuk-pay",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-08T22:14:16.075Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Life Event Verification",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society",
+      "Health"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Automatically verifies life events using data held in the General Register Office.",
+    "slug": "life-event-verification",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-04T16:19:05.623Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Reach SMS",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to automatically schedule, send and receive text messages.",
+    "slug": "reach-sms",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-23T09:18:37.478Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Pension Income API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Retrieves core set of citizen pension income attributes held by DWP based on DWP-GUID.",
+    "slug": "pension-income-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-02T17:37:39.121Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Residency Services",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Residency will be the authoritative source of residency information.",
+    "slug": "residency-services",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-28T12:54:19.317Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "NHS Charge Exemption",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Health",
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Checks if a citizen is eligible for free prescriptions.",
+    "slug": "nhs-charge-exemption",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-20T18:50:29.377Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Maternity Allowance Awards API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society",
+      "Health"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Maternity Allowance Claims and Awards information for a citizen.",
+    "slug": "maternity-allowance-awards-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-11-18T22:07:01.565Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Habitual Residency",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society",
+      "Mapping"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Access and validate habitual residency data.",
+    "slug": "habitual-residency",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-09T13:36:25.567Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Manage Interests",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to set, unset and query an interest for a claimant.",
+    "slug": "manage-interests",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-29T06:16:56.030Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "GUID Translation Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Exchanges a DWP GUID for the associated Consumer GUID and vice versa.",
+    "slug": "guid-translation-service",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-11T09:01:37.149Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Manage Earnings Threshold",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows to set and update different earnings thresholds for for a claimant.",
+    "slug": "manage-earnings-threshold",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-30T16:31:03.926Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Care Homes Information Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Health",
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows Local Authorities to notify DWP of changes around care home provision for citizens identified as being of interest.",
+    "slug": "care-homes-information-service",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-02T16:53:41.067Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Get Interest Details",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "Allows users to update a citizen's interest record.",
+    "slug": "get-interest-details",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-28",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-11T05:30:59.539Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "PIPCS Informational API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Department for Work and Pensions",
+    "summary": "The PIPCS benefit system provides a number of read-only SOAP APIs that can be used to obtain detailed information about PIP cases.",
+    "slug": "pipcs-informational-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-08-23",
+    "licenceName": "ISC",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-26T04:58:33.255Z",
+    "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
+    "links": null
+  },
+  {
+    "title": "DVLA Authentication",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Transport"
+    ],
+    "organisation": "Driver and Vehicle Licensing Agency",
+    "summary": "The DVLA Authentication API provides authentication, change password, new password and change API key services for users of DVLA secure APIs.",
+    "slug": "dvla-authentication",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-06T19:57:02.543Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "DVLA Vehicle Enquiry Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Transport"
+    ],
+    "organisation": "Driver and Vehicle Licensing Agency",
+    "summary": "The DVLA Vehicle Enquiry Service API provides vehicle details of a specified vehicle. It uses the vehicle registration number as input to search and provide details of the vehicle.",
+    "slug": "dvla-vehicle-enquiry-service",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-24T20:16:21.076Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Bathing Water",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Health",
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Environment Agency collects water quality data each year from May to September, to ensure that designated bathing water sites on the coast and inland are safe and clean for swimming and other activities. We make this data reusable and accessible to developers and to members of the public, by publishing it as linked data. \\n\\n Please visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "bathing-water",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-26T20:37:08.296Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Asset Management",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Environment Agency maintains records on assets of many types related to environmental activities particularly flood defences, including some assets owned or managed by other bodies. The API provides access to these asset description records along with information on maintenance activities planned for the assets. Only some assets have an associated maintenance schedule.\\n\\nIn the API the maintenance information is split in to three different types. Maintenance activities represent funded and scheduled work. A single activity may involve several maintenance actions on several different assets. We divide the activities into separate tasks, where each task represents a specific maintenance action on a single asset. Finally maintenance plans represent intended maintenance activities for future financial years but which have not necessarily been scheduled or funded at this stage. The API allows all activities, tasks and plans to be listed for a particular asset, set of assets or across all assets.\\n\\nPlease visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "asset-management",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-14T09:31:56.342Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Public Registers for Environmental Information",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Environment Agency licenses industry, business and individuals to carry out certain activities that have the potential to pollute the environment. When we receive an application for such a licence, we make that application and other relevant information available to the public. We do this before we make the decision of whether to issue the licence, or what conditions we will attach to it.\\n\\nAfter any permit is issued, further information is also made available on the registers. This can typically include monitoring information, details of any breaches of the terms of the licence, any enforcement actions that we have carried out and any applications to vary the terms of the licence.\\n\\nThe Public Registers for Environmental Information provide access to this registration and permit information both in the form of searchable web pages and as data which can be accessed by developers via an API.\\n\\nThe APIs cover the following public registers:\\n\\n- Waste Carriers, Brokers and Dealers\\n- Waste exemptions\\n- Scrap Metal Dealers\\n- Enforcement Actions\\n- Water Quality Exemptions\\n- Environmental Permitting Regulations - Radioactive Substances\\n- Environmental Permitting Regulations - Installations\\n- Environmental Permitting Regulations - Waste Operations\\n- Environmental Permitting Regulations - End of Life Vehicles\\n- Environmental Permitting Regulations - Discharge Consents\\n\\nThese APIs are provided under the Environment Agency Conditional Licence with no requirement for registration. If you make use of this data please note the conditions carefully.\\n\\nPlease visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "public-registers-for-environmental-information",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-11T12:59:34.904Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Ecology and Fish Data",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Ecology and Fish Data API provides access to the Environment Agency's open data on freshwater fish data, as well as freshwater and marine ecology survey data. This data collection is taken from the National Fish Populations Database (NFPD) and Biosys (Biological survey database).\\n\\nThe Ecology and Fish Data API uses a data model that harmonises these different sources, so that measurements taken for variety of purposes can be queried in a consistent way.The most central points of interest are the **Observations**. Each observation has a single result for a particular **Observable Property** for a particular **Feature of Interest**.\\n\\nPlease visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "ecology-and-fish-data",
+    "updateFrequency": null,
+    "firstPublished": "2022-07-21",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-10T06:11:24.687Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Rainfall",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Environment Agency has approximately 1000 real-time rain gauges which are connected by telemetry. Measurements of the amount of precipitation (mm) are captured in Tipping Bucket Raingauges (TBR). The data reported here gives accumulated totals for each 15 min period. The data is typically transferred once or twice per day.\\n\\nThe Rainfall API provides access to these rainfall measurements, and to information on the monitoring stations providing those measurements. It is compatible with (and integrated into) the API for water level/flow readings.\\n\\nNote that for information protection reasons the rainfall monitoring stations do not have names and their geographic location has been reduced to a 100m grid.\\n\\nThese APIs are provided as open data under the Open Government Licence with no requirement for registration. If you make use of this data please acknowledge this with the following attribution statement: 'This uses Environment Agency rainfall data from the real-time data API (Beta)'.\\n\\nPlease visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "rainfall",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-20T20:42:19.387Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Water Quality",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Water Quality Archive provides data on water quality measurements carried out by the Environment Agency. Samples are taken from sampling points round the country and then analysed by laboratories to measure aspects of the water quality or the environment at the sampling point. The archive provides data on these measurements and samples dating from 2000 to present day. It contains 58 million measurements on nearly 4 million samples from 58 thousand sampling points. \\n\\n The archive provides an API to allow selective access to the data, together with the ability to download the data split into either pre-defined or customizable subsets. The data is made available in CSV, JSON and RDF formats. \\n\\n Please visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "water-quality",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-15T17:34:12.703Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Flood-monitoring",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Environment Agency flood-monitoring API provides developers with access to near real-time information covering:\\n\\n- flood warnings and flood alerts\\n- flood areas which to which warnings or alerts apply\\n- measurements of water levels and flows\\n- information on the monitoring stations providing those measurements \\n\\nWater levels and flows are regularly monitored, usually every 15 minutes. However, data is transferred back to the Environment Agency at various frequencies, usually depending on the site and level of flood risk. Transfer of data is typically once or twice per day but usually increases during times of heightened flood risk. \\n\\nThese APIs are provided as open data under the Open Government Licence with no requirement for registration. If you make use of this data please acknowledge this with the following attribution statement: 'This uses Environment Agency flood and river level data from the real-time data API (Beta)'. \\n\\n Please visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "flood-monitoring",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-31T22:00:24.878Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Hydrology",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Hydrology API provides access to historic water flow information. It complements the near real-time data provided under `/flood-monitoring` in that it provides access to a long term archive of quality checked and qualified data. \\n\\n The API and data model for the `/hydrology` API differs slightly from that under `/flood-monitoring` due to intrinsic differences (for example presence of quality flags on each reading for qualified data), modelling changes (for example adding links to [SOSA/SSN](https://www.w3.org/TR/vocab-ssn/) terms) and technology differences. \\n\\n In addition Environment Agency are moving to using new identifiers for monitoring stations based on GUIDs and the station URIs provided by this API use these new standards. For convenience, the stations shown here provide annotations showing the old `stationReference` notations (as well as the River Levels on the Internet and WISKI notations) and provide `sameAs` links to the equivalent `/flood-monitoring` stations. \\n\\n Please visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "hydrology",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-09T07:10:46.981Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Tide Gauge",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The UK National Tide Gauge Network is owned and operated by the Environment Agency on behalf of the UK Coastal Flood Forecasting service (a partnership between the Environment Agency, Natural Resources Wales, the Scottish Environment Protection Agency and Northern Ireland Department for Infrastructure - Rivers). It records tidal elevations at 44 locations around the UK coast. Data is made available in near real-time with measurements reported every 15 mins. The measurements provide mean sea level within each 15 min window and are reported both relative to local datum (unit m) and relative to the Ordnance Datum at Newlyn (unit mAOD).\\n\\nThe Tide Gauge API provides access to these measurements, and to information on the monitoring stations providing those measurements. It is compatible with (and integrated into) the API for water level/flow and rainfall readings. The API data is normally updated every 15 mins so typically the latest available reading will lag between 15 and 30 mins.\\n\\nNote that all times given by the API are in GMT (also known as UTC), as indicated by the Z suffix (see XML Schema datatypes).\\n\\nThese APIs are provided as open data under the Open Government Licence with no requirement for registration. If you make use of this data please acknowledge this with the following attribution statement: 'This uses Environment Agency tide gauge data from the real-time data API (Beta)'.\\n\\nPlease visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "tide-gauge",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-29T18:42:54.739Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Catchment Data",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "Environment Agency",
+    "summary": "The Catchment Data Explorer (CDE) helps you explore and download information about the water environment. It supports and builds upon the data in the river basin management plans. The Catchment Data API complements this by providing selective programmatic access to the data. \\n\\n Please visit the [Defra Data Services Forum](https://support.environment.data.gov.uk/hc/en-gb) to let us know about any issues or to ask questions.",
+    "slug": "catchment-data",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-13T17:35:33.109Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Search",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "GOV.UK Search API allows you to find content on GOV.UK. It's the same API that powers [GOV.UK search] (https://gov.uk/search/all) and all the other dynamic content pages on GOV.UK.",
+    "slug": "gov.uk-search",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-02T12:10:01.565Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Organisations",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "The organisations API provides information about government organisations.",
+    "slug": "gov.uk-organisations",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-14T17:12:15.387Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Notify",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "GOV.UK Notify allows government departments to send emails, text messages and letters to their users.\\n\\nThe API contains:\\n\\n- the public-facing REST API for GOV.UK Notify, which teams can integrate with using our clients\\n- an internal-only REST API built using Flask to manage services, users, templates, etc (this is what the admin app talks to)\\n- asynchronous workers built using Celery to put things on queues and read them off to be processed, sent to providers, updated, etc.",
+    "slug": "gov.uk-notify",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-23T12:20:38.597Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Governments",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "The governments API lists information about governments back to 1801.",
+    "slug": "gov.uk-governments",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-21T03:15:01.234Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Pay",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "Anyone in the public sector can use GOV.UK Pay to take online payments. It only takes minutes to get set up with GOV.UK Pay. Then you can:\\n\\n- take payments using debit cards, credit cards or digital wallets\\n- give full or partial refunds\\n- switch Payment Service Providers, for free, when you choose\\n- use custom branding on your payment pages.\\n\\nGOV.UK Pay is ideal if you currently take payments using paper forms, by email or if you have an online service.",
+    "slug": "gov.uk-pay",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-02T14:16:10.181Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK World locations",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Towns and cities"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "Lists world locations used on GOV.UK. This is not the same as the country register.",
+    "slug": "gov.uk-world-locations",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-02T10:50:07.007Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Document Checking Service pilot",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "The Document Checking Service (DCS) pilot is for non-public sector organisations that want to find out if British passports are valid. The DCS acts as an interface between a service and HM Passport Office. Your service sends a passport check request to the DCS. The DCS validates the request and sends it to HM Passport Office. HM Passport Office checks the passport data against their database and sends a response back to the DCS. The DCS sends the response to your service as outlined in check if a passport is valid.",
+    "slug": "document-checking-service-pilot",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-24T11:38:06.459Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Content",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "GOV.UK Content API makes it easy to access the data used to render content on https://www.gov.uk. For any page hosted on GOV.UK you can use the path to access the content and associated metadata for a page.",
+    "slug": "gov.uk-content",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-16T07:13:55.645Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Data.gov.uk",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "This API allows you to access the data.gov.uk Dataset metadata in a machine-readable way, as JSON. A Dataset's metadata includes details such as title, description, usage licence, and a list of 'resources', which describe each data file that makes up the Dataset. Each resource contains a format, description and URL (for example for download).",
+    "slug": "data.gov.uk",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-12T05:45:27.547Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK PaaS v3",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "[GOV.UK PaaS](https://www.cloud.service.gov.uk/) allows government departments to host web facing services in the AWS cloud in Dublin and London regions. [GOV.UK PaaS](https://www.cloud.service.gov.uk/) is built on the Open Source [Cloud Foundry](https://www.cloudfoundry.org/) platform. There are two major versions of the API, v2 and v3. The API provides a comprehensive set of resources to manage the state of your Cloud Foundry Organisation, Spaces, Services and Applications.\\n\\nYou can read the [GOV.UK PaaS technical documentation for users](https://docs.cloud.service.gov.uk/).\\n\\nThe  API  handles all requests from the [Cloud Foundry Command Line Interface (CLI)](https://docs.cloudfoundry.org/cf-cli/) which is the primary user interface for users of the platform.",
+    "slug": "gov.uk-paas-v3",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-21T03:44:26.474Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK PaaS v2",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "[GOV.UK PaaS](https://www.cloud.service.gov.uk/) allows government departments to host web facing services in the AWS cloud in Dublin and London regions. [GOV.UK PaaS](https://www.cloud.service.gov.uk/) is built on the Open Source [Cloud Foundry](https://www.cloudfoundry.org/) platform. There are two major versions of the API, v2 and v3. The API provides a comprehensive set of resources to manage the state of your Cloud Foundry Organisation, Spaces, Services and Applications.\\n\\nYou can read the [GOV.UK PaaS technical documentation for users](https://docs.cloud.service.gov.uk/).\\n\\nThe  API  handles all requests from the [Cloud Foundry Command Line Interface (CLI)](https://docs.cloudfoundry.org/cf-cli/) which is the primary user interface for users of the platform.",
+    "slug": "gov.uk-paas-v2",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-07T10:37:13.553Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Bank Holidays",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society"
+    ],
+    "organisation": "Government Digital Service",
+    "summary": "The Bank Holidays API provides access to data about when bank holidays are in England and Wales, Scotland and Northern Ireland.",
+    "slug": "bank-holidays",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-08T15:38:00.889Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "CIS Deductions (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "Under the Construction Industry Scheme (CIS), contractors deduct money from a subcontractor’s payments and pass it to HM Revenue and Customs (HMRC). The deductions count as advance payments towards the subcontractor’s tax and National Insurance.\\n\\nContractors must register for the scheme. Subcontractors don’t have to register, but deductions are taken from their payments at a higher rate if they’re not registered.\\n\\nHere a developer can:\\n\\n- create CIS deductions where they have not previously registered with HMRC\\n- amend CIS deductions which have been previously populated when creating their record\\n- retrieve a list of CIS deductions for a subcontractor that has been previously populated\\n- remove CIS deductions that have been previously populated\\n\\n\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "cis-deductions-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-27T13:43:37.297Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Interest Restrictition Return (IRR)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      ""
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The API in its current state supports the following functions:\\n\\n- revoke an existing Reporting Company from submitting Interest Restriction Returns\\n- appoint a new Reporting Company for submitting Interest Restriction Returns\\n- submit an Interest Restriction Return (full)\\n- submit an Interest Restriction Return (abbreviated)\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "interest-restrictition-return-(irr)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-11-24T16:04:40.108Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Business Source Adjustable Summary (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The Self Assessment BSAS (Business Source Adjustable Summary) API allows a developer to retrieve an adjustable summary calculation for a specified self-employment or UK property business for a given accounting period.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "business-source-adjustable-summary-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-18T16:59:36.148Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Individual Benefits",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy",
+      "Society"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API provides information about an employee’s or director’s benefits for a given tax year, as reported to HMRC by their employer or employers through the PAYE process. For example company cars and fuel, interest-free and low interest loans, private medical and dental insurance.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "individual-benefits",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-06T13:30:16.895Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Goods Vehicle Movements",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API provides resources related to the Goods Vehicle Movement Service.\\n\\nThe Goods Vehicle Movement Service (GVMS) links declaration references together. This means the person moving goods only needs to present one reference at the frontier to prove that their goods have pre-lodged declarations.\\n\\nThe GVMS also links the movement of goods to declarations, meaning they can be automatically arrived and departed in HMRC systems in near-real-time.\\n\\nIt also notifies users via your software whether their inbound goods have been successfully cleared in HMRC systems by the time they arrive in the UK.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "goods-vehicle-movements",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-16T06:21:00.592Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Bulk Data File List",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      ""
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The API lists the bulk data files available to download for a specific information type. For each file in list there will be a URL to download the file.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "bulk-data-file-list",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-11-22T05:08:23.889Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Business Rates",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API provides endpoints related to Business Rates.\\n\\nThe Valuation Office Agency (VOA) sets the rateable value of a property. Local councils use this to calculate a business rates bill for that property.\\n\\nBefore using this API please ensure you have registered with the VOA for Business Rates via the website.\\n\\n<p>The sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "business-rates",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-27T15:40:39.646Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Safety and Security Import Notifications",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The APIs will receive new ENS submissions or amendments and will return a response for the end user. The response will include a movement reference number or an error message.\\n\\nThis API will allow you to:\\n\\n- get a list of notifications\\n- retrieve a notification\\n- acknowledge a notification\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "safety-and-security-import-notifications",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-21T21:46:51.690Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Self Assessment Accounts (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The Self Assessment Accounts API allows a developer to:\\n\\n- retrieve the overall liability broken down into overdue, payable and pending amounts\\n- retrieve a list of charges and payments for a given date range\\n- retrieve more detail about a specific transaction\\n- retrieve a list of charges made to an account for a given date range\\n- retrieve the history of changes to an individual charge\\n- retrieve a list of payments for a given date range\\n- retrieve the allocation details of a specific payment against one or more liabilities\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "self-assessment-accounts-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-23T11:39:33.556Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Marriage Allowance",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Society",
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "Marriage Allowance lets the lower earner of a couple transfer some of their Personal Allowance to their husband, wife or civil partner. If they are eligible this will then lower their tax bill.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "marriage-allowance",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-15T23:04:19.685Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Agent Authorisation",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API allows tax agents to request authorisation to act on a client's behalf for a specific Making Tax Digital (MTD) tax service and have the option to cancel the authorisation request.\\n\\nThe API also allows the agent to check the status of authorisations already requested and query active or inactive relationships.\\n\\n<p>The sandbox endpoint is  `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "agent-authorisation",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-27T12:14:01.811Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Check an EORI Number",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      ""
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API enables your application to:\\n\\n- check if an EORI number beginning with GB (issued by the UK) is valid\\n\\n- view the name and address of the business that the EORI number is registered to (if the business agreed to share this information)\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.</p>",
+    "slug": "check-an-eori-number",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-01T03:53:19.074Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Individual Calculations (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The individual calculations API allows a self-assessment taxpayer via software to:\\n\\n- trigger a self-assessment tax calculation\\n- list all their self-assessment tax calculations for a tax year\\n- retrieve their self-assessment tax calculation result using multiple endpoints\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "individual-calculations-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-17T11:34:37.777Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Lifetime ISA",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API allows financial organisations to report Lifetime ISA (LISA) information to HM Revenue and Customs (HMRC) and get information about payments made by HMRC.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "lifetime-isa",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-05T02:30:51.314Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Push Pull Notifications",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "Use the Push Pull Notifications API to get notifications (pull) and to send notifications (push) automatically.\\nOther HMRC APIs create notifications in response to events like asynchronous API requests.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "push-pull-notifications",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-02T07:50:34.952Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "VAT (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "Making Tax Digital introduces digital record-keeping for VAT-registered businesses. For businesses that are above the VAT threshold, it is mandatory to use this service. Those that are below the threshold can use this service voluntarily. HMRC customers (and their agents) will use digital record-keeping software to interact directly with our systems via the MTD APIs.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "vat-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-23T04:43:00.017Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Safety and Security Import Declarations",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The Safety and Security system handles digital communications between:\\n\\n- customs administrators\\n- carriers or their appointed representatives\\n\\nYou must provide the UK customs authorities with advance information by submitting an ENS before you bring goods into the UK.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "safety-and-security-import-declarations",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-01T05:00:18.352Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Relief at Source",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "Check if a pension scheme member is a resident in Scotland or Wales for tax purposes. Pension scheme administrators need this for relief at source claims.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "relief-at-source",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-06T18:31:29.527Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Individual Losses (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API allows software packages to show and provide a taxpayer's financial data for their Brought Forward Losses and Loss Claims.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "individual-losses-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-26T08:08:13.671Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Individual Income",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API provides the following information about an individual's income for a given tax year:\\n\\n- income from employments, as reported to HMRC by their employer or employers through the PAYE process\\n- income from pensions (other than state pension) and retirement annuities\\n- income from other state benefits, such as taxable Incapacity Benefit or contribution-based Employment and Support Allowance.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "individual-income",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-14T16:15:37.350Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Trade Tariff API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The GOV.UK Trade Tariff API makes it easy to access UK Trade Tariff data from [the Trade Tariff service](https://www.gov.uk/trade-tariff). The data includes commodity codes, import/export controls, customs duty and VAT rates. It is accessed via HTTPS and returns data in a JSON format. The reference documentation provides a thorough overview of the endpoints and the response format.",
+    "slug": "gov.uk-trade-tariff-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-14",
+    "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-12T16:49:24.904Z",
+    "contactEmail": "trade-tariff-support@transformuk.com",
+    "links": null
+  },
+  {
+    "title": "Individual Employment",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API provides information about an individual's history of employment for a given tax year, as reported to HMRC by their employer or employers through the PAYE process.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "individual-employment",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-25T05:07:18.038Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Individual Tax",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API provides the following information about an individual's tax record for a given year:\\n\\n- tax deducted from annual gross income for a given employment and tax year\\n- tax deducted from pensions (other than state pension) or retirement annuities\\n- tax deducted from Incapacity Benefit\\n\\nThe API also provides information about tax refunded, or set off, within this tax year. For example a repayment of CIS deductions (if you work in the construction industry), PAYE tax or tax paid on savings income. It may also be an amount that HMRC has reallocated to an existing debt.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "individual-tax",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-31T01:59:44.586Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Safety and Security Import Outcomes",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The APIs will receive new ENS submissions or amendments and will return a response for the end user. The response will include a movement reference number or an error message.\\n\\nThis API will allow you to:\\n\\n- get a list of outcomes\\n- retrieve an outcome\\n- acknowledge an outcome\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "safety-and-security-import-outcomes",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-07T18:51:00.858Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Obligations (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API allows a developer to:\\n\\n- retrieve obligations for a user's business income sources\\n- retrieve the crystallisation obligations for a user's Income Tax account\\n- retrieve the End of Period Statement obligations for a user's business income sources\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "obligations-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-27T08:53:19.415Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Self Assessment (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API is monolithic and is in the process of being broken down to more granular APIs.\\n\\nOnly taxpayers subscribed to Making Tax Digital for Business for tax years 2017/18 onwards can use the API.\\n\\nAs part of the subscription process, the user supplies HMRC with the following information:\\n\\n- the name of their business\\n- their accounting period\\n- whether they use cash or accruals accounting\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "self-assessment-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-08T15:12:17.762Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Customs Inventory Linking Exports",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API enables the functionality to support the Inventory Linking Export process. Inventory Linking controls and monitors cargo moving through temporary storage facilities, and allows the movement/transition through frontiers.\\n\\nThere are three functional areas:\\n\\n- consolidation - this enables the combining of consignments into one master consignment, or splitting into multiple consignments\\n\\n- movement - records the movement of consignments within Customs controlled storage facilities\\n\\n- query - the querying of data held within the Inventory Linking Export database\\n\\nWithin each of these functional areas, there are multiple message types, each performing a specific activity.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "customs-inventory-linking-exports",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-20T21:25:05.098Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Business Details (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The business details API allows a developer to:\\n\\n- list all businesses\\n- retrieve additional information for a user's business details\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "business-details-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-13T04:30:09.604Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "National Insurance",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy",
+      "Society"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API retrieves an annual summary of an individual taxpayer's class 1 total earnings and class 2 National Insurance contributions due for a given tax year.\\n\\nIts primary use is for the calculation of a self-employed taxpayer's National Insurance liability within the Self Assessment tax calculation.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "national-insurance",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-31T12:24:58.771Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Common Transit Convention Traders",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      ""
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "This API will allow you to send departure and arrival movement notifications to the New Computerised Transit System (NCTS). It will also let you retrieve messages sent from the offices of departure and destination.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "common-transit-convention-traders",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-25T17:44:16.859Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Business Income Source Summary (MTD)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "HM Revenue & Customs",
+    "summary": "The Self Assessment BISS (Business Income Source Summary) API allows a developer to retrieve a summary of income and expenditure for a specified self-employment or UK property business for a given tax year.\\n\\nThe sandbox endpoint is `https://test-api.service.hmrc.gov.uk`.",
+    "slug": "business-income-source-summary-(mtd)",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-02",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-13T04:27:19.269Z",
+    "contactEmail": "SDSTeam@hmrc.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Life Event Verification",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Health",
+      "Society"
+    ],
+    "organisation": "Home Office",
+    "summary": "A RESTful API for verifying 'life events' such as births, deaths and marriages.",
+    "slug": "life-event-verification",
+    "updateFrequency": null,
+    "firstPublished": "2021-07-21",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-02T23:32:07.870Z",
+    "contactEmail": "https://docs.api.lev.homeoffice.gov.uk/life-event-verification-lev-api/reference",
+    "links": null
+  },
+  {
+    "title": "Debt Respite Scheme (Breathing Space)",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Crime and justice",
+      "Society"
+    ],
+    "organisation": "Insolvency Service",
+    "summary": "The Debt Respite Scheme (Breathing Space) will give someone in problem debt the right to legal protections from their creditors.\\n\\nThis API allows money advisers to manage their clients through a breathing space, whilst also allowing creditors to digitally interact with the service.\\n\\nYou can read more in:\\n\\n- [Debt Respite Scheme (Breathing Space) - guidance for money advisers](https://www.gov.uk/government/publications/debt-respite-scheme-breathing-space-guidance/debt-respite-scheme-breathing-space-guidance-for-money-advisers)\\n- [Debt Respite Scheme (Breathing Space) - guidance for creditors](https://www.gov.uk/government/publications/debt-respite-scheme-breathing-space-guidance/debt-respite-scheme-breathing-space-guidance-for-creditors)",
+    "slug": "debt-respite-scheme-(breathing-space)",
+    "updateFrequency": null,
+    "firstPublished": "2021-03-09",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-01T18:00:02.035Z",
+    "contactEmail": "itproblems.breathingspace@insolvency.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Land Charges Full Search",
+    "type": "API",
+    "access": "On request",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "HM Land Registry",
+    "summary": "A land charge is an interest in land that imposes an obligation on the landowner in favour of some other person. Use this service to request an official search of the Land Charges Register.\\n\\n If you're a software developer: \\n\\n - Use this document to integrate data into your system.\\n\\n Poll Request Service URL for production environment:\\n\\n https://businessgateway.landregistry.gov.uk/b2b/BGSoapEngine/FullSearchV2_1PollRequestWebService?wsdl \\n\\n For test environment endpoints replace https://businessgateway.landregistry.gov.uk/b2b/BGSoapEngine with https://bgtest.landregistry.gov.uk/b2b/BGStubService",
+    "slug": "land-charges-full-search",
+    "updateFrequency": null,
+    "firstPublished": "2023-01-10",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-22T12:03:21.968Z",
+    "contactEmail": "channelpartners@landregistry.gov.uk",
+    "links": null
+  },
+  {
+    "title": "e-Document Registration Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "HM Land Registry",
+    "summary": "Use this service to: \\n\\n send applications to change the register \\n\\n - automate the collection of correspondence and responses \\n\\n - receive the completed application back \\n\\n If you are a software developer: \\n\\n - Use this document to integrate data into your system  \\n\\n Poll Request Service URL for production environment \\n\\n https://businessgateway.landregistry.gov.uk/b2b/ECDRS_SoapEngine/EDocumentRegistrationV2_1PollRequestWebService?wsdl \\n\\n Attachment Service URLs: \\n\\n https://businessgateway.landregistry.gov.uk/b2b/ECDRS_SoapEngine/AttachmentV2_1WebService?wsdl \\n\\n https://businessgateway.landregistry.gov.uk/b2b/ECDRS_SoapEngine/AttachmentV2_1PollRequestWebService?wsdl \\n\\n Correspondence/Requisition URL: \\n\\n https://businessgateway.landregistry.gov.uk/b2b/ECDRS_SoapEngine/CorrespondenceV2_1PollRequestWebService?wsdl \\n\\n Early Completion URL: \\n\\n https://businessgateway.landregistry.gov.uk/b2b/ECDRS_SoapEngine/EarlyCompletionV2_1PollRequestWebService?wsdl \\n\\n For test environment endpoints replace https://businessgateway.landregistry.gov.uk/b2b/ECDRS_SoapEngine with https://bgtest.landregistry.gov.uk/b2b/ECDRS_StubService",
+    "slug": "e-document-registration-service",
+    "updateFrequency": null,
+    "firstPublished": "2022-11-24",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-01T19:29:47.068Z",
+    "contactEmail": "channelpartners@landregistry.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Application Enquiry",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Towns and cities"
+    ],
+    "organisation": "HM Land Registry",
+    "summary": "Use this service to view applications that are not yet completed by HM Land Registry. Use this service to find out: an application's progress status, the reason for application delays, information about recently completed or cancelled applications, the full priority period for Official Searches. \\n\\nPoll Request Service URL for production environment: https://businessgateway.landregistry.gov.uk/b2b/BGSoapEngine/ApplicationEnquiryV1_0PollRequestWebService?wsdl \\n\\nTest environment URL: https://bgtest.landregistry.gov.uk/b2b/BGStubService/ApplicationEnquiryV1_0WebService?wsdl \\n\\nPoll Request Service URL for test environment: https://bgtest.landregistry.gov.uk/b2b/BGStubService/ApplicationEnquiryV1_0PollRequestWebService?wsdl",
+    "slug": "application-enquiry",
+    "updateFrequency": null,
+    "firstPublished": "2022-09-28",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-05T02:57:18.102Z",
+    "contactEmail": "channelpartners@landregistry.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Discharge Enquiry",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      ""
+    ],
+    "organisation": "HM Land Registry",
+    "summary": "Use this service to check if any charges have been removed in the previous 30 days. \\n\\n Poll Request Service URL for production environment: https://businessgateway.landregistry.gov.uk/b2b/BGSoapEngine/DischargeActivityV1_0PollRequestWebService?wsdl \\n\\n Test environment URL: https://bgtest.landregistry.gov.uk/b2b/BGStubService/DischargeActivityV1_0WebService?wsdl \\n\\n Poll Request Service URL for test environment: https://bgtest.landregistry.gov.uk/b2b/BGStubService/DischargeActivityV1_0PollRequestWebService?wsdl",
+    "slug": "discharge-enquiry",
+    "updateFrequency": null,
+    "firstPublished": "2022-10-11",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-04T08:57:34.988Z",
+    "contactEmail": "channelpartners@landregistry.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Inform Plus",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy",
+      "Towns and cities",
+      "Government"
+    ],
+    "organisation": "Local Government Association",
+    "summary": "Access to 1 billion+ metric values for English areas drawn from approximately 50 organisations publishing metrics that describe local authorities and their component areas.\\n\\nThe API also supports queries on the taxonomies and mappings published on the [LG Inform Plus website](https://standards.esd.org.uk/).",
+    "slug": "inform-plus",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-09T23:01:02.380Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Hackney Addresses",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities"
+    ],
+    "organisation": "London Borough of Hackney",
+    "summary": "We will use Addresses API when developing applications and services for the London Borough of Hackney. This ensures consistency and enables the linking of data across the organisation (via the Unique Property Reference Number). This API provides a limited interface to Hackney's Local Land and Property Gazetteer and to the National Address Gazetteer.\\n\\nWe have built the [Hackney Developer Hub](https://developer.api.hackney.gov.uk/api/addresses_api) anyone who is interested in building, using or expanding Hackney's APIs. It serves as a central repository for all APIs built for Hackney services. The hub also mentions if a given API is compliant with [Hackney Playbook standards](https://github.com/LBHackney-IT/API-Playbook-v2-beta).",
+    "slug": "hackney-addresses",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-11-30T17:15:59.649Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Keyworker API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Crime and justice"
+    ],
+    "organisation": "Ministry of Justice",
+    "summary": "A Spring Boot JSON API to manage the keyworkers of prisoners for the Digital Prison Services. Backend services for [Manage Key Workers](https://github.com/ministryofjustice/omic-ui/).",
+    "slug": "keyworker-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-31T07:12:29.032Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "GOV.UK Courts and Tribunals Publishing API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Crime and justice"
+    ],
+    "organisation": "Ministry of Justice",
+    "summary": "This app is for publishing courts and tribunals information to GOV.UK. The (initial) intended user is [Ministry of Justice's Courts and Tribunal Finder admin app](https://github.com/ministryofjustice/courtfinder).",
+    "slug": "gov.uk-courts-and-tribunals-publishing-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-12T18:23:24.610Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Custody API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Crime and justice"
+    ],
+    "organisation": "Ministry of Justice",
+    "summary": "The service provides REST access to the Nomis Oracle DB offender information.",
+    "slug": "custody-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-01T11:27:36.778Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Money to Prisoners API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Crime and justice",
+      "Society"
+    ],
+    "organisation": "Ministry of Justice",
+    "summary": "Backend and internal admin site for [Prisoner Money suite of apps](https://github.com/ministryofjustice/money-to-prisoners).",
+    "slug": "money-to-prisoners-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-28T17:11:42.843Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Visit someone in prison",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Crime and justice"
+    ],
+    "organisation": "Ministry of Justice",
+    "summary": "A service for booking a social visit to a prisoner in England or Wales.",
+    "slug": "visit-someone-in-prison",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-31T05:19:02.657Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Statistics",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Office for National Statistics",
+    "summary": "The Office for National Statistics API makes Datasets and other data available programmatically using HTTP. It allows you to filter Datasets and directly access specific data points. The API is open and unrestricted - no API keys are required, so you can start using it immediately. This API is currently in Beta and still being developed. Please be aware that as a result of this there may occasionally be breaking changes as we enhance functionality and respond to feedback.",
+    "slug": "statistics",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-12T20:55:25.171Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Open Geography portal",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "Office for National Statistics",
+    "summary": "The Open Geography portal from the Office for National Statistics (ONS) provides free and open access to the definitive source of geographic products, web applications, story maps, services and APIs. All content is available under the Open Government Licence v3.0, except where otherwise stated.",
+    "slug": "open-geography-portal",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-02T05:16:52.024Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "OS Features API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "Buildings, roads, greenspaces and much more. Get direct access to the most detailed geographic data for your analysis, taking full advantage of rich geometries and attributes to generate new insight. No need to download, store and manage large and complex Datasets - we take care of that so you can focus on adding value.",
+    "slug": "os-features-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-22T06:42:12.397Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "OS Maps API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "Add Ordnance Survey's detailed maps to your GIS, web or mobile applications with ease and make location-based decisions with confidence. Available in four styles, two projections and two access methods, OS Maps API gives unrivalled geographic context to your data. You can access these maps via OGC standard WMTS or Restful ZXY.",
+    "slug": "os-maps-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-31T09:11:38.638Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "OS Vector Tile API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "Slick, quick vector maps. Integrate Ordnance Survey's up-to-date, detailed maps in your applications, enabling you to make location-based decisions with confidence. You can customise the content and style to make your perfect map.",
+    "slug": "os-vector-tile-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-28T01:32:34.294Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "OS Places API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "Our secure, scalable, and resilient address look-up web service, OS Places API lets you search the UK's most comprehensive online address database. With OS Places API, managing customer data is a breeze. Lightning-quick postcode and address search means your records are accurate and customer deliveries should always get to the right front door.\\n\\nWhen an incident happens, control room staff need to know which properties are closest. OS Places' geosearch tool gives instant answers. This helps create the common operating picture that's vital for the emergency services.\\n\\nImportant note: OS Places API will be migrating to the OS Data Hub in January 2021 and at that time the base URLs will migrate to the common OS Data Hub API pattern.",
+    "slug": "os-places-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-01-23T15:43:46.865Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "OS Names API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "A free, searchable, reliable database to help you find and verify populated places, road names, road numbers and postcodes. OS Names API is a reliable way of supporting the discovery or identification and visualisation of a named place; geocoding; routing and navigation, and linking diverse information such as statistics or descriptions. OS Names can locate a feature using just its name, or it can find the closest location to a given point.",
+    "slug": "os-names-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-03-12T06:39:47.879Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "OS Download API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "The OS Downloads API is a service that lets users automate the discovery and download of OS OpenData. In doing so it improves the accessibility of the OS OpenData products. Using the OS Downloads API, you can:\\n\\n- discover which OS OpenData is available\\n- automate the download of OS OpenData\\n- request various coverage areas depending on the Dataset\\n- request various formats depending on the Dataset\\n- request metadata on available Datasets including thumbnail images",
+    "slug": "os-download-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-28T09:04:55.257Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "OS OAuth 2 API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "OAuth 2 is an authentication mechanism for APIs that allows applications to use time limited tokens for access to resources. A  common use case for the OAuth 2 API is when implementing a web application that uses the OS Data Hub APIs.",
+    "slug": "os-oauth-2-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-02T03:05:11.251Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "OS Linked Identifiers API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping"
+    ],
+    "organisation": "Ordnance Survey",
+    "summary": "The OS Linked Identifiers API allows users to access the valuable relationships between properties, streets and OS MasterMap identifiers for free.\\n\\nAn identifier is a unique reference assigned to a specific thing, so when you are talking to someone else you can use it to ensure you're talking about the same thing. They are used all the time, such as telephone numbers, postcodes and customer reference numbers. OS is striving to make its identifiers more accessible and useful for its customers.\\n\\nThe OS Linked Identifiers API takes this further by enabling the linking together of Datasets that are using different identifiers; for example, linking a property address (UPRN - Unique Property Reference Number) to the street that it is on (USRN - Unique Street Reference Number).",
+    "slug": "os-linked-identifiers-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-08-24",
+    "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-29T11:03:52.367Z",
+    "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
+    "links": null
+  },
+  {
+    "title": "Statistics.gov.scot",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government"
+    ],
+    "organisation": "Scottish Government",
+    "summary": "statistics.gov.scot provides public access to the data behind Scotland's official statistics in linked open data format.\\n\\nThe SPARQL endpoint allows flexible querying of the datastore using the SPARQL 1.1 language.\\n\\nThis API can be used to extract data, automate report-writing, publish data visualisations, or make interactive tools for exploring the data.\\n\\nThe site is managed by the Scottish Government on behalf of all producers of Scottish official statistics including Scottish Government, National Records of Scotland, NHS Information Services Division, Visit Scotland and others.\\n\\nThe API is provided under the Open Government Licence with no requirement for registration.\\n\\nFor queries or comments, please contact [statistics.opendata@gov.scot](mailto:statistics.opendata@gov.scot).",
+    "slug": "statistics.gov.scot",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-12T14:09:43.362Z",
+    "contactEmail": "statistics.opendata@gov.scot",
+    "links": null
+  },
+  {
+    "title": "GeoNetwork REST API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      ""
+    ],
+    "organisation": "Scottish Government",
+    "summary": "The Scottish Spatial Data Infrastructure API endpoint allows access to all the functionality of the Geonetwork metadata catalog. Whilst some functionality is limited to authenticated users and administrators only, published metadata records can be returned using the `records` endpoint and the record UUID, for example `https://spatialdata.gov.scot/geonetwork/srv/api/records/{uuid}`.",
+    "slug": "geonetwork-rest-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-11-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-09-29T16:59:37.571Z",
+    "contactEmail": "SSDI.Metadata@gov.scot",
+    "links": null
+  },
+  {
+    "title": "Recruitment API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "The Apprenticeship Service",
+    "summary": "The Recruitment API allows you to create an advert on Find an apprenticeship using your existing systems. Submitting a new vacancy advert via this API will create the vacancy advert in the live system. We provide a sandbox version of the API which you can use for testing purposes. The sandbox is available at: https://api-sandbox.apprenticeships.education.gov.uk/managevacancies. Note: In order to use the Recruitment API you need to obtain an API key from either an Employer or Training Provider registered on the Apprenticeship Service. More information is available on the developer portal.",
+    "slug": "recruitment-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-01-24",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-01T19:52:49.308Z",
+    "contactEmail": "Details available on developer portal",
+    "links": null
+  },
+  {
+    "title": "Display vacancy advert API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Business and economy"
+    ],
+    "organisation": "The Apprenticeship Service",
+    "summary": "The display vacancy advert API allows you to retrieve recruitment adverts from Find an apprenticeship. You can filter results based upon a variety of criteria in order to display the returned adverts on your own website.",
+    "slug": "display-vacancy-advert-api",
+    "updateFrequency": null,
+    "firstPublished": "2022-01-24",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-19T13:42:10.529Z",
+    "contactEmail": "Details available on developer portal",
+    "links": null
+  },
+  {
+    "title": "Discovery",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "The National Archives",
+    "summary": "Our Discovery application programming interface (API) is designed to maximise access to the information held in The National Archives' Discovery service. Discovery holds more than 35 million descriptions of records held by The National Archives and more than 2,500 archives and institutions across the United Kingdom, as well as a smaller number of archives around the world.\\n\\nThe information in Discovery is made up of record descriptions provided by or derived from the catalogues of the different archives. Discovery also contains significant information on hundreds of thousands of record creators from anonymous diarists to the world renowned.\\n\\nThe API is open and a [sandbox](https://discovery.nationalarchives.gov.uk/API/sandbox/index#!/) and documentation are provided.",
+    "slug": "discovery",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-05",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-04-30T06:41:10.187Z",
+    "contactEmail": "discovery@nationalarchives.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Transport for London Unified API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Transport",
+      "Towns and cities"
+    ],
+    "organisation": "Transport for London",
+    "summary": "OpenAPI / Swagger spec: https://api.tfl.gov.uk/swagger/docs/v1 <br> Swagger UI is here : https://api.tfl.gov.uk/swagger/ui/index.html <br> To use the Unified API, developers should register for an Application ID and Key. Append the `app_id` and `app_key` query parameters to your requests.\\n\\nThe public TfL data (or 'open data') released here is for open data users to use in their own software and services. We encourage software developers to use this data to present customer travel information in innovative ways - providing they adhere to the transport data terms and conditions.",
+    "slug": "transport-for-london-unified-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-11-11T08:05:31.671Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Tidal API - Foundation",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "UK Hydrographic Office",
+    "summary": "The Tidal API provides an authoritative source of tidal height predictions for Standard and Secondary tidal level stations. Also, now available are Tidal Stream Events for a range of geographic locations.\\n\\nFoundation provides a 1-year subscription to access the current plus 13 days’ worth of tidal height and stream events for a wide range of tidal height stations and stream locations around the British Isles and Ireland. This includes The Isle of Man and The Channel Islands consisting of the Bailiwicks of Jersey and Guernsey.\\n\\n- 20 calls per second\\n\\n- 20,000 calls per month\\n\\n- 1 year subscription - £120 ex VAT",
+    "slug": "tidal-api---foundation",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-03",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-10-03T06:47:33.616Z",
+    "contactEmail": "customerservices@ukho.gov.uk",
+    "links": null
+  },
+  {
+    "title": "UK Tidal API - Discovery",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Environment"
+    ],
+    "organisation": "UK Hydrographic Office",
+    "summary": "The ADMIRALTY UK Tidal API provides authoritative source of tidal height predictions for Standard and Secondary tidal level stations around the United Kingdom. Discovery provides a free 1-year subscription to access the current plus 6 days’ worth of tidal events for 607 tidal stations around the United Kingdom.",
+    "slug": "uk-tidal-api---discovery",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-18",
+    "licenceName": "subscription required",
+    "licenceURL": null,
+    "listingUpdated": "2024-05-06T07:05:40.582Z",
+    "contactEmail": "customerservices@ukho.gov.uk",
+    "links": null
+  },
+  {
+    "title": "AVCS Online Discovery API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Transport",
+      "Mapping"
+    ],
+    "organisation": "UK Hydrographic Office",
+    "summary": "The ADMIRALTY Vector Chart Service (AVCS) Online Discovery API provides free access to a trial version of the AVCS Online Web Map Service (WMS). It is intended for use by developers from organisations who are interested in becoming re-sellers of AVCS Online.\\n\\nThe Discovery API provides you with Electronic Navigational Charts (ENCs) along the south coast of England. You will have access to a maximum of 2000 API calls per day at a maximum rate of 30 calls per 30 second period.\\n\\nAVCS Online gives shore-based users and planning teams access to more than 15,000 Electronic Navigational Charts (ENCs), updated weekly, to support vessel tracking, voyage planning and for use in accident and emergency incidents. The inclusion of chart display settings and pick reports enables the on-board experience to be replicated from ashore.\\n\\nAVCS Online can be integrated into existing web-based systems as a standalone chart solution, or as a base layer with other layers added, to optimise the planning and support potential of the service.",
+    "slug": "avcs-online-discovery-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-09-18",
+    "licenceName": "subscription required",
+    "licenceURL": null,
+    "listingUpdated": "2024-06-04T06:23:47.621Z",
+    "contactEmail": "customerservices@ukho.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Tidal API - Premium",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "UK Hydrographic Office",
+    "summary": "The Tidal API provides an authoritative source of tidal height predictions for Standard and Secondary tidal level stations. Also, now available are Tidal Stream Events and Rates for a range of geographic locations.\\n\\nPremium provides access to historical and the current plus 1 years’ worth of tidal events and interval predictions for a wide range of tidal height stations and stream locations around the British Isles and Ireland. This includes The Isle of Man and The Channel Islands consisting of the Bailiwicks of Jersey and Guernsey.\\n\\n- 100 calls per second\\n\\n- 100,000 calls per month\\n\\n- 1 year subscription - £300 ex VAT",
+    "slug": "tidal-api---premium",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-03",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-11-05T13:10:29.281Z",
+    "contactEmail": "customerservices@ukho.gov.uk",
+    "links": null
+  },
+  {
+    "title": "ADMIRALTY Marine Environment Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "UK Hydrographic Office",
+    "summary": "A suite of services within one easily accessible subscription allowing access to the full range of ADMIRALTY Marine Environment services from the UK Hydrographic Office.\\n\\n Enhance your apps with the ADMIRALTY Marine Environment Service. \\n\\n This groups several individually available ADMIRALTY services into a convenient single subscription. \\n\\n These are: \\n\\n Aquaculture Service \\n\\n Marine Protected Areas Service \\n\\n UK Fishing Limits \\n\\n Wrecks Service \\n\\n For the ADMIRALTY Marine Environment Service you will have access to a maximum of 50,000 calls per month at a rate of up to 15 calls per second and a 1-year subscription that is free of charge.",
+    "slug": "admiralty-marine-environment-service",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-03",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-12T08:42:25.445Z",
+    "contactEmail": "customerservices@ukho.gov.uk",
+    "links": null
+  },
+  {
+    "title": "ADMIRALTY Maritime Limits Service",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Mapping",
+      "Environment",
+      "Defence"
+    ],
+    "organisation": "UK Hydrographic Office",
+    "summary": "A suite of services within one easily accessible subscription allowing access to the full range of ADMIRALTY Maritime Limits Services from the UK Hydrographic Office.\\n\\nEnhance your apps with the ADMIRALTY Maritime Limits Service.\\n\\nThis groups several individually available ADMIRALTY services into a convenient single subscription.\\n\\nThese are:\\n\\nContinental Shelf Limits\\n\\nShip Routeing\\n\\nTerritorial Sea Limits and Boundaries\\n\\nUK Economic Exclusive Zone\\n\\nUK Fishing Limits\\n\\nUK Port Limits\\n\\nFor the ADMIRALTY Maritime Limits Service you will have access to a maximum of 50,000 calls per month at a rate of up to 15 calls per second and a 1-year subscription that is free of charge.",
+    "slug": "admiralty-maritime-limits-service",
+    "updateFrequency": null,
+    "firstPublished": "2022-02-03",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-08-07T09:56:44.621Z",
+    "contactEmail": "customerservices@ukho.gov.uk",
+    "links": null
+  },
+  {
+    "title": "Police API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Crime and justice",
+      "Defence"
+    ],
+    "organisation": "UK Police",
+    "summary": "The API provides a rich data source for information, including:\\n\\n- neighbourhood team members\\n- upcoming events\\n- street-level crime and outcome data\\n- nearest police stations\\n\\nThe API is implemented as a standard JSON web service using HTTP GET and POST requests. Full request and response examples are provided in the documentation.",
+    "slug": "police-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-12",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-07-26T05:01:28.794Z",
+    "contactEmail": "https://data.police.uk/contact/",
+    "links": null
+  },
+  {
+    "title": "GeoReport",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Government",
+      "Transport",
+      "Towns and cities"
+    ],
+    "organisation": "West Berkshire Council",
+    "summary": "To raise new requests for service to West Berkshire Council for highways and countryside related issues.",
+    "slug": "georeport",
+    "updateFrequency": null,
+    "firstPublished": "2020-01-08",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-12-25T00:58:15.763Z",
+    "contactEmail": "",
+    "links": null
+  },
+  {
+    "title": "Transport for West Midlands API",
+    "type": "API",
+    "access": "Open",
+    "topic": [
+      "Towns and cities"
+    ],
+    "organisation": "West Midlands Combined Authority",
+    "summary": "The Transport for West Midlands API provides information about bus and tram services in the West Midlands. This includes station locations, timetables, routes and real-time predicted departures.",
+    "slug": "transport-for-west-midlands-api",
+    "updateFrequency": null,
+    "firstPublished": "2020-10-05",
+    "licenceName": "",
+    "licenceURL": null,
+    "listingUpdated": "2024-02-10T00:30:11.859Z",
+    "contactEmail": "",
+    "links": null
+  }
+]

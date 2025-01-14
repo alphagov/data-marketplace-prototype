@@ -3,7 +3,10 @@ const router = govukPrototypeKit.requests.setupRouter('/WIP')
 
 const root = process.cwd()
 
-const searchData = require(`${root}/app/data/dgu.json`)
+const dgu = require(`${root}/app/data/dgu.json`)
+const apis = require(`${root}/app/data/apis.json`)
+
+const searchData = dgu.concat(apis)
 
 const log = (input) => {
     if (typeof input == "string") {
@@ -25,27 +28,27 @@ const searchConfig = {
     aggregations: {
         topic: {
             title: 'Topic',
-            size: 50,
+            size: 100,
             sort: "key",
             conjunction: false,
             hide_zero_doc_count: true
         },
         organisation: {
             title: 'Organisation',
-            size: 50,
+            size: 1000,
             sort: "key",
             conjunction: false,
             hide_zero_doc_count: true
         },
         type: {
             title: 'Type',
-            size: 2,
+            size: 10,
             conjunction: false,
             hide_zero_doc_count: true
         },
         access: {
             title: 'Access',
-            size: 2,
+            size: 10,
             conjunction: false,
             hide_zero_doc_count: true
         }
@@ -71,6 +74,11 @@ const processFilters = (aggregations) => {
                     }
                 }))
         }))
+
+    filters.forEach((filter) => {
+        log(filter.title)
+        log(filter.items.length)
+    })
 
     return filters
 }
