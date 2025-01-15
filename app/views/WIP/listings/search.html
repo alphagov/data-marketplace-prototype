@@ -89,6 +89,29 @@
                             {{ listing.organisation }}
                         </p>
 
+                        {% if listing.type == "API" %}
+
+                            <div class="govuk-!-margin-bottom-4">
+                                {{ govukTag({
+                                    'text': 'API',
+                                    classes: "govuk-tag--grey"
+                                })}}
+                            </div>
+
+                        {% endif %}
+
+
+                        {% if listing.access == "On request" %}
+
+                            <div class="govuk-!-margin-bottom-4">
+                                {{ govukTag({
+                                    'text': 'Access on request',
+                                    classes: "govuk-tag--grey"
+                                })}}
+                            </div>
+
+                        {% endif %}
+
                         <!-- <p class="govuk-!-display-inline">
                             {% for distribution in result.distributions %}
                                 <strong class="govuk-tag govuk-tag--grey">{{ distribution }}</strong>
