@@ -94,7 +94,27 @@
 
       </dl>
 
-    {% else %}
+    {% endif %}
+
+    {% if listing.type == "API" %}
+
+      <h2 class="govuk-heading-m">
+        API
+      </h2>
+
+      <p>
+        You can access this data using an API. <a href="#">Find out more about APIs.</a>
+      </p>
+
+      <p class="govuk-!-font-weight-bold">
+        <a href="{{ listing.apiDocumentation }}">
+          API documentation on the supplier’s website
+        </a>
+      </p>
+
+    {% endif %}
+
+    {% if listing.access != "Open" %}
 
       <h2 class="govuk-heading-m">
         Request this data
