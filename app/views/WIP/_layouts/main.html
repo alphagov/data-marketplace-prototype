@@ -6,13 +6,19 @@
 
 {% block header %}
 
-{{ govukHeader({ productName: serviceName, classes:"govuk-header--full-width-border"}) }}
+{{ govukHeader({
+  productName: serviceName,
+  homepageUrl: "/WIP/home",
+  classes:"govuk-header--full-width-border"
+}) }}
 
 <style>
     .govuk-service-navigation__wrapper{
         flex-grow: 1;
     }
 </style>
+
+{% if data.loggedin %}
 
 <div class="govuk-service-navigation">
     
@@ -83,7 +89,7 @@
             </div>
 
             <div class="app-header-item app-header-account">
-              <a class="govuk-link" href="/WIP/home?loggedin=false">Account</a>
+              <a class="govuk-link" href="#">Account</a>
             </div>
 
           </div>
@@ -94,6 +100,35 @@
     </div>
 
   </div>
+
+
+{% else %}
+
+{% set navigationEnd %}
+  <li class="govuk-service-navigation__item" style="margin-left: auto;">
+    <a class="govuk-service-navigation__link" href="/WIP/sign-in">Sign in</a>
+  </li>
+{% endset %}
+
+{{ govukServiceNavigation({
+
+    navigation: [
+      {
+        href: "/WIP/home",
+        text: "Home"
+      },
+      {
+        href: "/WIP/support/get-started",
+        text: "Support"
+      }
+    ],
+    slots: {
+        navigationEnd: navigationEnd
+    }
+}) }}
+
+
+{% endif %}
 
 {% endblock %}
 
