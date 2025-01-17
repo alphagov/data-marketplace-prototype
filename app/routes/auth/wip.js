@@ -2,6 +2,8 @@
 // Auth - WIP
 // #################################################
 
+const url = require('url')
+
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter('/WIP')
 
@@ -29,6 +31,16 @@ router.use(function(request, response, next) {
         }
     }
 
-    response.redirect('/WIP/sign-in')
+    const returnURL = url.format({
+        pathname: request.path,
+        query: request.query
+    })
+
+    const passwordPageURL = url.format({
+        pathname: '/WIP/sign-in',
+        query: { returnURL }
+    })
+
+    response.redirect(passwordPageURL)
     
 })

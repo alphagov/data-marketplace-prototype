@@ -105,7 +105,8 @@ code {
 
     {{ govukWarningText({ text:"You're signing in to Data Marketplace" }) }}    
   
-    <form action="/WIP/home?loggedin=true" method="post">
+    <form action="/WIP{{ data.returnURL }}" method="get">
+      <input type="hidden" name="loggedin" value="true">
       <div class="govuk-form-group ">
         <label class="govuk-label" for="email">
           Email address
