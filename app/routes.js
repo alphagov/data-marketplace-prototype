@@ -4,17 +4,19 @@
 //
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
-const { promises: fs } = require("fs");
 
-let cache = {};
-let itemsjs;
-let items;
 
 // #################################################
 // Global
 // #################################################
 
 // None
+
+
+// Auth
+
+require('./routes/auth/wip.js')
+
 
 // #################################################
 // Secure
