@@ -96,23 +96,6 @@
 
     {% endif %}
 
-    {% if listing.type == "API" %}
-
-      <h2 class="govuk-heading-m">
-        API
-      </h2>
-
-      <p>
-        You can access this data using an API. <a href="#">Find out more about APIs.</a>
-      </p>
-
-      <p class="govuk-!-font-weight-bold">
-        <a href="{{ listing.apiDocumentation }}">
-          API documentation on the supplier’s website
-        </a>
-      </p>
-
-    {% endif %}
 
     {% if listing.access != "Open" %}
 
@@ -131,6 +114,32 @@
 
       <p>
         {{ govukButton({ text: "Start a data request" })}}
+      </p>
+
+    {% endif %}
+
+    {% if listing.type == "API" %}
+
+      <h2 class="govuk-heading-m">
+        API documentation
+      </h2>
+
+      {% if listing.access != "Open" %}
+
+        <p>
+          This API requires approval before usage.
+        </p>
+
+      {% endif %}
+
+      <p>
+        You can access this data using an API. <a href="#">Find out more about APIs.</a>
+      </p>
+
+      <p class="govuk-!-font-weight-bold">
+        <a href="{{ listing.apiDocumentation }}">
+          API documentation on the supplier’s website
+        </a>
       </p>
 
     {% endif %}
@@ -154,6 +163,15 @@
   
   </div>
   <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">
+      More from this organisation
+    </h2>
+
+    <p class="govuk-!-font-size-16">
+      <a href="/WIP/search?organisation={{ listing.organisation }}">
+        {{ listing.organisation }}
+      </a>
+    </p>
     {% if similar.length > 0 %}
       <h2 class="govuk-heading-m">Related data</h2>
     {% endif %}
@@ -171,15 +189,6 @@
       </p>
     {% endfor %}
 
-    <h2 class="govuk-heading-m">
-      More from this organisation
-    </h2>
-
-    <p class="govuk-!-font-size-16">
-      <a href="#">
-        {{ listing.organisation }}
-      </a>
-    </p>
   </div>
 
 {% endblock %}
