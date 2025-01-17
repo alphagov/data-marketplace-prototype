@@ -36,7 +36,7 @@ const searchConfig = {
         organisation: {
             title: 'Organisation',
             size: 1000,
-            sort: "key",
+            // sort: "key",
             conjunction: false,
             hide_zero_doc_count: true
         },
@@ -109,7 +109,7 @@ router.get('/search', (request, response) => {
     const topic = request.query.topic
 
     if (topic) {
-        searchOptions.filters.topic = topic
+        searchOptions.filters.topic = [].concat(topic)
     }
 
     const organisation = request.query.organisation
@@ -121,13 +121,13 @@ router.get('/search', (request, response) => {
     const type = request.query.type
 
     if (type) {
-        searchOptions.filters.type = type
+        searchOptions.filters.type = [].concat(type)
     }
 
     const access = request.query.access
 
     if (access) {
-        searchOptions.filters.access = access
+        searchOptions.filters.access = [].concat(access)
     }
 
     const page = Number(request.query.page) || 1

@@ -38,4 +38,28 @@ window.GOVUKPrototypeKit.documentReady(() => {
     })
   }
 
+  const dropdowns = document.querySelectorAll('.app-header-dropdown')
+
+  dropdowns.forEach(($dropdown) => {
+
+    $dropdown.addEventListener('click', function(event) {
+        
+      console.log('dropdown click')
+
+      const forId = $dropdown.dataset.for
+
+      console.log(forId)
+
+      const $forElement = document.querySelector('#' + forId)
+
+      if ($forElement.hasAttribute('hidden')) {
+        $forElement.removeAttribute('hidden')
+      } else {
+        $forElement.setAttribute('hidden', '')
+      }
+  
+    })
+
+  })
+
 })
