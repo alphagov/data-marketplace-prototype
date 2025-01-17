@@ -111,36 +111,26 @@ code {
         <label class="govuk-label" for="email">
           Email address
         </label>
-        <!--div id="email-hint" class="govuk-hint">
-          We’ll use this to direct you to your sign in provider
-        </div-->
-        
-        <!-- aria-describedby="email-hint" -->
-        <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" autocomplete="email">
+        <input class="govuk-input " id="email" type="email" spellcheck="false" autocomplete="email">
       </div>
   
       <div class="govuk-form-group">
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="remember_me" name="remember_me" type="checkbox" value="true">
+          <input class="govuk-checkboxes__input" id="remember_me" type="checkbox" value="true">
           <label class="govuk-label govuk-checkboxes__label" for="remember_me">
             Remember me
           </label>
         </div>
       </div>
-  
-      <!--div class="govuk-body">
-        By continuing you agree to your IP, email and browser details being recorded
-      </div-->
-  
-      <div id="divForceEmailNotice" class="govuk-inset-text hidden">
-        It looks like you may be having issues signing in, so we'll email you a one-time code this time
-      </div>
-  
-      
-      <div class="govuk-button-group">
-        <input type="submit" value="Continue" class="govuk-button" data-module="govuk-button">
         
-        <a href="https://test.datamarketplace.gov.uk" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
+      <div class="govuk-button-group">
+        
+        {{ govukButton({
+          text: "Continue",
+          href: data.returnURL
+        })}}
+        
+        <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
         
       </div>
     </form>

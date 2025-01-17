@@ -31,9 +31,13 @@ router.use(function(request, response, next) {
         }
     }
 
+    let query = request.query
+
+    query.loggedin = 'true'
+
     const returnURL = url.format({
-        pathname: request.path,
-        query: request.query
+        pathname: '/WIP' + request.path,
+        query: query
     })
 
     const passwordPageURL = url.format({
