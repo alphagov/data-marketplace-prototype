@@ -69,7 +69,7 @@
       This page was last updated {{ listing.listingUpdated | govukDate }}.
     </p>
 
-    {% if listing.links.length > 0 %}
+    {% if listing.access == "Open" and listing.links.length > 0 %}
 
     <h2 class="govuk-heading-m">
       Downloads
