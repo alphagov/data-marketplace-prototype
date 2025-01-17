@@ -12,6 +12,15 @@
   classes:"govuk-header--full-width-border"
 }) }}
 
+<div class="govuk-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Beta"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+</div>
+
 <style>
     .govuk-service-navigation__wrapper{
         flex-grow: 1;
@@ -20,7 +29,7 @@
 
 {% if data.loggedin == "true" %}
 
-<div class="govuk-service-navigation">
+
     
   <div class="govuk-width-container">
 
@@ -38,6 +47,7 @@
               column-gap: 40px;
               align-items: center;
               margin-bottom: 0;
+              border-bottom: 1px solid #b1b4b6;
             }
 
             .app-header a {
@@ -71,13 +81,21 @@
               margin-top: -2px;
             }
 
+            .app-header-dropdown {
+              display: flex;
+              align-items: center;
+            }
+
           </style>
 
           <div class="app-header govuk-body" id="navigation">
 
             <div class="app-header-item">
-              <a class="govuk-link" href="#">
-                Browse
+              <a class="govuk-link app-header-dropdown" href="#">
+                <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="30" height="40" class="" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                <span class="app-header-dropdown-label">
+                  Browse
+                </span>
               </a>
             </div>
 
@@ -89,7 +107,12 @@
             </div>
 
             <div class="app-header-item app-header-account">
-              <a class="govuk-link" href="#">Account</a>
+              <a class="govuk-link app-header-dropdown" href="#">
+                <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="30" height="40" class="" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                <span class="app-header-dropdown-label">
+                  Account
+                </span>
+              </a>
             </div>
 
           </div>
@@ -99,7 +122,7 @@
 
     </div>
 
-  </div>
+  
 
 
 {% else %}
