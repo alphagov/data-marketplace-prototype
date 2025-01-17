@@ -115,7 +115,7 @@ router.get('/search', (request, response) => {
     const organisation = request.query.organisation
 
     if (organisation) {
-        searchOptions.filters.organisation = organisation
+        searchOptions.filters.organisation = [].concat(organisation)
     }
 
     const type = request.query.type
