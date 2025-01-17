@@ -43,14 +43,13 @@
 
         <div class="govuk-grid-column-two-thirds" role="region" aria-label="Search results">
 
-            <div class="result-info">
-                <div class="result-info__header">
-                    <p class="govuk-!-colour-secondary" id="js-result-count">{{ count }} results</p>
+            <div class="results-header">
+                <div class="results-header-count govuk-!-colour-secondary">
+                    <p class="govuk-!-colour-secondary" id="js-result-count">
+                        {{ count }} results
+                    </p>
                 </div>
-            </div>
-
-            <div>
-                <div class="govuk-form-group sort-options gem-c-select">
+                <div class="results-header-sort">
                     <label for="order" class="sort-options__label govuk-label">Sort by</label>
                     <select class="js-order-results govuk-select sort-options__select" name="order" id="order">
                         <option value="updated-newest" selected >
@@ -60,7 +59,6 @@
                     </select>
                 </div>
             </div>
-
 
             {% if listings.length > 0 %}
                 <div class="govuk-!-margin-bottom-5">

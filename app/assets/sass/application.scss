@@ -967,3 +967,27 @@ button.govuk-link.app-spoof-link:focus {
 .gem-c-option-select__container-inner {
     padding: 5px 3px;
 }
+
+.results-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.results-header-count {
+    flex-grow: 1;
+}
+
+.results-header-count p{
+    margin: 0;
+}
+
+.results-header-sort {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.results-header-sort label {
+    margin: 0;
+}
