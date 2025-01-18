@@ -50,12 +50,19 @@
                     </p>
                 </div>
                 <div class="results-header-sort">
-                    <label for="order" class="sort-options__label govuk-label">Sort by</label>
-                    <select class="js-order-results govuk-select sort-options__select" name="order" id="order">
-                        <option value="updated-newest" selected >
+                    <label for="sort" class="sort-options__label govuk-label">Sort by</label>
+                    <select class="js-sort-results govuk-select sort-options__select" name="sort" id="sort">
+                        {% if term %}
+                            <option value="relevance" {{ "selected" if sort == "relevance" }}>
+                                Relevance
+                            </option>
+                        {% endif %}
+                        <option value="updated-newest" {{ "selected" if sort == "updated-newest" }} >
                             Added (newest)
                         </option>
-                        <option value="updated-oldest">Added (oldest)</option>
+                        <option value="updated-oldest" {{ "selected" if sort == "updated-oldest" }} >
+                            Added (oldest)
+                        </option>
                     </select>
                 </div>
             </div>

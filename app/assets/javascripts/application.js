@@ -30,13 +30,19 @@ window.GOVUKPrototypeKit.documentReady(() => {
   }
 
   var checkboxes = document.querySelectorAll("#searchForm input[type='checkbox']")
-  var button = document.querySelector("#hidden-search-button")
+  var searchButton = document.querySelector("#hidden-search-button")
 
   for (var i = 0; i < checkboxes.length; i++) {
     checkboxes[i].addEventListener("change", function() {
-      button.click()
+      searchButton.click()
     })
   }
+
+  var sort = document.querySelector('#sort')
+
+  sort.addEventListener('change', (event) => {
+    searchButton.click()
+  })
 
   const dropdowns = document.querySelectorAll('.app-header-dropdown')
 

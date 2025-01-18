@@ -20,9 +20,13 @@ log(searchData.length + " listings")
 
 const searchConfig = {
     sortings: {
-        "listing-updated-desc": {
+        "updated-newest": {
             field: 'listingUpdated',
             order: 'desc'
+        },
+        "updated-oldest": {
+            field: 'listingUpdated',
+            order: 'asc'
         }
     },
     aggregations: {
@@ -136,7 +140,21 @@ router.get('/search', (request, response) => {
         searchOptions.page = page
     }
 
-    searchOptions.sort = "listing-updated-desc"
+    const sort = request.query.sort
+
+    if (sort == "relevance") {
+        // default sort is relevance so leave searchOptions blank
+        response.locals.sort = sort
+    } else if (sort) {
+        searchOptions.sort = sort
+        response.locals.sort = sort
+    } else if (!term) {
+        searchOptions.sort = "updated-newest"
+        response.locals.sort = "updated-newest"
+    } else {
+        // default sort is relevance so leave searchOptions blank
+        response.locals.sort = "relevance"
+    }
 
     const results = itemsjs.search(searchOptions)
 
