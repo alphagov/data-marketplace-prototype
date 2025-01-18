@@ -4,6 +4,14 @@
   {{ listing.title }}
 {% endblock %}
 
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    href: "javascript:window.history.back()",
+    classes: "govuk-!-margin-top-6"
+  }) }}
+
+{% endblock %}
 
 {% block content %}
 
@@ -65,30 +73,80 @@
       ]
     }) }}
 
-    {% if listing.access == "Open" and listing.links.length > 0 %}
+    {% if listing.access == "Open" %}
 
-    <h2 class="govuk-heading-m">
-      Downloads
-    </h2>
+      {% if listing.links.access.length > 0 %}
 
-    <dl class="govuk-summary-list govuk-summary-list--no-border">
-      
-      {% for link in listing.links %}
+        <h2 class="govuk-heading-m">
+          Data links
+        </h2>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key govuk-!-width-one-half">
-          <a href="{{ link.url }}">
-            {{ link.title }}
-          </a>
-        </dt>
-        <dd class="govuk-summary-list__value govuk-!-width-one-half">
-          {{ link.format }}
-        </dd>
-      </div>
+        <ul class="govuk-list" id="accessLinks">
+          
+          {% for link in listing.links.access %}
 
-      {% endfor %}
+            <li class="govuk-!-margin-bottom-4 {% if loop.index > 10 %}additional-link hidden{% endif %}">
+                <a class="govuk-!-font-weight-bold" href="{{ link.url }}">
+                  {{ link.title }}
+                </a>
+            </li>
 
-      </dl>
+          {% endfor %}
+
+        </ul>
+
+        {% if listing.links.access.length > 10 %}
+
+          {{ govukButton({
+            text: 'Show more',
+            classes: "govuk-button--secondary toggle-links-button",
+            attributes: {
+              'data-for': 'accessLinks'
+            }
+          })}}
+
+        {% endif %}
+
+      {% endif %}
+
+      {% if listing.links.downloads.length > 0 %}
+
+      <h2 class="govuk-heading-m">
+        Downloads
+      </h2>
+
+      <dl class="govuk-summary-list govuk-summary-list--no-border" id="downloadLinks">
+        
+        {% for link in listing.links.downloads %}
+
+        <div class="govuk-summary-list__row {% if loop.index > 10 %}additional-link hidden{% endif %}">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </dt>
+          <dd class="govuk-summary-list__value govuk-!-width-one-half">
+            {{ link.format }}
+          </dd>
+        </div>
+
+        {% endfor %}
+
+        </dl>
+
+        {% if listing.links.downloads.length > 10 %}
+
+          {{ govukButton({
+            text: 'Show more',
+            classes: "govuk-button--secondary toggle-links-button",
+            attributes: {
+              'data-for': 'downloadLinks'
+            }
+          })}}
+
+        {% endif %}
+
+      {% endif %}
 
     {% endif %}
 

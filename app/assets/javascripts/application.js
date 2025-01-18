@@ -62,4 +62,35 @@ window.GOVUKPrototypeKit.documentReady(() => {
 
   })
 
+
+  const toggleLinksButtons = document.querySelectorAll('.toggle-links-button')
+
+  toggleLinksButtons.forEach(($button) => {
+
+    $button.addEventListener('click', function(event) {
+
+      if ($button.innerText == 'Show more') {
+        $button.innerText = 'Show less'
+      } else {
+        $button.innerText = 'Show more'
+      }
+        
+      console.log('toggleLinks click')
+
+      const forId = $button.dataset.for
+
+      console.log(forId)
+
+      const $forElement = document.querySelector('#' + forId)
+
+      const links = $forElement.querySelectorAll('.additional-link')
+
+      links.forEach(($link) => {
+        $link.classList.toggle('hidden')
+      })
+  
+    })
+
+  })
+
 })
