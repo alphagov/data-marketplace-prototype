@@ -86,7 +86,7 @@
           {% for link in listing.links.access %}
 
             <li class="govuk-!-margin-bottom-4 {% if loop.index > 10 %}additional-link hidden{% endif %}">
-                <a class="govuk-!-font-weight-bold" href="{{ link.url }}">
+                <a href="{{ link.url }}">
                   {{ link.title }}
                 </a>
             </li>
@@ -120,7 +120,7 @@
         {% for link in listing.links.downloads %}
 
         <div class="govuk-summary-list__row {% if loop.index > 10 %}additional-link hidden{% endif %}">
-          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half govuk-!-font-weight-regular">
             <a href="{{ link.url }}">
               {{ link.title }}
             </a>
