@@ -212,5 +212,21 @@ router.get('/listings/:resourceID', function(request, response) {
     response.locals.listing = listing
     response.locals.similar = findSimilar(searchData, listing)
     log(response.locals.similar)
-    response.render("/WIP/listings/view")
+    response.render("WIP/listings/view")
+})
+
+router.get('/home', function(request, response) {
+
+    response.locals.totalListings = searchData.length
+
+    const uniqueOrganisations = new Set()
+
+    searchData.forEach(item => {
+        uniqueOrganisations.add(item.organisation);
+    })
+
+    response.locals.totalOrganisations = uniqueOrganisations.size
+
+    response.render("WIP/home")
+
 })

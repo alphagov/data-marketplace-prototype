@@ -56,3 +56,11 @@ addFilter('govukDate', (input) => {
         return
     }
 })
+
+addFilter('numberWithCommas', (input) => {
+    try {
+        return input.toLocaleString('en-GB')
+    } catch {
+        return
+    }
+})
