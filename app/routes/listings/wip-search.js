@@ -140,20 +140,17 @@ router.get('/search', (request, response) => {
         searchOptions.page = page
     }
 
-    const sort = request.query.sort
+    let sort = request.query.sort
 
-    if (sort == "relevance") {
-        // default sort is relevance so leave searchOptions blank
-        response.locals.sort = sort
-    } else if (sort) {
+    if (!sort) {
+        sort = (term) ? "relevance" : "updated-newest"
+    }
+
+    response.locals.sort = sort
+
+    if (sort !== "relevance") {
+        // default sort is relevance so only set it for other sorts
         searchOptions.sort = sort
-        response.locals.sort = sort
-    } else if (!term) {
-        searchOptions.sort = "updated-newest"
-        response.locals.sort = "updated-newest"
-    } else {
-        // default sort is relevance so leave searchOptions blank
-        response.locals.sort = "relevance"
     }
 
     const results = itemsjs.search(searchOptions)

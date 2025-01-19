@@ -50,7 +50,30 @@
                     </p>
                 </div>
                 <div class="results-header-sort">
-                    <label for="sort" class="sort-options__label govuk-label">Sort by</label>
+                    {{ govukSelect({
+                        id: "sort",
+                        name: "sort",
+                        value: sort,
+                        label: {
+                            text: 'Sort by'
+                        },
+                        items: [
+                          {
+                            text: "Relevance",
+                            value: "relevance"
+                          } if term,
+                          {
+                            text: "Added (newest)",
+                            value: "updated-newest"
+                          },
+                          {
+                            text: "Added (oldest)",
+                            value: "updated-oldest"
+                          }
+                        ]
+                      }) }}
+                    <!-- <label for="sort" class="sort-options__label govuk-label">Sort by</label>
+
                     <select class="js-sort-results govuk-select sort-options__select" name="sort" id="sort">
                         {% if term %}
                             <option value="relevance" {{ "selected" if sort == "relevance" }}>
@@ -63,7 +86,7 @@
                         <option value="updated-oldest" {{ "selected" if sort == "updated-oldest" }} >
                             Added (oldest)
                         </option>
-                    </select>
+                    </select> -->
                 </div>
             </div>
 

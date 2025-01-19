@@ -982,12 +982,13 @@ button.govuk-link.app-spoof-link:focus {
     margin: 0;
 }
 
-.results-header-sort {
+.results-header-sort label {
+    margin: 0;
+}
+
+.results-header-sort .govuk-form-group {
+    margin: 0;
     display: flex;
     align-items: center;
     column-gap: 8px;
-}
-
-.results-header-sort label {
-    margin: 0;
 }
