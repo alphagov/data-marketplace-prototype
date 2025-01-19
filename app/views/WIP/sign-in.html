@@ -105,7 +105,7 @@ code {
 
     {{ govukWarningText({ text:"You're signing in to Data Marketplace" }) }}    
   
-    <form action="/WIP{{ data.returnURL }}" method="get">
+    
       <input type="hidden" name="loggedin" value="true">
       <div class="govuk-form-group ">
         <label class="govuk-label" for="email">
@@ -127,13 +127,11 @@ code {
         
         {{ govukButton({
           text: "Continue",
-          href: data.returnURL
+          href: data.returnURL or "/WIP/home?loggedin=true"
         })}}
         
         <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
         
       </div>
-    </form>
-  
 
   {% endblock %}
