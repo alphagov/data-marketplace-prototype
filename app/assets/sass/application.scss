@@ -992,3 +992,64 @@ button.govuk-link.app-spoof-link:focus {
     align-items: center;
     column-gap: 8px;
 }
+
+
+.app-header {
+    position: relative;
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    margin-bottom: 0;
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.app-header a {
+    text-decoration: none;
+}
+
+.app-header-item {
+    padding: 14px 0;
+}
+
+.app-header-search {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.app-header-search form {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.app-header-search input {
+    width: auto;
+    flex-grow: 1;
+}
+
+.app-header-search button {
+    margin-bottom: 0;
+    margin-top: -2px;
+}
+
+.app-header-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.browse-menu {
+    position: absolute;
+    z-index: 10;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 30px 15px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.browse-menu a {
+    text-decoration: none;
+}
