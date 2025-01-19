@@ -41,13 +41,23 @@ window.GOVUKPrototypeKit.documentReady(() => {
 
       console.log(forId)
 
-      const $forElement = document.querySelector('#' + forId)
+      const submenus = document.querySelectorAll('.header-submenu')
 
-      if ($forElement.hasAttribute('hidden')) {
-        $forElement.removeAttribute('hidden')
-      } else {
-        $forElement.setAttribute('hidden', '')
-      }
+      submenus.forEach(($submenu) => {
+
+        if ($submenu.id == forId) {
+
+          if ($submenu.hasAttribute('hidden')) {
+            $submenu.removeAttribute('hidden')
+          } else {
+            $submenu.setAttribute('hidden', '')
+          }
+
+        } else {
+          $submenu.setAttribute('hidden', '')
+        }
+          
+      })
   
     })
 

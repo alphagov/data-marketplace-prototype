@@ -62,12 +62,23 @@
             </div>
 
             <div class="app-header-item app-header-account">
-              <a class="govuk-link app-header-dropdown" href="#">
+              <a class="govuk-link app-header-dropdown" data-for="account-menu" href="#">
                 <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="30" height="40" class="" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
                 <span class="app-header-dropdown-label">
                   Account
                 </span>
               </a>
+              <div class="account-menu header-submenu" id="account-menu" hidden>
+                <a href="#">
+                  Your data
+                </a>
+                <a href="#">
+                  Support
+                </a>
+                <a href="/WIP/home?loggedin=false">
+                  Sign out
+                </a>
+              </div>
             </div>
 
           </div>
