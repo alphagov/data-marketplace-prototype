@@ -1,17 +1,7 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
    {{ serviceName }}
-{% endblock %}
-
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,8 +16,16 @@
 
       <!-- <span class="govuk-caption-l">Prepare to request a data share</span> -->
       <h1 class="govuk-heading-xl">
-        Request {{ data['shareTitle'] }} data
+        Start data request
       </h1>
+
+      <p>Requesting:</p>
+      
+      <p class="govuk-!-font-weight-bold">{{ data['shareTitle'] }}</p>
+
+      <p>From:</p>
+
+      <p class="govuk-!-font-weight-bold">{{ data['shareOrg'] }}</p>
 
       <p class="govuk-body">You need to answer some questions to make sure your request meets GDPR and data sharing standards.</p>
 

@@ -167,7 +167,10 @@
       </p>
 
       <p>
-        {{ govukButton({ text: "Start a data request" })}}
+        {{ govukButton({
+          text: "Start a data request",
+          href: "/WIP/request/?shareTitle=" + listing.title + "&shareOrg=" + listing.organisation
+        })}}
       </p>
 
     {% endif %}
