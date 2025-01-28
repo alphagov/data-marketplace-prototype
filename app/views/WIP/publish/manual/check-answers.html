@@ -178,7 +178,42 @@
               <span class="govuk-visually-hidden"> public or restricted data</span>
             </a>
           </dd>
-        </div>      
+        </div>   
+        
+        {% if data['access'] == "Public" %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Licence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['licence'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/WIP/publish/manual/licence?check-answers=true">
+              Change
+              <span class="govuk-visually-hidden"> licence</span>
+            </a>
+          </dd>
+        </div> 
+        {% endif %}
+
+        {% if data['access'] == "Restricted" %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Formats
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['formats'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/WIP/publish/manual/formats?check-answers=true">
+              Change
+              <span class="govuk-visually-hidden"> formats</span>
+            </a>
+          </dd>
+        </div> 
+        {% endif %}
+
       </dl>
 
       {% if data['access'] == "Public" %}

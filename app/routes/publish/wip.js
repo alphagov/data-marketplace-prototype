@@ -65,7 +65,7 @@ router.post('/manual/access-answer', function(request, response) {
 
     var access = request.session.data['access']
     if (access == 'Public'){
-        response.redirect(`${path}/manual/links`)
+        response.redirect(`${path}/manual/licence`)
     } else if (access == 'Restricted' ) {
         response.redirect(`${path}/manual/formats`)
     } else {

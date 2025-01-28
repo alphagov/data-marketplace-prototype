@@ -187,13 +187,52 @@
                 text: "To do"
               }
             }
-          }
+          },
+          {
+            title: {
+              text: "Licence"
+            },
+            href: path + "/licence",
+            status: {
+              text: "Done"
+            } if data['licence'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Public",
+          {
+            title: {
+              text: "Links"
+            },
+            href: path + "/links",
+            status: {
+              text: "Done"
+            } if data['links'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Public",
+          {
+            title: {
+              text: "Formats"
+            },
+            href: path + "/formats",
+            status: {
+              text: "Done"
+            } if data['formats'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Restricted"
         ]
       }) }}
 
         {{ govukButton({
           text: "Review and submit",
-          href: "#"
+          href: "/WIP/publish/manual/check-answers"
         }) }}
       
 

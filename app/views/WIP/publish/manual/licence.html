@@ -1,28 +1,11 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   Licence
 {% endblock %}
 
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
-{% endblock %}
 
 {% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -36,12 +19,13 @@
       <form class="form" action="/WIP/publish/manual/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/WIP/publish/manual/access-rights" method="post">
+      <form class="form" action="/WIP/publish/manual/links" method="post">
       {% endif %}
       
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-        {% from "govuk/components/input/macro.njk" import govukInput %}
+      <div class="govuk-caption-l">
+          {{ data['title'] }}
+      </div>
 
         {% set otherHtml %}
         {{ govukInput({
@@ -49,43 +33,36 @@
           name: "metadataLicenceOther",
           type: "text",
           label: {
-            text: "Enter URI to licence"
+            text: "Licence name"
+          }
+        }) }}
+        {{ govukInput({
+          id: "metadataLicenceOther",
+          name: "metadataLicenceOther",
+          type: "text",
+          label: {
+            text: "Link to licence"
           }
         }) }}
         {% endset -%}
 
         {{ govukRadios({
-          name: "metadataLicence",
-          hint: {
-            text: "Select an option. If 'other' selected, add an URL link to the licence."
-          },
+          name: "licence",
           fieldset: {
             legend: {
-              text: "What licence will be used to allow the data to be shared?",
+              text: "What is the licence for this data?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
             {
-              value: "Open Governemnt Licence",
-              text: "Open Governemnt Licence"
+              value: "Open Government Licence",
+              text: "Open Government Licence"
             },
             {
-              value: "CC0",
-              text: "CC0 (No rights reserved, public domain)"
-            },
-            {
-              value: "CC-BY",
-              text: "CC-BY (Attribution)"
-            },
-            {
-              value: "CC BY-SA",
-              text: "CC BY-SA (Attribution-ShareAlike)"
-            },
-            {
-              value: "CC BY-NC",
-              text: "CC BY-NC (Attribution-NonCommercial)"
+              value: "Not known",
+              text: "Not known"
             },
             {
               value: "Other",
@@ -93,43 +70,41 @@
               conditional: {
                 html: otherHtml
               }
-            },
-            {
-              divider: "or"
-            },
-            {
-              value: "Requires Data Share Agreement",
-              text: "Requires Data Share Agreement"
             }
           ],
           value: data['metadataLicence']
         }) }}
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+          }) }}
+          {{ govukButton({
+          text: "Save and return",
+          classes: "govuk-button--secondary",
+          href: "/WIP/publish/manual/task-list"
+          })}}
+      </div>
 
       </form>
 
     </div>
+    
     <div class="govuk-grid-column-one-third">
-      <div class="gem-c-contextual-sidebar">
-        <div class="gem-c-related-navigation">
-          <h2 id="learnLinks" class="gem-c-related-navigation__main-heading">
-            Learn
-          </h2>
-          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="learnLinks">
-            <ul class="gem-c-related-navigation__link-list">
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/metadata-model">Metadata sharing requirements</a>
-              </li>
-              
-              <li class="gem-c-related-navigation__link">
-                <a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="/WIP/learn/articles/adding-a-single-data-asset">Adding a single data description</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+
+      <h2 class="govuk-heading-m">
+        More information
+      </h2>
+
+      <p>
+        <a href="#">
+          Get help with licences
+        </a>
+      </p>
     </div>
+      
+  </div>
   </div>
 
 {% endblock %}
