@@ -1,21 +1,14 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
   {{ serviceName }}
 {% endblock %}
 
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
-{% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+  <a class="govuk-back-link" href="/WIP/request/dashboard">
+    Your data requests
+  </a>
 {% endblock %}
 
 {% block content %}
@@ -23,223 +16,318 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
-      <h1 class="govuk-heading-xl">
-        {{ data['shareTitle'] }} data
+      <span class="govuk-caption-l">
+        <!-- {% include "includes/request/request-id.html" %} -->
+         Draft request
+      </span>
+      <h1 class="govuk-heading-l">
+        {{ data['shareTitle'] }}
       </h1>
-
-      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Request incomplete</h2>
-      <p class="govuk-body govuk-!-margin-bottom-2">You have completed 0 of 5 sections.</p>
-      <p class="govuk-body govuk-!-margin-bottom-7">More sections may be added depending on your answers.</p>
-
-      <ol class="govuk-prototype-kit-task-list">
-        <li>
-          <h2 class="govuk-prototype-kit-task-list__section">
-            <span class="govuk-prototype-kit-task-list__section-number">1. </span> Purpose of the data share
-          </h2>
-          <ul class="govuk-prototype-kit-task-list__items">
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-what-type-data-cat" aria-describedby="">
-                  Data type
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <!-- <a href="030-data-subjects-cat" aria-describedby=""> -->
-                  Data subjects
-                <!-- </a> -->
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-aims-cat" aria-describedby="">
-                  Project aims
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-what-data-no-cat" aria-describedby="read-declaration-status">
-                  Data required
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-what-public-benefit-cat" aria-describedby="">
-                  Benefit to public
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-others-cat" aria-describedby="">
-                  Other organisations accessing data
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-how-impact-cat" aria-describedby="eligibility-status">
-                  Impact if data not given
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-when-need-cat" aria-describedby="read-declaration-status">
-                  Date required
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="govuk-prototype-kit-task-list__section">
-            <span class="govuk-prototype-kit-task-list__section-number">2. </span> Legal power and gateway
-          </h2>
-          <ul class="govuk-prototype-kit-task-list__items">
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-have-legal-power-cat" aria-describedby="">
-                  Legal power
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-legal-gateway-belief" aria-describedby="">
-                  Legal gateway
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                  Legal review
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="govuk-prototype-kit-task-list__section">
-            <span class="govuk-prototype-kit-task-list__section-number">3. </span> Data protection
-          </h2>
-          <ul class="govuk-prototype-kit-task-list__items">
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <!-- <a href="030-legal-basis-personal-cat" aria-describedby=""> -->
-                  Lawful basis for personal data
-                <!-- </a> -->
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <!-- <a href="030-legal-basis-special-cat" aria-describedby=""> -->
-                  Lawful basis for special category data
-                <!-- </a> -->
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-geography-cat" aria-describedby="">
-                  Data travel outside UK
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <!-- <a href="030-role-cat" aria-describedby=""> -->
-                  Role of organisation
-                <!-- </a> -->
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                  Data protection review
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="govuk-prototype-kit-task-list__section">
-            <span class="govuk-prototype-kit-task-list__section-number">4. </span> Data governance, security and technology
-          </h2>
-          <ul class="govuk-prototype-kit-task-list__items">
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-how-receive-cat" aria-describedby="">
-                  Data delivery
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-prefered-format-cat" aria-describedby="">
-                  Data format
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="030-how-dispose-cat.html" aria-describedby="">
-                  Disposal of data
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Not started</strong>
-            </li>
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                  Data security review
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="govuk-prototype-kit-task-list__section">
-            <span class="govuk-prototype-kit-task-list__section-number">5. </span> Review and send
-          </h2>
-          <ul class="govuk-prototype-kit-task-list__items">
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <!-- <a href="#" aria-describedby=""> -->
-                  Check answers
-                <!-- </a> -->
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
-      </ol>
     </div>
   </div>
 
-{% endblock %}
+  <div class="govuk-grid-row">
 
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body govuk-!-margin-bottom-2">
+        5 sections to complete
+      </p>
+
+      {% set path = "/WIP/request" %}
+
+      <h2 class="govuk-heading-m">
+        1. Purpose of the data share
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Data type"
+            },
+            href: path + "/data-type",
+            status: {
+              text: "Done"
+            }
+          },
+          {
+            title: {
+              text: "Data subjects"
+            },
+            href: path + "/data-subjects",
+            status: {
+                text: "Done"
+            } if data['data-subjects'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          
+          },
+          {
+            title: {
+              text: "Project aims"
+            },
+            href: path + "/project-aims",
+            status: {
+                text: "Done"
+            } if data['project-aims'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Data required"
+            },
+            href: path + "/data-required",
+            status: {
+                text: "Done"
+            } if data['data-required'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Benefit to public"
+            },
+            href: path + "/benefit-public",
+            status: {
+                text: "Done"
+            } if data['benefit-public'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Other organisations accessing the data"
+            },
+            href: path + "/other-orgs",
+            status: {
+                text: "Done"
+            } if data['other-orgs'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Impact if data not given"
+            },
+            href: path + "/impact",
+            status: {
+                text: "Done"
+            } if data['impact'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Date required"
+            },
+            href: path + "/date-required",
+            status: {
+                text: "Done"
+            } if data['date-required'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        2. Legal power and gateway
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Legal power"
+            },
+            href: path + "/legal-power",
+            status: {
+              text: "Done"
+            } if data['legal-power'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Legal review"
+            },
+            href: path + "/legal-review",
+            status: {
+              text: "Done"
+            } if data['legal-review'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        3. Data protection
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Point of contact"
+            },
+            href: path + "/contact",
+            status: {
+              text: "Done"
+            } if data['contactName'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Owner"
+            },
+            href: path + "/owner",
+            status: {
+              text: "Done"
+            } if data['ownerName'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Additional information
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Date first made available"
+            },
+            href: path + "/date-published",
+            status: {
+              text: "Done"
+            } if data['datePublished-day'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Update frequency"
+            },
+            href: path + "/frequency",
+            status: {
+              text: "Done"
+            } if data['frequency'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Public or restricted data"
+            },
+            href: path + "/access",
+            status: {
+              text: "Done"
+            } if data['access'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Licence"
+            },
+            href: path + "/licence",
+            status: {
+              text: "Done"
+            } if data['licence'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Public",
+          {
+            title: {
+              text: "Links"
+            },
+            href: path + "/links",
+            status: {
+              text: "Done"
+            } if data['links'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Public",
+          {
+            title: {
+              text: "Formats"
+            },
+            href: path + "/formats",
+            status: {
+              text: "Done"
+            } if data['formats'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Restricted"
+        ]
+      }) }}
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Organisation
+      </h2>
+      <p>
+        {{ data['shareOrg'] }}
+      </p>
+      <h2 class="govuk-heading-s">
+        Request ID
+      </h2>
+      <p>
+        ABCD1234
+      </p>
+      <h2 class="govuk-heading-s">
+        Get help with your request
+      </h2>
+      <p>
+        <a href="#">
+          help@dsne.gov.uk
+        </a>
+      </p>
+    </div>
+  </div>
+
 {% endblock %}
