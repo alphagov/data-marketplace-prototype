@@ -119,6 +119,10 @@
 
 {% endblock %}
 
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
 {% block footer %}
   {% include "includes/WIP_footer.html" %}
 {% endblock %}
