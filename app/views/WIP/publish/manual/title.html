@@ -5,17 +5,7 @@
 {% endblock %}
 
 
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -36,12 +26,12 @@
 
         {{ govukInput({
           label: {
-            text: "What is the title of the data set?",
+            text: "Listing title",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           hint: {
-            text: "Provide the full name. Your title should be unique – consider adding a version number or date range."
+            text: "Your title should be unique – consider adding a version number or date range."
           },
           id: "title",
           name: "title",

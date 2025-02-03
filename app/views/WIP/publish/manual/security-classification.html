@@ -4,17 +4,7 @@
   Security Classification
 {% endblock %}
 
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -37,7 +27,7 @@
           name: "security-classification",
           fieldset: {
             legend: {
-              html: "Is the security classification of the data&nbsp;set OFFICIAL?",
+              html: "Is the security classification of the data&nbsp;OFFICIAL?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }

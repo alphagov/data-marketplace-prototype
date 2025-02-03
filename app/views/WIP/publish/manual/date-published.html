@@ -4,17 +4,7 @@
   Contact
 {% endblock %}
 
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -44,13 +34,13 @@
           namePrefix: "datePublished",
           fieldset: {
               legend: {
-                  text: "When was the data set first made available?",
+                  text: "When was the data first made available?",
                   isPageHeading: true,
                   classes: "govuk-fieldset__legend--l"
               }
           },
           hint: {
-              text: "This is the date you first issued the data set, or published it in your data catalogue."
+              text: "This is the date you first issued the data, or published it in your data catalogue."
           }
         }) }}
 

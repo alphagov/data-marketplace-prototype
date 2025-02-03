@@ -33,7 +33,7 @@ router.post('/method', function(request, response) {
 
     var method = request.session.data['method']
     if (method == "web"){
-        response.redirect(`${path}/manual/type`)
+        response.redirect(`${path}/manual/security-classification`)
     } else if (method == "Upload a CSV file of metadata") {
         response.redirect(`${path}/csv/start`)
     } else {
@@ -73,6 +73,21 @@ router.post('/manual/access-answer', function(request, response) {
     }
 })
 
+router.post('/manual/access-method-answer', function(request, response) {
+
+    const type = request.session.data['access-method']
+
+    if (type == 'File download') {
+        response.redirect(`${path}/manual/links-download`)
+    } else if (type == 'API') {
+        response.redirect(`${path}/manual/links-api`)
+    } else {
+        response.redirect(`${path}/manual/links-webpage`)
+    }
+
+})
+
+
 router.post('/manual/links-answer', function(request, response) {
 
     let data = request.session.data
@@ -80,14 +95,17 @@ router.post('/manual/links-answer', function(request, response) {
     if (!data.links){
       data.links = {
         access: [],
-        download: []
+        download: [],
+        api: []
       }
     }
 
     let links
 
-    if (data['link-type'] == 'File download') {
+    if (data['access-method'] == 'File download') {
       links = data.links.download
+    } else if (data['access-method'] == 'API') {
+      links = data.links.api
     } else {
       links = data.links.access
     } 

@@ -5,17 +5,7 @@
 {% endblock %}
 
 
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -27,7 +17,7 @@
       </div>
 
       <h1 class="govuk-heading-l">
-        Provide keywords for the data set
+        Keywords
       </h1>
       <p class="govuk-hint">
         Enter one or more keywords. Add one word or phrase at a time, for example ‘schools’ or ‘exam results’. Do not use commas.

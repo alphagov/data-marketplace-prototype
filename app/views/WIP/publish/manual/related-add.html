@@ -1,0 +1,158 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  Related data assets
+{% endblock %}
+
+{% block beforeContent %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
+            Related listings (optional)
+        </h1>
+        <div class="govuk-hint">
+            Other datasets or APIs which are related to the one you are adding.
+        </div>
+
+
+
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/WIP/publish/manual/data-type" method="post">
+      {% endif %}
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-8">
+        Your listings
+      </h2>
+      <div class="govuk-hint">
+        Preview links open in a new tab.
+      </div>
+
+      <div class="govuk-form-group">
+
+        <style>
+            .related-item {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                display: flex;
+                column-gap: 20px;
+                align-items: center;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .related-item .govuk-body {
+                margin-bottom: 0;
+            }
+
+            .related-title {
+                flex-grow: 1;
+            }
+
+            .related-action .govuk-button {
+                margin-bottom: 0;
+            }
+        </style>
+
+        <div class="related-item">
+            <div class="related-title govuk-body">
+                <a href="#">
+                    Cereals and Oilseeds Production Harvest
+                </a>
+            </div>
+            <div class="related-action">
+                {{ govukButton({
+                    text: 'Add',
+                    classes: 'govuk-button--secondary'
+                })}}
+            </div>
+        </div>
+        <div class="related-item">
+            <div class="related-title govuk-body">
+                <a href="#">
+                    Commercial and industrial waste arisings
+                </a>
+            </div>
+            <div class="related-action">
+                {{ govukButton({
+                    text: 'Add',
+                    classes: 'govuk-button--secondary'
+                })}}
+            </div>
+        </div>
+        <div class="related-item">
+            <div class="related-title govuk-body">
+                <a href="#">
+                    Family food open data
+                </a>
+            </div>
+            <div class="related-action">
+                {{ govukButton({
+                    text: 'Add',
+                    classes: 'govuk-button--secondary'
+                })}}
+            </div>
+        </div>
+        <div class="related-item">
+            <div class="related-title govuk-body">
+                <a href="#">
+                    Survey of public attitudes and behaviours towards the environment
+                </a>
+            </div>
+            <div class="related-action">
+                {{ govukButton({
+                    text: 'Add',
+                    classes: 'govuk-button--secondary'
+                })}}
+            </div>
+        </div>
+        <div class="related-item">
+            <div class="related-title govuk-body">
+                <a href="#">
+                    Commercial and industrial waste arisings
+                </a>
+            </div>
+            <div class="related-action">
+                {{ govukButton({
+                    text: 'Add',
+                    classes: 'govuk-button--secondary'
+                })}}
+            </div>
+        </div>
+
+      </div>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+         }) }}
+         {{ govukButton({
+          text: "Save and return",
+          classes: "govuk-button--secondary",
+          attributes: {
+            formaction: "/WIP/publish/manual/task-list"
+          }
+         })}}
+      </div>
+
+      </form>
+
+
+    </div>
+   
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "includes/WIP_footer.html" %}
+{% endblock %}

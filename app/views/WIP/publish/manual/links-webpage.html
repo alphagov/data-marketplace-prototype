@@ -6,7 +6,7 @@
 
 {% block beforeContent %}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+    <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
 {% endblock %}
 
@@ -23,46 +23,40 @@
 
       {% else %}
 
-        <form class="form" action="/WIP/publish/manual/access-method-answer" method="post">
+        <form class="form" action="/WIP/publish/manual/links-answer" method="post">
 
       {% endif %}
 
         <div class="govuk-caption-l">
             {{ data['title'] }}
         </div>
+        
+        <h1 class="govuk-heading-l">
+            Add a webpage link
+        </h1>
 
-        {{ govukRadios({
-          name: "access-method",
-          fieldset: {
-            legend: {
-              text: "How to access the data",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          hint: {
-            text: "You’ll be able to add more access methods if needed."
-          },
-          items: [
-            {
-              value: "File download",
-              text: "File download",
-              attributes: {
-                "data-aria-controls": "conditional-file"
-               }
+        {{ govukInput({
+            label: {
+              text: "Link title",
+              classes: "govuk-label--s"
             },
-            {
-              value: "API",
-              text: "API"
+            hint: {
+                text: "If there is only one link, the title can be the same as your listing."
             },
-            {
-              value: "Webpage",
-              text: "Webpage"
-            }
-          ],
-          value: ''
+            id: "link-title",
+            name: "link-title",
+            value: ''
+          }) }}
+
+        {{ govukInput({
+            label: {
+                text: "Link URL",
+                classes: "govuk-label--s"
+            },
+            id: "link-url",
+            name: "link-url",
+            value: ''
         }) }}
-    
 
         <div class="govuk-button-group">
             {{ govukButton({
@@ -79,7 +73,6 @@
 
       </form>
 
-
       {%
         if data.links.download.length > 0 or
            data.links.api.length > 0 or
@@ -93,9 +86,9 @@
         {% include "/WIP/publish/manual/_includes/links-list.html" %}
 
       {% endif %}
-      
+        
     </div>
-  
+
   </div>
 
 {% endblock %}

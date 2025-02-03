@@ -5,17 +5,7 @@
 {% endblock %}
 
 
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -35,14 +25,14 @@
 
         {{ govukInput({
           label: {
-            text: "What is your reference for this data set?",
+            text: "What is your reference for this listing? (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "reference",
           name: "reference",
           hint: {
-            html: "<p class=\"govuk-hint\">Provide a reference that you use to identify this data set in your organisation. This might be a number, code or URL, for example.</p>
+            html: "<p class=\"govuk-hint\">Provide a reference that you use to identify this listing in your organisation. This might be a number, code or URL, for example.</p>
             <p class=\"govuk-hint\">This will not be visible to users outside your organisation.</p>"
           },
           value: data['reference']

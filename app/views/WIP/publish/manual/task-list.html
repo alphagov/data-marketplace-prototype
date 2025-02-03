@@ -6,25 +6,28 @@
 
 
 {% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-<a class="govuk-back-link" href="#">Your data listings</a>
-{% endblock %}
+  <a class="govuk-back-link" href="#">Your data listings</a>
+
+  {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <span class="govuk-caption-l">
+        <!-- {% include "includes/request/request-id.html" %} -->
+        Draft listing
+      </span>
       <h1 class="govuk-heading-l">
-        {{ data['title'] }} (draft)
+        {{ data['title'] }}
       </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
       {% set path = "/WIP/publish/manual" %}
 

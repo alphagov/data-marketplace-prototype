@@ -4,17 +4,7 @@
   Security Classification
 {% endblock %}
 
-{% block beforeContent %}
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "Beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -42,7 +32,7 @@
           value: data['access'],
           fieldset: {
             legend: {
-              text: "Is the data set publicly available?",
+              text: "Is the data publicly available?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
