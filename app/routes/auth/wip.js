@@ -19,12 +19,14 @@ router.use(function(request, response, next) {
 
     console.log(path)
 
+    console.dir(request.session.data)
+
     if (request.session.data.loggedin == 'true') {
         next()
         return
     }
 
-    for (allowedPath of allowedPaths) {
+    for (let allowedPath of allowedPaths) {
         if (path.startsWith(allowedPath)) {
             next()
             return
