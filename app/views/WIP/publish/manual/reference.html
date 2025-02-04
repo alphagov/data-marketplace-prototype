@@ -25,14 +25,14 @@
 
         {{ govukInput({
           label: {
-            text: "What is your reference for this listing? (optional)",
+            text: "Your reference (optional)",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           id: "reference",
           name: "reference",
           hint: {
-            html: "<p class=\"govuk-hint\">Provide a reference that you use to identify this listing in your organisation. This might be a number, code or URL, for example.</p>
+            html: "<p class=\"govuk-hint\">A reference that you use to identify this listing in your organisation. This might be a number, code or URL, for example.</p>
             <p class=\"govuk-hint\">This will not be visible to users outside your organisation.</p>"
           },
           value: data['reference']
