@@ -67,7 +67,7 @@ router.post('/manual/access-answer', function(request, response) {
     if (access == 'Public'){
         response.redirect(`${path}/manual/licence`)
     } else if (access == 'Restricted' ) {
-        response.redirect(`${path}/manual/formats`)
+        response.redirect(`${path}/manual/access-method-restricted`)
     } else {
         response.redirect(`${path}/manual/access`)
     }
@@ -120,6 +120,32 @@ router.post('/manual/links-answer', function(request, response) {
     })
   
     response.redirect(`${path}/manual/links-summary`)
+})
+
+router.post('/manual/access-method-restricted-answer', function(request, response) {
+
+    const accessMethods = request.session.data['access-method-restricted']
+
+    if (accessMethods.includes('File download')) {
+        response.redirect(`${path}/manual/formats`)
+    } else if (accessMethods.includes('API')) {
+        response.redirect(`${path}/manual/links-api-restricted`)
+    } else {
+        response.redirect(`${path}/manual/check-answers`)
+    }
+
+})
+
+router.post('/manual/formats-answer', function(request, response) {
+
+    const accessMethods = request.session.data['access-method-restricted']
+
+    if (accessMethods.includes('API')) {
+        response.redirect(`${path}/manual/links-api-restricted`)
+    } else {
+        response.redirect(`${path}/manual/check-answers`)
+    }
+
 })
 
 router.post('/wip-licence-answer', function(request, response) {

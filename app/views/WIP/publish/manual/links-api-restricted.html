@@ -1,0 +1,90 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  API details
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% if data['check-answers'] == "true" %}
+
+        <form class="form" action="/WIP/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+
+      {% else %}
+
+        <form class="form" action="/WIP/publish/manual/links-answer" method="post">
+
+      {% endif %}
+
+        <div class="govuk-caption-l">
+            {{ data['title'] }}
+        </div>
+        
+        <h1 class="govuk-heading-l">
+            API details
+        </h1>
+
+        <input type="hidden" name="access-method" value="API">
+
+        {{ govukInput({
+            label: {
+              text: "Title",
+              classes: "govuk-label--s"
+            },
+            hint: {
+                text: "If there is only one API, the title can be the same as your listing."
+            },
+            id: "link-title",
+            name: "link-title",
+            value: ''
+          }) }}
+
+        {{ govukInput({
+            label: {
+                text: "Documentation URL",
+                classes: "govuk-label--s"
+            },
+            id: "link-url",
+            name: "link-url",
+            value: ''
+        }) }}
+    
+        <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Continue"
+             }) }}
+             {{ govukButton({
+              text: "Save and return",
+              classes: "govuk-button--secondary",
+              attributes: {
+                formaction: "/WIP/publish/manual/task-list"
+              }
+             })}}
+        </div>
+
+      </form>
+
+      {%
+        if data.links.download.length > 0 or
+           data.links.api.length > 0 or
+           data.links.access.length > 0
+      %}
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-8">
+          Access links
+        </h2>
+
+        {% include "/WIP/publish/manual/_includes/links-list.html" %}
+
+      {% endif %}
+
+    </div>
+  
+  </div>
+
+{% endblock %}
