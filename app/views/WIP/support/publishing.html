@@ -1,0 +1,114 @@
+{% extends "WIP/_layouts/support.html" %}
+
+{% set navActive = "Support" %}
+
+{% block supportContent %}
+
+
+        <h1 class="govuk-heading-l">
+            Publishing on the Data Marketplace
+        </h1>
+
+{% set markdownContent %}
+
+Find out how to publish listings of your data on the Data Marketplace.
+
+You can also learn about the [details that make up your listing](?tab=t.0#bookmark=id.kx463niwsaoo).
+
+**On this page**
+
+- [Types of listing](#)  
+- [Why you should add listings](#)  
+- [Become a publisher](#)  
+- [Select a publishing method](#)
+- [Before you publish anything](#)
+
+## Types of listing
+
+The Data Marketplace has a catalogue of listings.
+
+Each listing describes a data set that users can:
+
+* access immediately – if the data set is public  
+* request access to – if the data set is restricted
+
+Public (or ‘open’) data listings include links that users can follow to download the data. This data is publicly available so there is no need for a data share agreement.
+
+Restricted data requires a data share agreement to be set up between the organisation that wants the data and the organisation that owns it.
+
+## Why you should add listings
+
+Before the Data Marketplace there was no central catalogue of the data that government organisations share.
+
+If you share your organisation’s data with other government organisations, or make it available to the public, using the Data Marketplace can save you time and effort.
+
+By publishing listings of your available data sets, other government colleagues will be able to find your data and understand how to access it.
+
+This may help to:
+
+* reduce the number of queries you receive about your data  
+* save you time when reviewing data requests from other organisations
+
+## Become a publisher
+
+Follow the steps below if you want to publish listings on the Data Marketplace.
+
+1. [Create a Data Marketplace account](/WIP/support/get-started) using your government email address.  
+2. Request the Metadata Publisher role from your user profile.
+
+## Select a publishing method
+
+There are 3 ways to publish listings in the Data Marketplace:
+
+* complete a web form  
+* upload a spreadsheet  
+* connect to the Data Marketplace API
+
+### Web form
+
+This method is the most straightforward if you want to add one listing at a
+time. You’ll answer questions about the data set, check your answers and then publish the listing.
+
+### Spreadsheet
+
+This method might be preferable if you want to add several listings in one go. You’ll download our template, provide information for each data set and then upload your completed spreadsheet.
+
+The file will be automatically checked for errors and you’ll get a message if there’s anything you need to fix. When the file has been validated, it will publish a unique listing for each data set you described in the spreadsheet.
+
+### API
+
+You can synchronise your organisation’s metadata with the Data Marketplace by using the Data Marketplace publish API.
+
+This allows you to automatically publish and update listings in the Data Marketplace catalogue, using information from your organisation’s data catalogue or data store.
+
+You’ll need someone with technical expertise and knowledge of APIs to carry out this integration. Typically this will be an API developer.
+
+<details class="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+        Onboard your API developer
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+        <p>Your API developer must work in your organisation and have an email address with your organisation’s domain (for example, hmrc.gov.uk).</p>  
+        <p>They will need to create a Data Marketplace account using this address.  Once they’ve signed in, they will be able to access the API.</p>
+        <p><a href="/WIP/support/ipa">API documentation</a></p>
+        <p></p>
+    </div>
+</details>
+
+
+## Before you publish anything
+
+Make sure that your Chief Data Officer (CDO), or the senior person responsible for data in your organisation, is aware that the data is being listed in the Data Marketplace.
+
+Whichever publishing method you choose, the [details you need to provide for your listing](?tab=t.0#bookmark=id.kx463niwsaoo) are the same.
+{% endset %}
+    
+    <div class="govuk-body">
+
+        {{ markdownContent | markdown | safe }}
+
+    </div>
+
+{% endblock %}
