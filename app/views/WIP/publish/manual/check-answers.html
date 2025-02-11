@@ -188,20 +188,53 @@
         {% endif %}
 
         {% if data['access'] == "Restricted" %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Formats
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['formats'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/WIP/publish/manual/formats?check-answers=true">
-              Change
-              <span class="govuk-visually-hidden"> formats</span>
-            </a>
-          </dd>
-        </div> 
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Access methods
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['access-method-restricted'] | join('<br>') | safe }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/WIP/publish/manual/formats?check-answers=true">
+                Change
+                <span class="govuk-visually-hidden"> access methods</span>
+              </a>
+            </dd>
+          </div> 
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Formats
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['formats'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/WIP/publish/manual/formats?check-answers=true">
+                Change
+                <span class="govuk-visually-hidden"> formats</span>
+              </a>
+            </dd>
+          </div> 
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              API
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['restricted-api-doc-url'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/WIP/publish/manual/formats?check-answers=true">
+                Change
+                <span class="govuk-visually-hidden"> formats</span>
+              </a>
+            </dd>
+          </div> 
+
         {% endif %}
 
       </dl>

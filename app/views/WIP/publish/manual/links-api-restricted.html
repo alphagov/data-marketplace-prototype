@@ -17,7 +17,7 @@
 
       {% else %}
 
-        <form class="form" action="/WIP/publish/manual/links-answer" method="post">
+        <form class="form" action="/WIP/publish/manual/check-answers" method="post">
 
       {% endif %}
 
@@ -26,7 +26,7 @@
         </div>
         
         <h1 class="govuk-heading-l">
-            API details
+            API details (optional)
         </h1>
 
         <input type="hidden" name="access-method" value="API">
@@ -49,8 +49,8 @@
                 text: "Documentation URL",
                 classes: "govuk-label--s"
             },
-            id: "link-url",
-            name: "link-url",
+            id: "restricted-api-doc-url",
+            name: "restricted-api-doc-url",
             value: ''
         }) }}
     
@@ -69,19 +69,6 @@
 
       </form>
 
-      {%
-        if data.links.download.length > 0 or
-           data.links.api.length > 0 or
-           data.links.access.length > 0
-      %}
-
-        <h2 class="govuk-heading-m govuk-!-margin-top-8">
-          Access links
-        </h2>
-
-        {% include "/WIP/publish/manual/_includes/links-list.html" %}
-
-      {% endif %}
 
     </div>
   

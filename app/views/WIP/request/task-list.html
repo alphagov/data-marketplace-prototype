@@ -1,0 +1,288 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+  Draft data request - {{ data['shareTitle'] }}
+{% endblock %}
+
+
+{% block beforeContent %}
+
+    <a class="govuk-back-link" href="#">Your data requests</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">
+        Draft data request
+      </span>
+      <h1 class="govuk-heading-l">
+        {{ data['shareTitle'] }}
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% set path = "/WIP/publish/manual" %}
+
+      <h2 class="govuk-heading-m">
+        Your project
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Personal data"
+            },
+            href: path + "/personal-data",
+            status: {
+              text: "Done"
+            }
+          },
+          {
+            title: {
+              text: "Your project"
+            },
+            href: path + "/project",
+            status: {
+                text: "Done"
+            } if data['project'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          
+          },
+          {
+            title: {
+              text: "Benefit to the public"
+            },
+            href: path + "/benefit",
+            status: {
+                text: "Done"
+            } if data['benefit'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Date required"
+            },
+            href: path + "/date-required",
+            status: {
+                text: "Done"
+            } if data['date-required'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Other organisations involved"
+            },
+            href: path + "/other-orgs",
+            status: {
+                text: "Done"
+            } if data['other-orgs'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
+              text: "Data stored outside the UK"
+            },
+            href: path + "/outside-uk",
+            status: {
+                text: "Done"
+            } if data['outside-uk'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Themes and keywords
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Themes"
+            },
+            href: path + "/themes",
+            status: {
+              text: "Done"
+            } if data['themes'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Keywords"
+            },
+            href: path + "/keywords",
+            status: {
+              text: "Done"
+            } if data['keywords'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Contact and owner
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Point of contact"
+            },
+            href: path + "/contact",
+            status: {
+              text: "Done"
+            } if data['contactName'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Owner"
+            },
+            href: path + "/owner",
+            status: {
+              text: "Done"
+            } if data['ownerName'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Additional information
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+          {
+            title: {
+              text: "Date first made available"
+            },
+            href: path + "/date-published",
+            status: {
+              text: "Done"
+            } if data['datePublished-day'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Update frequency"
+            },
+            href: path + "/frequency",
+            status: {
+              text: "Done"
+            } if data['frequency'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Public or restricted data"
+            },
+            href: path + "/access",
+            status: {
+              text: "Done"
+            } if data['access'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          },
+          {
+            title: {
+              text: "Licence"
+            },
+            href: path + "/licence",
+            status: {
+              text: "Done"
+            } if data['licence'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Public",
+          {
+            title: {
+              text: "Links"
+            },
+            href: path + "/links-summary",
+            status: {
+              text: "Done"
+            } if data['links'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Public",
+          {
+            title: {
+              text: "Formats"
+            },
+            href: path + "/formats",
+            status: {
+              text: "Done"
+            } if data['formats'] else {
+              tag: {
+                text: "To do"
+              }
+            }
+          } if data['access'] == "Restricted"
+        ]
+      }) }}
+
+        {{ govukButton({
+          text: "Review and submit",
+          href: "/WIP/publish/manual/check-answers"
+        }) }}
+      
+
+      <p>
+        <a class="govuk-link" href="#">Delete draft</a>
+      </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}

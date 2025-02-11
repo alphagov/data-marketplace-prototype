@@ -148,6 +148,7 @@ router.post('/manual/formats-answer', function(request, response) {
 
 })
 
+
 router.post('/wip-licence-answer', function(request, response) {
 
     var licence = request.session.data['metadataLicence']

@@ -1,0 +1,44 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post" action="/WIP/request/task-list">
+
+                {{ govukRadios({
+                    name: 'personal-data',
+                    fieldset: {
+                        legend: {
+                            text: 'Do you need personal data?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+                    hint: {
+                        text: 'This is any information that would personally identify someone, for example their name or address.'
+                    },
+                    items: [
+                        { value: 'Yes', text: 'Yes'},
+                        { value: 'No', text: 'No'}
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    text: 'Continue'
+                })}}
+
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
