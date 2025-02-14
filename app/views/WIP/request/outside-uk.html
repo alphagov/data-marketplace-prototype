@@ -1,0 +1,79 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+Description
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="">
+
+        {{ govukRadios({
+            name: "type",
+            fieldset: {
+              legend: {
+                html: "Will the data be stored outside the UK?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            hint : {
+                text: "This includes if any of the data you receive is stored outside the UK at any point. For example, if you share it with an organisation in another country."
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No",
+                text: "No"
+              }
+            ]
+          }) }}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+         }) }}
+         {{ govukButton({
+          text: "Save and return",
+          classes: "govuk-button--secondary",
+          attributes: {
+            formaction: "/WIP/request/task-list"
+          }
+         })}}
+      </div>
+
+  </form>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <h2 class="govuk-heading-m">
+      More information
+    </h2>
+
+    <p>
+    <a href="#">
+        Learn more about secure data transit outside the UK
+    </a>
+    </p>
+
+    <p>
+      <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/international-transfers-a-guide/">
+        Learn more about personal data being transfered outside the UK
+      </a>
+    </p>
+  </div>
+    
+</div>
+
+</div>
+
+
+{% endblock %}

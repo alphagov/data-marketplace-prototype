@@ -19,32 +19,31 @@
       <span class="govuk-caption-l">
         Draft data request
       </span>
-      <h1 class="govuk-heading-l">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
         {{ data['shareTitle'] }}
       </h1>
+      <p class="govuk-!-margin-bottom-6">
+        <a href="#">View listing</a>
+      </p>
     </div>
   </div>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {% set path = "/WIP/publish/manual" %}
+        <!-- {{ govukButton({
+            text: 'Invite collaborator',
+            classes: 'govuk-button--secondary'
+        })}} -->
+
+      {% set path = "/WIP/request" %}
 
       <h2 class="govuk-heading-m">
-        Your project
+        1. Your project
       </h2>
 
       {{ govukTaskList({
         items: [
-          {
-            title: {
-              text: "Personal data"
-            },
-            href: path + "/personal-data",
-            status: {
-              text: "Done"
-            }
-          },
           {
             title: {
               text: "Your project"
@@ -74,6 +73,19 @@
           },
           {
             title: {
+              text: "Other organisations involved"
+            },
+            href: path + "/other-orgs",
+            status: {
+                text: "Done"
+            } if data['other-orgs'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          },
+          {
+            title: {
               text: "Date required"
             },
             href: path + "/date-required",
@@ -87,12 +99,12 @@
           },
           {
             title: {
-              text: "Other organisations involved"
+              text: "Personal data"
             },
-            href: path + "/other-orgs",
+            href: path + "/personal-data",
             status: {
                 text: "Done"
-            } if data['other-orgs'] else {
+            } if data['personal-data'] else {
               tag: {
                 text: "To do"
                }
@@ -115,19 +127,54 @@
       }) }}
 
       <h2 class="govuk-heading-m">
-        Themes and keywords
+        2. Legal, data protection and security review
+      </h2>
+
+      <p>
+        You need to send your answers to specialists in your organisation, to help them answer the remaining questions below.
+      </p>
+      
+      {{ govukButton({
+        text: 'Download your answers',
+        classes: 'govuk-button--secondary'
+      })}}
+
+      <h2 class="govuk-heading-m">
+        Legal
+      </h2>
+
+      {{ govukTaskList({
+        items: [
+        {
+            title: {
+              text: "Legal power"
+            },
+            href: path + "/legal-power",
+            status: {
+                text: "Done"
+            } if data['legal-power'] else {
+              tag: {
+                text: "To do"
+               }
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Data protection
       </h2>
 
       {{ govukTaskList({
         items: [
           {
             title: {
-              text: "Themes"
+              text: "Lawful  basis for personal data"
             },
-            href: path + "/themes",
+            href: path + "/lawful-basis",
             status: {
               text: "Done"
-            } if data['themes'] else {
+            } if data['lawful-basis'] else {
               tag: {
                 text: "To do"
               }
@@ -135,12 +182,12 @@
           },
           {
             title: {
-              text: "Keywords"
+              text: "Role of organisation"
             },
-            href: path + "/keywords",
+            href: path + "/role-of-org",
             status: {
               text: "Done"
-            } if data['keywords'] else {
+            } if data['role-of-org'] else {
               tag: {
                 text: "To do"
               }
@@ -150,124 +197,24 @@
       }) }}
 
       <h2 class="govuk-heading-m">
-        Contact and owner
+        Data security
       </h2>
 
       {{ govukTaskList({
         items: [
           {
             title: {
-              text: "Point of contact"
+              text: "Data storage and disposal"
             },
-            href: path + "/contact",
+            href: path + "/data-storage",
             status: {
               text: "Done"
-            } if data['contactName'] else {
-              tag: {
-                text: "To do"
-              }
-            }
-          },
-          {
-            title: {
-              text: "Owner"
-            },
-            href: path + "/owner",
-            status: {
-              text: "Done"
-            } if data['ownerName'] else {
+            } if data['data-storage'] else {
               tag: {
                 text: "To do"
               }
             }
           }
-        ]
-      }) }}
-
-      <h2 class="govuk-heading-m">
-        Additional information
-      </h2>
-
-      {{ govukTaskList({
-        items: [
-          {
-            title: {
-              text: "Date first made available"
-            },
-            href: path + "/date-published",
-            status: {
-              text: "Done"
-            } if data['datePublished-day'] else {
-              tag: {
-                text: "To do"
-              }
-            }
-          },
-          {
-            title: {
-              text: "Update frequency"
-            },
-            href: path + "/frequency",
-            status: {
-              text: "Done"
-            } if data['frequency'] else {
-              tag: {
-                text: "To do"
-              }
-            }
-          },
-          {
-            title: {
-              text: "Public or restricted data"
-            },
-            href: path + "/access",
-            status: {
-              text: "Done"
-            } if data['access'] else {
-              tag: {
-                text: "To do"
-              }
-            }
-          },
-          {
-            title: {
-              text: "Licence"
-            },
-            href: path + "/licence",
-            status: {
-              text: "Done"
-            } if data['licence'] else {
-              tag: {
-                text: "To do"
-              }
-            }
-          } if data['access'] == "Public",
-          {
-            title: {
-              text: "Links"
-            },
-            href: path + "/links-summary",
-            status: {
-              text: "Done"
-            } if data['links'] else {
-              tag: {
-                text: "To do"
-              }
-            }
-          } if data['access'] == "Public",
-          {
-            title: {
-              text: "Formats"
-            },
-            href: path + "/formats",
-            status: {
-              text: "Done"
-            } if data['formats'] else {
-              tag: {
-                text: "To do"
-              }
-            }
-          } if data['access'] == "Restricted"
         ]
       }) }}
 
@@ -282,6 +229,35 @@
       </p>
 
     </div>
+
+
+    <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-s">
+          Data supplier
+        </h2>
+        <p>
+          {{ data['shareOrg'] }}
+        </p>
+        <h2 class="govuk-heading-s">
+          Support
+        </h2>
+        <p>
+          <a href="/WIP/support/request">
+            Learn about requesting restricted&nbsp;data
+          </a>
+        </p>
+        <p>
+          <a href="#">
+            help@datamarketplace.gov.uk
+          </a>
+        </p>
+        <h2 class="govuk-heading-s">
+          Request ID
+        </h2>
+        <p>
+          ABCD1234
+        </p>
+      </div>
 
   </div>
 

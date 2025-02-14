@@ -1,0 +1,57 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+Description
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="">
+
+        {{ govukRadios({
+            name: "type",
+            fieldset: {
+              legend: {
+                html: "Will other organisations access the&nbsp;data?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            hint : {
+                text: "For example, if this is a joint project with another government department."
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No",
+                text: "No"
+              }
+            ]
+          }) }}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+         }) }}
+         {{ govukButton({
+          text: "Save and return",
+          classes: "govuk-button--secondary",
+          attributes: {
+            formaction: "/WIP/request/task-list"
+          }
+         })}}
+      </div>
+
+  </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

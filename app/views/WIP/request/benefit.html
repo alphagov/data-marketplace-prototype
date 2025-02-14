@@ -1,0 +1,90 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+Description
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="">
+
+      {% set otherBenefit %}
+
+        {{ govukInput({
+          label: {
+            text: 'Specify the benefit to the public'
+          }
+        })}}
+
+      {% endset %}
+    
+      {{ govukCheckboxes({
+        name: "access-method-restricted",
+        fieldset: {
+          legend: {
+            text: "How will your project benefit the public?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            text: 'Support policy decisions',
+            value: 'Support policy decisions'
+          },
+          {
+            text: 'Deliver public services',
+            value: 'Deliver public services'
+          },
+          {
+            text: 'Allocate and evaluate government funding',
+            value: 'Allocate and evaluate government funding'
+          },
+          {
+            text: 'Understand social or economic trends',
+            value: 'Understand social or economic trends'
+          },
+          {
+            text: 'Understand the needs of the public',
+            value: 'Understand the needs of the public'
+          },
+          {
+            text: 'Research or statistical analysis',
+            value: 'Research or statistical analysis'
+          },
+          {
+            text: 'Something else',
+            value: 'Something else',
+            conditional: {
+              html: otherBenefit
+            }
+          }
+        ]
+      }) }}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+         }) }}
+         {{ govukButton({
+          text: "Save and return",
+          classes: "govuk-button--secondary",
+          attributes: {
+            formaction: "/WIP/request/task-list"
+          }
+         })}}
+      </div>
+
+  </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "WIP/_layouts/main.html" %}
+
+{% block pageTitle %}
+Description
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% if data['check-answers'] == "true" %}
+      <form class="form" action="/publish/manual/check-answers" method="post">
+        <input type="hidden" name="check-answers" value="false">
+      {% else %}
+      <form class="form" action="/publish/manual/summary" method="post">
+      {% endif %}
+    
+
+        {{ govukTextarea({
+          label: {
+            text: "Which groups of individuals do you need personal data for?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          id: "metadataDescription",
+          name: "metadataDescription",
+          rows: 6,
+          hint: {
+            html: "Be as specific as possible. For example, people over the age of 65 living in London. Identify every group of individuals relevant to your request."
+          },
+          value: data['metadataDescription']
+        }) }}
+        
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+        <h2 class="govuk-heading-m">
+          More information
+        </h2>
+
+        <p>
+            You should only request the personal data you need – and nothing more.
+        </p>
+        <p>
+          <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/">
+            Learn more about data minimisation
+          </a>
+        </p>
+      </div>
+        
+    </div>
+
+    <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue"
+         }) }}
+         {{ govukButton({
+          text: "Save and return",
+          classes: "govuk-button--secondary",
+          attributes: {
+            formaction: "/WIP/request/task-list"
+          }
+         })}}
+      </div>
+    
+    
+  </div>
+
+{% endblock %}
+

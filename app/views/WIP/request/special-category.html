@@ -12,17 +12,28 @@
 
             <form method="post" action="/WIP/request/personal-data-answer">
 
+                <h1 class="govuk-heading-l">
+                    Special category data
+                </h1>
+
+                <p>
+                    Some types of personal data are more sensitive and need extra protection, for example data revealing:
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>racial or ethnic origin</li>
+                    <li>political opinions</li>
+                    <li>religious or philosophical beliefs</li>
+                    <li>health conditions</li>
+                </ul>
+            
+
                 {{ govukRadios({
                     name: 'personal-data',
                     fieldset: {
                         legend: {
-                            text: 'Do you need personal data?',
-                            isPageHeading: true,
-                            classes: 'govuk-fieldset__legend--l'
+                            text: 'Do you need special category data?',
+                            classes: 'govuk-fieldset__legend--m'
                         }
-                    },
-                    hint: {
-                        text: 'This is information that could identify an individual, directly or indirectly. For example their name, location or physical characteristics.'
                     },
                     items: [
                         { value: 'Yes', text: 'Yes'},
@@ -45,8 +56,8 @@
             </h2>
  
             <p>
-              <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/personal-information-what-is-it/what-is-personal-data/what-is-personal-data/">
-                Learn more about personal data
+              <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/">
+                Learn more about special category data
               </a>
             </p>
           </div>

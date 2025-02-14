@@ -158,18 +158,18 @@
       </h2>
 
       <p>
-        This data contains sensitive information (such as personal details)
-        and requires a data share agreement with {{ listing.organisation }}.
+        This data contains sensitive information and requires a data share agreement
+        with {{ listing.organisation }}.
       </p>
 
       <p>
-        <a href="#">Learn more about requesting data</a>
+        <a href="/WIP/support/request">Learn about requesting restricted data</a>
       </p>
 
       <p>
         {{ govukButton({
           text: "Start a data request",
-          href: "/WIP/request/?shareTitle=" + listing.title + "&shareOrg=" + listing.organisation
+          href: "/WIP/request/task-list?shareTitle=" + listing.title + "&shareOrg=" + listing.organisation
         })}}
       </p>
 

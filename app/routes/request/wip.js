@@ -1,14 +1,19 @@
-// #################################################
-// Stage: Beta, MVP
-// Iteration: 0
-// #################################################
-
 const govukPrototypeKit = require('govuk-prototype-kit')
-const router = govukPrototypeKit.requests.setupRouter()
+const path = '/WIP/request'
+const router = govukPrototypeKit.requests.setupRouter(path)
 
-// #################################################
-// Acquirer - Request
-// #################################################
+router.post('/personal-data-answer', (request, response) => {
+
+  const personalData = request.session.data['personal-data']
+
+  if (personalData == 'Yes') {
+    response.redirect(`${path}/special-category`)
+  } else {
+    response.redirect(`${path}/outside-uk`)
+  }
+
+})
+
 
 router.post('/bMVP_wip--280', (req, res) => {
   

@@ -1,0 +1,99 @@
+{% extends "WIP/_layouts/support.html" %}
+
+{% set navActive = "Support" %}
+
+{% block supportContent %}
+
+
+        <h1 class="govuk-heading-l">
+            Requesting restricted data
+        </h1>
+
+{% set markdownContent %}
+
+If you want restricted data from the Data Marketplace catalogue, you need to request it from the organisation that owns the data – the data supplier.
+
+While public data is available to access immediately, you can only access restricted data once you have a data share agreement with the data supplier. Typically this is because the data contains personal or commercially sensitive information.
+
+## 1. Find the data you need
+
+[Search the catalogue](/WIP/search) for data that can support your project or policy.
+
+When you find a listing that’s of interest, if it says ‘Access on request’ this means it’s restricted data and you’ll need to request it.
+
+## 2. Submit a data request
+
+Select ‘Start a data request’ on the page for the listing.
+
+You’ll then need to answer [some questions](?tab=t.0#bookmark=id.84q1vd6z6dxc) to ensure your request meets data protection and data sharing requirements.
+
+Some questions may require support from people with skills in:
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>legal</li>
+    <li>data protection</li>
+    <li>data security</li>
+  </ul>
+
+You do not need to answer all the questions in one go. You can save your answers and return to edit them as often as you need before submitting your request.
+
+
+## 3. Wait for a decision
+
+When you’ve submitted your request, the data supplier will review it. It can take time for them to make a decision, and they might ask you for more information.
+
+They might reject your request if:
+
+* you do not have the legal power to request the data  
+* you do not provide enough information  
+* your answers have not been reviewed by legal, data protection and data security specialists in your organisation
+
+If the data supplier approves your request, continue with the steps below.
+
+## 4. Complete a memorandum of understanding (MOU)
+
+An MOU is a statement of intent between 2 or more parties. 
+
+You and the data supplier must agree an MOU that covers the details of your data sharing agreement. Speak with your data protection and legal teams for help with this.
+
+Many organisations have their own MOU templates.
+
+### If the data you’re requesting contains personal data
+
+The data supplier may ask for a [Data Protection Impact Assessment (DPIA)](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/what-is-a-dpia/).
+
+Make sure you speak with your data protection team to help complete this.
+
+## 5. Access the data
+
+Once your MOU is in place, the data supplier will speak with you about how you can access their data.
+
+Data sharing itself happens outside the Data Marketplace because each organisation manages data transfers differently.
+
+The data supplier might provide access to the data in one or more of the following options:
+
+* a webpage link
+* a file download link – for example, as a zip folder or in a format like CSV or PDF  
+* an application programming interface (API) – software that a developer in your organisation can set up
+
+You may need help from your data security team to access and store the data.
+
+### Data minimisation
+
+The data supplier might choose to give you some of the data, rather than the whole data set.
+
+If only some data from a large data set is relevant to your request, the supplier will only share the data you need – to comply with data protection requirements.
+
+### Querying the data you receive
+
+If the data you receive is not what you expected, speak with the data supplier.
+
+{% endset %}
+    
+    <div class="govuk-body">
+
+        {{ markdownContent | markdown | safe }}
+
+    </div>
+
+{% endblock %}

@@ -1,22 +1,9 @@
-{% extends "layouts/main.html" %}
+{% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
    {{ serviceName }}
 {% endblock %}
 
-{% block header %}
-    {{ govukHeader({
-      homepageUrl: "/WIP/",
-      serviceName: serviceName,
-      serviceUrl: "/WIP/start?loggedin=true",
-      containerClasses: "govuk-width-container"
-    }) }}
-    {% include "includes/WIP_nav_sign-out.html" %}
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
@@ -27,12 +14,9 @@
         <span class="govuk-caption-l">{% include "includes/request/request-id.html" %}</span>
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--l" for="other-orgs">
-            What other organisations will access the data?
+            Which other organisations will access the data?
           </label>
         </h1>
-        <div class="govuk-hint">
-          List all the organisations you will be sharing the data with.
-        </div>
       </div>
 
       {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
@@ -63,13 +47,18 @@
         <br>
 
         <div class="govuk-button-group">
-          <button class="govuk-button" type="submit" data-module="govuk-button">
-            Save and continue
-          </button>
-          <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button">
-            Save and return
-          </button>
+          {{ govukButton({
+            text: "Continue"
+           }) }}
+           {{ govukButton({
+            text: "Save and return",
+            classes: "govuk-button--secondary",
+            attributes: {
+              formaction: "/WIP/request/task-list"
+            }
+           })}}
         </div>
+
       </div>
     </form>
   </div>
