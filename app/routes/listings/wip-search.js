@@ -211,7 +211,6 @@ router.get('/listings/:resourceID', function(request, response) {
     const listing = searchData.find(listing => listing.slug == request.params.resourceID)
     response.locals.listing = listing
     response.locals.similar = findSimilar(searchData, listing)
-    log(response.locals.similar)
     response.render("WIP/listings/view")
 })
 
