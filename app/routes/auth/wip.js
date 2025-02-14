@@ -10,7 +10,8 @@ const router = govukPrototypeKit.requests.setupRouter('/WIP')
 const allowedPaths = [
     '/sign-in',
     '/home',
-    '/support'
+    '/support*',
+    '/'
 ]
 
 router.use(function(request, response, next) {
@@ -27,7 +28,12 @@ router.use(function(request, response, next) {
     }
 
     for (let allowedPath of allowedPaths) {
-        if (path.startsWith(allowedPath)) {
+        if (allowedPath.endsWith('*')){
+            if (path.startsWith(allowedPath.slice(0,-1))) {
+                next()
+                return
+            }
+        } else if (path == allowedPath) {
             next()
             return
         }
