@@ -31,9 +31,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <p>
+    <div style="word-wrap: break-word; overflow-wrap: break-word;">
       {{ listing.summary | govukMarkdown | safe }}
-    </p>
+    </div>
 
     {{ govukSummaryList({
       classes: "govuk-summary-list--no-border",
@@ -151,7 +151,7 @@
     {% endif %}
 
 
-    {% if listing.access != "Open" %}
+    {% if listing.access != "Open" and listing.type == "Dataset" %}
 
       <h2 class="govuk-heading-m">
         Request this data
