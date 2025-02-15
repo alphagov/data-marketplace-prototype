@@ -8,28 +8,30 @@ Description
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
       {% if data['check-answers'] == "true" %}
-      <form class="form" action="/publish/manual/check-answers" method="post">
+        <form class="form" action="/WIP/request/check-answers" method="post">
         <input type="hidden" name="check-answers" value="false">
       {% else %}
-      <form class="form" action="/publish/manual/summary" method="post">
+        <form class="form" action="/WIP/request/benefit" method="post">
       {% endif %}
 
-        <h1 class="govuk-heading-l">Your project</h1>
-    
+        <h1 class="govuk-heading-l">
+          Your project
+        </h1>
 
         {{ govukTextarea({
           label: {
             text: "What is your project about?",
             classes: "govuk-label--s"
           },
-          id: "metadataDescription",
-          name: "metadataDescription",
+          id: "project",
+          name: "project",
           rows: 6,
           hint: {
             html: ""
           },
-          value: data['metadataDescription']
+          value: data['project']
         }) }}
 
         {{ govukTextarea({
@@ -37,13 +39,13 @@ Description
               text: "How will the data help you achieve this?",
               classes: "govuk-label--s"
             },
-            id: "metadataDescription",
-            name: "metadataDescription",
+            id: "project-data",
+            name: "project-data",
             rows: 4,
             hint: {
               html: ""
             },
-            value: data['metadataDescription']
+            value: data['project-data']
           }) }}
 
           {{ govukTextarea({
@@ -51,13 +53,13 @@ Description
               text: "What would happen if you did not get the data?",
               classes: "govuk-label--s"
             },
-            id: "metadataDescription",
-            name: "metadataDescription",
+            id: "project-no-data",
+            name: "project-no-data",
             rows: 4,
             hint: {
               html: ""
             },
-            value: data['metadataDescription']
+            value: data['project-no-data']
           }) }}
 
           <div class="govuk-button-group">

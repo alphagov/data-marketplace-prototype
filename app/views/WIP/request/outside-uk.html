@@ -1,7 +1,7 @@
 {% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
-Description
+  Will the data be stored outside the UK?
 {% endblock %}
 
 {% block content %}
@@ -9,7 +9,7 @@ Description
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="">
+    <form method="post" action="/WIP/request/outside-uk-answer">
 
         {{ govukRadios({
             name: "type",
@@ -35,20 +35,20 @@ Description
             ]
           }) }}
 
-      <div class="govuk-button-group">
-        {{ govukButton({
-          text: "Continue"
-         }) }}
-         {{ govukButton({
-          text: "Save and return",
-          classes: "govuk-button--secondary",
-          attributes: {
-            formaction: "/WIP/request/task-list"
-          }
-         })}}
-      </div>
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+          {{ govukButton({
+            text: "Save and return",
+            classes: "govuk-button--secondary",
+            attributes: {
+              formaction: "/WIP/request/task-list"
+            }
+          })}}
+        </div>
 
-  </form>
+    </form>
 
   </div>
 

@@ -51,7 +51,7 @@
             href: path + "/project",
             status: {
                 text: "Done"
-            } if data['project'] else {
+            } if data['project'] and data['project-data'] and data['project-no-data'] else {
               tag: {
                 text: "To do"
                }

@@ -1,7 +1,7 @@
 {% extends "WIP/_layouts/main.html" %}
 
 {% block pageTitle %}
-Description
+  Benefit to the public
 {% endblock %}
 
 {% block content %}
@@ -9,20 +9,23 @@ Description
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="">
+    <form method="post" action="/WIP/request/other-orgs">
 
       {% set otherBenefit %}
 
         {{ govukInput({
           label: {
             text: 'Specify the benefit to the public'
-          }
+          },
+          name: 'benefit-other',
+          value: data['benefit-other']
         })}}
 
       {% endset %}
     
       {{ govukCheckboxes({
-        name: "access-method-restricted",
+        name: "benefit",
+        values: data['benefit'],
         fieldset: {
           legend: {
             text: "How will your project benefit the public?",
