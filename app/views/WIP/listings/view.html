@@ -20,7 +20,7 @@
   <div class="govuk-grid-column-two-thirds">
 
     <p class="govuk-caption-xl">
-      {{ listing.type }}
+      {{ listing.type | join(', ') }}
     </p>
     <h1 class="govuk-heading-xl">
         {{ listing.title }}
@@ -183,7 +183,7 @@
       <a href="#">Rents: Average weekly LA rents (API)</a>
     </p> -->
 
-    {% if listing.type == "API" %}
+    {% if listing.type | includes('API') %}
 
       <h2 class="govuk-heading-m">
         API documentation
@@ -226,7 +226,7 @@
       </p>
     {% endif %}
 
-    <p class="govuk-!-margin-top-4">
+    <p class="govuk-!-margin-top-9 govuk-!-colour-secondary">
       This page was last updated {{ listing.listingUpdated | govukDate }}.
     </p>
   

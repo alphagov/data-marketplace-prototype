@@ -105,28 +105,51 @@
                             {{ listing.organisation }}
                         </p>
 
-                        {% if listing.type == "API" %}
+                        <div class="govuk-!-margin-bottom-4">
 
-                            <div class="govuk-!-margin-bottom-4">
+                        {% if listing.type | includes('Dataset') and listing.type | includes('API') %}
+
+                                {{ govukTag({
+                                    'text': 'Dataset',
+                                    classes: "govuk-tag--grey govuk-!-font-size-16"
+                                })}}
                                 {{ govukTag({
                                     'text': 'API',
                                     classes: "govuk-tag--grey govuk-!-font-size-16"
                                 })}}
-                            </div>
+
+
+                        {% elseif listing.type == "API" %}
+
+                                {{ govukTag({
+                                    'text': 'API',
+                                    classes: "govuk-tag--grey govuk-!-font-size-16"
+                                })}}
+        
+
+                        {% elseif listing.type == "Dataset" %}
+
+                            
+                                {{ govukTag({
+                                    'text': 'Dataset',
+                                    classes: "govuk-tag--grey govuk-!-font-size-16"
+                                })}}
+                            
 
                         {% endif %}
 
-
                         {% if listing.access == "On request" %}
 
-                            <div class="govuk-!-margin-bottom-4">
+                            
                                 {{ govukTag({
                                     'text': 'Access on request',
                                     classes: "govuk-tag--grey govuk-!-font-size-16"
                                 })}}
-                            </div>
+                            
 
                         {% endif %}
+
+                    </div>
 
                         <!-- <p class="govuk-!-display-inline">
                             {% for distribution in result.distributions %}
