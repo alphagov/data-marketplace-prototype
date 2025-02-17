@@ -1,7 +1,9 @@
 [
   {
     "title": "Bathing Water Monitoring Locations",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -15,7 +17,7 @@
     "firstPublished": "2023-09-24",
     "licenceName": "Open Government License",
     "licenceURL": null,
-    "listingUpdated": "2024-01-01T16:38:34.959Z",
+    "listingUpdated": "2024-09-07T18:48:53.555Z",
     "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
     "links": null,
     "apiURL": "",
@@ -23,7 +25,9 @@
   },
   {
     "title": "Address Lookup",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "On request",
     "topic": [
       "Mapping",
@@ -37,7 +41,7 @@
     "firstPublished": "2023-09-18",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-09-05T04:21:43.706Z",
+    "listingUpdated": "2024-09-07T01:54:18.076Z",
     "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
     "links": null,
     "apiURL": "",
@@ -45,7 +49,9 @@
   },
   {
     "title": "BGS Sensor Data Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -59,7 +65,7 @@
     "firstPublished": "2022-02-01",
     "licenceName": "Open Government License",
     "licenceURL": null,
-    "listingUpdated": "2024-08-13T15:07:51.454Z",
+    "listingUpdated": "2024-03-16T15:15:23.226Z",
     "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
     "links": null,
     "apiURL": "https://sensors.bgs.ac.uk/FROST-Server/v1.1",
@@ -67,7 +73,9 @@
   },
   {
     "title": "AGS File Utilities Tool and API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -81,7 +89,7 @@
     "firstPublished": "2022-02-01",
     "licenceName": "Codebase is under LGPL v3.0",
     "licenceURL": null,
-    "listingUpdated": "2024-06-17T08:18:15.922Z",
+    "listingUpdated": "2024-11-08T08:34:32.447Z",
     "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
     "links": null,
     "apiURL": "https://agsapi.bgs.ac.uk/openapi.json",
@@ -89,7 +97,9 @@
   },
   {
     "title": "BGS OGCAPI Server",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -103,7 +113,7 @@
     "firstPublished": "2022-02-01",
     "licenceName": "Data under Open Government License",
     "licenceURL": null,
-    "listingUpdated": "2024-06-15T18:55:33.794Z",
+    "listingUpdated": "2024-05-17T03:16:24.708Z",
     "contactEmail": "BGS Enquiries - enquiries@bgs.ac.uk",
     "links": null,
     "apiURL": "https://ogcapi.bgs.ac.uk/openapi?f=json",
@@ -111,7 +121,9 @@
   },
   {
     "title": "Services",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -123,7 +135,7 @@
     "firstPublished": "2021-03-09",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-13T16:47:55.376Z",
+    "listingUpdated": "2024-11-20T20:14:55.743Z",
     "contactEmail": "fisdigital@buckinghamshire.gov.uk",
     "links": null,
     "apiURL": "https://api.familyinfo.buckinghamshire.gov.uk/api/v1/services",
@@ -131,7 +143,9 @@
   },
   {
     "title": "Cefas Data Portal APIs",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Transport",
@@ -145,7 +159,7 @@
     "firstPublished": "2022-01-31",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-02-21T20:44:33.327Z",
+    "listingUpdated": "2024-01-27T13:04:00.754Z",
     "contactEmail": "Data Governance Strategy and Support Team - data.manager@cefas.co.uk",
     "links": null,
     "apiURL": "https://data-api.cefas.co.uk/",
@@ -153,7 +167,9 @@
   },
   {
     "title": "Companies House",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -165,7 +181,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-09T13:43:15.406Z",
+    "listingUpdated": "2024-11-21T02:30:24.740Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://api.companieshouse.gov.uk/",
@@ -173,7 +189,9 @@
   },
   {
     "title": "Companies House Streaming",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -185,7 +203,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-03-16T06:48:48.909Z",
+    "listingUpdated": "2024-10-07T15:00:24.788Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://stream.companieshouse.gov.uk/",
@@ -193,7 +211,9 @@
   },
   {
     "title": "Teacher Training API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Education"
@@ -205,7 +225,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-12T18:17:55.817Z",
+    "listingUpdated": "2024-04-10T00:35:52.754Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://api.publish-teacher-training-courses.service.gov.uk/",
@@ -213,7 +233,9 @@
   },
   {
     "title": "Get into Teaching API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Education"
@@ -225,7 +247,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-25T06:51:29.155Z",
+    "listingUpdated": "2024-12-01T06:47:38.717Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "",
@@ -233,7 +255,9 @@
   },
   {
     "title": "DfE EAPIM Platform API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities"
@@ -245,7 +269,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-26T09:06:40.925Z",
+    "listingUpdated": "2024-08-14T09:50:32.152Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://github.com/DFE-Digital/eapim-platform-api",
@@ -253,7 +277,9 @@
   },
   {
     "title": "DfE Sign-in applications API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Education"
@@ -265,7 +291,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-16T17:14:02.655Z",
+    "listingUpdated": "2024-12-28T11:11:21.836Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "",
@@ -273,7 +299,9 @@
   },
   {
     "title": "UK-AIR Sensor Observation Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -285,7 +313,7 @@
     "firstPublished": "2020-02-26",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-08T17:01:39.725Z",
+    "listingUpdated": "2024-06-18T01:11:01.904Z",
     "contactEmail": "The service provider is described on the Capabilities document as: Ricardo Energy & Environment (http://ee.ricardo.com/cms/). The phone number and email address are on the GetCapabilities response document in the <ows:ServiceProvider> element.",
     "links": null,
     "apiURL": "https://uk-air.defra.gov.uk/sos-ukair/service?service=SOS&request=GetCapabilities",
@@ -293,7 +321,9 @@
   },
   {
     "title": "UK Trade Quotas",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -305,7 +335,7 @@
     "firstPublished": "2022-02-15",
     "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "licenceURL": null,
-    "listingUpdated": "2024-12-26T18:06:18.361Z",
+    "listingUpdated": "2024-07-07T14:32:23.289Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://data.api.trade.gov.uk/v1/Datasets/uk-trade-quotas/versions/v1.0.22/reports/quotas-including-current-volumes/data?format=csv&download",
@@ -313,7 +343,9 @@
   },
   {
     "title": "UK Global Tariff (measures as defined)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -325,7 +357,7 @@
     "firstPublished": "2020-09-05",
     "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "licenceURL": null,
-    "listingUpdated": "2024-07-14T03:14:32.278Z",
+    "listingUpdated": "2024-08-05T13:11:00.685Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://data.api.trade.gov.uk/v1/Datasets/uk-tariff-2021-01-01/versions/latest/tables/measures-as-defined/data?format=csv&download",
@@ -333,7 +365,9 @@
   },
   {
     "title": "UK Global Tariff (measures on declarable commodities)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -345,7 +379,7 @@
     "firstPublished": "2020-09-05",
     "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "licenceURL": null,
-    "listingUpdated": "2024-04-15T23:02:23.453Z",
+    "listingUpdated": "2024-07-14T16:57:11.679Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://data.api.trade.gov.uk/v1/Datasets/uk-tariff-2021-01-01/versions/latest/tables/measures-on-declarable-commodities/data?format=csv&download",
@@ -353,7 +387,9 @@
   },
   {
     "title": "Check barriers to trading and investing abroad",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -365,7 +401,7 @@
     "firstPublished": "2020-03-09",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-09-12T23:32:58.192Z",
+    "listingUpdated": "2024-02-24T07:21:58.258Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://data.api.trade.gov.uk/v1/Datasets/market-barriers/versions/latest/data?format=json",
@@ -373,7 +409,9 @@
   },
   {
     "title": "UK Global Tariff (commodities)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -385,7 +423,7 @@
     "firstPublished": "2022-02-15",
     "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "licenceURL": null,
-    "listingUpdated": "2024-05-24T01:59:56.919Z",
+    "listingUpdated": "2024-11-11T03:19:06.684Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://data.api.trade.gov.uk/v1/Datasets/uk-tariff-2021-01-01/versions/latest/tables/commodities/data?format=csv&download",
@@ -393,7 +431,9 @@
   },
   {
     "title": "Energy Performance Certificates - Domestic Buildings Search API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -406,7 +446,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-02-09T20:52:33.034Z",
+    "listingUpdated": "2024-12-08T14:29:26.194Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/domestic/search",
@@ -414,7 +454,9 @@
   },
   {
     "title": "OpenDataCommunities (Official statistics from DLUHC) SPARQL endpoint",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -426,7 +468,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "Licenced per Dataset, but mostly OGL",
     "licenceURL": null,
-    "listingUpdated": "2024-12-07T11:33:18.609Z",
+    "listingUpdated": "2024-06-18T14:54:06.193Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://opendatacommunities.org/sparql",
@@ -434,7 +476,9 @@
   },
   {
     "title": "Energy Performance Certificates - Non-domestic Recommendations API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -447,7 +491,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-11-30T08:04:35.961Z",
+    "listingUpdated": "2024-02-07T21:30:26.645Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/non-domestic/recommendations/:lmk-key",
@@ -455,7 +499,9 @@
   },
   {
     "title": "Energy Performance Certificates - Non-domestic Certificates API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -468,7 +514,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-01-20T10:11:49.510Z",
+    "listingUpdated": "2024-10-22T03:10:57.746Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/non-domestic/certificate/:lmk-key",
@@ -476,7 +522,9 @@
   },
   {
     "title": "Energy Performance Certificates - Display (public buildings) Certificates API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -489,7 +537,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-04-11T02:07:09.197Z",
+    "listingUpdated": "2024-08-19T03:27:22.849Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/display/certificate/:lmk-key",
@@ -497,7 +545,9 @@
   },
   {
     "title": "Energy Performance Certificates - Domestic Certificate Recommendations API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -510,7 +560,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-12-26T03:07:28.666Z",
+    "listingUpdated": "2024-07-29T03:44:17.043Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/domestic/recommendations/:lmk-key",
@@ -518,7 +568,9 @@
   },
   {
     "title": "Energy Performance Certificates - Non-domestic Buildings Search API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -531,7 +583,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-03-24T08:16:06.891Z",
+    "listingUpdated": "2024-05-07T04:37:17.053Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/non-domestic/search",
@@ -539,7 +591,9 @@
   },
   {
     "title": "Energy Performance Certificates - Display (public buildings) certificates search API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -552,7 +606,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-09-25T01:12:06.239Z",
+    "listingUpdated": "2024-06-21T20:32:33.933Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/display/search",
@@ -560,7 +614,9 @@
   },
   {
     "title": "OpenDataCommunities (Official statistics from DLUHC.) LinkedData resource API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -572,7 +628,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "Licenced per Dataset, but mostly OGL",
     "licenceURL": null,
-    "listingUpdated": "2024-02-20T12:27:34.194Z",
+    "listingUpdated": "2024-01-13T04:54:37.775Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "http://opendatacommunities.org/resource?uri={url-encoded-resource-uri}",
@@ -580,7 +636,9 @@
   },
   {
     "title": "Energy Performance Certificates - Domestic Certificates API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -593,7 +651,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-04-22T20:19:18.346Z",
+    "listingUpdated": "2024-10-14T00:54:48.561Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/domestic/certificate/:lmk-key",
@@ -601,7 +659,9 @@
   },
   {
     "title": "Energy Performance Certificates - Display (public buildings) Recommendations API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities",
@@ -614,7 +674,7 @@
     "firstPublished": "2020-11-05",
     "licenceName": "https://epc.opendatacommunities.org/docs/copyright",
     "licenceURL": null,
-    "listingUpdated": "2024-10-06T01:39:47.296Z",
+    "listingUpdated": "2024-02-24T08:23:55.114Z",
     "contactEmail": "odc@comunities.gov.uk",
     "links": null,
     "apiURL": "https://epc.opendatacommunities.org/api/v1/display/recommendations/:lmk-key",
@@ -622,7 +682,9 @@
   },
   {
     "title": "National Public Transport Access Nodes (NaPTAN) and National Public Transport Gazetteer (NPTG) API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Transport",
@@ -635,7 +697,7 @@
     "firstPublished": "2022-01-07",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-01T06:37:26.615Z",
+    "listingUpdated": "2024-02-21T19:52:17.028Z",
     "contactEmail": "https://beta-naptan.dft.gov.uk/",
     "links": null,
     "apiURL": "https://naptan.api.dft.gov.uk/swagger/index.html",
@@ -643,7 +705,9 @@
   },
   {
     "title": "Get Citizen Income Information API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -655,7 +719,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-09-28T02:37:26.383Z",
+    "listingUpdated": "2024-06-27T13:17:28.285Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -663,7 +727,9 @@
   },
   {
     "title": "Include Exclude Earnings",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -675,7 +741,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-10-27T19:22:34.141Z",
+    "listingUpdated": "2024-09-03T23:38:39.928Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -683,7 +749,9 @@
   },
   {
     "title": "Maintain Interest Details",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -695,7 +763,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-10-01T23:53:19.859Z",
+    "listingUpdated": "2024-07-31T11:26:53.689Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -703,7 +771,9 @@
   },
   {
     "title": "Contact Details Verification",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -715,7 +785,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-01-22T13:53:49.404Z",
+    "listingUpdated": "2024-03-05T19:18:07.976Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -723,7 +793,9 @@
   },
   {
     "title": "Citizen Trace",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -735,7 +807,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-08-24T05:56:28.357Z",
+    "listingUpdated": "2024-10-24T04:11:28.544Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -743,7 +815,9 @@
   },
   {
     "title": "FINDr Matching Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -755,7 +829,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-11-26T19:12:42.625Z",
+    "listingUpdated": "2024-12-25T23:57:27.533Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -763,7 +837,9 @@
   },
   {
     "title": "GOVUK Notify",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -775,7 +851,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-08-05T02:47:36.394Z",
+    "listingUpdated": "2024-01-06T14:11:59.162Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -783,7 +859,9 @@
   },
   {
     "title": "Calculate Earnings",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -795,7 +873,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-12-07T10:13:48.152Z",
+    "listingUpdated": "2024-04-27T02:39:07.410Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -803,7 +881,9 @@
   },
   {
     "title": "View Earnings",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -815,7 +895,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-09-13T08:43:59.450Z",
+    "listingUpdated": "2024-04-21T09:54:29.011Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -823,7 +903,9 @@
   },
   {
     "title": "DWP GUID Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -835,7 +917,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-06-03T14:05:10.668Z",
+    "listingUpdated": "2024-09-09T18:13:46.755Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -843,7 +925,9 @@
   },
   {
     "title": "Citizen API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -855,7 +939,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-07-19T18:44:40.162Z",
+    "listingUpdated": "2024-01-30T17:58:55.762Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -863,7 +947,9 @@
   },
   {
     "title": "Block Earnings",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -875,7 +961,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-02-27T08:55:53.960Z",
+    "listingUpdated": "2024-04-05T19:38:24.889Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -883,7 +969,9 @@
   },
   {
     "title": "Calculate Earnings by Payday",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -895,7 +983,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-10-02T05:22:34.394Z",
+    "listingUpdated": "2024-10-18T20:01:02.485Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -903,7 +991,9 @@
   },
   {
     "title": "Employment Income API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -915,7 +1005,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-10-11T15:32:59.798Z",
+    "listingUpdated": "2024-02-02T03:37:47.591Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -923,7 +1013,9 @@
   },
   {
     "title": "PIP Service Award Subsitute",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -935,7 +1027,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-06-02T23:53:18.931Z",
+    "listingUpdated": "2024-04-07T02:04:04.760Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -943,7 +1035,9 @@
   },
   {
     "title": "Citizen Relationships",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -955,7 +1049,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-12-26T12:13:56.599Z",
+    "listingUpdated": "2024-08-12T05:16:34.564Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -963,7 +1057,9 @@
   },
   {
     "title": "Self Reported Earnings",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -975,7 +1071,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-11-13T03:05:49.264Z",
+    "listingUpdated": "2024-04-06T19:40:52.316Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -983,7 +1079,9 @@
   },
   {
     "title": "GOVUK Pay",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -995,7 +1093,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-03-30T12:55:28.801Z",
+    "listingUpdated": "2024-08-12T05:02:07.851Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1003,7 +1101,9 @@
   },
   {
     "title": "Life Event Verification",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society",
@@ -1016,7 +1116,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-06-16T06:11:22.413Z",
+    "listingUpdated": "2024-10-10T21:44:38.233Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1024,7 +1124,9 @@
   },
   {
     "title": "Reach SMS",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1036,7 +1138,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-11-03T13:48:52.499Z",
+    "listingUpdated": "2024-04-07T11:51:30.867Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1044,7 +1146,9 @@
   },
   {
     "title": "Pension Income API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1056,7 +1160,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-02-20T20:00:56.573Z",
+    "listingUpdated": "2024-12-04T00:47:35.622Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1064,7 +1168,9 @@
   },
   {
     "title": "Residency Services",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1076,7 +1182,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-12-02T19:26:18.066Z",
+    "listingUpdated": "2024-11-30T04:07:23.476Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1084,7 +1190,9 @@
   },
   {
     "title": "NHS Charge Exemption",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Health",
@@ -1097,7 +1205,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-03-08T22:23:44.511Z",
+    "listingUpdated": "2024-03-07T22:38:00.801Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1105,7 +1213,9 @@
   },
   {
     "title": "Maternity Allowance Awards API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society",
@@ -1118,7 +1228,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-10-19T04:52:23.768Z",
+    "listingUpdated": "2024-02-13T19:05:28.618Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1126,7 +1236,9 @@
   },
   {
     "title": "Habitual Residency",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society",
@@ -1139,7 +1251,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-07-03T17:23:46.282Z",
+    "listingUpdated": "2024-10-02T14:50:54.051Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1147,7 +1259,9 @@
   },
   {
     "title": "Manage Interests",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1159,7 +1273,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-03-20T03:26:26.999Z",
+    "listingUpdated": "2024-07-15T20:59:49.005Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1167,7 +1281,9 @@
   },
   {
     "title": "GUID Translation Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1179,7 +1295,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-09-21T02:17:40.548Z",
+    "listingUpdated": "2024-02-28T18:38:36.659Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1187,7 +1303,9 @@
   },
   {
     "title": "Manage Earnings Threshold",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1199,7 +1317,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-06-28T05:47:50.808Z",
+    "listingUpdated": "2024-01-10T15:45:11.283Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1207,7 +1325,9 @@
   },
   {
     "title": "Care Homes Information Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Health",
@@ -1220,7 +1340,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-07-08T22:16:35.509Z",
+    "listingUpdated": "2024-08-18T09:35:27.657Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1228,7 +1348,9 @@
   },
   {
     "title": "Get Interest Details",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1240,7 +1362,7 @@
     "firstPublished": "2020-08-28",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-09-01T23:41:37.921Z",
+    "listingUpdated": "2024-01-07T21:11:58.178Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1248,7 +1370,9 @@
   },
   {
     "title": "PIPCS Informational API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1260,7 +1384,7 @@
     "firstPublished": "2022-08-23",
     "licenceName": "ISC",
     "licenceURL": null,
-    "listingUpdated": "2024-05-14T10:03:45.771Z",
+    "listingUpdated": "2024-09-10T20:05:06.904Z",
     "contactEmail": "integration.technologyplatforms@dwp.gov.uk",
     "links": null,
     "apiURL": "",
@@ -1268,7 +1392,9 @@
   },
   {
     "title": "DVLA Authentication",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Transport"
@@ -1280,7 +1406,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-10-17T00:00:33.162Z",
+    "listingUpdated": "2024-12-11T11:07:06.243Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://driver-vehicle-licensing.api.gov.uk/thirdparty-access",
@@ -1288,7 +1414,9 @@
   },
   {
     "title": "DVLA Vehicle Enquiry Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Transport"
@@ -1300,7 +1428,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-02T23:12:38.529Z",
+    "listingUpdated": "2024-08-20T01:22:03.835Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry",
@@ -1308,7 +1436,9 @@
   },
   {
     "title": "Bathing Water",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Health",
@@ -1321,7 +1451,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-06T04:48:17.312Z",
+    "listingUpdated": "2024-03-21T08:34:14.441Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://environment.data.gov.uk/bwq/index.html",
@@ -1329,7 +1459,9 @@
   },
   {
     "title": "Asset Management",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -1341,7 +1473,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-04T02:52:46.978Z",
+    "listingUpdated": "2024-12-09T22:30:18.129Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "http://environment.data.gov.uk/asset-management",
@@ -1349,7 +1481,9 @@
   },
   {
     "title": "Public Registers for Environmental Information",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -1361,7 +1495,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-24T07:07:11.769Z",
+    "listingUpdated": "2024-01-02T17:59:01.463Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://environment.data.gov.uk/public-register/view/index",
@@ -1369,7 +1503,9 @@
   },
   {
     "title": "Ecology and Fish Data",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -1381,7 +1517,7 @@
     "firstPublished": "2022-07-21",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-29T19:33:31.500Z",
+    "listingUpdated": "2024-04-07T03:50:09.720Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://environment.data.gov.uk/ecology/api/",
@@ -1389,7 +1525,9 @@
   },
   {
     "title": "Rainfall",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -1401,7 +1539,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-02-29T11:37:42.384Z",
+    "listingUpdated": "2024-10-19T20:50:41.567Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "http://environment.data.gov.uk/flood-monitoring/id/stations?parameter=rainfall",
@@ -1409,7 +1547,9 @@
   },
   {
     "title": "Water Quality",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -1421,7 +1561,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-22T02:20:51.870Z",
+    "listingUpdated": "2024-04-08T20:50:52.365Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://environment.data.gov.uk/water-quality/view/landing",
@@ -1429,7 +1569,9 @@
   },
   {
     "title": "Flood-monitoring",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment",
@@ -1442,7 +1584,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-11-29T18:17:10.236Z",
+    "listingUpdated": "2024-12-13T19:34:56.955Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "http://environment.data.gov.uk/flood-monitoring/id/floods",
@@ -1450,7 +1592,9 @@
   },
   {
     "title": "Hydrology",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -1462,7 +1606,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-09T08:19:25.496Z",
+    "listingUpdated": "2024-05-21T11:12:22.225Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://environment.data.gov.uk/hydrology/landing",
@@ -1470,7 +1614,9 @@
   },
   {
     "title": "Tide Gauge",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment",
@@ -1483,7 +1629,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-10T14:43:29.603Z",
+    "listingUpdated": "2024-06-10T01:02:40.740Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "http://environment.data.gov.uk/flood-monitoring/id/stations?type=TideGauge",
@@ -1491,7 +1637,9 @@
   },
   {
     "title": "Catchment Data",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -1503,7 +1651,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-19T10:30:52.547Z",
+    "listingUpdated": "2024-09-27T01:52:58.211Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://environment.data.gov.uk/catchment-planning/",
@@ -1511,7 +1659,9 @@
   },
   {
     "title": "GOV.UK Search",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1523,7 +1673,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-21T03:41:44.261Z",
+    "listingUpdated": "2024-01-02T00:02:05.239Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.gov.uk/api/search.json",
@@ -1531,7 +1681,9 @@
   },
   {
     "title": "GOV.UK Organisations",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1543,7 +1695,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-06T07:29:24.772Z",
+    "listingUpdated": "2024-11-01T09:03:35.221Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.gov.uk/api/organisations",
@@ -1551,7 +1703,9 @@
   },
   {
     "title": "GOV.UK Notify",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1563,7 +1717,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-11-17T20:23:22.624Z",
+    "listingUpdated": "2024-05-10T07:22:21.843Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://api.notifications.service.gov.uk/",
@@ -1571,7 +1725,9 @@
   },
   {
     "title": "GOV.UK Governments",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1583,7 +1739,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-03T04:44:56.723Z",
+    "listingUpdated": "2024-11-03T06:06:31.033Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.gov.uk/api/governments",
@@ -1591,7 +1747,9 @@
   },
   {
     "title": "GOV.UK Pay",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1603,7 +1761,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-04T00:46:45.114Z",
+    "listingUpdated": "2024-11-21T22:13:45.691Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://publicapi.payments.service.gov.uk/",
@@ -1611,7 +1769,9 @@
   },
   {
     "title": "GOV.UK World locations",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -1624,7 +1784,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-30T05:51:34.454Z",
+    "listingUpdated": "2024-03-31T03:58:13.779Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.gov.uk/api/world-locations",
@@ -1632,7 +1792,9 @@
   },
   {
     "title": "Document Checking Service pilot",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1644,7 +1806,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-15T16:47:32.051Z",
+    "listingUpdated": "2024-10-26T05:36:47.544Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://dcs-integration.ida.digital.cabinet-office.gov.uk/checks/passport",
@@ -1652,7 +1814,9 @@
   },
   {
     "title": "GOV.UK Content",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1664,7 +1828,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-03T00:24:35.197Z",
+    "listingUpdated": "2024-07-01T02:35:41.361Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.gov.uk/api/content",
@@ -1672,7 +1836,9 @@
   },
   {
     "title": "Data.gov.uk",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1684,7 +1850,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-18T21:47:10.414Z",
+    "listingUpdated": "2024-06-14T23:05:32.712Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://data.gov.uk/api/action/",
@@ -1692,7 +1858,9 @@
   },
   {
     "title": "GOV.UK PaaS v3",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1704,7 +1872,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-03-16T22:51:59.942Z",
+    "listingUpdated": "2024-02-25T14:08:04.596Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://api.london.cloud.service.gov.uk/v3",
@@ -1712,7 +1880,9 @@
   },
   {
     "title": "GOV.UK PaaS v2",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -1724,7 +1894,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-03-11T09:51:03.445Z",
+    "listingUpdated": "2024-07-22T18:12:43.147Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://api.london.cloud.service.gov.uk/v2",
@@ -1732,7 +1902,9 @@
   },
   {
     "title": "Bank Holidays",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society"
@@ -1744,7 +1916,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-20T16:58:52.669Z",
+    "listingUpdated": "2024-08-25T06:48:55.539Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.gov.uk/bank-holidays.json",
@@ -1752,7 +1924,9 @@
   },
   {
     "title": "CIS Deductions (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1764,7 +1938,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-24T05:13:33.303Z",
+    "listingUpdated": "2024-04-07T08:46:53.115Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1772,7 +1946,9 @@
   },
   {
     "title": "Interest Restrictition Return (IRR)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       ""
@@ -1784,7 +1960,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-03-18T11:33:48.240Z",
+    "listingUpdated": "2024-04-21T02:29:43.255Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1792,7 +1968,9 @@
   },
   {
     "title": "Business Source Adjustable Summary (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1804,7 +1982,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-09T18:32:47.149Z",
+    "listingUpdated": "2024-02-08T21:39:42.944Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1812,7 +1990,9 @@
   },
   {
     "title": "Individual Benefits",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy",
@@ -1825,7 +2005,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-20T15:23:08.529Z",
+    "listingUpdated": "2024-09-03T02:04:37.454Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1833,7 +2013,9 @@
   },
   {
     "title": "Goods Vehicle Movements",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1845,7 +2027,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-09T21:17:29.249Z",
+    "listingUpdated": "2024-09-18T08:42:58.527Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1853,7 +2035,9 @@
   },
   {
     "title": "Bulk Data File List",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       ""
@@ -1865,7 +2049,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-20T20:57:00.752Z",
+    "listingUpdated": "2024-08-09T21:01:41.687Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1873,7 +2057,9 @@
   },
   {
     "title": "Business Rates",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1885,7 +2071,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-19T21:19:42.916Z",
+    "listingUpdated": "2024-09-25T14:04:24.728Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1893,7 +2079,9 @@
   },
   {
     "title": "Safety and Security Import Notifications",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1905,7 +2093,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-01T14:13:08.933Z",
+    "listingUpdated": "2024-09-10T21:54:02.574Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1913,7 +2101,9 @@
   },
   {
     "title": "Self Assessment Accounts (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1925,7 +2115,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-18T01:36:30.094Z",
+    "listingUpdated": "2024-10-03T09:12:57.369Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1933,7 +2123,9 @@
   },
   {
     "title": "Marriage Allowance",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Society",
@@ -1946,7 +2138,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-08T17:54:56.594Z",
+    "listingUpdated": "2024-05-27T11:44:20.716Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1954,7 +2146,9 @@
   },
   {
     "title": "Agent Authorisation",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -1966,7 +2160,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-14T21:28:44.198Z",
+    "listingUpdated": "2024-03-17T07:07:05.886Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1974,7 +2168,9 @@
   },
   {
     "title": "Check an EORI Number",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       ""
@@ -1986,7 +2182,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-09-21T03:17:09.982Z",
+    "listingUpdated": "2024-12-09T12:35:24.494Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -1994,7 +2190,9 @@
   },
   {
     "title": "Individual Calculations (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2006,7 +2204,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-10-09T05:54:40.037Z",
+    "listingUpdated": "2024-01-13T11:35:36.500Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2014,7 +2212,9 @@
   },
   {
     "title": "Lifetime ISA",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2026,7 +2226,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-03-03T19:04:48.007Z",
+    "listingUpdated": "2024-06-24T11:44:34.913Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2034,7 +2234,9 @@
   },
   {
     "title": "Push Pull Notifications",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -2046,7 +2248,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-04T01:21:54.105Z",
+    "listingUpdated": "2024-03-10T07:29:50.925Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2054,7 +2256,9 @@
   },
   {
     "title": "VAT (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2066,7 +2270,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-25T19:08:22.571Z",
+    "listingUpdated": "2024-01-22T06:34:17.917Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2074,7 +2278,9 @@
   },
   {
     "title": "Safety and Security Import Declarations",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2086,7 +2292,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-02T14:28:33.326Z",
+    "listingUpdated": "2024-01-19T09:11:50.473Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2094,7 +2300,9 @@
   },
   {
     "title": "Relief at Source",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2106,7 +2314,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-17T03:43:37.716Z",
+    "listingUpdated": "2024-10-28T07:19:43.466Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2114,7 +2322,9 @@
   },
   {
     "title": "Individual Losses (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2126,7 +2336,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-08T11:13:58.565Z",
+    "listingUpdated": "2024-01-02T02:59:17.046Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2134,7 +2344,9 @@
   },
   {
     "title": "Individual Income",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2146,7 +2358,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-10-06T04:30:03.551Z",
+    "listingUpdated": "2024-07-01T22:20:34.171Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2154,7 +2366,9 @@
   },
   {
     "title": "GOV.UK Trade Tariff API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2166,7 +2380,7 @@
     "firstPublished": "2020-09-14",
     "licenceName": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "licenceURL": null,
-    "listingUpdated": "2024-01-10T14:54:17.011Z",
+    "listingUpdated": "2024-02-20T11:08:44.871Z",
     "contactEmail": "trade-tariff-support@transformuk.com",
     "links": null,
     "apiURL": "https://www.trade-tariff.service.gov.uk/api/v2",
@@ -2174,7 +2388,9 @@
   },
   {
     "title": "Individual Employment",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2186,7 +2402,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-09-10T06:11:25.913Z",
+    "listingUpdated": "2024-01-11T06:51:26.989Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2194,7 +2410,9 @@
   },
   {
     "title": "Individual Tax",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2206,7 +2424,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-09-02T06:06:12.196Z",
+    "listingUpdated": "2024-08-19T03:11:46.995Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2214,7 +2432,9 @@
   },
   {
     "title": "Safety and Security Import Outcomes",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2226,7 +2446,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-04T11:59:38.532Z",
+    "listingUpdated": "2024-01-15T13:48:29.797Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2234,7 +2454,9 @@
   },
   {
     "title": "Obligations (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2246,7 +2468,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-25T18:05:22.889Z",
+    "listingUpdated": "2024-08-28T16:51:42.635Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2254,7 +2476,9 @@
   },
   {
     "title": "Self Assessment (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2266,7 +2490,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-03-31T09:16:01.287Z",
+    "listingUpdated": "2024-05-15T19:30:44.676Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2274,7 +2498,9 @@
   },
   {
     "title": "Customs Inventory Linking Exports",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2286,7 +2512,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-09-21T08:02:58.261Z",
+    "listingUpdated": "2024-09-25T22:01:12.619Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2294,7 +2520,9 @@
   },
   {
     "title": "Business Details (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2306,7 +2534,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-12T19:29:43.517Z",
+    "listingUpdated": "2024-08-19T23:03:03.155Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2314,7 +2542,9 @@
   },
   {
     "title": "National Insurance",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy",
@@ -2327,7 +2557,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-11-21T00:51:31.611Z",
+    "listingUpdated": "2024-01-22T09:23:38.765Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2335,7 +2565,9 @@
   },
   {
     "title": "Common Transit Convention Traders",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       ""
@@ -2347,7 +2579,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-17T22:40:12.490Z",
+    "listingUpdated": "2024-12-01T01:51:05.035Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2355,7 +2587,9 @@
   },
   {
     "title": "Business Income Source Summary (MTD)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2367,7 +2601,7 @@
     "firstPublished": "2020-09-02",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-05T20:21:50.614Z",
+    "listingUpdated": "2024-08-07T07:13:45.056Z",
     "contactEmail": "SDSTeam@hmrc.gov.uk",
     "links": null,
     "apiURL": "https://api.service.hmrc.gov.uk",
@@ -2375,7 +2609,9 @@
   },
   {
     "title": "Life Event Verification",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Health",
@@ -2388,7 +2624,7 @@
     "firstPublished": "2021-07-21",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-10T14:31:24.566Z",
+    "listingUpdated": "2024-08-03T18:00:19.480Z",
     "contactEmail": "https://docs.api.lev.homeoffice.gov.uk/life-event-verification-lev-api/reference",
     "links": null,
     "apiURL": "",
@@ -2396,7 +2632,9 @@
   },
   {
     "title": "Debt Respite Scheme (Breathing Space)",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Crime and justice",
@@ -2409,7 +2647,7 @@
     "firstPublished": "2021-03-09",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-29T15:16:52.339Z",
+    "listingUpdated": "2024-07-07T01:51:31.216Z",
     "contactEmail": "itproblems.breathingspace@insolvency.gov.uk",
     "links": null,
     "apiURL": "https://www.gov.uk/api/debt-respite-scheme",
@@ -2417,7 +2655,9 @@
   },
   {
     "title": "Land Charges Full Search",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "On request",
     "topic": [
       "Mapping"
@@ -2429,7 +2669,7 @@
     "firstPublished": "2023-01-10",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-11-06T12:05:54.491Z",
+    "listingUpdated": "2024-12-29T16:43:18.627Z",
     "contactEmail": "channelpartners@landregistry.gov.uk",
     "links": null,
     "apiURL": "https://businessgateway.landregistry.gov.uk/b2b/BGSoapEngine/FullSearchV2_1WebService?wsdl",
@@ -2437,7 +2677,9 @@
   },
   {
     "title": "e-Document Registration Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -2449,7 +2691,7 @@
     "firstPublished": "2022-11-24",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-21T13:13:39.752Z",
+    "listingUpdated": "2024-05-14T02:15:26.993Z",
     "contactEmail": "channelpartners@landregistry.gov.uk",
     "links": null,
     "apiURL": "https://businessgateway.landregistry.gov.uk/b2b/ECDRS_SoapEngine/EDocumentRegistrationV2_1WebService?wsdl",
@@ -2457,7 +2699,9 @@
   },
   {
     "title": "Application Enquiry",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -2470,7 +2714,7 @@
     "firstPublished": "2022-09-28",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-24T01:55:26.570Z",
+    "listingUpdated": "2024-03-08T09:58:59.268Z",
     "contactEmail": "channelpartners@landregistry.gov.uk",
     "links": null,
     "apiURL": "https://businessgateway.landregistry.gov.uk/b2b/BGSoapEngine/ApplicationEnquiryV1_0Webservice?wsdl",
@@ -2478,7 +2722,9 @@
   },
   {
     "title": "Discharge Enquiry",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       ""
@@ -2490,7 +2736,7 @@
     "firstPublished": "2022-10-11",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-07T01:08:44.570Z",
+    "listingUpdated": "2024-08-22T20:07:56.116Z",
     "contactEmail": "channelpartners@landregistry.gov.uk",
     "links": null,
     "apiURL": "https://businessgateway.landregistry.gov.uk/b2b/BGSoapEngine/DischargeActivityV1_0WebService?wsdl",
@@ -2498,7 +2744,9 @@
   },
   {
     "title": "Inform Plus",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy",
@@ -2512,7 +2760,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-10-09T05:00:40.440Z",
+    "listingUpdated": "2024-07-25T23:53:33.373Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://webservices.esd.org.uk/",
@@ -2520,7 +2768,9 @@
   },
   {
     "title": "Hackney Addresses",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities"
@@ -2532,7 +2782,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-11T08:20:01.686Z",
+    "listingUpdated": "2024-12-29T08:45:29.087Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://ndws9fa08d.execute-api.eu-west-2.amazonaws.com/production/api/v1/addresses/",
@@ -2540,7 +2790,9 @@
   },
   {
     "title": "Keyworker API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Crime and justice"
@@ -2552,7 +2804,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-28T08:10:39.827Z",
+    "listingUpdated": "2024-12-01T16:11:22.289Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://keyworker-api.service.hmpps.dsd.io/",
@@ -2560,7 +2812,9 @@
   },
   {
     "title": "GOV.UK Courts and Tribunals Publishing API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Crime and justice"
@@ -2572,7 +2826,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-22T20:40:32.305Z",
+    "listingUpdated": "2024-08-16T01:33:34.080Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://github.com/alphagov/courts-api",
@@ -2580,7 +2834,9 @@
   },
   {
     "title": "Custody API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Crime and justice"
@@ -2592,7 +2848,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-07-16T14:26:47.579Z",
+    "listingUpdated": "2024-03-04T21:48:22.037Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://github.com/ministryofjustice/custody-api",
@@ -2600,7 +2856,9 @@
   },
   {
     "title": "Money to Prisoners API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Crime and justice",
@@ -2613,7 +2871,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-10T07:47:11.478Z",
+    "listingUpdated": "2024-08-28T06:43:48.197Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://github.com/ministryofjustice/money-to-prisoners-api",
@@ -2621,7 +2879,9 @@
   },
   {
     "title": "Visit someone in prison",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Crime and justice"
@@ -2633,7 +2893,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-07T02:59:22.047Z",
+    "listingUpdated": "2024-02-13T10:42:21.916Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.gov.uk/prison-visits",
@@ -2641,7 +2901,9 @@
   },
   {
     "title": "Statistics",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -2653,7 +2915,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-02-23T20:12:28.622Z",
+    "listingUpdated": "2024-04-17T09:19:56.902Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://api.beta.ons.gov.uk/v1",
@@ -2661,7 +2923,9 @@
   },
   {
     "title": "Open Geography portal",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping"
@@ -2673,7 +2937,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-05-24T00:06:22.993Z",
+    "listingUpdated": "2024-10-10T05:16:19.496Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/",
@@ -2681,7 +2945,9 @@
   },
   {
     "title": "OS Features API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping"
@@ -2693,7 +2959,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-03-23T10:17:38.068Z",
+    "listingUpdated": "2024-05-08T22:03:34.811Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/features/v1",
@@ -2701,7 +2967,9 @@
   },
   {
     "title": "OS Maps API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping"
@@ -2713,7 +2981,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-07-18T19:32:32.249Z",
+    "listingUpdated": "2024-04-19T09:50:23.391Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/maps/raster/v1",
@@ -2721,7 +2989,9 @@
   },
   {
     "title": "OS Vector Tile API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping"
@@ -2733,7 +3003,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-06-02T06:33:48.689Z",
+    "listingUpdated": "2024-01-17T21:02:13.961Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/maps/vector/v1/",
@@ -2741,7 +3011,9 @@
   },
   {
     "title": "OS Places API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping"
@@ -2753,7 +3025,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-08-11T10:54:29.512Z",
+    "listingUpdated": "2024-10-25T01:43:27.726Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/search/places/v1",
@@ -2761,7 +3033,9 @@
   },
   {
     "title": "OS Names API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping"
@@ -2773,7 +3047,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-08-17T13:48:47.856Z",
+    "listingUpdated": "2024-01-20T14:44:33.385Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/search/names/v1",
@@ -2781,7 +3055,9 @@
   },
   {
     "title": "OS Download API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -2793,7 +3069,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-06-06T03:53:30.329Z",
+    "listingUpdated": "2024-02-12T23:20:34.563Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/downloads/v1",
@@ -2801,7 +3077,9 @@
   },
   {
     "title": "OS OAuth 2 API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -2813,7 +3091,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-12-29T05:36:28.534Z",
+    "listingUpdated": "2024-02-27T12:48:30.485Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/oauth2/token/v1",
@@ -2821,7 +3099,9 @@
   },
   {
     "title": "OS Linked Identifiers API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping"
@@ -2833,7 +3113,7 @@
     "firstPublished": "2020-08-24",
     "licenceName": "https://osdatahub.os.uk/legal/termsConditions",
     "licenceURL": null,
-    "listingUpdated": "2024-06-06T10:51:31.693Z",
+    "listingUpdated": "2024-11-13T15:34:06.091Z",
     "contactEmail": "Ordnance Survey - <osdatahubenquiries@os.uk>",
     "links": null,
     "apiURL": "https://api.os.uk/search/links/v1",
@@ -2841,7 +3121,9 @@
   },
   {
     "title": "Statistics.gov.scot",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government"
@@ -2853,7 +3135,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-04-10T02:47:17.823Z",
+    "listingUpdated": "2024-05-28T13:41:19.677Z",
     "contactEmail": "statistics.opendata@gov.scot",
     "links": null,
     "apiURL": "https://statistics.gov.scot/sparql",
@@ -2861,7 +3143,9 @@
   },
   {
     "title": "GeoNetwork REST API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       ""
@@ -2873,7 +3157,7 @@
     "firstPublished": "2020-11-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-11-16T00:36:53.251Z",
+    "listingUpdated": "2024-10-10T03:23:13.292Z",
     "contactEmail": "SSDI.Metadata@gov.scot",
     "links": null,
     "apiURL": "https://spatialdata.gov.scot/geonetwork/srv/api",
@@ -2881,7 +3165,9 @@
   },
   {
     "title": "Recruitment API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2893,7 +3179,7 @@
     "firstPublished": "2022-01-24",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-14T22:51:53.051Z",
+    "listingUpdated": "2024-07-10T03:37:10.077Z",
     "contactEmail": "Details available on developer portal",
     "links": null,
     "apiURL": "https://api.apprenticeships.education.gov.uk/managevacancies",
@@ -2901,7 +3187,9 @@
   },
   {
     "title": "Display vacancy advert API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Business and economy"
@@ -2913,7 +3201,7 @@
     "firstPublished": "2022-01-24",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-25T13:15:38.988Z",
+    "listingUpdated": "2024-09-25T03:48:39.085Z",
     "contactEmail": "Details available on developer portal",
     "links": null,
     "apiURL": "https://api.apprenticeships.education.gov.uk/vacancies",
@@ -2921,7 +3209,9 @@
   },
   {
     "title": "Discovery",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -2933,7 +3223,7 @@
     "firstPublished": "2020-10-05",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-11-16T21:41:38.002Z",
+    "listingUpdated": "2024-05-05T19:29:19.224Z",
     "contactEmail": "discovery@nationalarchives.gov.uk",
     "links": null,
     "apiURL": "https://discovery.nationalarchives.gov.uk/API",
@@ -2941,7 +3231,9 @@
   },
   {
     "title": "Transport for London Unified API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Transport",
@@ -2954,7 +3246,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-29T22:34:14.097Z",
+    "listingUpdated": "2024-01-31T10:15:48.404Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://api.tfl.gov.uk/",
@@ -2962,7 +3254,9 @@
   },
   {
     "title": "Tidal API - Foundation",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -2976,7 +3270,7 @@
     "firstPublished": "2022-02-03",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-03-28T13:27:09.720Z",
+    "listingUpdated": "2024-10-03T07:32:22.573Z",
     "contactEmail": "customerservices@ukho.gov.uk",
     "links": null,
     "apiURL": "https://admiraltyapi.portal.azure-api.net/products/tidal-api-foundation",
@@ -2984,7 +3278,9 @@
   },
   {
     "title": "UK Tidal API - Discovery",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Environment"
@@ -2996,7 +3292,7 @@
     "firstPublished": "2020-09-18",
     "licenceName": "subscription required",
     "licenceURL": null,
-    "listingUpdated": "2024-03-30T14:31:20.593Z",
+    "listingUpdated": "2024-02-20T02:54:28.321Z",
     "contactEmail": "customerservices@ukho.gov.uk",
     "links": null,
     "apiURL": "https://admiraltyapi.portal.azure-api.net/products/uk-tidal-api",
@@ -3004,7 +3300,9 @@
   },
   {
     "title": "AVCS Online Discovery API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Transport",
@@ -3017,7 +3315,7 @@
     "firstPublished": "2020-09-18",
     "licenceName": "subscription required",
     "licenceURL": null,
-    "listingUpdated": "2024-08-11T18:05:34.608Z",
+    "listingUpdated": "2024-02-16T09:40:20.643Z",
     "contactEmail": "customerservices@ukho.gov.uk",
     "links": null,
     "apiURL": "https://admiraltyapi.portal.azure-api.net/products/avcs-online-discovery-api",
@@ -3025,7 +3323,9 @@
   },
   {
     "title": "Tidal API - Premium",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -3039,7 +3339,7 @@
     "firstPublished": "2022-02-03",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-12-25T20:53:42.624Z",
+    "listingUpdated": "2024-10-21T15:37:18.227Z",
     "contactEmail": "customerservices@ukho.gov.uk",
     "links": null,
     "apiURL": "https://admiraltyapi.portal.azure-api.net/products/tidal-api-premium",
@@ -3047,7 +3347,9 @@
   },
   {
     "title": "ADMIRALTY Marine Environment Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -3061,7 +3363,7 @@
     "firstPublished": "2022-02-03",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-01-31T00:00:40.709Z",
+    "listingUpdated": "2024-08-24T00:58:35.795Z",
     "contactEmail": "customerservices@ukho.gov.uk",
     "links": null,
     "apiURL": "https://admiraltyapi.portal.azure-api.net/products/marine-environment-service",
@@ -3069,7 +3371,9 @@
   },
   {
     "title": "ADMIRALTY Maritime Limits Service",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Mapping",
@@ -3083,7 +3387,7 @@
     "firstPublished": "2022-02-03",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-06-17T11:08:08.920Z",
+    "listingUpdated": "2024-05-26T10:02:37.204Z",
     "contactEmail": "customerservices@ukho.gov.uk",
     "links": null,
     "apiURL": "https://admiraltyapi.portal.azure-api.net/products/maritime-limits-service",
@@ -3091,7 +3395,9 @@
   },
   {
     "title": "Police API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Crime and justice",
@@ -3104,7 +3410,7 @@
     "firstPublished": "2020-10-12",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-10-22T12:45:38.961Z",
+    "listingUpdated": "2024-01-31T18:43:49.097Z",
     "contactEmail": "https://data.police.uk/contact/",
     "links": null,
     "apiURL": "https://data.police.uk/api/",
@@ -3112,7 +3418,9 @@
   },
   {
     "title": "GeoReport",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Government",
@@ -3126,7 +3434,7 @@
     "firstPublished": "2020-01-08",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-09-13T18:16:14.969Z",
+    "listingUpdated": "2024-03-07T04:49:55.340Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "https://www.westberks.gov.uk/webservices/open311.asmx",
@@ -3134,7 +3442,9 @@
   },
   {
     "title": "Transport for West Midlands API",
-    "type": "API",
+    "type": [
+      "API"
+    ],
     "access": "Open",
     "topic": [
       "Towns and cities"
@@ -3146,7 +3456,7 @@
     "firstPublished": "2020-10-05",
     "licenceName": "",
     "licenceURL": null,
-    "listingUpdated": "2024-08-01T14:57:03.320Z",
+    "listingUpdated": "2024-09-22T01:13:19.514Z",
     "contactEmail": "",
     "links": null,
     "apiURL": "http://api.tfwm.org.uk/",
