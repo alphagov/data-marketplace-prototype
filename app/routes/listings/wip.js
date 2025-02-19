@@ -82,6 +82,18 @@ const processFilters = (aggregations) => {
     return filters
 }
 
+function removeQuery(url, name, value) {
+    
+    console.log(url)
+
+    const urlObj = new URL(url)
+
+    urlObj.searchParams.delete(name, value)
+
+    return urlObj.toString()
+
+}
+
 // remove _unchecked from query
 
 router.use((request, response, next) => {
@@ -159,19 +171,45 @@ router.get('/search', (request, response) => {
     response.locals.count = results.pagination.total
     response.locals.filters = processFilters(results.data.aggregations)
 
+    // remove filter links
+
+    let removeFilterLinks = []
+
+    let filters = searchOptions.filters
+
+    const currentURL = `${request.protocol}://${request.get('host')}${request.originalUrl}`
+
+    for (let name in filters) {
+        for (let value of filters[name]) {
+            let text = value
+            if (value == 'Open') {
+                text = 'Open access'
+            }
+            if (value == 'On request') {
+                text = 'Access on request'
+            }
+            removeFilterLinks.push({
+                text: text,
+                href: removeQuery(currentURL, name, value)
+            })
+        }
+    }
+
+    response.locals.removeFilterLinks = removeFilterLinks
+
     // pagination
 
     let pagination = {}
 
-    let url = new URL(`${request.protocol}://${request.get('host')}${request.originalUrl}`)
+    let paginationURL = new URL(currentURL)
 
     // previous
 
     if (page != 1) {
         const prevPage = page - 1
-        url.searchParams.set('page', prevPage)
+        paginationURL.searchParams.set('page', prevPage)
         pagination.previous = {
-            href: url.href
+            href: paginationURL.href
         }
     }
 
@@ -179,9 +217,9 @@ router.get('/search', (request, response) => {
 
     if (page != results.pagination.numPages) {
         const nextPage = page + 1
-        url.searchParams.set('page', nextPage)
+        paginationURL.searchParams.set('page', nextPage)
         pagination.next = {
-            href: url.href
+            href: paginationURL.href
         }
     }
 

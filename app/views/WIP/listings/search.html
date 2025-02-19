@@ -6,6 +6,10 @@
   Find government data
 {% endblock %}
 
+
+{% block beforeContent %}
+{% endblock %}
+
 {% block content %}
 
 <form action="" method="GET" id="searchForm">
@@ -42,6 +46,17 @@
         </div>
 
         <div class="govuk-grid-column-two-thirds" role="region" aria-label="Search results">
+
+            {% if removeFilterLinks.length > 0 %}
+                <div class="remove-filters">
+                    {% for link in removeFilterLinks %}
+                        <a href="{{ link.href }}">
+                            <span class="govuk-visually-hidden">Clear filter</span>
+                            {{ link.text }}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
 
             <div class="results-header">
                 <div class="results-header-count govuk-!-colour-secondary">
