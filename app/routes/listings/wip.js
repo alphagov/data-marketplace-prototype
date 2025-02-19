@@ -40,7 +40,7 @@ const searchConfig = {
         organisation: {
             title: 'Organisation',
             size: 1000,
-            // sort: "key",
+            sort: "key",
             conjunction: false,
             hide_zero_doc_count: true
         },
