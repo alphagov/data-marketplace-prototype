@@ -64,3 +64,20 @@ addFilter('numberWithCommas', (input) => {
         return
     }
 })
+
+addFilter('doubleEscape', (input = '') => {
+    // First encode: convert special characters to HTML entities
+    const firstEncode = input.replace(/[&<>"']/g, function(match) {
+        const entities = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }
+        return entities[match]
+    })
+
+    // Second encode: convert & to &amp; in the already encoded string
+    return firstEncode.replace(/&/g, '&amp;')
+})

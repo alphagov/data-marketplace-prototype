@@ -58,9 +58,9 @@
         <span id="<%= checkboxes_count_id %>"
           class="gem-c-option-select__count govuk-visually-hidden"
           aria-live="polite"
-          data-single="<%= t('components.option_select.found_single') %>"
-          data-multiple="<%= t('components.option_select.found_multiple') %>"
-          data-selected="<%= t('components.option_select.selected') %>"></span>
+          data-single="option found"
+          data-multiple="options found"
+          data-selected="selected"></span>
       <% end %>
       <%= render "govuk_publishing_components/components/checkboxes", {
         name: "#{key}[]",

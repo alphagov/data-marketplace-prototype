@@ -972,6 +972,14 @@ button.govuk-link.app-spoof-link:focus {
     display: none;
 }
 
+.gem-c-option-select__filter-input {
+    background-image: url("/public/images/search-icon.svg");
+}
+
+.gem-c-option-select__filter {
+    padding: 10px 0;
+}
+
 .results-header {
     display: flex;
     align-items: center;

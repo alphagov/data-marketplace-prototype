@@ -25,7 +25,9 @@
                
                 {{ optionSelect({
                     title: filter.title,
+                    filter: filter.filter,
                     checkboxes: {
+                        id: 'option-select-checkboxes-' + filter.title,
                         name: filter.title | lower,
                         classes: "govuk-checkboxes--small js-auto-submit",
                         attributes: {

@@ -67,6 +67,7 @@ const processFilters = (aggregations) => {
     const filters = Object.values(aggregations)
         .map((aggregation) => ({
             title: aggregation.title,
+            filter: aggregation.title == 'Organisation',
             items: aggregation.buckets
                 .filter((item) => item.key != "")
                 .map((item) => ({
