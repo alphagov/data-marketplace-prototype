@@ -89,6 +89,7 @@ function removeQuery(url, name, value) {
     const urlObj = new URL(url)
 
     urlObj.searchParams.delete(name, value)
+    urlObj.searchParams.delete('page')
 
     return urlObj.toString()
 
@@ -199,9 +200,16 @@ router.get('/search', (request, response) => {
 
     // pagination
 
-    let pagination = {}
+    let pagination = {
+        page: page
+    }
 
     let paginationURL = new URL(currentURL)
+
+    // results text
+
+    pagination.resultsFrom = 1 + (page -1) * results.pagination.per_page
+    pagination.resultsTo = pagination.resultsFrom + results.data.items.length -1
 
     // previous
 
@@ -215,7 +223,9 @@ router.get('/search', (request, response) => {
 
     // next
 
-    if (page != results.pagination.numPages) {
+    const totalPages = Math.ceil(results.pagination.total/results.pagination.per_page)
+
+    if (page != totalPages) {
         const nextPage = page + 1
         paginationURL.searchParams.set('page', nextPage)
         pagination.next = {

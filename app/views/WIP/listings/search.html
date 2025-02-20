@@ -61,6 +61,9 @@
             <div class="results-header">
                 <div class="results-header-count govuk-!-colour-secondary">
                     <p class="govuk-!-colour-secondary" id="js-result-count">
+                        {% if pagination.page > 1 %}
+                            {{ pagination.resultsFrom }} to {{ pagination.resultsTo }} of 
+                        {% endif %}
                         {{ count }} results
                     </p>
                 </div>
@@ -182,12 +185,16 @@
                     {% endfor %}
                 </div>
 
-                {{ govukPagination({
-                    next: {
-                        text: "Next page",
-                        href: pagination.next.href
-                    }
-                  }) }}
+                {% if pagination.next %}
+
+                    {{ govukPagination({
+                        next: {
+                            text: "Next page",
+                            href: pagination.next.href
+                        }
+                    }) }}
+
+                {% endif %}
                 
             {% else %}
             <div class="no-results govuk-!-font-size-19"> 
@@ -208,9 +215,6 @@
 
 {% endblock %}
 
-{% block footer %}
-{% include "includes/WIP_footer.html" %}
-{% endblock %}
 
 {% block pageScripts %}
     <script src="/public/javascripts/option-select.js"></script>
