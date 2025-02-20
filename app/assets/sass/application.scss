@@ -1036,6 +1036,11 @@ button.govuk-link.app-spoof-link:focus {
 .app-header-search button {
     margin-bottom: 0;
     margin-top: -2px;
+    background-color: govuk-colour("blue");
+}
+
+.app-header-search button:hover {
+    background-color: govuk-colour("dark-blue");
 }
 
 .app-header-dropdown {
