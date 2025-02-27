@@ -12,14 +12,16 @@
   classes:"govuk-header--full-width-border"
 }) }}
 
-<div class="govuk-width-container">
-  {{ govukPhaseBanner({
-    tag: {
-      text: "Beta"
-    },
-    html: 'This is a new service – <a href="#">send us your feedback</a> to help improve it.'
-  }) }}
-</div>
+{% if hidePhaseBanner %}
+  <div class="govuk-width-container">
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Beta"
+      },
+      html: 'This is a new service – <a href="#">send us your feedback</a> to help improve it.'
+    }) }}
+  </div>
+{% endif %}
 
 <style>
     .govuk-service-navigation__wrapper{
